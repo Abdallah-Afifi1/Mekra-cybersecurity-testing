@@ -6,5 +6,9 @@
 /info/
 /objects/
 /refs/
-/mekra-cs-testing/ 
-/mekra-cs-testing/ 
+/mekra-cs-testing/
+
+# Office temporary lock files (created while a Word/Excel/PowerPoint file is open)
+~$*
+*.tmp
+.~lock.*#
