@@ -3,6 +3,8 @@
 | File | Content |
 |---|---|
 | `SRS-ch23_cybersecurity_requirements.csv` | 249 requirements from SRS chapter 23 (rev. 731696, 2026-10-08), one per row, with section, text, status, the SRS verification criteria, and empty columns for the planned test IDs, level, status and notes |
+| `CS_concept_requirements.csv` | 41 system cybersecurity requirements from the Cybersecurity Concept (SOW1 to SOW2 interface, secure debug, hardware protection), with test IDs |
+| `TECH-CS_SOW1-SOW2_requirements.csv` | 30 technical cybersecurity requirements for the SOW2 to SOW1 interface, with the concept requirements they satisfy and test IDs |
 | `feature_requirements_template.csv` | Same columns for the requirements you will send per feature. Copy it per feature |
 
 ## Counts
@@ -18,6 +20,7 @@
 
 - 52 requirements contain an open `[X]` configuration choice.
 - 27 requirements have no verification criteria in the SRS.
+- Concept-level requirements (Polarion, readyForReview) are in the two other CSV files and are counted in `05-Requirements-Inbox/SecureComm_SOW1-SOW2_and_SecureDebug/README.md`.
 
 ## Columns to fill
 

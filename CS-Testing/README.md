@@ -11,7 +11,7 @@ This workspace was built from the material already in `Components Datasheets/`. 
 | `00-Analysis/` | What is in the repo, the attack-surface map, and an index of every source document with its security relevance |
 | `01-System/` | System-level test areas: hardware interfaces, debug ports, flash, DRAM, SerDes/camera link, Ethernet |
 | `02-Software/` | Software-level test areas: DTLS, SOME/IP, software download (UCM), secure boot, secure storage |
-| `03-Traceability/` | Requirement-to-test matrix. Already loaded: the 249 SRS chapter 23 cybersecurity requirements |
+| `03-Traceability/` | Requirement-to-test matrix. Loaded: the 249 SRS chapter 23 requirements, the 41 concept and 30 technical requirements of the first feature |
 | `04-Test-Environment/` | What the existing bench can do for cybersecurity tests and what is missing |
 | `05-Requirements-Inbox/` | **Drop your per-feature requirements here** (template included) |
 
@@ -20,7 +20,8 @@ This workspace was built from the material already in `Components Datasheets/`. 
 - 249 cybersecurity requirements (SRS chapter 23, SW/HW/Mechanical Requirements rev. 731696, 2026-10-08) are extracted into `03-Traceability/SRS-ch23_cybersecurity_requirements.csv`. All are **Draft**.
 - 52 of the 249 still contain open `[X]` configuration choices (for example the RSA key length, the debug-unlock challenge validity of 30, 60 or 120 seconds, and the secure-boot failure action). These need a decision before a test can have a pass/fail threshold.
 - 27 of the 249 have no verification criteria in the SRS.
-- No cybersecurity test cases exist yet. The existing framework has SOME/IP and DHCP tests that can be reused (`04-Test-Environment/`).
+- Feature loaded: **Secure communication SOW1 to SOW2, Secure debug, Hardware security protection** (41 concept requirements and 30 technical requirements from Polarion). 46 test cases are specified in `01-System/` (30 CS-SOW1, 15 CS-DBG, 1 CS-HWP). Findings and blockers: `05-Requirements-Inbox/SecureComm_SOW1-SOW2_and_SecureDebug/README.md`.
+- No test scripts exist yet. The existing framework has SOME/IP and DHCP tests that can be reused (`04-Test-Environment/`).
 
 ## Next step
 

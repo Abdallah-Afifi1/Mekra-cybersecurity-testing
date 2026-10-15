@@ -2,18 +2,11 @@
 
 System level means the integrated MVC on the bench (hardware plus software), tested through its physical interfaces. Test IDs are proposals. They become real once you send the feature requirements. Every row traces to SRS requirements in `../03-Traceability/SRS-ch23_cybersecurity_requirements.csv`.
 
-## CS-DBG: debug access (SRS 23.3, 39 requirements)
+## CS-DBG: debug access
 
-| Proposed test | What is checked | Requirement anchors |
-|---|---|---|
-| CS-DBG-001 | In production mode, after power-on and after reset, JTAG (`ISP_JTAG`, TP1200 to TP1203) does not respond | MVC-107859 |
-| CS-DBG-002 | Unlock attempts on any interface other than the dedicated UART service interface are rejected | MVC-107862, MVC-107863 |
-| CS-DBG-003 | Challenge request with invalid format, or in a lifecycle state that does not allow it, is rejected | MVC-107865 |
-| CS-DBG-004 | Every unlock transaction gets a fresh challenge, nonce, salt and session ID. No value repeats across N transactions | MVC-107864, MVC-107857 |
-| CS-DBG-005 | A response with the wrong ECU ID, a stale response after the validity period, or a replayed response is rejected | MVC-107887, MVC-107893 |
-| CS-DBG-006 | Brute-force and rate behaviour of the unlock service (lock-out policy, if defined) | to be taken from the remaining 23.3 requirements |
+**Detailed test specs now exist:** `CS-DBG_secure_debug_and_hw_protection_tests.md` (15 secure-debug requirements plus 1 hardware-protection requirement, from your Cybersecurity Concept). The SRS chapter 23.3 has 39 software requirements for the same area. They are more detailed (UART service interface, KDF inputs, validity period 30/60/120 s `[X]`, rejection of unlock attempts on other interfaces). They are not yet mapped to the concept requirements, and some SRS checks have no concept counterpart, for example: unlock attempts through any interface other than the dedicated UART service, and uniqueness of challenge, nonce, salt and session ID across many transactions (MVC-107862, MVC-107864, MVC-107857). These should become extra steps or extra cases once the mapping is done.
 
-Needs: UART access to the unlock service, JTAG probe (Lauterbach is on the bench), a way to set the lifecycle state, and the key material for the valid unlock path. Open: the lifecycle states (see `../00-Analysis/02_security_attack_surface.md`, open point 3).
+Open: the lifecycle states (see `../00-Analysis/02_security_attack_surface.md`, open point 3).
 
 ## CS-BOOT: secure boot and flash (SRS 23.4, 35 requirements)
 
@@ -40,18 +33,18 @@ Needs: the flash access path (`ppSPIneedleAdapter` / `ppFlashAccess`), the image
 
 Needs: Lauterbach with SoC access to attempt the cross-range accesses.
 
-## CS-GMSL and CS-SOW1: camera link (SRS 23.2, 57 requirements, plus ch.15 and 20.3)
+## CS-SOW1 and CS-GMSL: camera link
 
-| Proposed test | What is checked |
+**Detailed test specs now exist:** `CS-SOW1_secure_communication_tests.md` (30 cases, from the Technical Cybersecurity Concept): root key in OTP, device authentication, row information, session key sharing, frame authentication with AES-CMAC and freshness window, protected control commands. The SRS chapter 23.2 has 57 software requirements for the same area, not yet mapped.
+
+Still open at system level, not covered by those 30 cases:
+
+| Check | Source |
 |---|---|
-| CS-SOW1-001 | Authentic imager: the device key chain verifies against the Samsung root public key |
-| CS-SOW1-002 | A camera with an unsigned or wrongly signed device key is refused. No session is established (23.2.3, 23.2.7) |
-| CS-SOW1-003 | Frames with a wrong, missing or replayed AES-CMAC are rejected after authentication is active. The first 17 frames have no tag by design, so the test must account for this |
-| CS-SOW1-004 | A new session key is generated per session and invalidated on reset, expiry or failure (23.2.4, MVC-108158) |
-| CS-SOW1-005 | The signed EEPROM read-only data is verified before use. A modified EEPROM is rejected |
-| CS-GMSL-001 | Manipulating I2C SerDes data after and during boot (use cases in SRS 20.3.1) is detected or has no security effect |
+| The signed EEPROM read-only data is verified before use. A modified EEPROM is rejected | SOW1 interface spec, SRS 23.2 |
+| Manipulating I2C SerDes data after and during boot is detected or has no security effect | SRS 20.3.1 (use cases), no concept requirement found |
 
-Needs: a real or emulated SOW1 camera with fused keys, or a camera-side simulator, and the Samsung key-provisioning documents (missing, see `../00-Analysis/01_repo_analysis.md`). The bench has the Technica TE-1190 GMSL capture module and the Lauterbach I2C path, which cover observation but not an in-line manipulator (the coverage matrix lists the I2C injector as Missing).
+Needs: a controllable SOW1 responder or a real camera with known keys. The Samsung key-provisioning documents are missing (see `../00-Analysis/01_repo_analysis.md`). The bench has the Technica TE-1190 GMSL capture module and the Lauterbach I2C path, which cover observation. An in-line manipulator is listed as Missing in the Interface / HW Coverage Matrix.
 
 ## CS-ETH: network layer
 

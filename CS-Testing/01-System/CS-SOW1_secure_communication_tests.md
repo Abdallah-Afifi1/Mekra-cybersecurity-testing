@@ -1,0 +1,413 @@
+# CS-SOW1: secure communication SOW2 to SOW1 (30 test cases)
+
+Generated from the Polarion exports in `../05-Requirements-Inbox/SecureComm_SOW1-SOW2_and_SecureDebug/` (baseline "readyForReview"). The procedure and pass criteria are copied **verbatim** from the verification criteria of each requirement, so they stay traceable. The "Equipment" lines are my assessment and need your confirmation. Test status for every case: **Not started**.
+
+Level: system (integrated MVC with imager or imager emulator). Source: technical cybersecurity requirements MVC-106557 and children (all CAL 2, all verified by test).
+
+## Secure Communication (SOW2 - SOW1) > ROT key storage
+
+### CS-SOW1-001: The system shall store the trusted 2048bit Samsung Root Public Key in OTP memory.
+
+- **Requirement:** MVC-106562 (2.2.3.1-1), CAL 2, method: **Test**
+- **Full text:** The system shall store the trusted 2048bit Samsung Root Public Key in OTP memory.
+- **Satisfies:** MVC-103063
+- **Equipment (assessment):** OTP or eFuse read-back (Lauterbach), SoC provisioning procedure
+- **Procedure and pass criteria (verbatim from the concept's verification criteria):**
+  - Verify that the Samsung Root RSA public key is stored in the defined OTP/eFuse location.
+  - Verify that the configured RSA key size is 2048 bits.
+  - Verify that the OTP storage area is configured as immutable after provisioning.
+  - Verify that the Secure Boot authentication function retrieves the Root RSA public key from the defined immutable storage location.
+
+## Secure Communication (SOW2 - SOW1) > Device Authentication Requirements
+
+### CS-SOW1-002: The system shall request the SOW1 device authentication data, including Device_n, KID, and Sig_device, from SO…
+
+- **Requirement:** MVC-106561 (2.2.3.2-1), CAL 2, method: **Test**
+- **Full text:** The system shall request the SOW1 device authentication data, including Device_n, KID, and Sig_device, from SOW1 over the I2C interface after reset or before starting the secure session.
+- **Satisfies:** MVC-107642
+- **Equipment (assessment):** I2C monitor (Saleae, or Lauterbach), controllable SOW1 responder that can send valid, modified or withheld authentication data, test signing key (see open points)
+- **Procedure and pass criteria (verbatim from the concept's verification criteria):**
+  - 1. Reset the system and monitor I2C traffic to verify that the system requests SOW1 authentication data.
+  - 2. Repeat the test when a secure session must be established before secure communication starts.
+  - 3. Verify that the request is sent to the configured SOW1 device over I2C.
+  - 4. Verify that the request-response handling supports the required fields Device_n, KID, and Sig_device.
+  - 5. Verify that the system handles a missing or incomplete response according to the defined authentication error and retry behavior.
+
+### CS-SOW1-003: The system shall authenticate SOW1 by verifying Sig_device over Device_n and KID using the trusted RSA-2048 Sa…
+
+- **Requirement:** MVC-106565 (2.2.3.2-2), CAL 2, method: **Test**
+- **Full text:** The system shall authenticate SOW1 by verifying Sig_device over Device_n and KID using the trusted RSA-2048 Samsung Root Public Key.
+- **Satisfies:** MVC-107642
+- **Equipment (assessment):** I2C monitor (Saleae, or Lauterbach), controllable SOW1 responder that can send valid, modified or withheld authentication data, test signing key (see open points)
+- **Procedure and pass criteria (verbatim from the concept's verification criteria):**
+  - 1. Provide authentication data containing a valid Device_n, KID, and Sig_device, with a signature generated using the private key corresponding to the trusted Samsung Root Public Key.
+  - 2. Verify that authentication succeeds when the signature covers the specified Device_n and KID values.
+  - 3. Modify Device_n without updating the signature and verify that authentication fails.
+  - 4. Modify KID without updating the signature and verify that authentication fails.
+  - 5. Provide an invalid signature or one generated using an untrusted private key and verify that authentication fails.
+  - 6. Verify that failed authentication does not result in the SOW1 device being marked as authenticated.
+
+### CS-SOW1-004: The system shall use RSASSA-PSS whith SHA-256 to verify the Imager's digital signature (Sig_device).
+
+- **Requirement:** MVC-106563 (2.2.3.2-3), CAL 2, method: **Test**
+- **Full text:** The system shall use RSASSA-PSS whith SHA-256 to verify the Imager's digital signature (Sig_device).
+- **Satisfies:** MVC-107642
+- **Equipment (assessment):** I2C monitor (Saleae, or Lauterbach), controllable SOW1 responder that can send valid, modified or withheld authentication data, test signing key (see open points)
+- **Procedure and pass criteria (verbatim from the concept's verification criteria):**
+  - 1. Verify through cryptographic configuration or implementation inspection that Sig_device verification uses RSASSA-PSS with SHA-256.
+  - 2. Verify the configured RSA public-key size is 2048 bits.
+  - 4. Verify failure when the signature or signed data is modified.
+  - 5. Verify that signatures generated using a different verification scheme or incompatible parameters are not accepted as valid RSASSA-PSS/SHA-256 signatures
+
+### CS-SOW1-005: The system shall retransmit the SOW1 authentication request up to three times if the expected authentication d…
+
+- **Requirement:** MVC-106566 (2.2.3.2-4), CAL 2, method: **Test**
+- **Full text:** The system shall retransmit the SOW1 authentication request up to three times if the expected authentication data is failed to be received.
+- **Satisfies:** MVC-103053
+- **Equipment (assessment):** I2C monitor (Saleae, or Lauterbach), controllable SOW1 responder that can send valid, modified or withheld authentication data, test signing key (see open points)
+- **Procedure and pass criteria (verbatim from the concept's verification criteria):**
+  - 1. Make the SOW1 authentication response unavailable and initiate authentication.
+  - 2. Monitor I2C traffic and count the authentication requests transmitted.
+  - 3. Verify that the system retransmits the request when expected authentication data is not received.
+  - 4. Verify that retransmission stops when valid authentication data is received or the retry limit is reached.
+  - 5. Repeat with a response arriving on the last permitted attempt.
+
+### CS-SOW1-006: The system shall terminate the SOW1 authentication process if authentication is not successfully completed aft…
+
+- **Requirement:** MVC-106569 (2.2.3.2-5), CAL 2, method: **Test**
+- **Full text:** The system shall terminate the SOW1 authentication process if authentication is not successfully completed after three authentication attempts.
+- **Satisfies:** MVC-103051
+- **Equipment (assessment):** I2C monitor (Saleae, or Lauterbach), controllable SOW1 responder that can send valid, modified or withheld authentication data, test signing key (see open points)
+- **Procedure and pass criteria (verbatim from the concept's verification criteria):**
+  - 1. Prevent valid authentication data from being received for the entire permitted authentication-attempt sequence.
+  - 2. Verify that the authentication procedure terminates after the defined attempt limit.
+  - 3. Verify that the device remains unauthenticated.
+  - 4. Verify that session establishment and protected SOW1 operations do not proceed based on the failed authentication.
+  - 5. Verify that the system does not continue retransmitting authentication requests indefinitely.
+
+## Secure Communication (SOW2 - SOW1) > Row information requirements
+
+### CS-SOW1-007: The system shall configure the row start value of Row_info_00 or Row_info_01 to either 0 or 1 to include the e…
+
+- **Requirement:** MVC-106576 (2.2.3.3-1), CAL 2, method: **Test**
+- **Full text:** The system shall configure the row start value of Row_info_00 or Row_info_01 to either 0 or 1 to include the embedded header containing the video frame counter in the AES-CMAC input. Note: If Row start value set as 0, first line will be included as a AES-CMAC input. - If Row start value set as 1, second line will be included as a AES-CMAC input.
+- **Satisfies:** MVC-103055
+- **Equipment (assessment):** Imager configuration access, frame capture, AES-CMAC reference calculator; for timing: CSI-2 capture (TE-1190)
+- **Procedure and pass criteria (verbatim from the concept's verification criteria):**
+  - 1. Configure the row-start value of Row_info_00 or Row_info_01 to 0 and verify that the first line, containing the embedded header and frame counter, is included in the AES-CMAC input.
+  - 2. Configure the row-start value to 1 and verify that the second line is used as the starting line.
+  - 3. Verify that the row-start value is correctly encoded in the transmitted row information.
+  - 4. Verify that the AES-CMAC input rows correspond to the configured starting value.
+  - 5. Verify that values other than 0 and 1 are rejected or handled according to the defined configuration-validation policy.
+
+### CS-SOW1-008: The system shall configure the row interval to be at least 10 for Merge Compressed or Merged output mode (RAW1…
+
+- **Requirement:** MVC-108741 (2.2.3.3-2), CAL 2, method: **Test**
+- **Full text:** The system shall configure the row interval to be at least 10 for Merge Compressed or Merged output mode (RAW12, RAW14, RAW16, RAW20, and RAW24), and at least 30 for Line Reorder mode (RAW12), to ensure that AES-CMAC calculation for the preceding selected row is completed before the next selected row is input for AES-CMAC calculation. Note: Row information format is defined by Samsung, which is described in ‘5 Key sharing’ chapter in S5K3B6SA - Cybersecurity Application note documnet.
+- **Satisfies:** MVC-103055
+- **Equipment (assessment):** Imager configuration access, frame capture, AES-CMAC reference calculator; for timing: CSI-2 capture (TE-1190)
+- **Procedure and pass criteria (verbatim from the concept's verification criteria):**
+  - 1. Verify that, for Merge Compressed or Merged output modes using RAW12, RAW14, RAW16, RAW20, or RAW24, the configured row interval is at least
+  - 10.
+  - 2. Verify that, for Line Reorder mode using RAW12, the configured row interval is at least
+  - 30.
+  - 3. Measure or inspect the timing of AES-CMAC processing for each selected row and verify that processing of the preceding selected row is completed before the next selected row is input.
+  - 4. Verify that unsupported mode/format combinations are not assigned an interval based on an unrelated mode's minimum.
+
+### CS-SOW1-009: The system shall ensure that the selected row range does not exceed the total vertical data size, including th…
+
+- **Requirement:** MVC-106574 (2.2.3.3-3), CAL 2, method: **Test**
+- **Full text:** The system shall ensure that the selected row range does not exceed the total vertical data size, including the image data and embedded header and statistics data, according to the following constraint: start + 1 + (interval + 1) × (total − 1) ≤ ysize_image + ysize_embedded_data where start is the starting row, interval is the row interval, total is the number of selected rows, and ysize_image and ysize_embedded_data are the vertical sizes of the image and embedded data.
+- **Satisfies:** MVC-103055
+- **Equipment (assessment):** Imager configuration access, frame capture, AES-CMAC reference calculator; for timing: CSI-2 capture (TE-1190)
+- **Procedure and pass criteria (verbatim from the concept's verification criteria):**
+  - 1. Verify that the row-selection configuration uses the constraint start + 1 + (interval + 1) × (total − 1) ≤ ysize_image + ysize_embedded_data.
+  - 2. Configure valid values for which the expression is exactly equal to the total vertical data size and verify that the configuration is accepted.
+  - 3. Configure values for which the expression exceeds the total vertical data size by one row and verify that the configuration is rejected or corrected before use.
+  - 4. Test the minimum supported start, interval, and total values.
+  - 5. Verify that the calculation uses the actual configured image and embedded-data vertical sizes and avoids integer overflow or truncation
+
+## Secure Communication (SOW2 - SOW1) > Key Sharing Requirements
+
+### CS-SOW1-010: The system shall generate a 256-bit cryptographically random session key (SSK) following successful authentica…
+
+- **Requirement:** MVC-106568 (2.2.3.4-1), CAL 2, method: **Test**
+- **Full text:** The system shall generate a 256-bit cryptographically random session key (SSK) following successful authentication.
+- **Satisfies:** MVC-103057
+- **Equipment (assessment):** Controllable SOW1 responder, I2C monitor, test private key to decrypt, RNG/TRNG fault injection (or code inspection), debug/log interfaces for key-exposure checks
+- **Procedure and pass criteria (verbatim from the concept's verification criteria):**
+  - 1. Complete SOW1 authentication successfully and trigger session-key generation.
+  - 2. Verify that the generated SSK has a length of exactly 256 bits.
+  - 3. Verify that session-key generation does not occur as a result of failed authentication.
+  - 4. Establish multiple independent sessions and verify that a new SSK is generated for each session.
+  - 5. Verify that the key is passed to the intended cryptographic operations without unintended truncation or alteration.
+
+### CS-SOW1-011: The system shall use a CSPRNG compliant with NIST SP 800-90A and seeded by a hardware TRNG to generate the 256…
+
+- **Requirement:** MVC-106560 (2.2.3.4-2), CAL 2, method: **Test**
+- **Full text:** The system shall use a CSPRNG compliant with NIST SP 800-90A and seeded by a hardware TRNG to generate the 256-bit session key.
+- **Satisfies:** MVC-103042
+- **Equipment (assessment):** Controllable SOW1 responder, I2C monitor, test private key to decrypt, RNG/TRNG fault injection (or code inspection), debug/log interfaces for key-exposure checks
+- **Procedure and pass criteria (verbatim from the concept's verification criteria):**
+  - 1. Verify that the configured CSPRNG follows the applicable NIST SP 800-90A requirements.
+  - 2. Verify that its entropy source is the hardware TRNG and that the TRNG output is supplied through the approved seeding mechanism.
+  - 3. Verify that the random-generation implementation reports errors if required initialization, entropy acquisition, or random generation fails.
+  - 4. Simulate or inject a controlled RNG/TRNG failure and verify that a new SSK is not generated using an insecure fallback.
+  - 5. Verify that session establishment does not continue using an invalid or unavailable session key.
+
+### CS-SOW1-012: Following successful authentication, The system shall extract 2048-bit device public key from the Imager's aut…
+
+- **Requirement:** MVC-106577 (2.2.3.4-3), CAL 2, method: **Test**
+- **Full text:** Following successful authentication, The system shall extract 2048-bit device public key from the Imager's authentication data.
+- **Satisfies:** MVC-103040
+- **Equipment (assessment):** Controllable SOW1 responder, I2C monitor, test private key to decrypt, RNG/TRNG fault injection (or code inspection), debug/log interfaces for key-exposure checks
+- **Procedure and pass criteria (verbatim from the concept's verification criteria):**
+  - 1. Provide valid authentication data containing the Imager's 2048-bit device public key.
+  - 2. Complete SOW1 authentication successfully.
+  - 3. Verify that the system extracts the device public key from the correct field and that the extracted key matches the reference key.
+  - 4. Verify that the extracted key is passed to the session-key encryption operation without truncation or unintended modification.
+  - 5. Provide missing, malformed, or invalid public-key data and verify that it is not used for session-key encryption.
+
+### CS-SOW1-013: The system shall encrypt the session key and selected row information (Row_info) using the 2048-bit device pub…
+
+- **Requirement:** MVC-106580 (2.2.3.4-4), CAL 2, method: **Test**
+- **Full text:** The system shall encrypt the session key and selected row information (Row_info) using the 2048-bit device public key with RSAES-OAEP and SHA-256.
+- **Satisfies:** MVC-103055
+- **Equipment (assessment):** Controllable SOW1 responder, I2C monitor, test private key to decrypt, RNG/TRNG fault injection (or code inspection), debug/log interfaces for key-exposure checks
+- **Procedure and pass criteria (verbatim from the concept's verification criteria):**
+  - 1. Provide a known 256-bit SSK, valid row information, and the corresponding 2048-bit device public key.
+  - 2. Verify that the system encrypts the SSK and row information using RSAES-OAEP with SHA-256.
+  - 3. Decrypt the resulting ciphertext using the matching private key and verify that the recovered SSK and row information match the original inputs exactly.
+  - 4. Verify that decryption with a different private key fails.
+  - 5. Verify that the encrypted output conforms to the defined message format and RSA ciphertext length.
+  - 6. Confirm the configured OAEP mask-generation function and label, if any, against the approved interface specification.
+
+### CS-SOW1-014: The system shall transmit the encrypted session key and selected row information (Row_info) to SOW1 over the I…
+
+- **Requirement:** MVC-106578 (2.2.3.4-5), CAL 2, method: **Test**
+- **Full text:** The system shall transmit the encrypted session key and selected row information (Row_info) to SOW1 over the I2C interface.
+- **Satisfies:** MVC-103034
+- **Equipment (assessment):** Controllable SOW1 responder, I2C monitor, test private key to decrypt, RNG/TRNG fault injection (or code inspection), debug/log interfaces for key-exposure checks
+- **Procedure and pass criteria (verbatim from the concept's verification criteria):**
+  - 1. Complete authentication and generate an SSK.
+  - 2. Monitor I2C traffic and verify that the encrypted SSK and selected row information are transmitted to the SOW1 device.
+  - 3. Verify that the transmitted ciphertext matches the output of the approved encryption operation.
+  - 4. Verify that the row information matches the active row-selection configuration.
+  - 5. Verify that the transmitted data follows the specified message layout, length, and field encoding.
+  - 6. Verify that transmission does not occur if authentication or encryption fails.
+
+### CS-SOW1-015: The system shall not expose the active session key through any accessible interface during the active secure s…
+
+- **Requirement:** MVC-106571 (2.2.3.4-6), CAL 2, method: **Test**
+- **Full text:** The system shall not expose the active session key through any accessible interface during the active secure session.
+- **Satisfies:** MVC-113706
+- **Equipment (assessment):** Controllable SOW1 responder, I2C monitor, test private key to decrypt, RNG/TRNG fault injection (or code inspection), debug/log interfaces for key-exposure checks
+- **Procedure and pass criteria (verbatim from the concept's verification criteria):**
+  - 1. Establish a secure session and identify accessible interfaces, including diagnostic commands, logs, debug interfaces, communication interfaces, and memory-access paths available in the intended operating configuration.
+  - 2. Attempt to retrieve the active SSK through each applicable interface.
+  - 3. Inspect logging and error-reporting behavior during normal operation and session-establishment failures.
+  - 4. Verify that no interface returns or transmits the SSK in plaintext or exposes it through an unauthorized read operation.
+  - 5. Verify that any permitted internal cryptographic use does not expose the key outside its authorized boundary.
+
+### CS-SOW1-016: The system shall retry secure session establishment up to three times if the expected response is failed to be…
+
+- **Requirement:** MVC-106567 (2.2.3.4-7), CAL 2, method: **Test**
+- **Full text:** The system shall retry secure session establishment up to three times if the expected response is failed to be received.
+- **Satisfies:** MVC-103046
+- **Equipment (assessment):** Controllable SOW1 responder, I2C monitor, test private key to decrypt, RNG/TRNG fault injection (or code inspection), debug/log interfaces for key-exposure checks
+- **Procedure and pass criteria (verbatim from the concept's verification criteria):**
+  - 1. Initiate secure session establishment and suppress the expected SOW1 response.
+  - 2. Monitor the I2C or applicable communication interface and count the session-establishment requests or retransmissions.
+  - 3. Verify that the system retries when the expected response is not received.
+  - 4. Supply a valid response within the allowed attempts and verify that the session can be established.
+  - 5. Repeat with no response and verify that retries stop at the configured limit.
+
+### CS-SOW1-017: The system shall terminate secure session establishment if a secure session is not successfully established af…
+
+- **Requirement:** MVC-106581 (2.2.3.4-8), CAL 2, method: **Test**
+- **Full text:** The system shall terminate secure session establishment if a secure session is not successfully established after three retry attempts.
+- **Satisfies:** MVC-103044
+- **Equipment (assessment):** Controllable SOW1 responder, I2C monitor, test private key to decrypt, RNG/TRNG fault injection (or code inspection), debug/log interfaces for key-exposure checks
+- **Procedure and pass criteria (verbatim from the concept's verification criteria):**
+  - 1. Prevent successful secure session establishment by withholding the expected response.
+  - 2. Verify that the system terminates the establishment procedure after the permitted three retry attempts.
+  - 3. Verify that the session is not marked active and that the SSK is not used for protected communication.
+  - 4. Verify that no further retries occur after termination.
+  - 5. Verify that the system can recover through a newly initiated establishment procedure, provided the applicable recovery conditions are met.
+
+### CS-SOW1-018: The system shall require establishment of a new secure session, including full SOW1 authentication and generat…
+
+- **Requirement:** MVC-106573 (2.2.3.4-9), CAL 2, method: **Test**
+- **Full text:** The system shall require establishment of a new secure session, including full SOW1 authentication and generation of a new session key (SSK), after session expiry, system reset, system restart, session termination, or detection of a security failure.
+- **Satisfies:** MVC-103036
+- **Equipment (assessment):** Controllable SOW1 responder, I2C monitor, test private key to decrypt, RNG/TRNG fault injection (or code inspection), debug/log interfaces for key-exposure checks
+- **Procedure and pass criteria (verbatim from the concept's verification criteria):**
+  - Verify each trigger independently: session expiry, system reset, system restart, explicit session termination, and detection of a security failure. For each trigger: 1. Establish a valid secure session. 2. Activate the trigger. 3. Verify that the existing session is invalidated and that the old SSK is no longer accepted for protected operations. 4. Verify that a new session requires full SOW1 authentication. 5. Verify that a new 256-bit SSK is generated following successful authentication. 6. Verify that protected communication does not resume before the new session is successfully established.
+
+## Secure Communication (SOW2 - SOW1) > Streaming videos Requirements (SOW1 -> SOW2)
+
+### CS-SOW1-019: The system shall extract the received 128-bit AES-CMAC authentication tag from the embedded footer of each rec…
+
+- **Requirement:** MVC-106572 (2.2.3.5-1), CAL 2, method: **Test**
+- **Full text:** The system shall extract the received 128-bit AES-CMAC authentication tag from the embedded footer of each received SOW1 video frame.
+- **Satisfies:** MVC-113705
+- **Equipment (assessment):** Video frame generator or imager able to produce frames with known counters and CMAC footers, CSI-2 capture, reference CMAC calculator
+- **Procedure and pass criteria (verbatim from the concept's verification criteria):**
+  - 1. Supply SOW1 video frames with known 128-bit AES-CMAC tags in their embedded footers.
+  - 2. Verify that the system extracts exactly 128 bits from the defined footer field for each frame.
+  - 3. Compare the extracted value with the reference tag.
+  - 4. Repeat with different valid tag values to verify that extraction is not hardcoded.
+  - 5. Test missing, truncated, and malformed footer data and verify that the system does not treat an invalid tag as successfully extracted.
+
+### CS-SOW1-020: The system shall calculate a 128-bit AES-CMAC tag over the selected rows of each video frame using the active…
+
+- **Requirement:** MVC-106583 (2.2.3.5-2), CAL 2, method: **Test**
+- **Full text:** The system shall calculate a 128-bit AES-CMAC tag over the selected rows of each video frame using the active 256-bit AES session key.
+- **Satisfies:** MVC-103033
+- **Equipment (assessment):** Video frame generator or imager able to produce frames with known counters and CMAC footers, CSI-2 capture, reference CMAC calculator
+- **Procedure and pass criteria (verbatim from the concept's verification criteria):**
+  - 1. Establish a valid secure session with a known 256-bit SSK.
+  - 2. Provide a test video frame and its configured selected-row information.
+  - 3. Independently calculate the expected AES-CMAC using the same key, selected-row data, and approved input encoding.
+  - 4. Verify that the system calculates a 128-bit AES-CMAC matching the reference value.
+  - 5. Modify a byte in a selected row and verify that the calculated result matches the independently calculated result for the modified input and normally differs from the original tag.
+  - 6. Verify that the active session key, rather than a fixed or previous-session key, is used.
+
+### CS-SOW1-021: The system shall verify the integrity and authenticity of each video frame by comparing the calculated AES-CMA…
+
+- **Requirement:** MVC-106582 (2.2.3.5-3), CAL 2, method: **Test**
+- **Full text:** The system shall verify the integrity and authenticity of each video frame by comparing the calculated AES-CMAC tag with the 128-bit CMAC tag received in the frame footer.
+- **Satisfies:** MVC-119709
+- **Equipment (assessment):** Video frame generator or imager able to produce frames with known counters and CMAC footers, CSI-2 capture, reference CMAC calculator
+- **Procedure and pass criteria (verbatim from the concept's verification criteria):**
+  - 1. Provide a valid frame with a footer tag matching the independently calculated AES-CMAC.
+  - 2. Verify that the comparison succeeds.
+  - 3. Modify the footer tag while leaving the frame data unchanged and verify that comparison fails.
+  - 4. Modify authenticated frame data while retaining the original footer tag and verify that comparison fails.
+  - 5. Verify that the comparison uses the complete 128-bit tag and does not accept a partial match.
+
+### CS-SOW1-022: The system shall reject any received SOW1 video frame if AES-CMAC verification fails.
+
+- **Requirement:** MVC-106564 (2.2.3.5-4), CAL 2, method: **Test**
+- **Full text:** The system shall reject any received SOW1 video frame if AES-CMAC verification fails.
+- **Satisfies:** MVC-119710
+- **Equipment (assessment):** Video frame generator or imager able to produce frames with known counters and CMAC footers, CSI-2 capture, reference CMAC calculator
+- **Procedure and pass criteria (verbatim from the concept's verification criteria):**
+  - 1. Submit a frame with a valid format but an incorrect AES-CMAC tag.
+  - 2. Submit a frame whose authenticated data has been modified without updating its tag.
+  - 3. Verify that the system rejects each frame after verification fails.
+  - 4. Verify that the rejected frame is not forwarded to downstream processing as trusted video data.
+  - 5. Verify that rejection of a frame does not inadvertently cause the same invalid frame to be accepted on a subsequent processing path.
+
+### CS-SOW1-023: The system shall verify the freshness, ordering, and sequence validity of each received SOW1 video frame using…
+
+- **Requirement:** MVC-106575 (2.2.3.5-5), CAL 2, method: **Test**
+- **Full text:** The system shall verify the freshness, ordering, and sequence validity of each received SOW1 video frame using the frame counter embedded in the frame header.
+- **Satisfies:** MVC-103031
+- **Equipment (assessment):** Video frame generator or imager able to produce frames with known counters and CMAC footers, CSI-2 capture, reference CMAC calculator
+- **Procedure and pass criteria (verbatim from the concept's verification criteria):**
+  - 1. Supply frames with valid, increasing frame-counter values and verify that freshness, ordering, and sequence checks are applied.
+  - 2. Supply duplicated, stale, and out-of-order frames and verify that each is handled according to the specified counter-validation policy.
+  - 3. Supply counter values at the defined acceptance-window boundaries and verify the expected result.
+  - 4. Verify that freshness validation uses the frame counter extracted from the embedded header, not an unrelated or hardcoded value.
+  - 5. Verify that malformed or unavailable counter data cannot cause a frame to be treated as fresh.
+
+### CS-SOW1-024: The system shall not accept SOW1 secured video stream data as trusted before successful SOW1 device authentica…
+
+- **Requirement:** MVC-109120 (2.2.3.5-6), CAL 2, method: **Test**
+- **Full text:** The system shall not accept SOW1 secured video stream data as trusted before successful SOW1 device authentication and secure session establishment.
+- **Satisfies:** MVC-119708
+- **Equipment (assessment):** Video frame generator or imager able to produce frames with known counters and CMAC footers, CSI-2 capture, reference CMAC calculator
+- **Procedure and pass criteria (verbatim from the concept's verification criteria):**
+  - 1. Start the system without completing SOW1 authentication and supply secured video frames.
+  - 2. Verify that those frames are not accepted or processed as trusted.
+  - 3. Repeat after authentication failure and during unsuccessful secure session establishment.
+  - 4. Terminate an established session and verify that frames from the previous session are no longer accepted as trusted.
+  - 5. Complete authentication and establish a valid session, then verify that frames can be considered for trusted processing subject to successful integrity and freshness checks.
+
+### CS-SOW1-025: The system shall extract the video frame counter from the embedded header data of each received SOW1 video fra…
+
+- **Requirement:** MVC-113726 (2.2.3.5-7), CAL 2, method: **Test**
+- **Full text:** The system shall extract the video frame counter from the embedded header data of each received SOW1 video frame and use the counter value for freshness validation.
+- **Satisfies:** MVC-103031
+- **Equipment (assessment):** Video frame generator or imager able to produce frames with known counters and CMAC footers, CSI-2 capture, reference CMAC calculator
+- **Procedure and pass criteria (verbatim from the concept's verification criteria):**
+  - 1. Supply video frames with known frame-counter values in the embedded headers.
+  - 2. Verify that the system extracts the correct counter value from each header.
+  - 3. Verify that the extracted value is supplied to the freshness-validation logic.
+  - 4. Repeat with different counter values to confirm correct extraction across the supported counter range.
+  - 5. Test missing, truncated, and malformed headers and verify that invalid counter data is not used to authorize a frame
+
+### CS-SOW1-026: The system shall reject duplicated, stale, or out-of-order SOW1 video frames based on a 3-frame freshness wind…
+
+- **Requirement:** MVC-113727 (2.2.3.5-8), CAL 2, method: **Test**
+- **Full text:** The system shall reject duplicated, stale, or out-of-order SOW1 video frames based on a 3-frame freshness window and shall accept a frame only when its frame counter satisfies LastAcceptedCounter < ReceivedCounter ≤ LastAcceptedCounter + 3.
+- **Satisfies:** MVC-113703
+- **Equipment (assessment):** Video frame generator or imager able to produce frames with known counters and CMAC footers, CSI-2 capture, reference CMAC calculator
+- **Procedure and pass criteria (verbatim from the concept's verification criteria):**
+  - Verify that the configured forward acceptance window is set to 3 frames.
+  - Verify that a frame with a counter equal to LastAcceptedCounter is rejected.
+  - Verify that a frame with a counter lower than LastAcceptedCounter is rejected.
+  - Verify that a frame with a counter equal to LastAcceptedCounter + 1 is accepted.
+  - Verify that a frame with a counter equal to LastAcceptedCounter + 2 is accepted.
+  - Verify that a frame with a counter equal to LastAcceptedCounter + 3 is accepted.
+  - Verify that a frame with a counter greater than LastAcceptedCounter + 3 is rejected.
+  - Verify that LastAcceptedCounter is updated after a frame within the acceptance window is successfully authenticated.
+
+## Secure Communication (SOW2 - SOW1) > SOW1 Commands Requirements (SOW2 -> SOW1)
+
+### CS-SOW1-027: The SOW2 shall not transmit protected SOW1 control commands before successful authentication.
+
+- **Requirement:** MVC-109119 (2.2.3.6-1), CAL 2, method: **Test**
+- **Full text:** The SOW2 shall not transmit protected SOW1 control commands before successful authentication.
+- **Satisfies:** MVC-119714
+- **Equipment (assessment):** I2C monitor, reference CMAC calculator, command injection from SOW2 software
+- **Procedure and pass criteria (verbatim from the concept's verification criteria):**
+  - 1. Attempt to transmit SOW1 control commands before SOW1 authentication has succeeded.
+  - 2. Repeat after authentication failure and during incomplete secure session establishment.
+  - 3. Monitor the outgoing communication interface and verify that no SOW1 control command is transmitted in these states.
+  - 4. Complete authentication successfully and verify that command transmission is permitted only when the other applicable secure-session requirements are satisfied.
+  - 5. Terminate the session and verify that commands cannot continue to be transmitted using the invalidated session.
+
+### CS-SOW1-028: The system shall calculate a 128-bit AES-CMAC over each SOW1 control command using the established 256-bit ses…
+
+- **Requirement:** MVC-108740 (2.2.3.6-2), CAL 2, method: **Test**
+- **Full text:** The system shall calculate a 128-bit AES-CMAC over each SOW1 control command using the established 256-bit session key.
+- **Satisfies:** MVC-113701
+- **Equipment (assessment):** I2C monitor, reference CMAC calculator, command injection from SOW2 software
+- **Procedure and pass criteria (verbatim from the concept's verification criteria):**
+  - 1. Establish a valid secure session with a known 256-bit SSK.
+  - 2. Provide representative SOW1 control commands and independently calculate the expected AES-CMAC using the same key and the command's specified authenticated input.
+  - 3. Verify that the system calculates a 128-bit AES-CMAC for each command.
+  - 4. Verify that the calculated tag matches the independent reference result.
+  - 5. Modify a command field covered by the CMAC and verify that the recalculated tag matches the reference result for the modified command and normally differs from the original tag.
+  - 6. Verify that the active session key is used rather than a hardcoded key or a key retained from a previous session.
+
+### CS-SOW1-029: The system shall append the calculated 128-bit AES-CMAC tag to each SOW1 control command before transmission.
+
+- **Requirement:** MVC-106570 (2.2.3.6-3), CAL 2, method: **Test**
+- **Full text:** The system shall append the calculated 128-bit AES-CMAC tag to each SOW1 control command before transmission.
+- **Satisfies:** MVC-119707
+- **Equipment (assessment):** I2C monitor, reference CMAC calculator, command injection from SOW2 software
+- **Procedure and pass criteria (verbatim from the concept's verification criteria):**
+  - 1. Generate a valid SOW1 control command and verify that the system calculates its 128-bit AES-CMAC before transmission.
+  - 2. Monitor the outgoing communication interface and verify that the transmitted message contains the command followed by the calculated tag in the specified field order and encoding.
+  - 3. Independently calculate the reference CMAC and compare it with the transmitted tag.
+  - 4. Repeat with different commands and command contents to confirm that the tag is calculated for each command rather than reused.
+  - 5. Verify that the transmitted tag is exactly 128 bits and that the message conforms to the specified protocol format.
+  - 6. Verify that the command is not transmitted as a protected command if CMAC calculation fails.
+
+### CS-SOW1-030: The system shall include a monotonically increasing Counter in each protected SOW1 control command.
+
+- **Requirement:** MVC-109121 (2.2.3.6-4), CAL 2, method: **Test**
+- **Full text:** The system shall include a monotonically increasing Counter in each protected SOW1 control command.
+- **Satisfies:** MVC-113702
+- **Equipment (assessment):** I2C monitor, reference CMAC calculator, command injection from SOW2 software
+- **Procedure and pass criteria (verbatim from the concept's verification criteria):**
+  - 1. Generate and transmit successive protected SOW1 control commands and inspect the counter field of each message.
+  - 2. Verify that the counter increases monotonically for successive commands within a session.
+  - 3. Verify that the counter is included in every protected command using the specified encoding and field position.
+  - 4. Verify that the counter does not repeat or decrease during normal operation.
+  - 5. Test the defined counter-maximum condition and verify that the system follows the approved exhaustion/rollover policy without silently violating monotonicity.
+  - 6. Verify the counter behavior after session termination and establishment of a new session according to the specified initialization policy.
+

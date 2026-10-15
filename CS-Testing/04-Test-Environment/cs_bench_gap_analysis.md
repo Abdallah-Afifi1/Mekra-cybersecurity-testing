@@ -19,6 +19,8 @@ Sources: `Test environment description/Description_of_test_environment_SOW-2.doc
 
 | Item | Needed for | Status |
 |---|---|---|
+| **Test root key** and a way to provision it (development OTP or equivalent), so SOW1 authentication can be tested with valid and modified signatures | CS-SOW1-001 to 004 | **Blocker.** Only Samsung holds the real root private key |
+| Controllable SOW1 responder (withhold, modify, delay, truncate responses), test frames with known AES-CMAC and frame counters, and a reference CMAC calculator | CS-SOW1-002 to 030 | **Missing.** A real imager cannot do this. The in-line I2C injector is listed as Missing in the coverage matrix |
 | Scriptable DTLS 1.3 server and fault-injecting peer (PSK, ECDHE, TLS_AES_128_GCM_SHA256) | CS-DTLS (90 requirements) | **Not in repo.** Build or adopt |
 | UART host tool and scripts for the debug unlock service, plus key material | CS-DBG | Not in repo. Unlock protocol details come from SRS 23.3 and the remaining requirement text |
 | Defined ECU lifecycle states and a way to switch them on the bench | CS-DBG, CS-BOOT | Open question |
