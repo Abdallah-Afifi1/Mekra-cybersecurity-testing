@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<singletest source="hello_test.py">
+	<meta>
+		<title>hello test</title>
+		<description>A minimal "hello world!" test script</description>
+		<author>Tremmel</author>
+		<date>04.08.2020</date>
+		<version>1.1.0</version>
+		<last_revision>migrated to Python 3</last_revision>
+		<starttime>2025-04-17T17:39:56</starttime>
+		<endtime>2025-04-17T17:39:56</endtime>
+		<hil_computername>ISYCWS050</hil_computername>
+		<hil_project_path>D:\HIL-Projekte\Mekra_SOW2</hil_project_path>
+		<hil_username>JoTremmel</hil_username>
+	</meta>
+	<results>
+		<result>
+			<description>Hello World!</description>
+			<verdict>PASSED</verdict>
+			<deltatime>0.000</deltatime>
+		</result>
+		<result>
+			<description>
+Current supply voltage setpoint:
+UserInterface.Basis.AnalogOut.SUP1_cv_prog: 14.00 V
+			</description>
+			<verdict>INFO</verdict>
+			<deltatime>0.101</deltatime>
+		</result>
+		<result>
+			<description>
+Check nominal supply voltage
+Expected value: 14.00 V
+Current value:  13.98 V (UserInterface.Basis.AnalogIn.SUP1_cv_mon)
+Absolute Tolerance:  +/- 0.05 V
+			</description>
+			<verdict>PASSED</verdict>
+			<deltatime>0.103</deltatime>
+		</result>
+		<result>
+			<description>
+Current draw in idle should be below 2A
+0.100 A (UserInterface.Basis.AnalogIn.SUP1_cc_mon) &lt; 2.000 A
+			</description>
+			<verdict>PASSED</verdict>
+			<deltatime>0.103</deltatime>
+		</result>
+	</results>
+</singletest>

@@ -1,0 +1,29 @@
+Dongle-DLL v5.1 (x64)
+# #####################################################################
+# Checking License: TestToolkit v2.2.1...
+# #####################################################################
+D-USB-2020-B-00DB TestToolkit 2.2.x
+PASSED
+# License valid
+[verifyFeature] ttk_checks 1.7.0
+
+> An exception occurred:
+>  Type:      ModuleNotFoundError
+>  Exception: No module named 'requests'
+--Traceback:-------------------------------------------
+Traceback (most recent call last):
+  File "D:\Releases\TestSupport\test_support312\test_runner_base.py", line 289, in runTest
+  File "D:\VSC-GitLab\11_p_01467_mekra_vision_controller\Python\TestPool\psu_test.py", line 16, in <module>
+    from _automation_wrapper_ import TestEnv
+  File "D:\VSC-GitLab\11_p_01467_mekra_vision_controller\Python\TestPool\_automation_wrapper_.py", line 72, in <module>
+    from tools.technica      import ees_te200x
+  File "D:\VSC-GitLab\11_p_01467_mekra_vision_controller\Python\TestLibraries\tools\technica\ees_te200x.py", line 27, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+
+-------------------------------------------------------
+# No viable test results detected.
+# Updating results with error information...
+XML... ...writing......done
+# Updated results stored to "SingleTest_s00t00.xml".
+[[test_runner_finally]]

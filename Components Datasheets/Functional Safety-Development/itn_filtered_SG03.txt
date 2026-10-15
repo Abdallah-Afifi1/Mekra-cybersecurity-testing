@@ -1,0 +1,448 @@
+system.input_pic_cnt 0
+system.compressed_raw 0
+system.sensor_readout_mode 0
+system.raw_start_x 0
+system.raw_start_y 4
+system.h_subsample_factor_num 1
+system.h_subsample_factor_den 1
+system.v_subsample_factor_num 1
+system.v_subsample_factor_den 1
+system.number_of_exposures 1
+system.sensor_mode 0
+system.compression_offset 0
+system.ability 1
+system.yuv_mode 0
+system.flip_h 0
+system.flip_v 0
+system.frame_number 1
+system.number_of_frames 1
+
+static_bad_pixel_correction.enable 0
+static_bad_pixel_correction.calib_version 0
+static_bad_pixel_correction.calib_vin_start_x 0
+static_bad_pixel_correction.calib_vin_start_y 0
+static_bad_pixel_correction.calib_vin_width 0
+static_bad_pixel_correction.calib_vin_height 0
+static_bad_pixel_correction.calib_vin_h_subsample_factor_num 0
+static_bad_pixel_correction.calib_vin_h_subsample_factor_den 0
+static_bad_pixel_correction.calib_vin_v_subsample_factor_num 0
+static_bad_pixel_correction.calib_vin_v_subsample_factor_den 0
+static_bad_pixel_correction.map_path 
+
+vignette_compensation.enable 0
+vignette_compensation.coarse_radial_bins_count 0
+vignette_compensation.coarse_radial_bins_logsize 0
+vignette_compensation.fine_radial_bins_count 0
+vignette_compensation.fine_radial_bins_logsize 0
+vignette_compensation.model_center_x 0 0 0 0
+vignette_compensation.model_center_y 0 0 0 0
+vignette_compensation.vig_gain_table_path 
+vignette_compensation.calib_version 0
+vignette_compensation.calib_vin_start_x 0
+vignette_compensation.calib_vin_start_y 0
+vignette_compensation.calib_vin_width 0
+vignette_compensation.calib_vin_height 0
+vignette_compensation.calib_vin_h_subsample_factor_num 0
+vignette_compensation.calib_vin_h_subsample_factor_den 0
+vignette_compensation.calib_vin_v_subsample_factor_num 0
+vignette_compensation.calib_vin_v_subsample_factor_den 0
+vignette_compensation.calib_mode_enable 0
+chromatic_aberration_correction.enable 0
+chromatic_aberration_correction.calib_version 0
+chromatic_aberration_correction.horizontal_grid_number 0
+chromatic_aberration_correction.vertical_grid_number 0
+chromatic_aberration_correction.tile_width_exponent 0
+chromatic_aberration_correction.tile_height_exponent 0
+chromatic_aberration_correction.vin_sensor_start_x 0
+chromatic_aberration_correction.vin_sensor_start_y 0
+chromatic_aberration_correction.vin_sensor_width 0
+chromatic_aberration_correction.vin_sensor_height 0
+chromatic_aberration_correction.vin_sensor_h_subsample_factor_num 0
+chromatic_aberration_correction.vin_sensor_h_subsample_factor_den 0
+chromatic_aberration_correction.vin_sensor_v_subsample_factor_num 0
+chromatic_aberration_correction.vin_sensor_v_subsample_factor_den 0
+chromatic_aberration_correction.red_ca_grid_table_path 
+chromatic_aberration_correction.blue_ca_grid_table_path 
+
+warp_compensation.enable 1
+warp_compensation.calib_version 538444801
+warp_compensation.horizontal_grid_number 61
+warp_compensation.vertical_grid_number 49
+warp_compensation.tile_width_exponent 5
+warp_compensation.tile_height_exponent 5
+warp_compensation.vin_sensor_start_x 0
+warp_compensation.vin_sensor_start_y 4
+warp_compensation.vin_sensor_width 1920
+warp_compensation.vin_sensor_height 1536
+warp_compensation.vin_sensor_h_subsample_factor_num 1
+warp_compensation.vin_sensor_h_subsample_factor_den 1
+warp_compensation.vin_sensor_v_subsample_factor_num 1
+warp_compensation.vin_sensor_v_subsample_factor_den 1
+warp_compensation.enb_2stage_compensation 0
+warp_compensation.warp_grid_table_path d:\itn_Warp_Table.bin
+dzoom.enable 1
+dzoom.shiftx 0
+dzoom.shifty 0
+dzoom.zoomx 65536
+dzoom.zoomy 65536
+li_auto_bad_pixel_correction.enable 4
+li_auto_bad_pixel_correction.hot_pixel_detection_strength 4
+li_auto_bad_pixel_correction.dark_pixel_detection_strength 4
+li_auto_bad_pixel_correction.correction_method 0
+li_auto_bad_pixel_correction.hot_pixel_detection_strength_irmode_redblue 0
+li_auto_bad_pixel_correction.dark_pixel_detection_strength_irmode_redblue 0
+
+li_cfa_leakage_filter.enable 0
+li_cfa_leakage_filter.alpha_rr 0
+li_cfa_leakage_filter.alpha_rb 0
+li_cfa_leakage_filter.alpha_br 0
+li_cfa_leakage_filter.alpha_bb 0
+li_cfa_leakage_filter.saturation_level 0
+li_cfa_noise_filter.enable 1
+li_cfa_noise_filter.extent_fine_red 24
+li_cfa_noise_filter.extent_fine_green 24
+li_cfa_noise_filter.extent_fine_blue 24
+li_cfa_noise_filter.extent_regular_red 14
+li_cfa_noise_filter.extent_regular_green 14
+li_cfa_noise_filter.extent_regular_blue 14
+li_cfa_noise_filter.original_blend_strength_red 160
+li_cfa_noise_filter.original_blend_strength_green 160
+li_cfa_noise_filter.original_blend_strength_blue 160
+li_cfa_noise_filter.selectivity_fine 250
+li_cfa_noise_filter.selectivity_regular 100
+li_cfa_noise_filter.strength_fine_red 250
+li_cfa_noise_filter.strength_fine_green 250
+li_cfa_noise_filter.strength_fine_blue 250
+li_cfa_noise_filter.dir_lev_max_red 255
+li_cfa_noise_filter.dir_lev_max_green 255
+li_cfa_noise_filter.dir_lev_max_blue 255
+li_cfa_noise_filter.dir_lev_min_red 0
+li_cfa_noise_filter.dir_lev_min_green 0
+li_cfa_noise_filter.dir_lev_min_blue 0
+li_cfa_noise_filter.dir_lev_mul_red 3
+li_cfa_noise_filter.dir_lev_mul_green 3
+li_cfa_noise_filter.dir_lev_mul_blue 3
+li_cfa_noise_filter.dir_lev_offset_red -499
+li_cfa_noise_filter.dir_lev_offset_green -499
+li_cfa_noise_filter.dir_lev_offset_blue -499
+li_cfa_noise_filter.dir_lev_shift_red 3
+li_cfa_noise_filter.dir_lev_shift_green 3
+li_cfa_noise_filter.dir_lev_shift_blue 3
+li_cfa_noise_filter.lev_mul_red 3
+li_cfa_noise_filter.lev_mul_green 3
+li_cfa_noise_filter.lev_mul_blue 3
+li_cfa_noise_filter.lev_offset_red -499
+li_cfa_noise_filter.lev_offset_green -499
+li_cfa_noise_filter.lev_offset_blue -499
+li_cfa_noise_filter.lev_shift_red 4
+li_cfa_noise_filter.lev_shift_green 4
+li_cfa_noise_filter.lev_shift_blue 4
+li_cfa_noise_filter.max_noise_level_red 62
+li_cfa_noise_filter.max_noise_level_green 62
+li_cfa_noise_filter.max_noise_level_blue 62
+li_cfa_noise_filter.min_noise_level_red 0
+li_cfa_noise_filter.min_noise_level_green 0
+li_cfa_noise_filter.min_noise_level_blue 0
+li_cfa_noise_filter.apply_to_color_diff_red 10
+li_cfa_noise_filter.apply_to_color_diff_blue 10
+li_cfa_noise_filter.opt_for_rccb_red 1
+li_cfa_noise_filter.opt_for_rccb_blue 1
+li_cfa_noise_filter.directional_enable 1
+li_cfa_noise_filter.directional_horvert_edge_strength 20
+li_cfa_noise_filter.directional_horvert_edge_strength_bias 10
+li_cfa_noise_filter.directional_horvert_original_blend_strength 120
+
+li_anti_aliasing.enable 2
+li_anti_aliasing.thresh 0
+li_anti_aliasing.log_fractional_correct 0
+
+before_ce.r_gain 4096
+before_ce.g_gain 4096
+before_ce.b_gain 4096
+after_ce.r_gain 4096
+after_ce.g_gain 4096
+after_ce.b_gain 4096
+
+pre_cc_gain.enable 0
+pre_cc_gain.r_gain 0
+pre_cc_gain.g_gain 0
+pre_cc_gain.b_gain 0
+color_correction.three_d_path d:\itn_CC_3d.bin
+color_correction.matrix_enable 0
+color_correction.matrix 1024 0 0 1024 0 1024
+color_correction.matrix_shift_minus_8 2
+
+tone_curve.curve_red 0 0 1 1 2 3 4 5 5 6 7 7 8 9 11 13 15 18 20 22 25 28 31 34 36 39 41 45 48 51 55 58 60 64 66 69 74 76 79 83 86 89 93 97 100 103 106 111 115 118 122 126 130 134 138 142 145 150 155 160 165 171 175 181 185 191 196 201 206 210 215 220 225 231 237 242 248 254 260 266 271 277 283 289 294 300 306 312 318 323 329 335 340 345 352 356 362 367 372 378 383 388 394 399 404 409 415 419 425 429 435 441 445 450 456 461 465 470 475 480 484 489 493 498 503 507 512 517 521 526 530 535 538 543 548 552 556 560 564 569 573 577 582 585 589 594 598 601 605 608 612 617 620 625 628 632 636 640 644 648 652 656 660 662 668 671 676 679 682 687 690 694 699 702 707 710 714 719 722 726 730 734 737 742 746 749 752 758 761 764 769 772 776 781 784 788 793 796 800 804 808 811 816 820 823 828 831 834 840 843 846 851 855 859 863 866 871 874 879 882 887 889 895 897 902 905 910 913 917 922 925 929 933 936 941 945 949 951 955 959 963 967 971 976 979 983 987 991 995 999 1004 1008 1013 1016 1019 1023
+tone_curve.curve_green 0 0 1 1 2 3 4 5 5 6 7 7 8 9 11 13 15 18 20 22 25 28 31 34 36 39 41 45 48 51 55 58 60 64 66 69 74 76 79 83 86 89 93 97 100 103 106 111 115 118 122 126 130 134 138 142 145 150 155 160 165 171 175 181 185 191 196 201 206 210 215 220 225 231 237 242 248 254 260 266 271 277 283 289 294 300 306 312 318 323 329 335 340 345 352 356 362 367 372 378 383 388 394 399 404 409 415 419 425 429 435 441 445 450 456 461 465 470 475 480 484 489 493 498 503 507 512 517 521 526 530 535 538 543 548 552 556 560 564 569 573 577 582 585 589 594 598 601 605 608 612 617 620 625 628 632 636 640 644 648 652 656 660 662 668 671 676 679 682 687 690 694 699 702 707 710 714 719 722 726 730 734 737 742 746 749 752 758 761 764 769 772 776 781 784 788 793 796 800 804 808 811 816 820 823 828 831 834 840 843 846 851 855 859 863 866 871 874 879 882 887 889 895 897 902 905 910 913 917 922 925 929 933 936 941 945 949 951 955 959 963 967 971 976 979 983 987 991 995 999 1004 1008 1013 1016 1019 1023
+tone_curve.curve_blue 0 0 1 1 2 3 4 5 5 6 7 7 8 9 11 13 15 18 20 22 25 28 31 34 36 39 41 45 48 51 55 58 60 64 66 69 74 76 79 83 86 89 93 97 100 103 106 111 115 118 122 126 130 134 138 142 145 150 155 160 165 171 175 181 185 191 196 201 206 210 215 220 225 231 237 242 248 254 260 266 271 277 283 289 294 300 306 312 318 323 329 335 340 345 352 356 362 367 372 378 383 388 394 399 404 409 415 419 425 429 435 441 445 450 456 461 465 470 475 480 484 489 493 498 503 507 512 517 521 526 530 535 538 543 548 552 556 560 564 569 573 577 582 585 589 594 598 601 605 608 612 617 620 625 628 632 636 640 644 648 652 656 660 662 668 671 676 679 682 687 690 694 699 702 707 710 714 719 722 726 730 734 737 742 746 749 752 758 761 764 769 772 776 781 784 788 793 796 800 804 808 811 816 820 823 828 831 834 840 843 846 851 855 859 863 866 871 874 879 882 887 889 895 897 902 905 910 913 917 922 925 929 933 936 941 945 949 951 955 959 963 967 971 976 979 983 987 991 995 999 1004 1008 1013 1016 1019 1023
+
+hdr_input.compand_enable 1
+hdr_input.compand_table 2688 10322 12322 13347 14355 14867 15379 15891 16403 17427 18452 19476 20484 21508 22533 23557 24581 25605 26630 27654 28678 29702 30727 31751 32775 34823 36872 38920 40969 41993 43017 44042 45066 47114 49163 51211 53260 54268 55292 56316 57341 59389 61438 63486 65535
+hdr_input.decompand_enable 1
+hdr_input.decompand_table 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 2 2 3 3 4 4 5 9 13 17 21 28 36 44 52 60 68 76 84 92 100 108 116 148 180 212 244 307 371 435 499 625 753 881 1009 1261 1517 1773 2029 2541 3053 3565 4077 5093 6117 7141 8165 10197 12245 14293 16341 20405 24501 28597 32693 40885 49077 57269 65461 98037 130805 163573 196341 229109 261877 392350 523593 654836 786078 917321 1048564
+
+rgb_to_yuv_matrix.m11 218
+rgb_to_yuv_matrix.m12 732
+rgb_to_yuv_matrix.m13 74
+rgb_to_yuv_matrix.m21 -117
+rgb_to_yuv_matrix.m22 -395
+rgb_to_yuv_matrix.m23 512
+rgb_to_yuv_matrix.m31 512
+rgb_to_yuv_matrix.m32 -465
+rgb_to_yuv_matrix.m33 -47
+rgb_to_yuv_matrix.y_offset 0
+rgb_to_yuv_matrix.u_offset 128
+rgb_to_yuv_matrix.v_offset 128
+
+rgb_ir.mode 0
+rgb_ir.ircorrect_offset_b 0
+rgb_ir.ircorrect_offset_gb 0
+rgb_ir.ircorrect_offset_gr 0
+rgb_ir.ircorrect_offset_r 0
+rgb_ir.mul_base_val 0
+rgb_ir.mul_delta_high 0
+rgb_ir.mul_high 0
+rgb_ir.mul_high_val 0
+rgb_ir.ir_only 0
+
+chroma_scale.enable 1
+chroma_scale.gain_curve 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024
+li_chroma_median_filter.enable 1
+li_chroma_median_filter.cb_adaptive_strength 200
+li_chroma_median_filter.cr_adaptive_strength 200
+li_chroma_median_filter.cb_non_adaptive_strength 0
+li_chroma_median_filter.cr_non_adaptive_strength 0
+li_chroma_median_filter.cb_adaptive_amount 170
+li_chroma_median_filter.cr_adaptive_amount 170
+
+li_demosaic.enable 1
+li_demosaic.activity_thresh 3
+li_demosaic.activity_difference_thresh 512
+li_demosaic.grad_clip_thresh 512
+li_demosaic.grad_noise_thresh 40
+li_demosaic.alias_interpolation_strength 30
+li_demosaic.alias_interpolation_thresh 1048575
+rgb_to_y12_matrix.enable 1
+rgb_to_y12_matrix.m11 218
+rgb_to_y12_matrix.m12 732
+rgb_to_y12_matrix.m13 74
+rgb_to_y12_matrix.y_offset 0
+li_gb_gr_mismatch_correct.narrow_enable 0
+li_gb_gr_mismatch_correct.wide_enable 0
+li_gb_gr_mismatch_correct.wide_safety 64
+li_gb_gr_mismatch_correct.wide_thresh 64
+
+li_processing_select.use_1st_sharpen_not_asf 0
+li_advanced_spatial_filter.enable 1
+li_advanced_spatial_filter.fir_specify 2
+li_advanced_spatial_filter.fir_strength_iso 72
+li_advanced_spatial_filter.fir_strength_dir 28
+li_advanced_spatial_filter.fir_per_dir_fir_dir_amounts 0 0 0 0 0 0 0 0 0
+li_advanced_spatial_filter.fir_per_dir_fir_dir_strengths 0 0 0 0 0 0 0 0 0
+li_advanced_spatial_filter.fir_per_dir_fir_iso_strengths 0 0 0 0 0 0 0 0 0
+li_advanced_spatial_filter.fir_coefs 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+li_advanced_spatial_filter.fir_wide_edge_detect 2
+li_advanced_spatial_filter.directional_decide_t0 10
+li_advanced_spatial_filter.directional_decide_t1 20
+li_advanced_spatial_filter.alpha_max_down 4
+li_advanced_spatial_filter.alpha_max_up 4
+li_advanced_spatial_filter.alpha_min_down 0
+li_advanced_spatial_filter.alpha_min_up 0
+li_advanced_spatial_filter.T0_down 2
+li_advanced_spatial_filter.T0_up 2
+li_advanced_spatial_filter.T1_down 4
+li_advanced_spatial_filter.T1_up 4
+li_advanced_spatial_filter.level_str_adjust_high 130
+li_advanced_spatial_filter.level_str_adjust_high_delta 5
+li_advanced_spatial_filter.level_str_adjust_high_strength 40
+li_advanced_spatial_filter.level_str_adjust_mid_strength 48
+li_advanced_spatial_filter.level_str_adjust_low 60
+li_advanced_spatial_filter.level_str_adjust_low_delta 5
+li_advanced_spatial_filter.level_str_adjust_low_strength 54
+li_advanced_spatial_filter.T0T1_div_high 160
+li_advanced_spatial_filter.T0T1_div_high_delta 5
+li_advanced_spatial_filter.T0T1_div_high_strength 32
+li_advanced_spatial_filter.T0T1_div_low 50
+li_advanced_spatial_filter.T0T1_div_low_delta 5
+li_advanced_spatial_filter.T0T1_div_low_strength 32
+li_advanced_spatial_filter.T0T1_div_mid_strength 32
+li_advanced_spatial_filter.max_change_down 8
+li_advanced_spatial_filter.max_change_up 8
+li_advanced_spatial_filter.max_change_not_T0T1_alpha 1
+li_color_dependent_luma_noise_reduction.enable 0
+li_color_dependent_luma_noise_reduction.sensor_wb_b 0
+li_color_dependent_luma_noise_reduction.sensor_wb_g 0
+li_color_dependent_luma_noise_reduction.sensor_wb_r 0
+li_color_dependent_luma_noise_reduction.strength0 100
+li_color_dependent_luma_noise_reduction.strength1 128
+li_color_dependent_luma_noise_reduction.strength2 0
+li_color_dependent_luma_noise_reduction.strength2_max_change 0
+li_chroma_filter.enable 1
+li_chroma_filter.noise_level_cb 10
+li_chroma_filter.noise_level_cr 10
+li_chroma_filter.original_blend_strength_cb 255
+li_chroma_filter.original_blend_strength_cr 255
+li_chroma_filter.radius 64
+final_sharpen_noise_filter_both.enable 1
+final_sharpen_noise_filter_both.mode 2
+final_sharpen_noise_filter_both.edge_thresh 20
+final_sharpen_noise_filter_both.wide_edge_detect 1
+final_sharpen_noise_filter_both.max_change_up5x5 255
+final_sharpen_noise_filter_both.max_change_down5x5 255
+final_sharpen_noise_filter_both.three_d_table 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+final_sharpen_noise_filter_both.three_d_u_bits 0
+final_sharpen_noise_filter_both.three_d_u_offset 0
+final_sharpen_noise_filter_both.three_d_u_shift 0
+final_sharpen_noise_filter_both.three_d_v_bits 0
+final_sharpen_noise_filter_both.three_d_v_offset 0
+final_sharpen_noise_filter_both.three_d_v_shift 0
+final_sharpen_noise_filter_both.three_d_y_offset 0
+final_sharpen_noise_filter_both.three_d_y_shift 0
+final_sharpen_noise_filter_both.max_change_up 25
+final_sharpen_noise_filter_both.max_change_down 210
+final_sharpen_noise_filter_both.narrow_nonsmooth_detect_sub 5 16 23 26 27 26 26 16 15 15 14 15 25 17 18 20 20
+final_sharpen_noise_filter_both.narrow_nonsmooth_detect_shift 2
+final_sharpen_noise_filter_noise.fir_specify 2
+final_sharpen_noise_filter_noise.fir_strength_iso 4
+final_sharpen_noise_filter_noise.fir_strength_dir 1
+final_sharpen_noise_filter_noise.fir_per_dir_fir_dir_amounts 0 0 0 0 0 0 0 0 0
+final_sharpen_noise_filter_noise.fir_per_dir_fir_dir_strengths 0 0 0 0 0 0 0 0 0
+final_sharpen_noise_filter_noise.fir_per_dir_fir_iso_strengths 0 0 0 0 0 0 0 0 0
+final_sharpen_noise_filter_noise.fir_coefs 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+final_sharpen_noise_filter_noise.max_change_down 10
+final_sharpen_noise_filter_noise.max_change_up 10
+final_sharpen_noise_filter_noise.level_str_adjust_high 130
+final_sharpen_noise_filter_noise.level_str_adjust_high_delta 5
+final_sharpen_noise_filter_noise.level_str_adjust_high_strength 8
+final_sharpen_noise_filter_noise.level_str_adjust_mid_strength 12
+final_sharpen_noise_filter_noise.level_str_adjust_low 36
+final_sharpen_noise_filter_noise.level_str_adjust_low_delta 5
+final_sharpen_noise_filter_noise.level_str_adjust_low_strength 16
+final_sharpen_noise_filter_noise.level_str_adjust_not_T0T1_level_based 1
+final_sharpen_noise_filter_noise.T0 4
+final_sharpen_noise_filter_noise.T1 10
+final_sharpen_noise_filter_noise.alpha_min 0
+final_sharpen_noise_filter_noise.alpha_max 0
+final_sharpen_noise_filter_noise.level_str_adjust_method 0
+final_sharpen_noise_filter_noise.directional_decide_t0 10
+final_sharpen_noise_filter_noise.directional_decide_t1 15
+final_sharpen_noise_filter_noise.advanced_enable 0
+final_sharpen_noise_filter_noise.advanced_iso_max_change_method 14
+final_sharpen_noise_filter_noise.advanced_iso_max_change_table 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255
+final_sharpen_noise_filter_noise.advanced_iso_noise_level_method 6
+final_sharpen_noise_filter_noise.advanced_iso_noise_level_table 4 13 13 14 14 15 15 16 16 17 17 18 18 19 19 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20
+final_sharpen_noise_filter_noise.advanced_iso_size 2
+final_sharpen_noise_filter_noise.advanced_iso_str_a_method 14
+final_sharpen_noise_filter_noise.advanced_iso_str_a_table 144 138 104 40 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+final_sharpen_noise_filter_noise.advanced_iso_str_b_method 6
+final_sharpen_noise_filter_noise.advanced_iso_str_b_table 144 138 104 40 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+final_sharpen_noise_filter_sharpen.fir_specify 4
+final_sharpen_noise_filter_sharpen.fir_strength_iso 160
+final_sharpen_noise_filter_sharpen.fir_strength_dir 128
+final_sharpen_noise_filter_sharpen.fir_per_dir_fir_dir_amounts 0 0 0 0 0 0 0 0 0
+final_sharpen_noise_filter_sharpen.fir_per_dir_fir_dir_strengths 0 0 0 0 0 0 0 0 0
+final_sharpen_noise_filter_sharpen.fir_per_dir_fir_iso_strengths 0 0 0 0 0 0 0 0 0
+final_sharpen_noise_filter_sharpen.fir_coefs 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -4 -4 -4 -4 -4 -4 -4 -4 -8 -8 -8 -8 -8 -4 -4 -8 -80 -80 -80 -8 -4 -4 -8 -80 864 -4 -4 -4 -4 -4 -4 -4 -4 -8 -8 -8 -8 -8 -4 -4 -8 -80 -80 -80 -8 -4 -4 -8 -80 864 -4 -4 -4 -4 -4 -4 -4 -4 -8 -8 -8 -8 -8 -4 -4 -8 -80 -80 -80 -8 -4 -4 -8 -80 864 -4 -4 -4 -4 -4 -4 -4 -4 -8 -8 -8 -8 -8 -4 -4 -8 -80 -80 -80 -8 -4 -4 -8 -80 864 -4 -4 -4 -4 -4 -4 -4 -4 -8 -8 -8 -8 -8 -4 -4 -8 -80 -80 -80 -8 -4 -4 -8 -80 864 -4 -4 -4 -4 -4 -4 -4 -4 -8 -8 -8 -8 -8 -4 -4 -8 -80 -80 -80 -8 -4 -4 -8 -80 864 -4 -4 -4 -4 -4 -4 -4 -4 -8 -8 -8 -8 -8 -4 -4 -8 -80 -80 -80 -8 -4 -4 -8 -80 864 -4 -4 -4 -4 -4 -4 -4 -4 -8 -8 -8 -8 -8 -4 -4 -8 -80 -80 -80 -8 -4 -4 -8 -80 864
+final_sharpen_noise_filter_sharpen.pos_fir_artifact_reduce_enable 1
+final_sharpen_noise_filter_sharpen.pos_fir_artifact_reduce_strength 220
+final_sharpen_noise_filter_sharpen.over_shoot_reduce_allow 18
+final_sharpen_noise_filter_sharpen.over_shoot_reduce_strength 220
+final_sharpen_noise_filter_sharpen.under_shoot_reduce_allow 20
+final_sharpen_noise_filter_sharpen.under_shoot_reduce_strength 200
+final_sharpen_noise_filter_sharpen_coring.coring_table 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16
+final_sharpen_noise_filter_sharpen_coring.fractional_bits 3
+final_sharpen_noise_filter_sharpen_coring_index_scale.high 100
+final_sharpen_noise_filter_sharpen_coring_index_scale.high_delta 4
+final_sharpen_noise_filter_sharpen_coring_index_scale.high_strength 16
+final_sharpen_noise_filter_sharpen_coring_index_scale.mid_strength 16
+final_sharpen_noise_filter_sharpen_coring_index_scale.low 16
+final_sharpen_noise_filter_sharpen_coring_index_scale.low_delta 4
+final_sharpen_noise_filter_sharpen_coring_index_scale.low_strength 16
+final_sharpen_noise_filter_sharpen_coring_index_scale.method 0
+final_sharpen_noise_filter_sharpen_min_coring_result.high 100
+final_sharpen_noise_filter_sharpen_min_coring_result.high_delta 4
+final_sharpen_noise_filter_sharpen_min_coring_result.high_strength 0
+final_sharpen_noise_filter_sharpen_min_coring_result.mid_strength 0
+final_sharpen_noise_filter_sharpen_min_coring_result.low 48
+final_sharpen_noise_filter_sharpen_min_coring_result.low_delta 2
+final_sharpen_noise_filter_sharpen_min_coring_result.low_strength 0
+final_sharpen_noise_filter_sharpen_min_coring_result.method 0
+final_sharpen_noise_filter_sharpen_max_coring_result.high 10
+final_sharpen_noise_filter_sharpen_max_coring_result.high_delta 3
+final_sharpen_noise_filter_sharpen_max_coring_result.high_strength 160
+final_sharpen_noise_filter_sharpen_max_coring_result.mid_strength 210
+final_sharpen_noise_filter_sharpen_max_coring_result.low 1
+final_sharpen_noise_filter_sharpen_max_coring_result.low_delta 3
+final_sharpen_noise_filter_sharpen_max_coring_result.low_strength 255
+final_sharpen_noise_filter_sharpen_max_coring_result.method 6
+final_sharpen_noise_filter_sharpen_scale_coring.high 100
+final_sharpen_noise_filter_sharpen_scale_coring.high_delta 5
+final_sharpen_noise_filter_sharpen_scale_coring.high_strength 20
+final_sharpen_noise_filter_sharpen_scale_coring.mid_strength 17
+final_sharpen_noise_filter_sharpen_scale_coring.low 30
+final_sharpen_noise_filter_sharpen_scale_coring.low_delta 5
+final_sharpen_noise_filter_sharpen_scale_coring.low_strength 16
+final_sharpen_noise_filter_sharpen_scale_coring.method 14
+
+contrast_enhance.enable 1
+contrast_enhance.luma_avg_method 0
+contrast_enhance.luma_avg_weight_r 1
+contrast_enhance.luma_avg_weight_gr 63
+contrast_enhance.luma_avg_weight_gb 63
+contrast_enhance.luma_avg_weight_b 1
+contrast_enhance.fir_enable 1
+contrast_enhance.fir_coeff 4 4 32
+contrast_enhance.coring_index_scale_shift 3
+contrast_enhance.coring_index_scale_low_strength 8
+contrast_enhance.coring_index_scale_mid_strength 8
+contrast_enhance.coring_index_scale_high_strength 8
+contrast_enhance.coring_index_scale_low 1
+contrast_enhance.coring_index_scale_high 8
+contrast_enhance.coring_index_scale_low_delta 1
+contrast_enhance.coring_index_scale_high_delta 1
+contrast_enhance.coring_gain_shift 9
+contrast_enhance.coring_gain_low_strength 1
+contrast_enhance.coring_gain_mid_strength 1
+contrast_enhance.coring_gain_high_strength 1
+contrast_enhance.coring_gain_low 1
+contrast_enhance.coring_gain_high 8
+contrast_enhance.coring_gain_low_delta 1
+contrast_enhance.coring_gain_high_delta 1
+contrast_enhance.coring_table 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8
+contrast_enhance.output_enable 1
+contrast_enhance.output_shift 12
+contrast_enhance.output_table 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 2 2 2 2 3 3 3 3 4 4 5 5 6 6 7 7 8 9 10 11 12 13 14 15 16 17 19 20 22 24 26 28 30 33 35 38 41 44 47 50 54 58 62 67 71 76 82 87 93 99 106 113 120 128 137 145 155 164 175 185 197 209 221 235 249 264 279 295 312 330 349 369 390 411 434 458 483 509 537 566 596 627 660 694 730 768 807 848 891 935 982 1030 1081 1134 1189 1246 1306 1368 1433 1500 1571 1644 1720 1799 1881 1966 2055 2147 2243 2343 2446 2554 2665 2781 2901 3025 3154 3288 3427 3571 3720 3875 4035 4201 4373 4551 4735 4925 5123 5327 5538 5756 5982 6216 6458 6707 6965 7232 7508 7792 8086 8390 8704 9027 9361 9706 10062 10429 10808 11199 11602 12018 12446 12888 13344 13813 14297 14796 15309 15838 16383
+contrast_enhance.input_table_enable 1
+contrast_enhance.input_table 305049 305049 323331 334766 343231 350004 355677 360573 364890 368756 372262 375473 378437 381191 383766 386184 388464 390622 392672 394624 396488 398272 399983 401627 403209 404734 406207 407631 409009 410345 411641 412899 414123 415313 416472 417602 418703 419778 420828 421854 422857 423838 424798 425739 426660 427564 428450 429319 430172 431009 431832 432640 433435 434216 434985 435741 436485 437218 437939 438649 439349 440039 440719 441390 442051 443346 444608 445837 447036 448206 449349 450465 451557 452625 453670 454694 455697 456680 457645 458591 459519 460431 461326 462206 463071 463921 464758 465581 466391 467188 467973 468746 469508 470259 470999 471729 472449 473859 475232 476570 477875 479148 480392 481607 482795 483958 485096 486210 487302 488372 489421 490451 491461 492454 493428 494386 495327 496253 497163 498059 498941 499809 500663 501505 502334 503151 503957 504751 505534 507069 508564 510020 511440 512827 514180 515503 516796 518061 519300 520513 521701 522866 524008 525129 526229 527309 528369 529412 530436 531444 532435 533410 534369 535314 536244 537160 538063 538952 539829 540694 541546 543217 544843 546428 547974 549483 550956 552396 553804 555181 556529 557849 559142 560410 561653 562873 564070 565246 566400 567535 568650 569747 570825 571886 572931 573959 574971 575968 576951 577919 578873 579814 580742 582560 584331 586056 587739 589381 590985 592552 594084 595583 597050 598487 599894 601274 602627 603955 605258 606538 607794 609029 610243 611437 612611 613766 614902 616021 617123 618208 619278 620332 621370 622394 623404 625384 627311 629189 631020 632807 634553 636258 637926 639557 641154 642718 644250 645752 647225 648670 650088 651481 652849 654193 655514 656813 658091 659348 660585 661803 663003 664184 665348 666495 667625 668740 669839 671993 674091 676135 678128 680074 681974 683830 685645 687421 689159 690861 692528 694163 695766 697339 698883 700399 701888 703351 704789 706203 707593 708962 710308 711634 712939 714225 715492 716740 717971 719184 720381 722725 725008 727233 729403 731520 733588 735608 737584 739517 741408 743261 745076 746855 748600 750312 751993 753642 755263 756855 758420 759959 761473 762962 764428 765871 767292 768691 770070 771429 772768 774089 775391 777943 780428 782849 785211 787516 789766 791966 794116 796219 798278 800295 802271 804207 806106 807970 809799 811594 813358 815091 816795 818470 820118 821738 823334 824904 826451 827974 829475 830954 832412 833849 835266 838044 840749 843384 845955 848463 850913 853306 855647 857936 860178 862372 864523 866631 868698 870726 872717 874671 876591 878477 880331 882155 883948 885712 887449 889158 890841 892499 894133 895742 897329 898894 900436 903460 906403 909272 912070 914800 917466 920072 922619 925111 927550 929939 932280 934574 936824 939032 941198 943326 945415 947468 949487 951471 953423 955343 957233 959094 960926 962730 964508 966260 967987 969690 971369 974660 977864 980986 984032 987003 989905 992741 995514 998226 1000881 1003481 1006029 1008526 1010975 1013378 1015736 1018051 1020326 1022561 1024757 1026917 1029041 1031132 1033189 1035214 1037208 1039172 1041107 1043014 1044894 1046747 1048575
+contrast_enhance.boost_gain_shift 7
+contrast_enhance.boost_table 82 82 82 82 82 82 82 82 82 82 82 82 82 82 82 82 82 82 82 82 82 82 80 78 75 72 69 66 62 59 56 53 50 47 45 42 40 37 35 32 30 28 25 23 21 18 16 14 13 11 10 8 7 5 4 3 3 2 1 0 0 0 0 0
+contrast_enhance.boost_table_size_exp 6
+contrast_enhance.radius 1
+contrast_enhance.epsilon 19
+
+front_end_exp0.r_gain 132464
+front_end_exp0.g_gain 132464
+front_end_exp0.b_gain 132464
+front_end_exp0.ir_gain 132464
+front_end_exp0.shutter_ratio 1
+
+static_black_level_exp0.r_black 0
+static_black_level_exp0.g_r_black 0
+static_black_level_exp0.g_b_black 0
+static_black_level_exp0.b_black 0
+static_black_level_exp0.g_black 0
+static_black_level_exp0.ir_black 0
+
+li_wide_chroma_filter.enable 1
+li_wide_chroma_filter.noise_level_cb 3
+li_wide_chroma_filter.noise_level_cr 3
+li_wide_chroma_filter_combine.T0_cb 1
+li_wide_chroma_filter_combine.T0_cr 2
+li_wide_chroma_filter_combine.T1_cb 3
+li_wide_chroma_filter_combine.T1_cr 4
+li_wide_chroma_filter_combine.alpha_max_cb 255
+li_wide_chroma_filter_combine.alpha_max_cr 255
+li_wide_chroma_filter_combine.alpha_min_cb 0
+li_wide_chroma_filter_combine.alpha_min_cr 0
+li_wide_chroma_filter_combine.max_change_cb 2
+li_wide_chroma_filter_combine.max_change_cr 2

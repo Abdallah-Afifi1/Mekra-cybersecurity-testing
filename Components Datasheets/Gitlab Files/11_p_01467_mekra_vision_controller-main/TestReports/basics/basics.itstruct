@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testseries>
+	<meta>
+		<title />
+		<description>Basic Tests for SOW2 test environment</description>
+		<author>J. Völler &amp; S. Reiner</author>
+		<date>2025-07-25T11:55:22</date>
+		<version />
+		<last_revision />
+		<hardwareversion>0</hardwareversion>
+		<softwareversion>0</softwareversion>
+		<customer>Volvo</customer>
+		<project>SOW 2 - Rear and Trailer Camera RFP - Volvo</project>
+		<department>T-EQS</department>
+	</meta>
+	<testsequences>
+		<testsequence source="someip_test.seq">
+			<meta>
+				<title />
+				<description>&lt;description text&gt;</description>
+				<author>Justin Case</author>
+				<date>2025-07-25T11:55:12</date>
+				<version />
+				<last_revision />
+			</meta>
+			<singletests>
+				<singletest source="someip_test.py" />
+			</singletests>
+		</testsequence>
+	</testsequences>
+</testseries>

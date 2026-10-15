@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>ImageAcquisition</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="../../../../../js/displayToc.js" type="text/javascript"></script>
+<script>
+
+  function switchProjectProperties() {
+			if (document.getElementById("proj00").style.display == "none") {
+				document.getElementById("proj00").style.display = "revert";
+				document.getElementById("proj01").style.display = "revert";
+				document.getElementById("proj02").style.display = "revert";
+				document.getElementById("proj03").style.display = "revert";
+				document.getElementById("proj04").style.display = "revert";
+				document.getElementById("proj05").style.display = "revert";
+			} else {
+				document.getElementById("proj00").style.display = "none";
+				document.getElementById("proj01").style.display = "none";
+				document.getElementById("proj02").style.display = "none";
+				document.getElementById("proj03").style.display = "none";
+				document.getElementById("proj04").style.display = "none";
+				document.getElementById("proj05").style.display = "none";
+			}
+}
+
+		function switchAdvancedProperties(){
+
+			if (document.getElementById("adv00").style.display == "none") {;
+				document.getElementById("adv00").style.display = "revert";
+				document.getElementById("adv01").style.display = "revert";
+			} else {
+				document.getElementById("adv00").style.display = "none";
+				document.getElementById("adv01").style.display = "none";
+			}
+		}
+		function initPage()
+        {			
+			var divs = document.getElementsByClassName("ObjectDetailsNotes");
+			for (var j = 0; j < divs.length; j++) {
+				var tmpStr = divs[j].innerHTML;
+				tmpStr = tmpStr.replace(/#gt;/g, "&gt;");
+				tmpStr = tmpStr.replace(/#lt;/g, "&lt;");
+
+				tmpStr = tmpStr.replace(/&gt;/g, ">");
+				tmpStr = tmpStr.replace(/&lt;/g, "<");
+
+				divs[j].innerHTML = tmpStr;
+			}
+
+            if (document.getElementById('TableGroup') != null)
+            {
+                toggleItem(document.getElementById('TableGroup').getElementsByTagName('li')[0].id.replace("Title", ""));
+            }
+
+        }
+</script>
+<style>
+
+</style>
+</head>
+<body onload="initPage();">
+<div class="section group" >
+
+		<div class="col span_2_of_2 header_frame">
+			<h1> ImageAcquisition </h1>
+			<!-- <img class="header_image" src="../../../../../images/mekraLangGermany.PNG" align="right" alt="Header Image" />-->
+			<img class="header_image" src="../../../../../images/mekraLangGermany.PNG" align="right" alt="Header Image" />
+		</div>
+		<div class="col span_2_of_2 breadcrumb_frame">
+			<p><a href="../../../../EA5.htm">VideoStreaming</a> / <a href="../../../EA385.htm">Structure</a> / <a href="../../EA494.htm">FunctionalGroups</a> / <a href="../EA537.htm">SubGroups</a> / <a href="EA547.htm">ImageAcquisition</a> / <a href="EA545.htm">ImageAcquisition</a></p>
+		</div>
+			
+		<table class="contentmaintable">
+			<!-- <tfoot>
+				<tr>
+					<td>foot1</td>
+					<td>foot2</td>
+				</tr>
+			</tfoot> -->
+			<tbody>
+				<tr>
+					<td class="indexcell">
+						<div class="projectBrowserTitle">Project: </div>
+						<ul>
+<li><img src="../../../../../images/175.png" alt="Diagram"/> <a href="EA545.htm">ImageAcquisition</a></li>
+<li><img src="../../../../../images/5.png" alt="Class"/> <a href="EA548.htm">forward run-time status/diagnostic signals from SOW1</a></li>
+<li><img src="../../../../../images/5.png" alt="Class"/> <a href="EA549.htm">forwarding of configuration data towards SOW1<br /></a></li>
+<li><img src="../../../../../images/5.png" alt="Class"/> <a href="EA550.htm">frame reception managing</a></li>
+<li><img src="../../../../../images/5.png" alt="Class"/> <a href="EA551.htm">indication of &#39;image ready&#39; towards ImageProcesing</a></li>
+<li><img src="../../../../../images/5.png" alt="Class"/> <a href="EA552.htm">provision of  RAW Data Image</a></li>
+<li><img src="../../../../../images/5.png" alt="Class"/> <a href="EA553.htm">reception of RAW Stream via Input Interface</a></li>
+<li><img src="../../../../../images/5.png" alt="Class"/> <a href="EA554.htm">reception of run-time status/diagnostic signals from SOW1</a></li>
+<li><img src="../../../../../images/5.png" alt="Class"/> <a href="EA555.htm">temporary storage of RAW Data in a buffer</a></li>
+</ul>
+
+					</td>
+					<td class="contentcell"><div class="PageBody">
+	<div class="diagram_image"> 
+<img src="EA546.png" usemap="#EA546" border="0" />
+
+<MAP NAME="EA546">
+<area shape="rect" coords="230,100,625,414" href="../../EA490.htm" target="_self">
+<area shape="rect" coords="386,443,567,519" href="EA552.htm" target="_self">
+<area shape="rect" coords="213,443,303,513" href="EA550.htm" target="_self">
+<area shape="rect" coords="59,443,149,513" href="EA548.htm" target="_self">
+<area shape="rect" coords="559,443,796,520" href="EA551.htm" target="_self">
+<area shape="rect" coords="662,628,752,719" href="EA554.htm" target="_self">
+<area shape="rect" coords="545,649,635,719" href="EA549.htm" target="_self">
+<area shape="rect" coords="139,649,229,719" href="EA555.htm" target="_self">
+<area shape="rect" coords="271,779,518,855" href="EA553.htm" target="_self">
+<area shape="rect" coords="10,10,833,892" href="EA545.htm" target="_self">
+</MAP>
+ </div>
+	<div class="ObjectTitle">ImageAcquisition : SysML Block Definition diagram</div>
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">24.07.2025 10:13:33</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">24.07.2025 10:45:51</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><button onclick="switchProjectProperties()"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" /></button>Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">rekas</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><button onclick="switchAdvancedProperties()"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" /></button>Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{CB10FBB7-D555-4779-9850-F3CB9D66D181}</td>
+		</tr>
+	</table>
+	
+</div>
+
+ </td>
+				</tr>
+			</tbody>
+		</table>
+		
+</div>
+</body>
+</html>
+

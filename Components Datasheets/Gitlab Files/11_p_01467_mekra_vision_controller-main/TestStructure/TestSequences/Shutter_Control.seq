@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsequence>
+	<meta>
+		<title>Shutter_Control</title>
+		<description>&lt;description text&gt;</description>
+		<author>Ehu Li</author>
+		<date>2026-08-17T09:32:12</date>
+		<version />
+		<last_revision />
+	</meta>
+	<singletests>
+		<singletest source="Shutter_Control/MVC-92785-Shutter_mode_activation_during_runtime.py" />
+		<singletest source="Shutter_Control/MVC-100520-Shutter_behavior_in_automatic_mode.py" />
+		<singletest source="Shutter_Control/MVC-100610-Shutter_not_Supported.py" />
+		<singletest source="Shutter_Control/MVC-92780-Shutter_modes_default_configuration_at_startup.py" />
+		<singletest source="Shutter_Control/MVC-92786-Lens_protection_mechanism_timing.py" />
+	</singletests>
+</testsequence>

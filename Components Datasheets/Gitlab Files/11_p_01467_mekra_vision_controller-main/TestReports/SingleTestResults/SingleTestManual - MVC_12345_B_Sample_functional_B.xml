@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<singletest source="MVC-12345-B-Sample_functional_B.py">
+	<meta>
+		<title>MVC-12345-B-Sample functional B</title>
+		<description>basic access tests for climate chamber access</description>
+		<author>ReinerS</author>
+		<date>12.02.2026</date>
+		<version>1.0.0</version>
+		<last_revision>initial</last_revision>
+<<<<<<< HEAD
+<<<<<<< HEAD
+		<starttime>2026-05-19T10:00:16</starttime>
+		<endtime>2026-05-19T10:01:12</endtime>
+=======
+		<starttime>2026-07-22T09:24:47</starttime>
+		<endtime>2026-07-22T09:26:35</endtime>
+>>>>>>> 93d6095 (Update)
+=======
+		<starttime>2026-07-22T09:24:47</starttime>
+		<endtime>2026-07-22T09:26:35</endtime>
+>>>>>>> cd6bea95eb16eb82cfdd1fad980b69f85f9eab72
+		<hil_computername>TTE-SOW2-W11</hil_computername>
+		<hil_project_path>d:\VSC-GitLab\11_p_01467_mekra_vision_controller</hil_project_path>
+		<hil_username>svc_systessow2</hil_username>
+	</meta>
+	<results>
+		<result>
+			<description>
+
+24548571&amp;260515&amp;12664&amp;98D3D2-003178&amp;B03
+			</description>
+			<verdict>INFO</verdict>
+			<deltatime>9.391</deltatime>
+		</result>
+		<result>
+			<description> Power supply set to 28.0 V</description>
+			<verdict />
+		</result>
+		<result>
+			<description>
+Check PSU output voltage
+Expected value: 28.000 V
+Current value:  27.998 V (voltage_ch4)
+Absolute Tolerance:  +/- 0.020 V
+			</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-12345-B-Sample_functional_B</testcase_id>
+			<deltatime>10.500</deltatime>
+		</result>
+		<result>
+			<description>
+compare DMC
+Current:  24548571&amp;260515&amp;12664&amp;98D3D2-003178&amp;B03
+Expected: == 24548571&amp;260515&amp;12664&amp;98D3D2-003178&amp;B03
+			</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-12345-B-Sample_functional_B</testcase_id>
+			<deltatime>20.757</deltatime>
+		</result>
+		<result>
+			<description>
+compare device_type
+Current:  rcam_2
+Expected: == rcam_2
+			</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-12345-B-Sample_functional_B</testcase_id>
+			<deltatime>20.758</deltatime>
+		</result>
+		<result>
+			<description>
+compare volvoNr
+Current:  24548571
+Expected: == 24548571
+			</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-12345-B-Sample_functional_B</testcase_id>
+			<deltatime>20.759</deltatime>
+		</result>
+		<result>
+			<description>
+compare cam_index
+Current:  B03
+Expected: == B03
+			</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-12345-B-Sample_functional_B</testcase_id>
+			<deltatime>20.759</deltatime>
+		</result>
+		<result>
+			<description>
+compare snpn
+Current:  4324548571
+Expected: == 4324570242
+			</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>MVC-12345-B-Sample_functional_B</testcase_id>
+			<deltatime>20.760</deltatime>
+		</result>
+		<result>
+			<description>
+compare SNr
+Current:  12664
+Expected: == 12664
+			</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-12345-B-Sample_functional_B</testcase_id>
+			<deltatime>20.760</deltatime>
+		</result>
+		<result>
+			<description>
+compare mac-address
+Current:  98D3D2003178
+Expected: == 98D3D2003178
+			</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-12345-B-Sample_functional_B</testcase_id>
+			<deltatime>20.761</deltatime>
+		</result>
+		<result>
+			<description>
+compare subscribe command HVS
+Current:  ['Service Id: 433f', 'Method Id: 0131', 'Length: 00000008', 'Request Id: 12345678', 'Protocol Version: 01', 'Interface Version: 01', 'Message Type: 80']
+Expected: == ['Service Id: 433f', 'Method Id: 0131', 'Length: 00000008', 'Request Id: 12345678', 'Protocol Version: 01', 'Interface Version: 01', 'Message Type: 80']
+			</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-12345-B-Sample_functional_B</testcase_id>
+			<deltatime>21.563</deltatime>
+		</result>
+		<result>
+			<description>
+compare subscribe command MVS
+Current:  ['Service Id: 433f', 'Method Id: 0131', 'Length: 00000008', 'Request Id: 12345678', 'Protocol Version: 01', 'Interface Version: 01', 'Message Type: 80']
+Expected: == ['Service Id: 433f', 'Method Id: 0131', 'Length: 00000008', 'Request Id: 12345678', 'Protocol Version: 01', 'Interface Version: 01', 'Message Type: 80']
+			</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-12345-B-Sample_functional_B</testcase_id>
+			<deltatime>22.365</deltatime>
+		</result>
+		<result>
+			<description>
+Check PSU current ch4
+Expected value: 0.160 A
+Current value:  0.196 A (current_ch4)
+Absolute Tolerance:  +/- 0.080 A
+			</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-12345-B-Sample_functional_B</testcase_id>
+			<deltatime>32.378</deltatime>
+		</result>
+		<result>
+			<description>The RTP-sniffer detected frames on the HVS.</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-12345-B-Sample_functional_B</testcase_id>
+			<deltatime>32.443</deltatime>
+		</result>
+		<result>
+			<description>The RTP-sniffer detected frames on the MVS.</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-12345-B-Sample_functional_B</testcase_id>
+			<deltatime>39.712</deltatime>
+		</result>
+		<result>
+			<description>It may be that metadata in the stream prevents a .jpg from being created.</description>
+			<verdict>INFO</verdict>
+			<deltatime>40.213</deltatime>
+		</result>
+		<result>
+			<description>
+compare unSubscribe command HVS
+Current:  ['Service Id: 433f', 'Method Id: 0132', 'Length: 00000008', 'Request Id: 12345678', 'Protocol Version: 01', 'Interface Version: 01', 'Message Type: 80']
+Expected: == ['Service Id: 433f', 'Method Id: 0132', 'Length: 00000008', 'Request Id: 12345678', 'Protocol Version: 01', 'Interface Version: 01', 'Message Type: 80']
+			</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-12345-B-Sample_functional_B</testcase_id>
+			<deltatime>46.600</deltatime>
+		</result>
+		<result>
+			<description>
+compare unSubscribe command MVS
+Current:  ['Service Id: 433f', 'Method Id: 0132', 'Length: 00000008', 'Request Id: 12345678', 'Protocol Version: 01', 'Interface Version: 01', 'Message Type: 80']
+Expected: == ['Service Id: 433f', 'Method Id: 0132', 'Length: 00000008', 'Request Id: 12345678', 'Protocol Version: 01', 'Interface Version: 01', 'Message Type: 80']
+			</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-12345-B-Sample_functional_B</testcase_id>
+			<deltatime>47.401</deltatime>
+		</result>
+	</results>
+</singletest>

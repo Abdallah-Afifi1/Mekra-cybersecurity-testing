@@ -1,0 +1,5 @@
+tocTab[tocTab.length] = new Array("0.3.3.1.1.2.2:1", "", "«FunctionalGroup» Deserializer", "EARoot/EA3/EA3/EA1/EA1/EA2/EA2/EA1244.htm", "5.png", "E1575", "0", "", "Class0","{E9154321-ACBD-4bec-843B-585C65765CD0}");
+tocTab[tocTab.length] = new Array("0.3.3.1.1.2.2:2", "", "«FunctionalGroup» DRAM(RAW Data)", "EARoot/EA3/EA3/EA1/EA1/EA2/EA2/EA1245.htm", "5.png", "E1579", "0", "", "Class0","{3706B244-CE52-4fce-BAB5-A1B8D586B6AC}");
+tocTab[tocTab.length] = new Array("0.3.3.1.1.2.2:3", "", "«FunctionalGroup» I2C", "EARoot/EA3/EA3/EA1/EA1/EA2/EA2/EA1246.htm", "5.png", "E1578", "0", "", "Class0","{EBCF6EDD-F845-4c58-B364-5F5EFEEFD554}");
+tocTab[tocTab.length] = new Array("0.3.3.1.1.2.2:4", "", "«FunctionalGroup» SPI", "EARoot/EA3/EA3/EA1/EA1/EA2/EA2/EA1247.htm", "5.png", "E1577", "0", "", "Class0","{C58087F0-4411-436e-AF3C-BAD42C33FD53}");
+tocTab[tocTab.length] = new Array("0.3.3.1.1.2.2:5", "", "«FunctionalGroup» VIN MIPI", "EARoot/EA3/EA3/EA1/EA1/EA2/EA2/EA1248.htm", "5.png", "E1576", "0", "", "Class0","{40B534B7-D507-4554-86DA-87D093831B98}");

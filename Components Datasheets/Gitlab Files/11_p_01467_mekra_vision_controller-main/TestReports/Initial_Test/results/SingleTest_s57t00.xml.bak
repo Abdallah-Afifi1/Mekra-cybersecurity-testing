@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<singletest source="MVC-12345-B-Sample_functional_B.py">
+	<meta>
+		<title>MVC-12345-B-Sample functional B</title>
+		<description>basic access tests for climate chamber access</description>
+		<author>ReinerS</author>
+		<date>12.02.2026</date>
+		<version>1.0.0</version>
+		<last_revision>initial</last_revision>
+		<starttime>2026-05-28T16:44:43</starttime>
+		<endtime>2026-05-28T16:45:46</endtime>
+		<hil_computername>VVE-KAMTEST-W10</hil_computername>
+		<hil_project_path>C:\Users\systest_MCP2\Documents\11_p_01467_mekra_vision_controller</hil_project_path>
+		<hil_username>systest_MCP2</hil_username>
+	</meta>
+	<results>
+		<result>
+			<description>
+
+24548571&amp;260521&amp;13135&amp;98D3D2-00334F&amp;B03
+			</description>
+			<verdict>INFO</verdict>
+			<deltatime>4.795</deltatime>
+		</result>
+		<result>
+			<description> Power supply set to 28.0 V</description>
+			<verdict />
+		</result>
+		<result>
+			<description>
+Check PSU output voltage
+Expected value: 28.000 V
+Current value:  28.003 V (voltage_ch4)
+Absolute Tolerance:  +/- 0.020 V
+			</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-12345-B-Sample_functional_B</testcase_id>
+			<deltatime>5.911</deltatime>
+		</result>
+		<result>
+			<description>no getPayload</description>
+			<verdict>ERROR</verdict>
+			<testcase_id>MVC-12345-B-Sample_functional_B</testcase_id>
+			<deltatime>20.911</deltatime>
+		</result>
+		<result>
+			<description>retry getCamIndentification</description>
+			<verdict>INFO</verdict>
+			<deltatime>35.911</deltatime>
+		</result>
+		<result>
+			<description>
+compare DMC
+Current:  24548571&amp;260521&amp;13135&amp;98D3D2-00334F&amp;B03
+Expected: == 24548571&amp;260521&amp;13135&amp;98D3D2-00334F&amp;B03
+			</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-12345-B-Sample_functional_B</testcase_id>
+			<deltatime>36.269</deltatime>
+		</result>
+		<result>
+			<description>
+compare device_type
+Current:  rcam_2
+Expected: == rcam_2
+			</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-12345-B-Sample_functional_B</testcase_id>
+			<deltatime>36.271</deltatime>
+		</result>
+		<result>
+			<description>
+compare volvoNr
+Current:  24548571
+Expected: == 24548571
+			</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-12345-B-Sample_functional_B</testcase_id>
+			<deltatime>36.271</deltatime>
+		</result>
+		<result>
+			<description>
+compare cam_index
+Current:  B03
+Expected: == B03
+			</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-12345-B-Sample_functional_B</testcase_id>
+			<deltatime>36.271</deltatime>
+		</result>
+		<result>
+			<description>
+compare snpn
+Current:  4324548571
+Expected: == 4324548571
+			</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-12345-B-Sample_functional_B</testcase_id>
+			<deltatime>36.271</deltatime>
+		</result>
+		<result>
+			<description>
+compare SNr
+Current:  13135
+Expected: == 13135
+			</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-12345-B-Sample_functional_B</testcase_id>
+			<deltatime>36.271</deltatime>
+		</result>
+		<result>
+			<description>
+compare mac-address
+Current:  98D3D200334F
+Expected: == 98D3D200334F
+			</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-12345-B-Sample_functional_B</testcase_id>
+			<deltatime>36.271</deltatime>
+		</result>
+		<result>
+			<description>
+compare subscribe command HVS
+Current:  ['Service Id: 433f', 'Method Id: 0131', 'Length: 00000008', 'Request Id: 12345678', 'Protocol Version: 01', 'Interface Version: 01', 'Message Type: 80']
+Expected: == ['Service Id: 433f', 'Method Id: 0131', 'Length: 00000008', 'Request Id: 12345678', 'Protocol Version: 01', 'Interface Version: 01', 'Message Type: 80']
+			</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-12345-B-Sample_functional_B</testcase_id>
+			<deltatime>37.075</deltatime>
+		</result>
+		<result>
+			<description>
+compare subscribe command MVS
+Current:  ['Service Id: 433f', 'Method Id: 0131', 'Length: 00000008', 'Request Id: 12345678', 'Protocol Version: 01', 'Interface Version: 01', 'Message Type: 80']
+Expected: == ['Service Id: 433f', 'Method Id: 0131', 'Length: 00000008', 'Request Id: 12345678', 'Protocol Version: 01', 'Interface Version: 01', 'Message Type: 80']
+			</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-12345-B-Sample_functional_B</testcase_id>
+			<deltatime>37.877</deltatime>
+		</result>
+		<result>
+			<description>
+Check PSU current ch4
+Expected value: 0.160 A
+Current value:  0.180 A (current_ch4)
+Absolute Tolerance:  +/- 0.080 A
+			</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-12345-B-Sample_functional_B</testcase_id>
+			<deltatime>47.887</deltatime>
+		</result>
+		<result>
+			<description>The RTP-sniffer detected frames on the HVS.</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-12345-B-Sample_functional_B</testcase_id>
+			<deltatime>47.917</deltatime>
+		</result>
+		<result>
+			<description>image HVS</description>
+			<verdict>INFO</verdict>
+			<deltatime>50.149</deltatime>
+			<object name="98D3D200334F_00013135_HVS.jpg" source="C:/Users/systest_MCP2/Documents/11_p_01467_mekra_vision_controller/TestReports/Initial_Test/TestData/98D3D200334F_00013135_HVS.jpg" type="image/jpeg" />
+		</result>
+		<result>
+			<description>The RTP-sniffer detected frames on the MVS.</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-12345-B-Sample_functional_B</testcase_id>
+			<deltatime>50.833</deltatime>
+		</result>
+		<result>
+			<description>It may be that metadata in the stream prevents a .jpg from being created.</description>
+			<verdict>INFO</verdict>
+			<deltatime>51.337</deltatime>
+		</result>
+		<result>
+			<description>image MVS</description>
+			<verdict>INFO</verdict>
+			<deltatime>52.363</deltatime>
+			<object name="98D3D200334F_00013135_MVS.jpg" source="C:/Users/systest_MCP2/Documents/11_p_01467_mekra_vision_controller/TestReports/Initial_Test/TestData/98D3D200334F_00013135_MVS.jpg" type="image/jpeg" />
+		</result>
+		<result>
+			<description>
+compare unSubscribe command HVS
+Current:  ['Service Id: 433f', 'Method Id: 0132', 'Length: 00000008', 'Request Id: 12345678', 'Protocol Version: 01', 'Interface Version: 01', 'Message Type: 80']
+Expected: == ['Service Id: 433f', 'Method Id: 0132', 'Length: 00000008', 'Request Id: 12345678', 'Protocol Version: 01', 'Interface Version: 01', 'Message Type: 80']
+			</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-12345-B-Sample_functional_B</testcase_id>
+			<deltatime>53.664</deltatime>
+		</result>
+		<result>
+			<description>
+compare unSubscribe command MVS
+Current:  ['Service Id: 433f', 'Method Id: 0132', 'Length: 00000008', 'Request Id: 12345678', 'Protocol Version: 01', 'Interface Version: 01', 'Message Type: 80']
+Expected: == ['Service Id: 433f', 'Method Id: 0132', 'Length: 00000008', 'Request Id: 12345678', 'Protocol Version: 01', 'Interface Version: 01', 'Message Type: 80']
+			</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-12345-B-Sample_functional_B</testcase_id>
+			<deltatime>54.466</deltatime>
+		</result>
+	</results>
+</singletest>

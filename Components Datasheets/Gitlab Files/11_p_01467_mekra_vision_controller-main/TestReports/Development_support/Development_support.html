@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="author" content="Stefan Reiner">
+  <title>Development support &ndash; Test Report</title>
+  <style>
+ body, table, td, th { font:14px/1.4 Verdana, sans-serif; }
+ body { color:#222; background:#FFF; margin:1em; padding:1px; }
+ p { margin:.8em 0; padding:0; text-align:left; }
+ h1, h2, h3, h4 { font-weight:bold; margin-bottom:.5em; text-align:left; }
+ h1 { font-size:2.0em;}
+ h2 { font-size:1.5em;}
+ h3 { font-size:1.3em; margin-top:1.6em; }
+ h4 { font-size:1.1em; margin-top:1.0em; }
+ a, a:link, a:visited { text-decoration:none; color:#009; }
+ a:hover, a:active { text-decoration:underline; color:#00D; }
+ hr { color:#CCC; border:1px solid #CCC; border-width:1px 0 0; }
+ div#content { width:72em; padding-bottom:4em; }
+ div#overview { padding-bottom:2em; }
+ div.singletest { margin:0 0 4em 0; padding-left:1em; }
+ div.testsequence { margin:4em 0; padding-left:1em; }
+ div.summary { margin-bottom:4em; }
+ #content #logo { float:right; }
+ div#content div.testsequence:first-child { border-top:2px solid #444; margin-top:4em; }
+ div.jump { font-size:.8em; margin-top:.5em;}
+ .overview-tc table, .overview-seqtc table, .overview-seq table { border:1px double #436892; border-width:0 5px; }
+ table { width:100%; border-spacing:1px;}
+ table { background:#999; }
+ table tr { background:#FFF; }
+ table td, table th { text-align:center; padding:.1em .5em; }
+ table th { font-weight:bold;}
+ table .label { width:32em; text-align:left; }
+ table .label-overall { text-align:left; }
+ table td.label { padding-left:1em; }
+ table .label-seq { width:8em; text-align:left; }
+ table .label-tcid { width:6em; text-align:center; }
+ table td.label-tcid { }
+ table .footer .label-tcid { text-align:left }
+ table .source-tests { width:50%; text-align:left; }
+ table td.source-tests { padding-left:.5em; }
+ table .descr { width:auto; text-align:left; }
+ table .over { width:3em; }
+ table .step { width:3em; }
+ table th.tc-ids { width:4em;}
+ table th.verdictheader, table .verdict { width:8em; }
+ table td.over { color:#777;}
+ table td.step { color:#668;}
+ table td.delta-t { color:#668; font-size:.8em; }
+ table td.verdict { }
+ td.verdict:focus { outline:2px solid #506BAD; box-shadow:inset 0 0 8px #506BAD, 0 0 8px #222 !important; }
+ table tr:nth-child(odd) { background-color:#FAFAFA; }
+ table tr.footer, table tr.header, table tr.footer td, table tr.footer th, table tr.header td, table tr.header th { background:#F0F0F0; font-weight:bold; border-width:1px 0; }
+ table tr.header th, table tr.header td { background:#ECECEC; background:linear-gradient(0, #FCFCFC, #E8E8E8);}
+ table tr.footer th, table tr.footer td { background:#ECECEC; background:linear-gradient(0, #E8E8E8, #FCFCFC);}
+ table td img { display:block; margin:.5em auto; max-width:800px; max-height:600px; }
+ table td .objnote { padding:.2em .5em; color:#436892; background:#FFF; border:1px solid #436892; border-radius:.5em; }
+ table.meta { border:0; margin:.4em 0 .5em; padding:0; width:auto; background:none;}
+ table.meta th, table.meta td { text-align:left; padding:.1em .5em; border:0; }
+ table.meta th { font-weight:bold; padding-left:0; min-width:12em; }
+ svg.donut { width:180px; height:180px; }
+ .overview-tc-level th.testcases { min-width:12em; }
+ .overview-tc-level th.overall { width:200px; }
+ .overview-tc-level td { text-align:left; }
+ .overview-tc-level td.chart, .overview-tc-level td.overall-by-tcs { text-align:center; }
+ .overview-tc-level td.passed_tcs { border-left:6px solid #4A4; }
+ .overview-tc-level td.failed_tcs { border-left:6px solid #A44; }
+ .overview-tc-level td.other_tcs { border-left:6px solid #AAA; }
+ .v_passed { color:#080; }
+ .v_retest_passed { color:#070; }
+ .v_failed { color:#A00; font-weight:bold; }
+ .v_error { color:#FFF; font-weight:bold; background:#C00 !important; }
+ .v_not_tested { color:#999; }
+ .v_not_planned { color:#BBB; }
+ .v_not_specified { color:#AAA; }
+ .v_info { color:#008; }
+ .v_todo { color:#008; font-weight:bold;}
+ .v_accepted { color:#F6AC07; font-weight:bold;}
+ .highlighted, .highlighted1 { color:#506BAD; font-weight:bold; }
+ .highlighted2 { color:#FFFFFF; font-weight:bold; background:#506BAD; padding:.7em 1em;}
+ .highlighted3 { color:#4C876A; font-weight:bold; }
+ .highlighted4 { color:#AAC5B1; }
+ .cmnt_params1, .cmnt_params2 { color:#888; background:#EEE; }
+ .cmnt_regex1, .cmnt_regex2, .cmnt_regex3, .cmnt_regex4 { color:#F3F5F9; text-decoration:underline; font-weight:bold; background:#506BAD; }
+ .cmnt_regex1 { padding-left:0; }
+ .cmnt_regex2 { padding-left:1em; }
+ .cmnt_regex3 { padding-left:2em; }
+ .cmnt_regex4 { padding-left:3em; }
+ .lhl-1 { color:#EA7637; font-weight:bold; font-style:normal; display:inline-block;}
+ .lhl-2 { color:#008800; font-weight:bold; font-family:monospace; background:#F3FAF6; display:inline-block;}
+ .lhl-3 { color:#384B7A; font-weight:normal; font-style:normal; background:#E8ECF3; display:inline-block;}
+ td.verdict { }
+ td.verdict span { display:block; border-radius:.5em; font-size:.8em; font-weight:normal; padding:.2em; margin:.3em auto; background:#DDD; color:#000; border:1px solid #DADADA; white-space:pre-wrap; white-space:pre-line; }
+ td.v_passed span, td.v_retest_passed span { background-color:#CFC; border-color:#AFA; color:#080; }
+ td.v_failed span { background-color:#FCC; border-color:#FAA; color:#A00; }
+ td.v_error span { background-color:#F22; border-color:#A22; color:#FFF; }
+ td.v_not_tested span { background-color:#999; border-color:#888888; color:#FFF; }
+ td.v_not_specified span { background-color:#BBB; border-color:#A8A8A8; color:#444;}
+ td.v_not_planned span { background-color:#DDD; border-color:#C8C8C8; color:#666; }
+ td.v_accepted span { background-color:#FFEDB7; border-color:#FFC811; color:#DA570A; }
+ td.v_todo span, td.v_info span { background-color:#DDF; border-color:#AAE; color:#116; }
+   </style>
+  <style>
+ body #buttonPanel { display:none; }
+ body.showUtils #buttonPanel { display:block; }
+ * html body #buttonPanel { display:none !important; }
+ #buttonPanel { position:fixed; right:4px; top:8px; width:8em; margin:0 2px 0 0; padding:2px 2px 6px; text-align:center; color:#F3F5F9; background:#506BAD; border:1px solid #3B5081; border:2px solid #DDE; border-radius:7px; box-shadow:0 0 2px #444, inset 0 0 16px #3B5081; }
+ #buttonPanel div { padding:0 .2em; font-weight:bold; }
+ #buttonPanel button { text-align:center; margin:0; padding:0 .5em; }
+ #buttonPanel button img { vertical-align:middle; margin:0; padding:0; }
+ #buttonPanel #bHide, #buttonPanel #bView { min-width:90%; }
+ #buttonPanel #custom_verdict { text-align:center; width:6em; }
+ #viewSource { width:85%; position:fixed; left:4px; top:4px; margin:0; padding:.5em; border:2px solid #DDE; border-radius:7px; color:#FFF; background:#506BAD; box-shadow:0 0 2px #444, inset 0 0 16px #3B5081; }
+ #viewSource textarea { width:100%; height:20em; display:block; font:1em/1.2 "Courier New",monospace; white-space:pre; overflow:auto; border:none; color:#FFF; background:#3B5081; }
+ #viewSource button { float:right; }
+   </style>
+  <style>
+ body #editOverlay { display:none; }
+ body.showUtils #editOverlay { display:block; }
+ td.editActive { outline:2px solid #F6AC07; box-shadow:inset 0 0 8px #F6AC07, 0 0 8px #222; }
+ #editOverlay { width:600px; position:fixed; top:100px; left:100px; margin:0; padding:2px; border:2px solid #DDE; border-radius:7px; color:#FFF; background:#3B5081; box-shadow:0 0 2px #444, inset 0 0 16px #3B5081; }
+ #editOverlay p { min-height:2em; max-height:8em; width:auto; margin:0; padding:.5em; white-space:pre-wrap; white-space:pre-line; overflow-x:hidden; overflow-y:auto; border:4px solid #35577D; border-width:4px 4px 4px 0; }
+ #editOverlay textarea { display:block; width:98%; height:8em; margin:0 auto; }
+ #editOverlay #eoButtons { text-align:right; padding:1em .2em .2em; margin:.2em 0 0; float:left; width:99%; background:#506BAD; }
+ #editOverlay #eoButtons:after { clear:both; }
+ #editOverlay #eoButtons button { float:right; min-width:5em; }
+ #editOverlay #eoButtons button#eoClear { float:left; }
+ #editOverlay #eoTitle { padding:.2em; background:#506BAD; font-weight:bold; }
+ #editOverlay #eoClose { width:16px; height:16px; line-height:14px; position:absolute; right:4px; top:3px; margin-right:.1em; text-align:center; color:#E8ECF3; background:#35577D; border:1px solid #E8ECF3; cursor:pointer; }
+ #editOverlay #eoClose:hover { color:#FFF; border-color:#FFF; }
+   </style>
+  <script type="text/javascript">
+    /*****************************************************************\
+    * Common Functions {{{
+    */
+    var verdicts  = null;
+    var editEnabled = false;
+    /** safely attach onload events **/
+    function addLoadEvent(func) { //{{{
+      var oldonload = window.onload;
+      if (typeof window.onload != 'function') {
+        window.onload = func;
+      } else {
+        window.onload = function() { oldonload(); func(); }
+      }
+      //}}}
+    }
+    /** Trims leading/trailing whitespace from a string **/
+    function trim(text) { //{{{
+      if (typeof String.prototype.trim == 'function') {
+        return text.trim(); 
+      } else {
+        return text.replace(/^\s+/, '').replace(/\s+$/, '');
+      }
+      //}}}
+    }
+    /** Gets the text below the supplied node **/
+    function getText(obj) { //{{{
+      if (!obj) { return ''; }
+      return obj.innerText || obj.textContent;
+      //}}}
+    }
+    /** Gets a preconfigured button element **/
+    function getButton(id, label, action) { //{{{
+      var button = document.createElement('button');
+      if (id) {button.id = id;}
+      button.onclick = action;
+      button.appendChild(document.createTextNode(label));
+      return button;
+      //}}}
+    }
+    /** Gets a preconfigured button element (with icon image) **/
+    function getImgButton(id, label, action, src, alt, title) { //{{{
+      var button = getButton(id, label + ' ', action);
+      img = document.createElement('img');
+      img.onerror = ieMissingImgAltFix;
+      img.src = src;
+      img.alt = alt;
+      button.appendChild(img);
+      if (title) {button.title = title;}
+      return button;
+      //}}}
+    }
+    function ieMissingImgAltFix() {
+      if (!this.parentNode) { return; }
+      var label = this.parentNode.getElementsByTagName('span')[0];
+      if (label) {
+         label.innerHTML = ''; // cleanup in case of repeated calls
+      } else {
+         label = document.createElement('span');
+         this.parentNode.insertBefore(label, this);
+      }
+      label.appendChild(document.createTextNode(this.alt));
+      this.parentNode.style.minWidth = '100%';
+      this.style.display = 'none';
+    }
+
+    /** Gets a list of available verdicts **/
+    function initVerdicts() { //{{{
+      // global verdicts
+      if (!verdicts) {
+        // the following assumes that all elements with class "verdict"
+        // are in fact verdict entries and appear in the document in
+        // ascending order (and thus the running index in "tabindex" will
+        // map to the correct item in the verdicts-array.
+        if (document.getElementsByClassName) {
+           // getElementsByClassName() works in FF3+, Safari3+, Chrome1+, Opera9.6+
+           verdicts = document.getElementsByClassName('verdict');
+         } else {
+           // fallback for older browsers
+           verdicts = Array();
+           var rows = document.getElementsByTagName('tr');
+           for (var i = 0; i < rows.length; i++) {
+             var child = rows[i].lastChild;
+             if (child && child.className.indexOf('verdict') > -1) { // close enough
+               verdicts.push(child);
+            }
+          }
+          /*
+           items = document.getElementsByTagName('td');
+           for (var i = 0; i < items.length; i++) {
+             if (items[i].className.indexOf('verdict') > -1) { // close enough
+               verdicts.push(items[i]);
+            }
+          }
+          */
+        }
+      }
+      return verdicts;
+      //}}}
+    }
+    /** shows/hides the utility panels (via css) **/
+    function showUtils(visible) { //{{{
+      var newClassName = 'showUtils';
+      if (visible == 'toggle') {
+        newClassName = (document.body.className ? '' : 'showUtils');
+      } else {
+        newClassName = (visible ? 'showUtils' : '');
+      }
+      document.body.className = newClassName;
+      //}}}
+    }
+    /** **/
+    function appendPrevNextButtons(parent, verdict, verdictClass, iconSrc) { //{{{
+      var upArrow   = '\u2191'; // &uarr;
+      var downArrow = '\u2193'; // &darr;
+      //var upArrow   = '\u21D1'; //  &uArr;
+      //var downArrow = '\u21D3'; //  &dArr;
+
+      parent.appendChild(getImgButton(
+        '', upArrow,
+        function() {findVerdict(verdict, verdictClass, -1)},
+        iconSrc,
+        verdict,
+        'previous '+verdict
+      ));
+      parent.appendChild(getImgButton(
+        '', downArrow,
+        function() {findVerdict(verdict, verdictClass, 1)},
+        iconSrc,
+        verdict,
+        'next '+verdict
+      ));
+      //}}}
+    }
+
+    addLoadEvent(function() { //{{{
+      document.onkeydown = function(e) {
+        // no all browsers fire onkeypressed for "special" keys like ESC or the F-keys
+        var evt = e || window.event;
+        //alert(evt.keyCode);
+        switch (evt.keyCode) {
+          case 27:  // ESC
+            showUtils('toggle');
+            if (endEdit) { endEdit(); }
+            return false; // prevent default action
+            break;
+          case 112: // F1
+            showUtils(true);
+            return false; // prevent default action
+            break;
+        }
+        return true;
+      }
+      showUtils(true);
+      //}}}
+    });
+
+    addLoadEvent(addButtonPanel);
+
+    /*************************************************************************/
+    function toggleButtonPanel() { //{{{
+      if (!removeButtonPanel()) { addButtonPanel(); }
+      //}}}
+    }
+    function removeButtonPanel() { //{{{
+      var buttonPanel = document.getElementById('buttonPanel');
+      if (!buttonPanel) { return false;}
+      buttonPanel.parentNode.removeChild(buttonPanel);
+      return true
+      //}}}
+    }
+    function addButtonPanel() { //{{{
+      // GIF headers are shorter than PNG headers (so it is more compact for small icons)
+      var iconSrcDefault   = 'data:image/gif;base64,R0lGODlhEAAQALMAAABAAICAgMDAwAAAAP///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAAAAALAAAAAAQABAAAwQ/EMgwapA4gxF6HxrGBUL5hZ5AEGancSVbCtRLrjMNZnDeaqlcLTSaeUKSkYezQ1U4gBMSNZxmpFZRNbtpcjERADs=';
+      var iconSrcPassed    = 'data:image/gif;base64,R0lGODlhEAAQALMAAABAAMDAwICAgP///wD/AAAAAACfAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAAAAALAAAAAAQABAAAwRMEEhRqpA4gyJ6LxrGCUH5hV4wDGancSVbBtRLrjMNZnDeaqmcwEAoFiWjWYdoaBJEng9RMsVQLACmM5QhGrldwglMfXJ24CYSTdZEAAA7'
+      var iconSrcFailed    = 'data:image/gif;base64,R0lGODlhEAAQALMAAABAAICAgMDAwAAAAP8AAIAAAP///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAAAAALAAAAAAQABAAAwRJEMgwapA4gxF6HxrGBUL5hZ5gGGancSVbCtRLrjMNZnDeaqkchUAkFCSjWadQJIo8H2ZoUuEAmM5pBkvQbgk6r0TK2WmzFfE0AgA7';
+      var iconSrcError     = 'data:image/gif;base64,R0lGODlhEAAQALMAAABAAICAgMDAwP8AAAAAAIAAAP///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAAAAALAAAAAAQABAAAwRLEMhAapA4AxJ6JxrGBUL5hZ5gGGancSVbCtRLrjMNZnDeaqkcZUAcFCSjWadQJIo8H2ZoUuEAmM5pBjvQbgc0gVfCzWoLaHR3HIoAADs=';
+      var iconSrcNotTested = 'data:image/gif;base64,R0lGODlhEAAQALMAAABAAAAA/4CAgMDAwAAAAAAAgP///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAAAAALAAAAAAQABAAAwRSEEhBqpA4AyJ6JxrGCUP5hd5gGGancSVbDtRLrjMNZnDeap1BoDAbFgLI4UY4pCWfgUmShLwgNckCoCq4Zq5PZ/QbfQKY2HFSUiVjvMhBaJ6JAAA7';
+      var iconSrcComment   = 'data:image/gif;base64,R0lGODlhEAAQALMAAABAAICAgAAAAP///7y8vAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAAAAALAAAAAAQABAAAwQ+EMhJq70YBMF7sFswjORWCQSpDoQwbYMYzPMofJqwrrcE07VaT4LajVon1spE0bU6HNwExcwECNKMRsvteiMAOw=='
+
+      var upArrow   = '\u2191'; // &uarr;
+      var downArrow = '\u2193'; // &darr;
+
+      var buttonPanel = document.getElementById('buttonPanel');
+
+      if (buttonPanel) {
+         buttonPanel.innerHTML = '';
+      } else {
+         buttonPanel = document.createElement('div');
+         buttonPanel.id = 'buttonPanel';
+         document.body.insertBefore(buttonPanel, document.body.firstChild);
+      }
+      var title = document.createElement('div');
+      title.appendChild(document.createTextNode('Utilities'));
+      buttonPanel.appendChild(title);
+      appendPrevNextButtons(buttonPanel, 'Passed', 'v_passed', iconSrcPassed);
+      appendPrevNextButtons(buttonPanel, 'Failed', 'v_failed', iconSrcFailed);
+      appendPrevNextButtons(buttonPanel, 'Error',  'v_error',  iconSrcError);
+      appendPrevNextButtons(buttonPanel, 'Not Tested', 'v_not_tested', iconSrcNotTested);
+      
+      // custom verdict navigation
+      var input = document.createElement('input');
+      input.type  = "text";
+      input.value = "INFO";
+      input.title = "custom search verdict";
+      input.id = "custom_verdict";
+      input.onkeypress = function(e) { 
+        var evt = e || window.event;
+        if (evt.keyCode == 13) { // enter
+          findVerdict('custom', '', 1);
+          return false;
+        } 
+        return true;
+      };
+      buttonPanel.appendChild(input)
+      appendPrevNextButtons(buttonPanel, 'custom', '', iconSrcDefault);
+      
+      // comment navigation
+      buttonPanel.appendChild(getImgButton(
+        '', upArrow, function() {findComment(-1)}, iconSrcComment, 'Comment', 'previous Comment'
+      ));
+      buttonPanel.appendChild(getImgButton(
+        '', downArrow, function() {findComment(1)}, iconSrcComment, 'Comment', 'next Comment'
+      ));
+      buttonPanel.appendChild(getButton(
+        'bHide', 'hide [ESC]', function() {showUtils('toggle')}
+      ));
+      if (editEnabled) {
+        buttonPanel.appendChild(getButton('bView', 'View Source', toggleViewSource))
+      }
+      //}}}
+    }
+    /**}}}**/
+  </script>
+
+  <script type="text/javascript">
+    /*****************************************************************\
+    * Verdict/Comment Navigation {{{
+    */
+    var lastVerdictIndex = -1;
+    //** attach handlers for verdict search and start position **/
+    addLoadEvent(function() { //{{{
+       // global verdicts
+       initVerdicts();
+       document.onclick = updateActiveVerdict;
+       //}}}
+    });
+
+    /** **/
+    function updateActiveVerdict(e) { //{{{
+      // global verdicts, lastVerdictIndex
+      var event = e || window.event;
+      var target = event.target || event.srcElement;
+      if (target.nodeName != 'TD' && target.parentNode.nodeName == 'TD') {
+        target = target.parentNode;
+      }
+      if (target && target.className.indexOf('verdict') > -1) { // close enough
+        lastVerdictIndex = parseInt(target.getAttribute('tabindex')) - 1;
+        // for reports split into sub-reports ("multidoc"):
+        // global verdict index will not match local index in sub document
+        // => calculate index difference
+        if (verdicts) {
+           var startIndex = parseInt(verdicts[0].getAttribute('tabindex'));
+           lastVerdictIndex -= startIndex;
+        }
+        //alert(target.nodeName + "\n" + target.tabIndex + "\n" + target.innerHTML);
+      }
+      //}}}
+    }
+    /** **/
+    function findVerdict(verdict, verdictClass, direction) { //{{{
+      // global verdicts, lastVerdictIndex
+      var offset = (direction > 0 ? 1 : -1);
+      var startIndex = null;
+
+      if (!verdictClass) {
+         var input = document.getElementById("custom_verdict")
+         if (input) {
+            verdict = trim(input.value);
+            verdictClass = "v_" + verdict.replace(/\W/g, "_").toLowerCase();
+            if (!verdict) { verdictClass = "verdict"; }
+         } else {
+            verdict = "";
+            verdictClass = "verdict";
+         }
+      }
+
+
+      if (!verdicts) {
+        alert("No verdicts available.");
+        return;
+      }
+      while (true) {
+        lastVerdictIndex += offset;
+        if (lastVerdictIndex < 0) {
+          lastVerdictIndex = verdicts.length - 1;
+        } else if (lastVerdictIndex >= verdicts.length) {
+          lastVerdictIndex = 0;
+        }
+        ver = verdicts[lastVerdictIndex];
+        if (ver.className && ver.className.indexOf(verdictClass) > -1) {
+          var cnames  = ver.className.split(" ");
+          var found = false;
+          for (var i = 0; i < cnames.length; ++i) {
+            if (cnames[i] == verdictClass) {
+                found = true;
+                break;
+            }
+          }
+          if (found) {
+              //alert("Found: "+ ver.className + " index: " + lastVerdictIndex);
+              scrollToMiddle(ver);
+              break;
+          }
+        }
+        if (lastVerdictIndex == startIndex) {
+          alert("Verdict " + verdict + " not found");
+          break;
+        }
+        if (startIndex == null) { startIndex = lastVerdictIndex; }
+      }
+      //}}}
+    }
+
+    /** **/
+    function findComment(direction) { //{{{
+      var offset = (direction > 0 ? 1 : -1);
+      var startIndex = null;
+      while (true) {
+        lastVerdictIndex += offset;
+        if (lastVerdictIndex < 0) {
+          lastVerdictIndex = verdicts.length - 1;
+        } else if (lastVerdictIndex >= verdicts.length) {
+          lastVerdictIndex = 0;
+        }
+        ver = verdicts[lastVerdictIndex];
+        if (ver.getElementsByTagName('span').length > 0) {
+          scrollToMiddle(ver);
+          break;
+        }
+        if (lastVerdictIndex == startIndex) {
+          alert("No comment found");
+          break;
+        }
+        if (startIndex == null) { startIndex = lastVerdictIndex; }
+      }
+      //}}}
+    }
+
+    /** **/
+    function scrollToMiddle(obj){ //{{{
+      obj.scrollIntoView(); // scroll object to top of viewport (if possible)
+      if (window.innerHeight)  {
+        // add browsers but IE
+        viewportHeight = window.innerHeight
+      } else if (document.documentElement && document.documentElement.clientHeight) {
+        // IE6+ so-called 'standards compliant mode'
+        viewportHeight = document.documentElement.clientHeight;
+      } else if (document.body && document.body.clientHeight) {
+        // IE in quirks mode
+        viewportHeight = document.body.clientHeight;
+      }
+      offset = (viewportHeight - obj.clientHeight) / 2;
+      window.scrollBy(0, -offset); // offset scroll position to move object to middle of viewport
+      obj.focus(); // focus forces the object into view as well.
+      // So even if the element would by now be scrolled off screen, it would again
+      // be forced on-screen (though not necessarily to the middle position)
+      //}}}
+    }
+
+    /**}}}**/
+  </script>
+
+
+
+  <script type="text/javascript" src="isyedit.js"></script>
+</head>
+<body>
+<div id="content">
+<div class="testreport">
+	<h1 id="reporttitle">Test Report: Development support</h1>
+	<p>&lt;description text&gt;</p>
+	<table class="meta">
+	<tr><th>Created on:</th><td>2026-03-02T12:59:13</td></tr>
+	<tr><th>Created by:</th><td>Stefan Reiner</td></tr>
+	<tr><th>Department:</th><td>MEKRA_T-EQV</td></tr>
+	<tr><th>Customer:</th><td>Volvo</td></tr>
+	<tr><th>Project:</th><td>MVC</td></tr>
+	<tr><th>SW-Version:</th><td>---</td></tr>
+	<tr><th>HW-Version:</th><td>B-Sample</td></tr>
+	</table>
+<div id="overview">
+	<h2>Overview</h2>
+	<div class="jump"><a href="#overview-seq">&darr; sequences</a> <a href="#overview-test">&darr; single tests</a> <a href="#overview-summary">&darr; overall result</a></div>
+	<div class="overview-tc-level">
+		<h3 id="overview-tc-level">Overview by Testcase Result</h3>
+		<table>
+			<tr class="header"><th class="testcases">Testcase Count</th><th class="overall">Overall</th></tr>
+			<tr><td class="label passed_tcs">Passed Test Cases: 0 (<span style="color:#880000">0.0&nbsp;%</span>)</td><td class="chart" rowspan="2"><svg class="donut" viewBox="-22 -22 44 44" style="transform:rotate(-90deg)">
+
+	<g stroke-width="10" fill="transparent">
+		<circle r="15.9154943" stroke="#CCC"/>
+		<circle r="15.9155" stroke="#BBB" stroke-dasharray="100.000 1000" />
+		<circle r="15.9155" stroke="#B44" stroke-dasharray="100.000 1000" />
+		<circle r="15.9155" stroke="#4B4" stroke-dasharray="0.000 1000" />
+	</g>
+</svg></td></tr>
+			<tr><td class="label failed_tcs">Failed Test Cases: 1</td></tr>
+			<tr class="footer"><th class="label-tcid">&sum; 1 TCs</th><td class="overall-by-tcs"><span class="v_failed">Failed</span></td></tr>
+		</table>
+	</div>
+	<div class="overview-tc">
+		<h3 id="overview-tc">Testcase Overview</h3>
+		<table>
+			<tr class="header"><th class="label-tcid">Testcase-ID</th><th class="source-tests">Source Tests</th><th>Passed</th><th>Failed</th><th>Passed&nbsp;<small>[%]</small></th></tr>
+			<tr><td class="label-tcid">FF_Chip_test_2</td><td class="source-tests"><a href="#seq0test1">FF Chip test 2</a></td><td>2</td><td>2</td><td><span style="color:#880000">50.0&nbsp;%</span></td></tr>
+			<tr><td class="label-tcid">&lt;without&nbsp;id&gt;</td><td class="source-tests"><a href="#seq0test0">FF Chip test 1</a></td><td>0</td><td>2</td><td><span style="color:#880000">0.0&nbsp;%</span></td></tr>
+			<tr class="footer"><th class="label-tcid">&sum; 1 TCs</th><th class="label-overall">Overall</th><td>2</td><td>4</td><td><span style="color:#880000">33.3&nbsp;%</span></td></tr>
+		</table>
+	</div>
+	<div class="overview-seq">
+		<h3 id="overview-seq">Sequence Overview</h3>
+		<table>
+			<tr class="header"><th class="label">Test Sequence</th><th>Passed</th><th>Failed</th><th>Passed&nbsp;<small>[%]</small></th><th>Runtime <small>[hh:mm:ss]</small></th></tr>
+			<tr><td class="label"><a href="#seq0_overview">FF_Chip_Test</a></td><td>2</td><td>4</td><td><span style="color:#880000">33.3&nbsp;%</span></td><td>00:01:09</td></tr>
+			<tr class="footer"><th class="label-overall">Overall</th><td>2</td><td>4</td><td><span style="color:#880000">33.3&nbsp;%</span></td><td>00:01:09</td></tr>
+		</table>
+	</div>
+	<div class="overview-test">
+		<h3 id="overview-test">Single Test Overview</h3>
+		<h4><a href="#seq0" id="seq0_overview">FF_Chip_Test</a></h4>
+		<table>
+			<tr class="header"><th class="label">Single Test</th><th>Passed</th><th>Failed</th><th>Passed&nbsp;<small>[%]</small></th><th>Runtime <small>[hh:mm:ss]</small></th></tr>
+			<tr><td class="label"><a href="#seq0test0" id="seq0test0_overview">FF Chip test 1</a></td><td>0</td><td>2</td><td><span style="color:#880000">0.0&nbsp;%</span></td><td>n/a</td></tr>
+			<tr><td class="label"><a href="#seq0test1" id="seq0test1_overview">FF Chip test 2</a></td><td>2</td><td>2</td><td><span style="color:#880000">50.0&nbsp;%</span></td><td>00:01:09</td></tr>
+			<tr class="footer"><th class="label-overall">Overall</th><td>2</td><td>4</td><td><span style="color:#880000">33.3&nbsp;%</span></td><td>00:01:09</td></tr>
+		</table>
+	</div>
+	<div class="overview-summary">
+		<h3 id="overview-summary">Overall Result</h3>
+		<table>
+			<tr class="header"><th class="label"></th><th>Passed</th><th>Failed</th><th>Passed&nbsp;<small>[%]</small></th><th>Runtime <small>[hh:mm:ss]</small></th></tr>
+			<tr><th class="label-overall">Overall</th><td>2</td><td>4</td><td><span style="color:#880000">33.3&nbsp;%</span></td><td>00:01:09</td></tr>
+		</table>
+	</div>
+</div> <!-- /overview -->
+<div class="sequence">
+	<h2 id="seq0">Sequence: FF_Chip_Test</h2>
+	<p>Test-1: 70°C -&gt; 85°C in (2°C stepps/20min) stepps.<br />Test-2: 85°C  infinitely.</p>
+	<table class="meta">
+	<tr><th>Revision Date:</th><td>2026-02-11T14:58:40</td></tr>
+	<tr><th>Author:</th><td>Stefan Reiner</td></tr>
+	</table>
+	<div class="jump"><a href="#seq0_overview">&uarr; back to overview</a></div>
+	<div class="singletest">
+		<h3 id="seq0test0">Test: FF Chip test 1</h3>
+		<p>basic access tests for climate chamber access</p>
+		<table class="meta">
+		<tr><th>Test Source File:</th><td>development_support/FF_Chip_test_1.py</td></tr>
+		<tr><th>Tested on:</th><td></td></tr>
+		<tr><th>Last Revision:</th><td>initial</td></tr>
+		<tr><th>Version:</th><td>1.0.0</td></tr>
+		<tr><th>Revision Date:</th><td>15.12.2025</td></tr>
+		<tr><th>Author:</th><td>ReinerS</td></tr>
+		<tr><th>Testcase-IDs:</th><td></td></tr>
+		</table>
+	<div class="jump"><a href="#seq0test0_overview">&uarr; back to overview</a> <a href="#result_seq0test0">&darr; test result</a></div>
+		<h4>Test Steps:</h4>
+		<table title="FF Chip test 1">
+			<tr class="header"><th class="over">#</th><th class="step">No.</th><th class="descr"></th><th class="delta-t">&Delta;t</th><th class="tc-ids">TC-ID</th><th class="verdictheader">Verdict</th></tr>
+			<tr><td class="over">1</td><td class="step">1</td><td class="descr">Test script aborted with errors.</td><td class="delta-t">0.000s</td><td class="tc-ids"></td><td class="verdict v_failed" tabindex="1" id="v1">FAILED</td></tr>
+			<tr><td class="over">2</td><td class="step">2</td><td class="descr">Keyboard Interrupt detected, current test aborted.</td><td class="delta-t"></td><td class="tc-ids"></td><td class="verdict v_error" tabindex="2" id="v2">ERROR</td></tr>
+		</table>
+		<h4 id="result_seq0test0">Single Test Result</h4>
+		<table>
+			<tr class="header"><th class="label"></th><th>Passed</th><th>Failed</th><th>Passed&nbsp;<small>[%]</small></th></tr>
+			<tr><th class="label-overall">FF Chip test 1</th><td>0</td><td>2</td><td><span style="color:#880000">0.0&nbsp;%</span></td></tr>
+		</table>
+	<div class="jump"><a href="#seq0test0_overview">&uarr; back to overview</a> <a href="#seq0test0">&uarr; test start</a></div>
+	</div> <!-- /singletest -->
+	<div class="singletest">
+		<h3 id="seq0test1">Test: FF Chip test 2</h3>
+		<p>basic access tests for climate chamber access</p>
+		<table class="meta">
+		<tr><th>Test Source File:</th><td>development_support/FF_Chip_test_2.py</td></tr>
+		<tr><th>Tested on:</th><td>2026-03-02T12:59:12</td></tr>
+		<tr><th>Last Revision:</th><td>initial</td></tr>
+		<tr><th>Version:</th><td>1.0.0</td></tr>
+		<tr><th>Revision Date:</th><td>15.12.2025</td></tr>
+		<tr><th>Author:</th><td>ReinerS</td></tr>
+		<tr><th>Testcase-IDs:</th><td>FF_Chip_test_2</td></tr>
+		</table>
+	<div class="jump"><a href="#seq0test1_overview">&uarr; back to overview</a> <a href="#result_seq0test1">&darr; test result</a></div>
+		<h4>Test Steps:</h4>
+		<table title="FF Chip test 2">
+			<tr class="header"><th class="over">#</th><th class="step">No.</th><th class="descr"></th><th class="delta-t">&Delta;t</th><th class="tc-ids">TC-ID</th><th class="verdictheader">Verdict</th></tr>
+			<tr><td class="over">3</td><td class="step">1</td><td class="descr">Climate chamber set to manual mode / start</td><td class="delta-t">1.377s</td><td class="tc-ids"></td><td class="verdict v_info" tabindex="3" id="v3">INFO</td></tr>
+			<tr><td class="over">4</td><td class="step">2</td><td class="descr">Current temperature should be within climate chamber limits<br />Value:     20.7 °C (temperature)<br />Min value: -72.0 °C<br />Max value: 180.0 °C</td><td class="delta-t">1.379s</td><td class="tc-ids">FF_Chip_test_2</td><td class="verdict v_passed" tabindex="4" id="v4">PASSED</td></tr>
+			<tr><td class="over">5</td><td class="step">3</td><td class="descr">Active temperature setpoint should be within climate chamber limits<br />Value:     85.0 °C (temperature_setpoint)<br />Min value: -72.0 °C<br />Max value: 180.0 °C</td><td class="delta-t">1.382s</td><td class="tc-ids">FF_Chip_test_2</td><td class="verdict v_passed" tabindex="5" id="v5">PASSED</td></tr>
+			<tr><td class="over">6</td><td class="step">4</td><td class="descr">Test script aborted with errors.</td><td class="delta-t">1m 8.738s</td><td class="tc-ids">FF_Chip_test_2</td><td class="verdict v_failed" tabindex="6" id="v6">FAILED</td></tr>
+			<tr><td class="over">7</td><td class="step">5</td><td class="descr">Keyboard Interrupt detected, current test aborted.</td><td class="delta-t">1m 8.738s</td><td class="tc-ids">FF_Chip_test_2</td><td class="verdict v_error" tabindex="7" id="v7">ERROR</td></tr>
+		</table>
+		<h4 id="result_seq0test1">Single Test Result</h4>
+		<table>
+			<tr class="header"><th class="label"></th><th>Passed</th><th>Failed</th><th>Passed&nbsp;<small>[%]</small></th></tr>
+			<tr><th class="label-overall">FF Chip test 2</th><td>2</td><td>2</td><td><span style="color:#880000">50.0&nbsp;%</span></td></tr>
+		</table>
+	<div class="jump"><a href="#seq0test1_overview">&uarr; back to overview</a> <a href="#seq0test1">&uarr; test start</a></div>
+	</div> <!-- /singletest -->
+</div> <!-- /sequence -->
+<div class="summary">
+	<h2>Summary</h2>
+	<h3>General:</h3>
+	<table>
+		<tr class="header"><th class="label" colspan="3">Overview:</th></tr>
+		<tr><td colspan="3" style="padding:1em"><b>7</b> Results in <b>2</b> Single Tests, subdivided into <b>1</b> Test Sequence</td></tr>
+		<tr class="header"><th class="label" colspan="3">Distribution by Verdict:</th></tr>
+		<tr><td class="v_passed">PASSED</td><td>2</td><td><span>28.6&nbsp;%</span></td></tr>
+		<tr><td class="v_failed">FAILED</td><td>2</td><td><span>28.6&nbsp;%</span></td></tr>
+		<tr><td class="v_error">ERROR</td><td>2</td><td><span>28.6&nbsp;%</span></td></tr>
+		<tr><td class="v_info">INFO</td><td>1</td><td><span>14.3&nbsp;%</span></td></tr>
+	</table>
+	<h3>Overall for Passed/Failed:</h3>
+	<table>
+			<tr class="header"><th class="label"></th><th>Passed</th><th>Failed</th><th>Passed&nbsp;<small>[%]</small></th></tr>
+			<tr><th class="label-overall">Overall</th><td>2</td><td>4</td><td><span style="color:#880000">33.3&nbsp;%</span></td></tr>
+	</table>
+</div> <!-- /summary -->
+</div> <!-- /testreport -->
+</div><!--/#content-->
+</body>
+</html>

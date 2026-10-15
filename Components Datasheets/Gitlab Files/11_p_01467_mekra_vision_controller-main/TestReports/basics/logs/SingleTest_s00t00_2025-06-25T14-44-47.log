@@ -1,0 +1,91 @@
+Dongle-DLL v5.1 (x64)
+# #####################################################################
+# Checking License: TestToolkit v2.2.1...
+# #####################################################################
+D-USB-2020-B-00DB TestToolkit 2.2.x
+PASSED
+# License valid
+[verifyFeature] ttk_checks 1.7.0
+
+== psu_test.py =================================================================
+[[setup]]
+# #############################################################
+# Connected to TCPIP0::192.168.10.10:
+# Device: Rohde&Schwarz NGP824
+#         5601.4007k03/111087,02.025 02E3A3C161
+# #############################################################
+NGP800Series Device:
+    Rohde&Schwarz,NGP824,5601.4007k03/111087,02.025 02E3A3C161
+    VISA Address: TCPIP0::192.168.10.10
+psu.displayBrightness() = 0.4
+psu.displayBrightness() = 0.4
+  INFO  - Current PSU system datetime: 2025-06-25 14:43:24
+          Delta time: 0.14s
+--------------------------------------------------------------------------------
+psu.channelOutputEnable(1) = True
+psu.channelOutputEnable(2) = True
+psu.channelOutputEnable(3) = False
+psu.channelOutputEnable(4) = False
+psu.masterOutputEnable()   = True
+--------------------------------------------------------------------------------
+  INFO  - Power supply set to 2.22 V
+          Delta time: 0.30s
+voltage_preset_ch1: 2.220 V
+voltage_ch1: 2.220 V
+ PASSED - Check PSU output voltage
+          Expected value: 2.220 V
+          Current value:  2.220 V (voltage_ch1)
+          Absolute Tolerance:  +/- 0.020 V
+          Delta time: 0.33s
+          Testcase-ID: psu_basics
+  INFO  - Power supply set to 12.345 V
+          Delta time: 0.35s
+voltage_preset_ch1: 12.345 V
+voltage_ch1: 12.338 V
+ PASSED - Check PSU output voltage
+          Expected value: 12.345 V
+          Current value:  12.342 V (voltage_ch1)
+          Absolute Tolerance:  +/- 0.020 V
+          Delta time: 0.37s
+          Testcase-ID: psu_basics
+  INFO  - Disabled Channel 1 output
+          Delta time: 0.39s
+12.34V 0.03V 0.00V ...ok
+ PASSED - Voltage of disabled channel should be zero.
+          Expected value: 0.000 V
+          Current value:  0.002 V (voltage_ch1)
+          Absolute Tolerance:  +/- 0.020 V
+          Delta time: 0.45s
+          Testcase-ID: psu_basics
+ PASSED - Check current temperature of output channel 1
+          Value:     37.0 °C (temperature_ch1)
+          Min value: 18.0 °C
+          Max value: 50.0 °C
+          Delta time: 0.45s
+          Testcase-ID: psu_basics
+
+[[breakdown]]
+
+--Elapsed Time:----------------
+  0.5 seconds
+
+--Results:---------------------
+   INFO   - Current PSU system datetime: 2025-06-25 14:43:24
+   INFO   - Power supply set to 2.22 V
+  PASSED  - Check PSU output voltage\nExpected value: 2.220 V\nCurrent value:  2.220 V (voltage_ch1)\nAbsolute Tolerance:  +/- 0.020 V
+   INFO   - Power supply set to 12.345 V
+  PASSED  - Check PSU output voltage\nExpected value: 12.345 V\nCurrent value:  12.342 V (voltage_ch1)\nAbsolute Tolerance:  +/- 0.020 V
+   INFO   - Disabled Channel 1 output
+  PASSED  - Voltage of disabled channel should be zero.\nExpected value: 0.000 V\nCurrent value:  0.002 V (voltage_ch1)\nAbsolute Tolerance:  +/- 0.020 V
+  PASSED  - Check current temperature of output channel 1\nValue:     37.0 °C (temperature_ch1)\nMin value: 18.0 °C\nMax value: 50.0 °C
+
+--Summary:---------------------
+  FAILED : 0
+  PASSED : 4
+  INFO   : 4
+-------------------------------
+
+XML... ...writing......done
+# Results stored to "SingleTest_s00t00.xml".
+Done.
+[[test_runner_finally]]

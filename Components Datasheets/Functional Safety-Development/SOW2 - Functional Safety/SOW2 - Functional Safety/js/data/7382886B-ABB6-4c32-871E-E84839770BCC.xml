@@ -1,0 +1,3 @@
+tocTab[tocTab.length] = new Array("0.3.3.1.1.2.1", "", "DomainElements (Internal)", "EARoot/EA3/EA3/EA1/EA1/EA2/EA1/EA1242.htm", "4.png", "", "", "{1BBDF947-5941-423c-91DA-815B0058947B}", "Package");
+tocTab[tocTab.length] = new Array("0.3.3.1.1.2.2", "1", "FunctionalGroups", "EARoot/EA3/EA3/EA1/EA1/EA2/EA2/EA1243.htm", "4.png", "", "", "{371DEC61-BBD6-4fa8-AEAB-90BA2C099000}", "Package");
+tocTab[tocTab.length] = new Array("0.3.3.1.1.2.3", "", "Interfaces (Internal)", "EARoot/EA3/EA3/EA1/EA1/EA2/EA3/EA1249.htm", "4.png", "", "", "{05FEB6D7-DEAA-44a7-A978-AF5608674566}", "Package");

@@ -1,0 +1,38 @@
+Dongle-DLL v5.1 (x64)
+# #####################################################################
+# Checking License: TestToolkit v2.2.1...
+# #####################################################################
+D-USB-2020-B-00DB TestToolkit 2.2.x
+PASSED
+# License valid
+[verifyFeature] ttk_checks 1.7.0
+self.hostIP:  192.168.120.1
+self.serverIP:  192.168.120.4
+self.hostPort:  50010
+self.destinationPort:  30501
+
+> An exception occurred:
+>  Type:      TypeError
+>  Exception: '<' not supported between instances of 'str' and 'int'
+--Traceback:-------------------------------------------
+Traceback (most recent call last):
+  File "D:\Releases\TestSupport\test_support312\test_runner_base.py", line 289, in runTest
+  File "D:\VSC-GitLab\11_p_01467_mekra_vision_controller\Python\TestPool\someip_test.py", line 19, in <module>
+    from SOMEIP import someip_commands
+  File "D:\VSC-GitLab\11_p_01467_mekra_vision_controller\Python\TestPool\SOMEIP\someip_commands.py", line 27, in <module>
+    someip_client = SomeipClient(
+                    ^^^^^^^^^^^^^
+  File "D:\VSC-GitLab\11_p_01467_mekra_vision_controller\Python\TestLibraries\tools\SOMEIP\someip_client.py", line 41, in __init__
+    if not self.verify_input():
+           ^^^^^^^^^^^^^^^^^^^
+  File "D:\VSC-GitLab\11_p_01467_mekra_vision_controller\Python\TestLibraries\tools\SOMEIP\someip_client.py", line 63, in verify_input
+    if self.destinationPort < 1 or self.destinationPort > 65535:
+       ^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: '<' not supported between instances of 'str' and 'int'
+
+-------------------------------------------------------
+# No viable test results detected.
+# Updating results with error information...
+XML... ...writing......done
+# Updated results stored to "SingleTest_s00t00.xml".
+[[test_runner_finally]]

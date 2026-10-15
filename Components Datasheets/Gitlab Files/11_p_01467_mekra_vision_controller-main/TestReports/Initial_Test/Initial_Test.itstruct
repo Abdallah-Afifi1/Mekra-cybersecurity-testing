@@ -1,0 +1,798 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testseries>
+	<meta>
+		<title />
+		<description>&lt;description text&gt;</description>
+		<author>Stefan Reiner</author>
+		<date>2026-05-28T14:50:08</date>
+		<version />
+		<last_revision />
+		<hardwareversion>B2-Sample</hardwareversion>
+		<softwareversion>SW04C6.2</softwareversion>
+		<customer>Isuzu</customer>
+		<project>MVC</project>
+		<department>MEKRA T-EQV</department>
+	</meta>
+	<testsequences>
+		<testsequence source="Initial_Test_Cam_1.seq">
+			<meta>
+				<title>Initial_test_1</title>
+				<description>&lt;description text&gt;</description>
+				<author>Stefan Reiner</author>
+				<date>2026-03-05T08:55:06</date>
+				<version />
+				<last_revision />
+			</meta>
+			<singletests>
+				<singletest source="MVC-12345-B-Sample_functional_B.py" selected="true" />
+			</singletests>
+		</testsequence>
+		<testsequence source="Initial_Test_Cam_2.seq">
+			<meta>
+				<title>Initial_test_2</title>
+				<description>&lt;description text&gt;</description>
+				<author>Stefan Reiner</author>
+				<date>2026-03-05T08:57:03</date>
+				<version />
+				<last_revision />
+			</meta>
+			<singletests>
+				<singletest source="MVC-12345-B-Sample_functional_B.py" selected="false" />
+			</singletests>
+		</testsequence>
+		<testsequence source="Initial_Test_Cam_3.seq">
+			<meta>
+				<title>Initial_test_3</title>
+				<description>&lt;description text&gt;</description>
+				<author>Stefan Reiner</author>
+				<date>2026-03-05T08:58:26</date>
+				<version />
+				<last_revision />
+			</meta>
+			<singletests>
+				<singletest source="MVC-12345-B-Sample_functional_B.py" selected="false" />
+			</singletests>
+		</testsequence>
+		<testsequence source="Initial_Test_Cam_4.seq">
+			<meta>
+				<title>Initial_test_4</title>
+				<description>&lt;description text&gt;</description>
+				<author>Stefan Reiner</author>
+				<date>2026-03-05T08:59:13</date>
+				<version />
+				<last_revision />
+			</meta>
+			<singletests>
+				<singletest source="MVC-12345-B-Sample_functional_B.py" selected="false" />
+			</singletests>
+		</testsequence>
+		<testsequence source="Initial_Test_Cam_5.seq">
+			<meta>
+				<title>Initial_test_5</title>
+				<description>&lt;description text&gt;</description>
+				<author>Stefan Reiner</author>
+				<date>2026-03-05T08:59:19</date>
+				<version />
+				<last_revision />
+			</meta>
+			<singletests>
+				<singletest source="MVC-12345-B-Sample_functional_B.py" selected="false" />
+			</singletests>
+		</testsequence>
+		<testsequence source="Initial_Test_Cam_6.seq">
+			<meta>
+				<title>Initial_test_6</title>
+				<description>&lt;description text&gt;</description>
+				<author>Stefan Reiner</author>
+				<date>2026-03-05T08:59:25</date>
+				<version />
+				<last_revision />
+			</meta>
+			<singletests>
+				<singletest source="MVC-12345-B-Sample_functional_B.py" selected="false" />
+			</singletests>
+		</testsequence>
+		<testsequence source="Initial_Test_Cam_7.seq">
+			<meta>
+				<title>Initial_test_7</title>
+				<description>&lt;description text&gt;</description>
+				<author>Stefan Reiner</author>
+				<date>2026-03-05T08:59:31</date>
+				<version />
+				<last_revision />
+			</meta>
+			<singletests>
+				<singletest source="MVC-12345-B-Sample_functional_B.py" selected="false" />
+			</singletests>
+		</testsequence>
+		<testsequence source="Initial_Test_Cam_8.seq">
+			<meta>
+				<title>Initial_test_8</title>
+				<description>&lt;description text&gt;</description>
+				<author>Stefan Reiner</author>
+				<date>2026-03-05T08:59:37</date>
+				<version />
+				<last_revision />
+			</meta>
+			<singletests>
+				<singletest source="MVC-12345-B-Sample_functional_B.py" selected="false" />
+			</singletests>
+		</testsequence>
+		<testsequence source="Initial_Test_Cam_9.seq">
+			<meta>
+				<title>Initial_test_9</title>
+				<description>&lt;description text&gt;</description>
+				<author>Stefan Reiner</author>
+				<date>2026-03-05T08:59:45</date>
+				<version />
+				<last_revision />
+			</meta>
+			<singletests>
+				<singletest source="MVC-12345-B-Sample_functional_B.py" selected="false" />
+			</singletests>
+		</testsequence>
+		<testsequence source="Initial_Test_Cam_10.seq">
+			<meta>
+				<title>Initial_test_10</title>
+				<description>&lt;description text&gt;</description>
+				<author>Stefan Reiner</author>
+				<date>2026-03-05T08:55:28</date>
+				<version />
+				<last_revision />
+			</meta>
+			<singletests>
+				<singletest source="MVC-12345-B-Sample_functional_B.py" selected="false" />
+			</singletests>
+		</testsequence>
+		<testsequence source="Initial_Test_Cam_11.seq">
+			<meta>
+				<title>Initial_test_11</title>
+				<description>&lt;description text&gt;</description>
+				<author>Stefan Reiner</author>
+				<date>2026-03-05T08:55:34</date>
+				<version />
+				<last_revision />
+			</meta>
+			<singletests>
+				<singletest source="MVC-12345-B-Sample_functional_B.py" selected="true" />
+			</singletests>
+		</testsequence>
+		<testsequence source="Initial_Test_Cam_12.seq">
+			<meta>
+				<title>Initial_test_12</title>
+				<description>&lt;description text&gt;</description>
+				<author>Stefan Reiner</author>
+				<date>2026-03-05T08:55:41</date>
+				<version />
+				<last_revision />
+			</meta>
+			<singletests>
+				<singletest source="MVC-12345-B-Sample_functional_B.py" selected="false" />
+			</singletests>
+		</testsequence>
+		<testsequence source="Initial_Test_Cam_13.seq">
+			<meta>
+				<title>Initial_test_13</title>
+				<description>&lt;description text&gt;</description>
+				<author>Stefan Reiner</author>
+				<date>2026-03-05T08:55:49</date>
+				<version />
+				<last_revision />
+			</meta>
+			<singletests>
+				<singletest source="MVC-12345-B-Sample_functional_B.py" selected="false" />
+			</singletests>
+		</testsequence>
+		<testsequence source="Initial_Test_Cam_14.seq">
+			<meta>
+				<title>Initial_test_14</title>
+				<description>&lt;description text&gt;</description>
+				<author>Stefan Reiner</author>
+				<date>2026-03-05T08:55:56</date>
+				<version />
+				<last_revision />
+			</meta>
+			<singletests>
+				<singletest source="MVC-12345-B-Sample_functional_B.py" selected="false" />
+			</singletests>
+		</testsequence>
+		<testsequence source="Initial_Test_Cam_15.seq">
+			<meta>
+				<title>Initial_test_15</title>
+				<description>&lt;description text&gt;</description>
+				<author>Stefan Reiner</author>
+				<date>2026-03-05T08:56:13</date>
+				<version />
+				<last_revision />
+			</meta>
+			<singletests>
+				<singletest source="MVC-12345-B-Sample_functional_B.py" selected="false" />
+			</singletests>
+		</testsequence>
+		<testsequence source="Initial_Test_Cam_16.seq">
+			<meta>
+				<title>Initial_test_16</title>
+				<description>&lt;description text&gt;</description>
+				<author>Stefan Reiner</author>
+				<date>2026-03-05T08:56:21</date>
+				<version />
+				<last_revision />
+			</meta>
+			<singletests>
+				<singletest source="MVC-12345-B-Sample_functional_B.py" selected="false" />
+			</singletests>
+		</testsequence>
+		<testsequence source="Initial_Test_Cam_17.seq">
+			<meta>
+				<title>Initial_test_17</title>
+				<description>&lt;description text&gt;</description>
+				<author>Stefan Reiner</author>
+				<date>2026-03-05T08:56:30</date>
+				<version />
+				<last_revision />
+			</meta>
+			<singletests>
+				<singletest source="MVC-12345-B-Sample_functional_B.py" selected="false" />
+			</singletests>
+		</testsequence>
+		<testsequence source="Initial_Test_Cam_18.seq">
+			<meta>
+				<title>Initial_test_18</title>
+				<description>&lt;description text&gt;</description>
+				<author>Stefan Reiner</author>
+				<date>2026-03-05T08:56:38</date>
+				<version />
+				<last_revision />
+			</meta>
+			<singletests>
+				<singletest source="MVC-12345-B-Sample_functional_B.py" selected="false" />
+			</singletests>
+		</testsequence>
+		<testsequence source="Initial_Test_Cam_19.seq">
+			<meta>
+				<title>Initial_test_19</title>
+				<description>&lt;description text&gt;</description>
+				<author>Stefan Reiner</author>
+				<date>2026-03-05T08:56:46</date>
+				<version />
+				<last_revision />
+			</meta>
+			<singletests>
+				<singletest source="MVC-12345-B-Sample_functional_B.py" selected="false" />
+			</singletests>
+		</testsequence>
+		<testsequence source="Initial_Test_Cam_20.seq">
+			<meta>
+				<title>Initial_test_20</title>
+				<description>&lt;description text&gt;</description>
+				<author>Stefan Reiner</author>
+				<date>2026-03-05T08:57:09</date>
+				<version />
+				<last_revision />
+			</meta>
+			<singletests>
+				<singletest source="MVC-12345-B-Sample_functional_B.py" selected="false" />
+			</singletests>
+		</testsequence>
+		<testsequence source="Initial_Test_Cam_21.seq">
+			<meta>
+				<title>Initial_test_21</title>
+				<description>&lt;description text&gt;</description>
+				<author>Stefan Reiner</author>
+				<date>2026-03-05T08:57:16</date>
+				<version />
+				<last_revision />
+			</meta>
+			<singletests>
+				<singletest source="MVC-12345-B-Sample_functional_B.py" selected="false" />
+			</singletests>
+		</testsequence>
+		<testsequence source="Initial_Test_Cam_22.seq">
+			<meta>
+				<title>Initial_test_22</title>
+				<description>&lt;description text&gt;</description>
+				<author>Stefan Reiner</author>
+				<date>2026-03-05T08:57:21</date>
+				<version />
+				<last_revision />
+			</meta>
+			<singletests>
+				<singletest source="MVC-12345-B-Sample_functional_B.py" selected="false" />
+			</singletests>
+		</testsequence>
+		<testsequence source="Initial_Test_Cam_23.seq">
+			<meta>
+				<title>Initial_test_23</title>
+				<description>&lt;description text&gt;</description>
+				<author>Stefan Reiner</author>
+				<date>2026-03-05T08:57:28</date>
+				<version />
+				<last_revision />
+			</meta>
+			<singletests>
+				<singletest source="MVC-12345-B-Sample_functional_B.py" selected="false" />
+			</singletests>
+		</testsequence>
+		<testsequence source="Initial_Test_Cam_24.seq">
+			<meta>
+				<title>Initial_test_24</title>
+				<description>&lt;description text&gt;</description>
+				<author>Stefan Reiner</author>
+				<date>2026-03-05T08:57:34</date>
+				<version />
+				<last_revision />
+			</meta>
+			<singletests>
+				<singletest source="MVC-12345-B-Sample_functional_B.py" selected="false" />
+			</singletests>
+		</testsequence>
+		<testsequence source="Initial_Test_Cam_25.seq">
+			<meta>
+				<title>Initial_test_25</title>
+				<description>&lt;description text&gt;</description>
+				<author>Stefan Reiner</author>
+				<date>2026-03-05T08:57:45</date>
+				<version />
+				<last_revision />
+			</meta>
+			<singletests>
+				<singletest source="MVC-12345-B-Sample_functional_B.py" selected="false" />
+			</singletests>
+		</testsequence>
+		<testsequence source="Initial_Test_Cam_26.seq">
+			<meta>
+				<title>Initial_test_26</title>
+				<description>&lt;description text&gt;</description>
+				<author>Stefan Reiner</author>
+				<date>2026-03-05T08:57:58</date>
+				<version />
+				<last_revision />
+			</meta>
+			<singletests>
+				<singletest source="MVC-12345-B-Sample_functional_B.py" selected="false" />
+			</singletests>
+		</testsequence>
+		<testsequence source="Initial_Test_Cam_27.seq">
+			<meta>
+				<title>Initial_test_27</title>
+				<description>&lt;description text&gt;</description>
+				<author>Stefan Reiner</author>
+				<date>2026-03-05T08:58:06</date>
+				<version />
+				<last_revision />
+			</meta>
+			<singletests>
+				<singletest source="MVC-12345-B-Sample_functional_B.py" selected="false" />
+			</singletests>
+		</testsequence>
+		<testsequence source="Initial_Test_Cam_28.seq">
+			<meta>
+				<title>Initial_test_28</title>
+				<description>&lt;description text&gt;</description>
+				<author>Stefan Reiner</author>
+				<date>2026-03-05T08:58:14</date>
+				<version />
+				<last_revision />
+			</meta>
+			<singletests>
+				<singletest source="MVC-12345-B-Sample_functional_B.py" selected="false" />
+			</singletests>
+		</testsequence>
+		<testsequence source="Initial_Test_Cam_29.seq">
+			<meta>
+				<title>Initial_test_29</title>
+				<description>&lt;description text&gt;</description>
+				<author>Stefan Reiner</author>
+				<date>2026-03-05T08:58:20</date>
+				<version />
+				<last_revision />
+			</meta>
+			<singletests>
+				<singletest source="MVC-12345-B-Sample_functional_B.py" selected="false" />
+			</singletests>
+		</testsequence>
+		<testsequence source="Initial_Test_Cam_30.seq">
+			<meta>
+				<title>Initial_test_30</title>
+				<description>&lt;description text&gt;</description>
+				<author>Stefan Reiner</author>
+				<date>2026-03-05T08:58:33</date>
+				<version />
+				<last_revision />
+			</meta>
+			<singletests>
+				<singletest source="MVC-12345-B-Sample_functional_B.py" selected="false" />
+			</singletests>
+		</testsequence>
+		<testsequence source="Initial_Test_Cam_31.seq">
+			<meta>
+				<title>Initial_test_31</title>
+				<description>&lt;description text&gt;</description>
+				<author>Stefan Reiner</author>
+				<date>2026-03-05T08:58:39</date>
+				<version />
+				<last_revision />
+			</meta>
+			<singletests>
+				<singletest source="MVC-12345-B-Sample_functional_B.py" selected="false" />
+			</singletests>
+		</testsequence>
+		<testsequence source="Initial_Test_Cam_32.seq">
+			<meta>
+				<title>Initial_test_32</title>
+				<description>&lt;description text&gt;</description>
+				<author>Stefan Reiner</author>
+				<date>2026-03-05T08:58:47</date>
+				<version />
+				<last_revision />
+			</meta>
+			<singletests>
+				<singletest source="MVC-12345-B-Sample_functional_B.py" selected="false" />
+			</singletests>
+		</testsequence>
+		<testsequence source="Initial_Test_Cam_33.seq">
+			<meta>
+				<title>Initial_test_33</title>
+				<description>&lt;description text&gt;</description>
+				<author>Stefan Reiner</author>
+				<date>2026-03-05T08:58:54</date>
+				<version />
+				<last_revision />
+			</meta>
+			<singletests>
+				<singletest source="MVC-12345-B-Sample_functional_B.py" selected="false" />
+			</singletests>
+		</testsequence>
+		<testsequence source="Initial_Test_Cam_34.seq">
+			<meta>
+				<title>Initial_test_34</title>
+				<description>&lt;description text&gt;</description>
+				<author>Stefan Reiner</author>
+				<date>2026-03-05T08:59:02</date>
+				<version />
+				<last_revision />
+			</meta>
+			<singletests>
+				<singletest source="MVC-12345-B-Sample_functional_B.py" selected="false" />
+			</singletests>
+		</testsequence>
+		<testsequence source="Initial_Test_Cam_35.seq">
+			<meta>
+				<title>Initial_test_29</title>
+				<description>&lt;description text&gt;</description>
+				<author>Stefan Reiner</author>
+				<date>2026-03-05T08:58:20</date>
+				<version />
+				<last_revision />
+			</meta>
+			<singletests>
+				<singletest source="MVC-12345-B-Sample_functional_B.py" selected="false" />
+			</singletests>
+		</testsequence>
+		<testsequence source="Initial_Test_Cam_36.seq">
+			<meta>
+				<title>Initial_test_30</title>
+				<description>&lt;description text&gt;</description>
+				<author>Stefan Reiner</author>
+				<date>2026-03-05T08:58:33</date>
+				<version />
+				<last_revision />
+			</meta>
+			<singletests>
+				<singletest source="MVC-12345-B-Sample_functional_B.py" selected="false" />
+			</singletests>
+		</testsequence>
+		<testsequence source="Initial_Test_Cam_37.seq">
+			<meta>
+				<title>Initial_test_31</title>
+				<description>&lt;description text&gt;</description>
+				<author>Stefan Reiner</author>
+				<date>2026-03-05T08:58:39</date>
+				<version />
+				<last_revision />
+			</meta>
+			<singletests>
+				<singletest source="MVC-12345-B-Sample_functional_B.py" selected="false" />
+			</singletests>
+		</testsequence>
+		<testsequence source="Initial_Test_Cam_38.seq">
+			<meta>
+				<title>Initial_test_32</title>
+				<description>&lt;description text&gt;</description>
+				<author>Stefan Reiner</author>
+				<date>2026-03-05T08:58:47</date>
+				<version />
+				<last_revision />
+			</meta>
+			<singletests>
+				<singletest source="MVC-12345-B-Sample_functional_B.py" selected="false" />
+			</singletests>
+		</testsequence>
+		<testsequence source="Initial_Test_Cam_39.seq">
+			<meta>
+				<title>Initial_test_33</title>
+				<description>&lt;description text&gt;</description>
+				<author>Stefan Reiner</author>
+				<date>2026-03-05T08:58:54</date>
+				<version />
+				<last_revision />
+			</meta>
+			<singletests>
+				<singletest source="MVC-12345-B-Sample_functional_B.py" selected="false" />
+			</singletests>
+		</testsequence>
+		<testsequence source="Initial_Test_Cam_40.seq">
+			<meta>
+				<title>Initial_test_34</title>
+				<description>&lt;description text&gt;</description>
+				<author>Stefan Reiner</author>
+				<date>2026-03-05T08:59:02</date>
+				<version />
+				<last_revision />
+			</meta>
+			<singletests>
+				<singletest source="MVC-12345-B-Sample_functional_B.py" selected="false" />
+			</singletests>
+		</testsequence>
+		<testsequence source="Initial_Test_Cam_41.seq">
+			<meta>
+				<title>Initial_test_34</title>
+				<description>&lt;description text&gt;</description>
+				<author>Stefan Reiner</author>
+				<date>2026-03-05T08:59:02</date>
+				<version />
+				<last_revision />
+			</meta>
+			<singletests>
+				<singletest source="MVC-12345-B-Sample_functional_B.py" selected="false" />
+			</singletests>
+		</testsequence>
+		<testsequence source="Initial_Test_Cam_42.seq">
+			<meta>
+				<title>Initial_test_34</title>
+				<description>&lt;description text&gt;</description>
+				<author>Stefan Reiner</author>
+				<date>2026-03-05T08:59:02</date>
+				<version />
+				<last_revision />
+			</meta>
+			<singletests>
+				<singletest source="MVC-12345-B-Sample_functional_B.py" selected="false" />
+			</singletests>
+		</testsequence>
+		<testsequence source="Initial_Test_Cam_43.seq">
+			<meta>
+				<title>Initial_test_34</title>
+				<description>&lt;description text&gt;</description>
+				<author>Stefan Reiner</author>
+				<date>2026-03-05T08:59:02</date>
+				<version />
+				<last_revision />
+			</meta>
+			<singletests>
+				<singletest source="MVC-12345-B-Sample_functional_B.py" selected="false" />
+			</singletests>
+		</testsequence>
+		<testsequence source="Initial_Test_Cam_44.seq">
+			<meta>
+				<title>Initial_test_34</title>
+				<description>&lt;description text&gt;</description>
+				<author>Stefan Reiner</author>
+				<date>2026-03-05T08:59:02</date>
+				<version />
+				<last_revision />
+			</meta>
+			<singletests>
+				<singletest source="MVC-12345-B-Sample_functional_B.py" selected="false" />
+			</singletests>
+		</testsequence>
+		<testsequence source="Initial_Test_Cam_45.seq">
+			<meta>
+				<title>Initial_test_34</title>
+				<description>&lt;description text&gt;</description>
+				<author>Stefan Reiner</author>
+				<date>2026-03-05T08:59:02</date>
+				<version />
+				<last_revision />
+			</meta>
+			<singletests>
+				<singletest source="MVC-12345-B-Sample_functional_B.py" selected="false" />
+			</singletests>
+		</testsequence>
+		<testsequence source="Initial_Test_Cam_46.seq">
+			<meta>
+				<title>Initial_test_34</title>
+				<description>&lt;description text&gt;</description>
+				<author>Stefan Reiner</author>
+				<date>2026-03-05T08:59:02</date>
+				<version />
+				<last_revision />
+			</meta>
+			<singletests>
+				<singletest source="MVC-12345-B-Sample_functional_B.py" selected="false" />
+			</singletests>
+		</testsequence>
+		<testsequence source="Initial_Test_Cam_47.seq">
+			<meta>
+				<title>Initial_test_34</title>
+				<description>&lt;description text&gt;</description>
+				<author>Stefan Reiner</author>
+				<date>2026-03-05T08:59:02</date>
+				<version />
+				<last_revision />
+			</meta>
+			<singletests>
+				<singletest source="MVC-12345-B-Sample_functional_B.py" selected="false" />
+			</singletests>
+		</testsequence>
+		<testsequence source="Initial_Test_Cam_48.seq">
+			<meta>
+				<title>Initial_test_34</title>
+				<description>&lt;description text&gt;</description>
+				<author>Stefan Reiner</author>
+				<date>2026-03-05T08:59:02</date>
+				<version />
+				<last_revision />
+			</meta>
+			<singletests>
+				<singletest source="MVC-12345-B-Sample_functional_B.py" selected="false" />
+			</singletests>
+		</testsequence>
+		<testsequence source="Initial_Test_Cam_49.seq">
+			<meta>
+				<title>Initial_test_34</title>
+				<description>&lt;description text&gt;</description>
+				<author>Stefan Reiner</author>
+				<date>2026-03-05T08:59:02</date>
+				<version />
+				<last_revision />
+			</meta>
+			<singletests>
+				<singletest source="MVC-12345-B-Sample_functional_B.py" selected="false" />
+			</singletests>
+		</testsequence>
+		<testsequence source="Initial_Test_Cam_50.seq">
+			<meta>
+				<title>Initial_test_34</title>
+				<description>&lt;description text&gt;</description>
+				<author>Stefan Reiner</author>
+				<date>2026-03-05T08:59:02</date>
+				<version />
+				<last_revision />
+			</meta>
+			<singletests>
+				<singletest source="MVC-12345-B-Sample_functional_B.py" selected="false" />
+			</singletests>
+		</testsequence>
+		<testsequence source="Initial_Test_Cam_51.seq">
+			<meta>
+				<title>Initial_test_34</title>
+				<description>&lt;description text&gt;</description>
+				<author>Stefan Reiner</author>
+				<date>2026-03-05T08:59:02</date>
+				<version />
+				<last_revision />
+			</meta>
+			<singletests>
+				<singletest source="MVC-12345-B-Sample_functional_B.py" selected="false" />
+			</singletests>
+		</testsequence>
+		<testsequence source="Initial_Test_Cam_52.seq">
+			<meta>
+				<title>Initial_test_34</title>
+				<description>&lt;description text&gt;</description>
+				<author>Stefan Reiner</author>
+				<date>2026-03-05T08:59:02</date>
+				<version />
+				<last_revision />
+			</meta>
+			<singletests>
+				<singletest source="MVC-12345-B-Sample_functional_B.py" selected="false" />
+			</singletests>
+		</testsequence>
+		<testsequence source="Initial_Test_Cam_53.seq">
+			<meta>
+				<title>Initial_test_34</title>
+				<description>&lt;description text&gt;</description>
+				<author>Stefan Reiner</author>
+				<date>2026-03-05T08:59:02</date>
+				<version />
+				<last_revision />
+			</meta>
+			<singletests>
+				<singletest source="MVC-12345-B-Sample_functional_B.py" selected="false" />
+			</singletests>
+		</testsequence>
+		<testsequence source="Initial_Test_Cam_54.seq">
+			<meta>
+				<title>Initial_test_34</title>
+				<description>&lt;description text&gt;</description>
+				<author>Stefan Reiner</author>
+				<date>2026-03-05T08:59:02</date>
+				<version />
+				<last_revision />
+			</meta>
+			<singletests>
+				<singletest source="MVC-12345-B-Sample_functional_B.py" selected="false" />
+			</singletests>
+		</testsequence>
+		<testsequence source="Initial_Test_Cam_55.seq">
+			<meta>
+				<title>Initial_test_34</title>
+				<description>&lt;description text&gt;</description>
+				<author>Stefan Reiner</author>
+				<date>2026-03-05T08:59:02</date>
+				<version />
+				<last_revision />
+			</meta>
+			<singletests>
+				<singletest source="MVC-12345-B-Sample_functional_B.py" selected="false" />
+			</singletests>
+		</testsequence>
+		<testsequence source="Initial_Test_Cam_56.seq">
+			<meta>
+				<title>Initial_test_34</title>
+				<description>&lt;description text&gt;</description>
+				<author>Stefan Reiner</author>
+				<date>2026-03-05T08:59:02</date>
+				<version />
+				<last_revision />
+			</meta>
+			<singletests>
+				<singletest source="MVC-12345-B-Sample_functional_B.py" selected="false" />
+			</singletests>
+		</testsequence>
+		<testsequence source="Initial_Test_Cam_57.seq">
+			<meta>
+				<title>Initial_test_34</title>
+				<description>&lt;description text&gt;</description>
+				<author>Stefan Reiner</author>
+				<date>2026-03-05T08:59:02</date>
+				<version />
+				<last_revision />
+			</meta>
+			<singletests>
+				<singletest source="MVC-12345-B-Sample_functional_B.py" selected="false" />
+			</singletests>
+		</testsequence>
+		<testsequence source="Initial_Test_Cam_58.seq">
+			<meta>
+				<title>Initial_test_34</title>
+				<description>&lt;description text&gt;</description>
+				<author>Stefan Reiner</author>
+				<date>2026-03-05T08:59:02</date>
+				<version />
+				<last_revision />
+			</meta>
+			<singletests>
+				<singletest source="MVC-12345-B-Sample_functional_B.py" selected="true" />
+			</singletests>
+		</testsequence>
+		<testsequence source="Initial_Test_Cam_59.seq">
+			<meta>
+				<title>Initial_test_34</title>
+				<description>&lt;description text&gt;</description>
+				<author>Stefan Reiner</author>
+				<date>2026-03-05T08:59:02</date>
+				<version />
+				<last_revision />
+			</meta>
+			<singletests>
+				<singletest source="MVC-12345-B-Sample_functional_B.py" selected="true" />
+			</singletests>
+		</testsequence>
+		<testsequence source="Initial_Test_Cam_60.seq">
+			<meta>
+				<title>Initial_test_34</title>
+				<description>&lt;description text&gt;</description>
+				<author>Stefan Reiner</author>
+				<date>2026-03-05T08:59:02</date>
+				<version />
+				<last_revision />
+			</meta>
+			<singletests>
+				<singletest source="MVC-12345-B-Sample_functional_B.py" selected="true" />
+			</singletests>
+		</testsequence>
+	</testsequences>
+</testseries>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<singletest source="development_support/FF_Chip_test_2.py">
+	<meta>
+		<title>FF Chip test 2</title>
+		<description>basic access tests for climate chamber access</description>
+		<author>ReinerS</author>
+		<date>15.12.2025</date>
+		<version>1.0.0</version>
+		<last_revision>initial</last_revision>
+		<starttime>2026-03-02T14:22:26</starttime>
+		<endtime>2026-03-02T14:22:47</endtime>
+		<hil_computername>TTE-SOW2-W11</hil_computername>
+		<hil_project_path>D:\VSC-GitLab\11_p_01467_mekra_vision_controller</hil_project_path>
+		<hil_username>svc_systessow2</hil_username>
+	</meta>
+	<results>
+		<result>
+			<description>Climate chamber set to manual mode / start</description>
+			<verdict>INFO</verdict>
+			<deltatime>6.262</deltatime>
+		</result>
+		<result>
+			<description>
+Current temperature should be within climate chamber limits
+Value:     35.8 °C (temperature)
+Min value: -72.0 °C
+Max value: 180.0 °C
+			</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>FF_Chip_test_2</testcase_id>
+			<deltatime>6.262</deltatime>
+		</result>
+		<result>
+			<description>
+Active temperature setpoint should be within climate chamber limits
+Value:     85.0 °C (temperature_setpoint)
+Min value: -72.0 °C
+Max value: 180.0 °C
+			</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>FF_Chip_test_2</testcase_id>
+			<deltatime>6.262</deltatime>
+		</result>
+		<result>
+			<description>Test script aborted with errors.</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>FF_Chip_test_2</testcase_id>
+			<deltatime>20.732</deltatime>
+		</result>
+		<result>
+			<description>Keyboard Interrupt detected, current test aborted.</description>
+			<verdict>ERROR</verdict>
+			<testcase_id>FF_Chip_test_2</testcase_id>
+			<deltatime>20.732</deltatime>
+		</result>
+	</results>
+</singletest>

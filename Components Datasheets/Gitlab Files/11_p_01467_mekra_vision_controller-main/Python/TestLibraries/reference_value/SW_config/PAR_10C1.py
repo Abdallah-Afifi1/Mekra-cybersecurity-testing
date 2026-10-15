@@ -1,0 +1,23 @@
+#SW Configuration Data: Volvo Standard 1Gbit
+
+parVer = bytes([0x31, 0x30, 0x43, 0x31])
+device_type = bytes([0x72, 0x63, 0x61, 0x6d, 0x5f, 0x32])
+someIpSdSourcePort = 0x771A
+someIpSdDestinationPort = 0x771A
+someIpSdDestinationIp = bytes([0xef, 0x78, 0x01, 0x01])
+cameraServicePort = 0x7725
+shutterSupported = 0x01
+T_imager_auto_on = 0x00F0
+T_imager_auto_off = 0x0140
+T_imager_protection_on = 0x02D0
+T_imager_protection_off = 0x0280
+numbersOfRegionOfInterest = 0x08
+RtpSourcePort1 = 0x138C
+RtpSourcePort2 = 0x1396
+RtpDestinationIp1 = bytes([0x00, 0x00, 0x00, 0x00])
+RtpDestinationIp2 = bytes([0x00, 0x00, 0x00, 0x00])
+RtpDestinationPort1 = 0x138d
+RtpDestinationPort2 = 0x13ae
+RtpVlanId1 = 0x00
+RtpVlanId2 = 0x00
+

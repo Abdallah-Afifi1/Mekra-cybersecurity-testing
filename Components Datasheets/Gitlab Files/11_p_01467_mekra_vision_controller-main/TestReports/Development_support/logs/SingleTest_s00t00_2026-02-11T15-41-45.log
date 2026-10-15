@@ -1,0 +1,95 @@
+Dongle-DLL v5.1 (x64)
+# #####################################################################
+# Checking License: TestToolkit v2.2.1...
+# #####################################################################
+D-USB-2020-B-00DB TestToolkit 2.2.x
+PASSED
+# License valid
+[verifyFeature] ttk_checks 1.7.0
+self.hostIP:  192.168.120.1
+self.serverIP:  192.168.120.10
+self.hostPort:  50010
+self.destinationPort:  62509
+hostSocket:  <socket.socket fd=716, family=2, type=2, proto=0>
+hostSocket:  <socket.socket fd=716, family=2, type=2, proto=0>
+host_data:  ('192.168.120.1', 50010)
+hostSocket:  <socket.socket fd=716, family=2, type=2, proto=0, laddr=('192.168.120.1', 50010)>
+self.hostIP:  192.168.120.250
+self.serverIP:  192.168.120.10
+self.hostPort:  50010
+self.destinationPort:  62509
+hostSocket:  <socket.socket fd=700, family=2, type=2, proto=0>
+hostSocket:  <socket.socket fd=700, family=2, type=2, proto=0>
+host_data:  ('192.168.120.250', 50010)
+hostSocket:  <socket.socket fd=700, family=2, type=2, proto=0, laddr=('192.168.120.250', 50010)>
+
+== FF_Chip_test_1.py ===========================================================
+[[setup]]
+################################################################################
+ Vötsch VT7004 on 192.168.10.40:2049
+# SimPac
+ 
+################################################################################
+# #############################################################
+# Connected to TCPIP0::192.168.10.10:
+# Device: Rohde&Schwarz NGP824
+#         5601.4007k03/111087,02.025 02E3A3C161
+# #############################################################
+# #############################################################
+# Connected to TCPIP0::192.168.10.20:
+# Device: Siglent Technologies SDM3065X
+#         SDM36HCX800721,3.02.01.13
+# #############################################################
+ PASSED - Current temperature should be within climate chamber limits
+          Value:     25.4 °C (temperature)
+          Min value: -72.0 °C
+          Max value: 180.0 °C
+          Delta time: 1.61s
+          Testcase-ID: FF_Chip_test_1
+ PASSED - Active temperature setpoint should be within climate chamber limits
+          Value:     20.0 °C (temperature_setpoint)
+          Min value: -72.0 °C
+          Max value: 180.0 °C
+          Delta time: 1.61s
+          Testcase-ID: FF_Chip_test_1
+DHCP server is starting...
+DHCP Discover received.
+Sending DHCP Offer.
+Waiting for DHCP Request after Offer.
+l_readable:  [<socket.socket fd=1532, family=2, type=2, proto=0, laddr=('192.168.120.1', 67)>]
+DHCP Request received. Sending DHCP Acknowledge.
+ACK client IP: [192, 168, 120, 10] cycles: 0
+C:\Users\svc_systessow2\AppData\Local\Programs\Python\Python312\Lib\subprocess.py:1127: ResourceWarning: subprocess 19436 is still running
+  _warn("subprocess %s is still running" % self.pid,
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\svc_systessow2\AppData\Local\Programs\Python\Python312\Lib\subprocess.py:1127: ResourceWarning: subprocess 23136 is still running
+  _warn("subprocess %s is still running" % self.pid,
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+funktion test
+# Setting temperature 70.0 °C
+# Waiting for temperature to settle...
+ 25.4  25.4  25.4  25.4  25.4  25.4  25.4  25.4  25.4  25.4  25.4  25.4  25.4  25.5  25.5  25.5  25.6  25.6  25.6  25.7  25.7 
+
+[[breakdown]]
+
+--Elapsed Time:----------------
+  1 minute, 1.4 seconds
+
+--Results:---------------------
+  PASSED  - Current temperature should be within climate chamber limits\nValue:     25.4 °C (temperature)\nMin value: -72.0 °C\nMax value: 180.0 °C
+  PASSED  - Active temperature setpoint should be within climate chamber limits\nValue:     20.0 °C (temperature_setpoint)\nMin value: -72.0 °C\nMax value: 180.0 °C
+
+--Summary:---------------------
+  FAILED : 0
+  PASSED : 2
+-------------------------------
+
+XML... ...writing......done
+# Results stored to "SingleTest_s00t00.xml".
+
+Keyboard Interrupt detected, aborting test...
+# Found test environment instance 'testenv'
+# Updating results with error information...
+XML... ...writing......done
+# Results stored to "SingleTest_s00t00.xml".
+[[test_runner_finally]]

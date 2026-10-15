@@ -1,0 +1,10 @@
+tocTab[tocTab.length] = new Array("0.2.2.47:1", "", "45", "EARoot/EA2/EA2/EA47/EA1485.htm", "175.png", "329", "0", "", "Logical diagram0","{B39DD7BA-DA28-80EE-A625-F75AFE716EC3}");
+tocTab[tocTab.length] = new Array("0.2.2.47:3", "", "«FMEAItem» 45", "EARoot/EA2/EA2/EA47/EA1490.htm", "5.png", "E2191", "0", "", "Class0","{973DA078-DF48-E015-8F52-54D63CE26BCD}");
+tocTab[tocTab.length] = new Array("0.2.2.47:2", "", "45", "EARoot/EA2/EA2/EA47/EA1487.htm", "182.png", "330", "E2191", "", "CompositeStructure diagram0","{A999083E-72D7-1442-806A-4067A170305C}");
+tocTab[tocTab.length] = new Array("0.2.2.47:4", "", "AP", "EARoot/EA2/EA2/EA47/EA1491.htm", "118.png", "E2192", "E2191", "", "Part0","{B7855222-8D15-54B4-8207-B3CE79B5BD13}");
+tocTab[tocTab.length] = new Array("0.2.2.47:5", "", "AP_aux", "EARoot/EA2/EA2/EA47/EA1492.htm", "118.png", "E2193", "E2191", "", "Part0","{A9B337E1-4CCA-3081-B417-5B421BE62A87}");
+tocTab[tocTab.length] = new Array("0.2.2.47:6", "", "Cause: function &#39;acquireDiagnostics&#39; faulty (contrast-brightness)<br />", "EARoot/EA2/EA2/EA47/EA1493.htm", "118.png", "E2194", "E2191", "", "Part0","{A242432A-3297-A128-8E2A-4AE264AF0418}");
+tocTab[tocTab.length] = new Array("0.2.2.47:7", "", "DetMeasure: Review (if the prosposed technical solution suffice)", "EARoot/EA2/EA2/EA47/EA1494.htm", "118.png", "E2198", "E2191", "", "Part0","{BC253FCA-8DE8-A120-8A4A-A4D0475B4539}");
+tocTab[tocTab.length] = new Array("0.2.2.47:8", "", "Effect: Details lost due to incorrect contrast or brightness", "EARoot/EA2/EA2/EA47/EA1495.htm", "118.png", "E2197", "E2191", "", "Part0","{9DEA9E95-8ADA-4E9C-8A69-5D96696EE79C}");
+tocTab[tocTab.length] = new Array("0.2.2.47:9", "", "FailureMode: Stream with incorrect contrast or brightness", "EARoot/EA2/EA2/EA47/EA1496.htm", "118.png", "E2195", "E2191", "", "Part0","{90C8D832-61A5-276A-B089-A411BEC5E633}");
+tocTab[tocTab.length] = new Array("0.2.2.47:10", "", "PrevMeasure: fault (contrast-brightness) free function &#39;acquireDiagnostics&#39; shall be ensured<br />", "EARoot/EA2/EA2/EA47/EA1497.htm", "118.png", "E2196", "E2191", "", "Part0","{B45B7341-89F4-3220-AA19-1A60DC6F1A77}");

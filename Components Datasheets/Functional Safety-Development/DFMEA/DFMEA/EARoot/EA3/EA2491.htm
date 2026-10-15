@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Architecture</title>
+<link href="../../css/ea.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="../../js/displayToc.js" type="text/javascript"></script>
+<script>
+
+  function switchProjectProperties() {
+			if (document.getElementById("proj00").style.display == "none") {
+				document.getElementById("proj00").style.display = "revert";
+				document.getElementById("proj01").style.display = "revert";
+				document.getElementById("proj02").style.display = "revert";
+				document.getElementById("proj03").style.display = "revert";
+				document.getElementById("proj04").style.display = "revert";
+				document.getElementById("proj05").style.display = "revert";
+			} else {
+				document.getElementById("proj00").style.display = "none";
+				document.getElementById("proj01").style.display = "none";
+				document.getElementById("proj02").style.display = "none";
+				document.getElementById("proj03").style.display = "none";
+				document.getElementById("proj04").style.display = "none";
+				document.getElementById("proj05").style.display = "none";
+			}
+}
+
+		function switchAdvancedProperties(){
+
+			if (document.getElementById("adv00").style.display == "none") {;
+				document.getElementById("adv00").style.display = "revert";
+				document.getElementById("adv01").style.display = "revert";
+			} else {
+				document.getElementById("adv00").style.display = "none";
+				document.getElementById("adv01").style.display = "none";
+			}
+		}
+		function initPage()
+        {			
+			var divs = document.getElementsByClassName("ObjectDetailsNotes");
+			for (var j = 0; j < divs.length; j++) {
+				var tmpStr = divs[j].innerHTML;
+				tmpStr = tmpStr.replace(/#gt;/g, "&gt;");
+				tmpStr = tmpStr.replace(/#lt;/g, "&lt;");
+
+				tmpStr = tmpStr.replace(/&gt;/g, ">");
+				tmpStr = tmpStr.replace(/&lt;/g, "<");
+
+				divs[j].innerHTML = tmpStr;
+			}
+
+            if (document.getElementById('TableGroup') != null)
+            {
+                toggleItem(document.getElementById('TableGroup').getElementsByTagName('li')[0].id.replace("Title", ""));
+            }
+
+        }
+</script>
+<style>
+
+</style>
+</head>
+<body onload="initPage();">
+<div class="section group" >
+
+		<div class="col span_2_of_2 header_frame">
+			<h1> Architecture </h1>
+			<!-- <img class="header_image" src="../../images/mekraLangGermany.PNG" align="right" alt="Header Image" />-->
+			<img class="header_image" src="../../images/mekraLangGermany.PNG" align="right" alt="Header Image" />
+		</div>
+		<div class="col span_2_of_2 breadcrumb_frame">
+			<p><a href="../EA5.htm">DFMEA</a> / <a href="EA2497.htm">Architecture</a> / <a href="EA2491.htm">Architecture</a></p>
+		</div>
+			
+		<table class="contentmaintable">
+			<!-- <tfoot>
+				<tr>
+					<td>foot1</td>
+					<td>foot2</td>
+				</tr>
+			</tfoot> -->
+			<tbody>
+				<tr>
+					<td class="indexcell">
+						<div class="projectBrowserTitle">Project: </div>
+						<ul>
+<li><img src="../../images/4.png" alt="Package"/> <a href="./EA1/EA2544.htm">see MVC::VideoStreaming(Branch)</a></li>
+<li><img src="../../images/175.png" alt="Diagram"/> <a href="EA2491.htm">Architecture</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2504.htm">BroadR-Reach</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2505.htm">Des</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2499.htm">forward run-time status/diagnostic signals from SOW1</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2506.htm">forwarding of configuration data towards SOW1<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2500.htm">frame reception managing</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2507.htm">ImageAcquisition</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2508.htm">ImageOutput</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2509.htm">ImageProcessing</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2510.htm">indication of &#39;image ready&#39; towards ImageProcesing</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2511.htm">LogArch.</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2502.htm">provision of  RAW Data Image</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2512.htm">reception of RAW Stream via Input Interface</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2513.htm">reception of run-time status/diagnostic signals from SOW1</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2514.htm">Shutter</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2515.htm">SoC</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2516.htm">temporary storage of RAW Data in a buffer</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2517.htm">VideoStreaming (CameraSystem)</a></li>
+<li><img src="../../images/82.png" alt="Artifact"/> <a href="EA2498.htm">ATTENTION! in the new arch. concept this part is no longer in ImageAcquisition</a></li>
+<li><img src="../../images/118.png" alt="Part"/> <a href="EA2501.htm">occurrence_aux</a></li>
+</ul>
+
+					</td>
+					<td class="contentcell"><div class="PageBody">
+	<div class="diagram_image"> 
+<img src="EA2492.png" usemap="#EA2492" border="0" />
+
+<MAP NAME="EA2492">
+<area shape="rect" coords="334,849,424,940" href="./EA1/EA2550.htm" target="_self">
+<area shape="rect" coords="100,815,230,887" href="EA2498.htm" target="_self">
+<area shape="rect" coords="395,402,525,462" href="../EA2/EA1/EA11/EA248.htm" target="_self">
+<area shape="rect" coords="134,682,224,752" href="EA2500.htm" target="_self">
+<area shape="rect" coords="323,662,413,732" href="EA2502.htm" target="_self">
+<area shape="rect" coords="700,550,790,620" href="EA2499.htm" target="_self">
+<area shape="rect" coords="554,536,644,627" href="EA2510.htm" target="_self">
+<area shape="rect" coords="1062,355,1152,425" href="EA2504.htm" target="_self">
+<area shape="rect" coords="888,362,978,432" href="EA2515.htm" target="_self">
+<area shape="rect" coords="709,362,799,432" href="EA2505.htm" target="_self">
+<area shape="rect" coords="793,111,883,213" href="EA2511.htm" target="_self">
+<area shape="rect" coords="444,78,534,148" href="EA2514.htm" target="_self">
+<area shape="rect" coords="395,525,485,616" href="EA2513.htm" target="_self">
+<area shape="rect" coords="286,546,376,616" href="EA2506.htm" target="_self">
+<area shape="rect" coords="162,546,252,616" href="EA2516.htm" target="_self">
+<area shape="rect" coords="37,545,127,615" href="EA2512.htm" target="_self">
+<area shape="rect" coords="552,252,642,322" href="EA2508.htm" target="_self">
+<area shape="rect" coords="351,263,505,339" href="EA2509.htm" target="_self">
+<area shape="rect" coords="37,236,304,503" href="EA2493.htm" target="_self">
+<area shape="rect" coords="163,62,268,177" href="EA2495.htm" target="_self">
+<area shape="rect" coords="10,10,1189,1041" href="EA2491.htm" target="_self">
+</MAP>
+ </div>
+	<div class="ObjectTitle">Architecture : SysML Block Definition diagram</div>
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">14.07.2025 12:05:44</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">30.07.2025 17:34:55</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><button onclick="switchProjectProperties()"><img src="../../images/plus03.gif" align="absmiddle" id="proj" /></button>Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">rekas</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><button onclick="switchAdvancedProperties()"><img src="../../images/plus03.gif" align="absmiddle" id="adv" /></button>Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{92C68BCA-2F93-C215-95C3-161EC8CCB19F}</td>
+		</tr>
+	</table>
+	
+</div>
+
+ </td>
+				</tr>
+			</tbody>
+		</table>
+		
+</div>
+</body>
+</html>
+

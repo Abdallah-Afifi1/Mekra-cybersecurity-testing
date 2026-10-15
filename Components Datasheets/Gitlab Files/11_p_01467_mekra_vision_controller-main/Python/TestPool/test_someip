@@ -1,0 +1,105 @@
+# -----------------------------------------------------------------------------
+# Testcase : SOME/IP message-header conformance - data-driven negative tests
+# Verifies : each header field, when set to an invalid value, is answered with
+#            the correct SOME/IP error response (message_type 0x81 + return_code).
+# Usage    : edit TEST_CASES (add / change rows) and SELECTED (which ones to run).
+# Author   :
+# Name     :
+# -----------------------------------------------------------------------------
+from _automation_wrapper_ import TestEnv
+from tools.ServiceDiscovery.servicediscovery import ServiceDiscovery
+from tools.SOMEIP.someip_client import SomeipClient
+from tools.SOMEIP.someip_packet import SomeipPacket
+
+# ============================ CONFIG (edit here) =============================
+CAMERA_IP    = "192.168.120.10"
+TESTPC_IP    = "192.168.120.1"
+SOMEIP_PORT  = 30501
+SD_MCAST_IP  = "239.120.1.1"
+SD_PORT      = 30490
+BOOT_TIMEOUT = 30
+
+
+
+# A valid request to a SUPPORTED method - the baseline every case starts from.
+BASE_REQUEST = dict(
+    service_id=0x433F, method_id=0x0010, length=0x08, request_id=0x12345678,
+    protocol_version=0x01, interface_version=0x01, message_type=0x00,
+    return_code=0x00, payload=None,
+)
+
+# Which cases to run: "ALL" or a list of keys from TEST_CASES.
+SELECTED = "ALL"
+
+# Each case = take BASE_REQUEST, override one field, expect an ERROR response
+# with the given return_code (message_type defaults to "81" = ERROR).
+TEST_CASES = {
+    "92403_unknown_service":  dict(name="Unknown Service ID",      override={"service_id": 0xBEEF},      expect_rc="02"),  # E_UNKNOWN_SERVICE
+    "92417_unknown_method":   dict(name="Unknown Method ID",       override={"method_id": 0x0000},       expect_rc="03"),  # E_UNKNOWN_METHOD
+    "92416_wrong_protocol":   dict(name="Wrong Protocol Version",  override={"protocol_version": 0x02},  expect_rc="07"),  # E_WRONG_PROTOCOL_VERSION
+    "92419_wrong_interface":  dict(name="Wrong Interface Version", override={"interface_version": 0x02}, expect_rc="08"),  # E_WRONG_INTERFACE_VERSION
+    "92404_wrong_msgtype":    dict(name="Wrong Message Type",      override={"message_type": 0x42},      expect_rc="0a"),  # E_WRONG_MESSAGE_TYPE (confirm vs spec)
+    # add more rows as you cover them; confirm expect_rc against the spec:
+    # "92813_invalid_rc":     dict(name="Invalid Return Code",     override={"return_code": 0x55},       expect_rc="??"),
+}
+
+# Positive control (MVC-92411): a supported method must return a positive response.
+POSITIVE_CONTROL = dict(name="Successfully processed Request", override={}, expect_rc="00", msg_type="80")
+# =============================================================================
+
+
+def send(client, fields, attempts=3):
+    """Build a SOME/IP request from a fields dict and send it; retry if no response."""
+    req = SomeipPacket(**fields)
+    for _ in range(attempts):
+        client.send_packet(req, client.serverIP, client.destinationPort)
+        if client.someip_rx_packet is not None:
+            break
+    return client.someip_rx_packet
+
+
+def run_case(testresult, client, key, case):
+    """Run one case: override a field on the base request, send, verify the response."""
+    fields   = {**BASE_REQUEST, **case["override"]}
+    exp_type = case.get("msg_type", "81")     # default: ERROR
+    exp_rc   = case["expect_rc"]
+    resp     = send(client, fields)
+    tag      = f"{key} - {case['name']}"
+
+    if resp is None:
+        testresult.addBoolean(f"[{tag}] response received", False)
+        return
+    testresult.addInfo(f"[{tag}] got msg_type={resp.get_message_type()} rc={resp.get_return_code()}")
+    testresult.addEqual(f"[{tag}] Message Type", expected=exp_type, actual=resp.get_message_type())
+    testresult.addEqual(f"[{tag}] Return Code",  expected=exp_rc,   actual=resp.get_return_code())
+
+
+with TestEnv(testcase_id="SOME/IP header conformance (data-driven)") as testenv:
+    testresult = testenv.getResults()
+    
+    testresult.addHeader("Precondition: power on -> camera OPERATIONAL")
+    psu = testenv.getPSU()
+    psu.voltage_preset_ch4.set(24.0)
+    psu.channelOutputEnable(1, True)
+    psu.masterOutputEnable(True)
+
+    sd = ServiceDiscovery(SD_MCAST_IP, SD_PORT)
+    sd.connect()
+    testresult.addBoolean("OfferService seen (camera OPERATIONAL)",
+                          sd.get_sd_message_noevent(timeout=BOOT_TIMEOUT) is not None)
+
+    client = SomeipClient(client_ip=TESTPC_IP, server_ip=CAMERA_IP,
+                          client_source_port="0", client_destination_port=SOMEIP_PORT)
+
+    testresult.addHeader("Positive control")
+    run_case(testresult, client, "92411", POSITIVE_CONTROL)
+
+    testresult.addHeader("Header negative cases")
+    keys = list(TEST_CASES) if SELECTED == "ALL" else SELECTED
+    for key in keys:
+        run_case(testresult, client, key, TEST_CASES[key])
+
+    client.close_socket()
+    sd.disconnect()
+
+print("Done.")

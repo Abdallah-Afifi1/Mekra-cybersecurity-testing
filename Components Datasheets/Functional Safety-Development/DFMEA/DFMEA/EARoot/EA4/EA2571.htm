@@ -1,0 +1,383 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Causes - SG4</title>
+<link href="../../css/ea.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="../../js/displayToc.js" type="text/javascript"></script>
+<script>
+
+  function switchProjectProperties() {
+			if (document.getElementById("proj00").style.display == "none") {
+				document.getElementById("proj00").style.display = "revert";
+				document.getElementById("proj01").style.display = "revert";
+				document.getElementById("proj02").style.display = "revert";
+				document.getElementById("proj03").style.display = "revert";
+				document.getElementById("proj04").style.display = "revert";
+				document.getElementById("proj05").style.display = "revert";
+			} else {
+				document.getElementById("proj00").style.display = "none";
+				document.getElementById("proj01").style.display = "none";
+				document.getElementById("proj02").style.display = "none";
+				document.getElementById("proj03").style.display = "none";
+				document.getElementById("proj04").style.display = "none";
+				document.getElementById("proj05").style.display = "none";
+			}
+}
+
+		function switchAdvancedProperties(){
+
+			if (document.getElementById("adv00").style.display == "none") {;
+				document.getElementById("adv00").style.display = "revert";
+				document.getElementById("adv01").style.display = "revert";
+			} else {
+				document.getElementById("adv00").style.display = "none";
+				document.getElementById("adv01").style.display = "none";
+			}
+		}
+		function initPage()
+        {			
+			var divs = document.getElementsByClassName("ObjectDetailsNotes");
+			for (var j = 0; j < divs.length; j++) {
+				var tmpStr = divs[j].innerHTML;
+				tmpStr = tmpStr.replace(/#gt;/g, "&gt;");
+				tmpStr = tmpStr.replace(/#lt;/g, "&lt;");
+
+				tmpStr = tmpStr.replace(/&gt;/g, ">");
+				tmpStr = tmpStr.replace(/&lt;/g, "<");
+
+				divs[j].innerHTML = tmpStr;
+			}
+
+            if (document.getElementById('TableGroup') != null)
+            {
+                toggleItem(document.getElementById('TableGroup').getElementsByTagName('li')[0].id.replace("Title", ""));
+            }
+
+        }
+</script>
+<style>
+
+</style>
+</head>
+<body onload="initPage();">
+<div class="section group" >
+
+		<div class="col span_2_of_2 header_frame">
+			<h1> Causes - SG4 </h1>
+			<!-- <img class="header_image" src="../../images/mekraLangGermany.PNG" align="right" alt="Header Image" />-->
+			<img class="header_image" src="../../images/mekraLangGermany.PNG" align="right" alt="Header Image" />
+		</div>
+		<div class="col span_2_of_2 breadcrumb_frame">
+			<p><a href="../EA5.htm">DFMEA</a> / <a href="EA2575.htm">Causes</a> / <a href="EA2571.htm">Causes - SG4</a></p>
+		</div>
+			
+		<table class="contentmaintable">
+			<!-- <tfoot>
+				<tr>
+					<td>foot1</td>
+					<td>foot2</td>
+				</tr>
+			</tfoot> -->
+			<tbody>
+				<tr>
+					<td class="indexcell">
+						<div class="projectBrowserTitle">Project: </div>
+						<ul>
+<li><img src="../../images/175.png" alt="Diagram"/> <a href="EA2567.htm">Causes - SG2</a></li>
+<li><img src="../../images/175.png" alt="Diagram"/> <a href="EA2569.htm">Causes - SG3</a></li>
+<li><img src="../../images/175.png" alt="Diagram"/> <a href="EA2571.htm">Causes - SG4</a></li>
+<li><img src="../../images/175.png" alt="Diagram"/> <a href="EA2573.htm">Traceability</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2578.htm">&#39;configureDispatchment&#39; (function) faulty (integrity loss (contrast-brightness) of &#39;DispatchmentConfiguration&#39;) <br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2579.htm">&#39;configureDispatchment&#39; (function) faulty (integrity loss (FoV) of &#39;DispatchmentConfiguration&#39;) <br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2580.htm">&#39;configureDispatchment&#39; (function) faulty (integrity loss (frozen image) of &#39;DispatchmentConfiguration&#39;) </a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2581.htm">&#39;configureEncoding&#39; (function) faulty (integrity loss (contrast-brightness) of &#39;EncodingConfiguration&#39;) <br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2582.htm">&#39;configureEncoding&#39; (function) faulty (integrity loss (FoV) of &#39;EncodingConfiguration&#39;) <br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2583.htm">&#39;configureEncoding&#39; (function) faulty (integrity loss (frozen image) of &#39;EncodingConfiguration&#39;) </a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2584.htm">&#39;configureProcessing&#39; (function) faulty ( integrity loss (contrast-brightness) of &#39;ProcessingConfiguration&#39;)<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2585.htm">&#39;configureProcessing&#39; (function) faulty ( integrity loss (FoV) of &#39;ProcessingConfiguration&#39;)<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2586.htm">&#39;configureProcessing&#39; (function) faulty ( integrity loss (frozen image) of &#39;ProcessingConfiguration&#39;)</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2587.htm">&#39;configureRAWStream&#39; (function) faulty ( integrity loss (contrast-brightness) of &#39;RAWStreamConfiguration&#39;)<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2588.htm">&#39;configureRAWStream&#39; (function) faulty ( integrity loss (FoV) of &#39;RAWStreamConfiguration&#39;)<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2589.htm">&#39;configureRAWStream&#39; (function) faulty ( integrity loss (frozen image) of &#39;RAWStreamConfiguration&#39;)</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2590.htm">&#39;configureScaling&#39; (function) faulty ( integrity loss (FoV) of &#39;ScalingConfiguration&#39;)<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2591.htm">&#39;configureScaling&#39; (function) faulty ( integrity loss (frozen image) of &#39;ScalingConfiguration&#39;)</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2592.htm">&#39;configureScaling&#39; (function) faulty (integrity loss (contrast-brightness) of &#39;ScalingConfiguration&#39;)<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2593.htm">&#39;dispatch image&#39; (function) faulty (contrast-brightness)<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2594.htm">&#39;dispatch image&#39; (function) faulty (FoV)</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2595.htm">&#39;encode image&#39; (function) faulty (contrast-brightness)<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2596.htm">&#39;encode image&#39; (function) faulty (FoV)</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2597.htm">&#39;scale image&#39; (function) faulty (contrast-brightness)<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2598.htm">&#39;scale image&#39; (function) faulty (FoV)</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2599.htm">(frame reception delivers the same frame) sequence integrity: frame repetition</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2600.htm">dispatch image faulty (does not guarantee consecutiveness)</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2601.htm">encode image faulty (does not guarantee consecutiveness)</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2602.htm">faulty (contrast-brightness) input  of &#39;RAWDataImage&#39; to &#39;provison of RAW Data&#39;<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2605.htm">faulty (contrast-brightness) input of &#39;encodedImage&#39; to &#39;dispatch image&#39;<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2606.htm">faulty (contrast-brightness) input of &#39;FullResolutionProcessedImage&#39; in &#39;scale image&#39;<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2607.htm">faulty (contrast-brightness) input of &#39;newImageIndicator&#39; in &#39;recceive RAW image&#39;<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2608.htm">faulty (contrast-brightness) input of &#39;RAWImage&#39; in &#39;processImage&#39;<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2609.htm">faulty (contrast-brightness) input of &#39;rawImage&#39; in &#39;receive RAW image&#39;<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2610.htm">faulty (contrast-brightness) input of &#39;TargetResolutionImage&#39; to &#39;encode image&#39;<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2611.htm">faulty (contrast-brightness) input of &#39;tmpDataImage&#39; in temporary storage of RAW Data<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2612.htm">faulty (contrast-brightness) input of &#39;VideoConfiguration&#39; in &#39;encode image&#39;<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2603.htm">faulty (contrast-brightness) input of  &#39;VideoConfiguration&#39; in &#39;scale image&#39;<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2604.htm">faulty (contrast-brightness) input of  &#39;VideoConfiguration&#39; to &#39;processingImage&#39;<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2613.htm">faulty (contrast-brightness) input of RAW Stream via input interface<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2614.htm">faulty (FoV) input  of &#39;RAWDataImage&#39; to &#39;provison of RAW Data&#39;</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2617.htm">faulty (FoV) input of &#39;encodedImage&#39; to &#39;dispatch image&#39;</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2618.htm">faulty (FoV) input of &#39;newImageIndicator&#39; in &#39;recceive RAW image&#39;</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2619.htm">faulty (FoV) input of &#39;rawImage&#39; in &#39;receive RAW image&#39;</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2620.htm">faulty (FoV) input of &#39;RAWImage&#39; to &#39;processImage&#39;</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2621.htm">faulty (FoV) input of &#39;TargetResolutionImage&#39; to &#39;encode image&#39;</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2622.htm">faulty (FoV) input of &#39;tmpDataImage&#39; in temporary storage of RAW Data</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2623.htm">faulty (FoV) input of &#39;VideoConfiguration&#39; to &#39;encode image&#39;</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2615.htm">faulty (FoV) input of  &#39;VideoConfiguration&#39; to &#39;processingImage&#39;</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2616.htm">faulty (FoV) input of  &#39;VideoConfiguration&#39; to &#39;scale image&#39;</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2624.htm">faulty (FoV) input of RAW Stream via input interface</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2625.htm">faulty (frozen image) input  of &#39;RAWDataImage&#39; to &#39;provison of RAW Data&#39;</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2626.htm">faulty (frozen image) input of &#39;RAWDataImage&#39; in &#39;temporary storage...&#39;</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2627.htm">faulty (frozen image) input of RAW Stream via input interface</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2628.htm">faulty (frozen image) reception (input) of consecutive RAW Images (consecutiveness not guaranteed)</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2632.htm">faulty (no consecutive) reception of &#39;Full Resolution Processed Image&#39;</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2629.htm">faulty (no consecutive) reception of  &#39;Encoded Image&#39;</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2630.htm">faulty (no consecutive) reception of  &#39;Target Resolution Image&#39;</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2631.htm">faulty (no consecutive) reception of  RAW Image</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2633.htm">faulty input (contrast-brightness) of &#39;DiagnosticsInformation&#39; in &#39;receiveDiagnosticsInformation&#39; function<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2634.htm">faulty input (contrast-brightness) of &#39;DispatchmentConfiguration&#39; in &#39;configureDispatchment&#39; function<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2635.htm">faulty input (contrast-brightness) of &#39;EncodingConfiguration&#39; in &#39;configureEncoding&#39; function<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2636.htm">faulty input (contrast-brightness) of &#39;FunctionalSafetyDiagnostics&#39; in &#39;acquireDiagnostics&#39; function<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2637.htm">faulty input (contrast-brightness) of &#39;ImageMetaData&#39; in &#39;analyseImageMetaData&#39; function<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2638.htm">faulty input (contrast-brightness) of &#39;ProcessingConfiguration&#39; in &#39;configureProcessing&#39; function<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2639.htm">faulty input (contrast-brightness) of &#39;RAWDataImage&#39; in &#39;provideImageMetaData&#39; function<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2640.htm">faulty input (contrast-brightness) of &#39;RAWStreamConfiguration&#39; in &#39;configureRAWStream&#39; function<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2641.htm">faulty input (contrast-brightness) of &#39;RegularDiagnostics&#39; in &#39;handleDiagnostics&#39; function<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2642.htm">faulty input (contrast-brightness) of &#39;ScalingConfiguration&#39; in &#39;configureScaling&#39; function<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2643.htm">faulty input (contrast-brightness) of &#39;VideoConfiguration&#39; in &#39;storeVideoStreamConfiguration&#39; function<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2644.htm">faulty input (contrast-brightness) of &#39;VideoStreamConfiguration&#39; in &#39;configureStream&#39; function<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2645.htm">faulty input (contrast-brightness) of &#39;VideoStreamOff-Command&#39; in &#39;switchVideoStraemOff&#39; function<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2646.htm">faulty input (contrast-brightness) of &#39;VideoStreamOn-Command&#39; in &#39;switchVideoSreamOn&#39; function<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2647.htm">faulty input (FoV) of &#39;DiagnosticsInformation&#39; in &#39;receiveDiagnosticsInformation&#39; function<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2648.htm">faulty input (FoV) of &#39;DispatchmentConfiguration&#39; in &#39;configureDispatchment&#39; function<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2649.htm">faulty input (FoV) of &#39;EncodingConfiguration&#39; in &#39;configureEncoding&#39; function<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2650.htm">faulty input (FoV) of &#39;FunctionalSafetyDiagnostics&#39; in &#39;acquireDiagnostics&#39; function<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2651.htm">faulty input (FoV) of &#39;ImageMetaData&#39; in &#39;analyseImageMetaData&#39; function<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2652.htm">faulty input (FoV) of &#39;RAWDataImage&#39; in &#39;provideImageMetaData&#39; function<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2653.htm">faulty input (FoV) of &#39;RAWStreamConfiguration&#39; in &#39;configureRAWStream&#39; function</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2654.htm">faulty input (FoV) of &#39;RegularDiagnostics&#39; in &#39;handleDiagnostics&#39; function<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2655.htm">faulty input (FoV) of &#39;ScalingConfiguration&#39; in &#39;configureScaling&#39; function<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2656.htm">faulty input (FoV) of &#39;VideoConfiguration&#39; in &#39;storeVideoStreamConfiguration&#39; function<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2657.htm">faulty input (FoV) of &#39;VideoProcessingConfiguration&#39; in &#39;configureProcessing&#39; function<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2658.htm">faulty input (FoV) of &#39;VideoStreamConfiguration&#39; in &#39;configureStream&#39; function<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2659.htm">faulty input (FoV) of &#39;VideoStreamOff-Command&#39; in &#39;switchVideoStraemOff&#39; function<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2660.htm">faulty input (FoV) of &#39;VideoStreamOn-Command&#39; in &#39;switchVideoSreamOn&#39; function<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2661.htm">faulty input (frozen image) of &#39;DiagnosticsInformation&#39; in &#39;receiveDiagnosticsInformation&#39; function<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2662.htm">faulty input (frozen image) of &#39;DispatchmentConfiguration&#39; in &#39;configureDispatchment&#39; function</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2663.htm">faulty input (frozen image) of &#39;EncodingConfiguration&#39; in &#39;configureEncoding&#39; function</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2664.htm">faulty input (frozen image) of &#39;FunctionalSafetyDiagnostics&#39; in &#39;acquireDiagnostics&#39; function<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2665.htm">faulty input (frozen image) of &#39;ImageMetaData&#39; in &#39;analyseImageMetaData&#39; function<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2666.htm">faulty input (frozen image) of &#39;ProcessingConfiguration&#39; in &#39;configureProcessing&#39; function</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2667.htm">faulty input (frozen image) of &#39;RAWDataImage&#39; in &#39;provideImageMetaData&#39; function</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2668.htm">faulty input (frozen image) of &#39;RAWStreamConfiguration&#39; in &#39;configureRAWStream&#39; function</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2669.htm">faulty input (frozen image) of &#39;RegularDiagnostics&#39; in &#39;handleDiagnostics&#39; function<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2670.htm">faulty input (frozen image) of &#39;ScalingConfiguration&#39; in &#39;configureScaling&#39; function</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2671.htm">faulty input (frozen image) of &#39;VideoConfiguration&#39; in &#39;storeVideoStreamConfiguration&#39; function<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2672.htm">faulty input (frozen image) of &#39;VideoStreamConfiguration&#39; in &#39;configureStream&#39; function<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2673.htm">faulty input (frozen image) of &#39;VideoStreamOff-Command&#39; in &#39;switchVideoStraemOff&#39; function<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2674.htm">faulty input (frozen image) of &#39;VideoStreamOn-Command&#39; in &#39;switchVideoSreamOn&#39; function<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2675.htm">fauty (FoV) input of &#39;FullResolutionProcessedImage&#39; to &#39;scale image&#39;</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2676.htm">function &#39;acquireDiagnostics&#39; faulty (contrast-brightness)<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2677.htm">function &#39;acquireDiagnostics&#39; faulty (FoV)<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2678.htm">function &#39;acquireDiagnostics&#39; faulty (frozen image)<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2679.htm">function &#39;analyseImageMetaData&#39; faulty (contrast-brightness)<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2680.htm">function &#39;analyseImageMetaData&#39; faulty (FoV)<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2681.htm">function &#39;analyseImageMetaData&#39; faulty (frozen image)<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2682.htm">function &#39;configureStream&#39; faulty (contrast-brightness)<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2683.htm">function &#39;configureStream&#39; faulty (FoV)<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2684.htm">function &#39;configureStream&#39; faulty (frozen image)<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2685.htm">function &#39;disableStream&#39; faulty (contrast-brightness)<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2686.htm">function &#39;disableStream&#39; faulty (FoV)<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2687.htm">function &#39;disableStream&#39; faulty (frozen image)</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2688.htm">function &#39;enableStream&#39; faulty (contrast-brightness)<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2689.htm">function &#39;enableStream&#39; faulty (FoV)<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2690.htm">function &#39;enableStream&#39; faulty (frozen image)</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2691.htm">function &#39;handleDiagnostics&#39; faulty (contrast-brightness)<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2692.htm">function &#39;handleDiagnostics&#39; faulty (FoV)<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2693.htm">function &#39;handleDiagnostics&#39; faulty (frozen image)<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2694.htm">function &#39;provideConfiguration&#39; faulty (contrast-brightness)<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2695.htm">function &#39;provideConfiguration&#39; faulty (FoV)<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2696.htm">function &#39;provideConfiguration&#39; faulty (frozen image)<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2697.htm">function &#39;provideImageMetaData&#39; faulty (contrast-brightness)<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2698.htm">function &#39;provideImageMetaData&#39; faulty (FoV)<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2699.htm">function &#39;provideImageMetaData&#39; faulty (frozen image)</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2700.htm">function &#39;receiveDiagnosticsInformation&#39; faulty (contrast-brightness)<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2701.htm">function &#39;receiveDiagnosticsInformation&#39; faulty (FoV)<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2702.htm">function &#39;receiveDiagnosticsInformation&#39; faulty (frozen image)<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2703.htm">function &#39;storeVideoStreamConfiguration&#39; faulty (contrast-brightness)<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2704.htm">function &#39;storeVideoStreamConfiguration&#39; faulty (FoV)<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2705.htm">function &#39;storeVideoStreamConfiguration&#39; faulty (frozen image)<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2706.htm">function &#39;switchVideoSreamOn&#39; faulty (contrast-brightness)<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2707.htm">function &#39;switchVideoSreamOn&#39; faulty (FoV)<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2708.htm">function &#39;switchVideoSreamOn&#39; faulty (frozen image)<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2709.htm">function &#39;switchVideoStraemOff&#39; faulty (contrast-brightness)<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2710.htm">function &#39;switchVideoStraemOff&#39; faulty (FoV)<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2711.htm">function &#39;switchVideoStraemOff&#39; faulty (frozen image)<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2712.htm">image processing faulty (does not guarantee consecutiveness)</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2713.htm">image stored in faulty way (wrong image position)</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2714.htm">indication of &#39;image ready&#39; (function) faulty (contrast-brightness)<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2715.htm">indication of &#39;image ready&#39; (function) faulty (FoV)</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2716.htm">invocation of &#39;disable stream&#39; function faulty (contrast-brightness)</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2717.htm">invocation of &#39;disable stream&#39; function faulty (FoV)</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2718.htm">invocation of &#39;disable stream&#39; function faulty (frozen image)</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2719.htm">invocation of &#39;enable stream&#39; function faulty (contrast-brightness)</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2720.htm">invocation of &#39;enable stream&#39; function faulty (FoV)</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2735.htm">pointing to the same image</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2721.htm">processing image (function) faulty (contrast-brightness)<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2722.htm">processing image (function) faulty (FoV)</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2723.htm">provision of RAW  Data Image (function) faulty (contrast-brightness) <br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2724.htm">provision of RAW  Data Image (function) faulty (FoV) </a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2736.htm">provision of the same image (no provision of consecutive data)</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2725.htm">reception (functionality) of RAW images faulty (does not guarantee consecutiveness)</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2726.htm">reception (functionality) of RAW Stream via Input Interface faulty (contrast-brightness)<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2727.htm">reception (functionality) of RAW Stream via Input Interface faulty (FoV)</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2728.htm">reception of &#39;raw image&#39; (function) faulty (contrast-brightness)<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2729.htm">reception of &#39;raw image&#39; (function) faulty (FoV)</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2730.htm">reception of newImageIndicator faulty (does not guarantee consecutiveness)</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2731.htm">scale image faulty (does not guarantee consecutiveness)</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2732.htm">SOW1-SafeState request is not detected OR &#39;switch Stream off&#39; signal is NOT generated</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2733.htm">storage (functionality) of &#39;tmpDataImage&#39; faulty (contrast-brightness)<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA2734.htm">storage (functionality) of &#39;tmpDataImage&#39; faulty (FoV)</a></li>
+</ul>
+
+					</td>
+					<td class="contentcell"><div class="PageBody">
+	<div class="diagram_image"> 
+<img src="EA2572.png" usemap="#EA2572" border="0" />
+
+<MAP NAME="EA2572">
+<area shape="rect" coords="439,6568,529,6675" href="EA2677.htm" target="_self">
+<area shape="rect" coords="255,6485,379,6589" href="EA2650.htm" target="_self">
+<area shape="rect" coords="450,6189,553,6296" href="EA2710.htm" target="_self">
+<area shape="rect" coords="277,6189,380,6322" href="EA2659.htm" target="_self">
+<area shape="rect" coords="487,6027,586,6134" href="EA2707.htm" target="_self">
+<area shape="rect" coords="320,6022,419,6155" href="EA2660.htm" target="_self">
+<area shape="rect" coords="504,5857,644,5964" href="EA2704.htm" target="_self">
+<area shape="rect" coords="316,5857,456,5961" href="EA2656.htm" target="_self">
+<area shape="rect" coords="463,5680,598,5787" href="EA2701.htm" target="_self">
+<area shape="rect" coords="255,5681,390,5785" href="EA2647.htm" target="_self">
+<area shape="rect" coords="252,5484,342,5591" href="EA2695.htm" target="_self">
+<area shape="rect" coords="411,5310,501,5417" href="EA2692.htm" target="_self">
+<area shape="rect" coords="242,5302,332,5448" href="EA2654.htm" target="_self">
+<area shape="rect" coords="501,5101,591,5208" href="EA2683.htm" target="_self">
+<area shape="rect" coords="266,5116,385,5220" href="EA2658.htm" target="_self">
+<area shape="rect" coords="591,4968,701,5075" href="EA2680.htm" target="_self">
+<area shape="rect" coords="309,4872,419,4992" href="EA2651.htm" target="_self">
+<area shape="rect" coords="255,4505,345,4612" href="EA2686.htm" target="_self">
+<area shape="rect" coords="255,4299,345,4406" href="EA2689.htm" target="_self">
+<area shape="rect" coords="512,4169,633,4273" href="EA2579.htm" target="_self">
+<area shape="rect" coords="312,4155,433,4288" href="EA2648.htm" target="_self">
+<area shape="rect" coords="520,3974,625,4107" href="EA2582.htm" target="_self">
+<area shape="rect" coords="298,3974,400,4107" href="EA2649.htm" target="_self">
+<area shape="rect" coords="31,6547,121,6638" href="../EA3/EA1/EA2545.htm" target="_self">
+<area shape="rect" coords="33,6196,132,6287" href="../EA3/EA1/EA2565.htm" target="_self">
+<area shape="rect" coords="37,6006,127,6097" href="../EA3/EA1/EA2566.htm" target="_self">
+<area shape="rect" coords="30,5857,166,5927" href="../EA3/EA1/EA2564.htm" target="_self">
+<area shape="rect" coords="33,5681,164,5751" href="../EA3/EA1/EA2562.htm" target="_self">
+<area shape="rect" coords="30,5484,120,5575" href="../EA3/EA1/EA2559.htm" target="_self">
+<area shape="rect" coords="30,5287,120,5378" href="../EA3/EA1/EA2557.htm" target="_self">
+<area shape="rect" coords="31,5116,121,5207" href="../EA3/EA1/EA2552.htm" target="_self">
+<area shape="rect" coords="30,4917,136,5008" href="../EA3/EA1/EA2546.htm" target="_self">
+<area shape="rect" coords="39,4341,129,4432" href="../EA3/EA1/EA2555.htm" target="_self">
+<area shape="rect" coords="39,4495,129,4586" href="../EA3/EA1/EA2553.htm" target="_self">
+<area shape="rect" coords="30,4139,131,4230" href="../EA3/EA1/EA2547.htm" target="_self">
+<area shape="rect" coords="30,3949,120,4040" href="../EA3/EA1/EA2548.htm" target="_self">
+<area shape="rect" coords="351,3124,441,3257" href="EA2590.htm" target="_self">
+<area shape="rect" coords="201,3119,291,3265" href="EA2655.htm" target="_self">
+<area shape="rect" coords="372,2979,484,3083" href="EA2585.htm" target="_self">
+<area shape="rect" coords="201,2918,333,3051" href="EA2657.htm" target="_self">
+<area shape="rect" coords="333,2824,443,2931" href="EA2698.htm" target="_self">
+<area shape="rect" coords="207,2772,317,2889" href="EA2652.htm" target="_self">
+<area shape="rect" coords="30,3083,120,3174" href="../EA3/EA1/EA2551.htm" target="_self">
+<area shape="rect" coords="39,2913,129,3004" href="../EA3/EA1/EA2549.htm" target="_self">
+<area shape="rect" coords="30,2760,136,2851" href="../EA3/EA1/EA2560.htm" target="_self">
+<area shape="rect" coords="223,1585,343,1689" href="EA2588.htm" target="_self">
+<area shape="rect" coords="223,1445,340,1562" href="EA2653.htm" target="_self">
+<area shape="rect" coords="34,1496,124,1587" href="../EA3/EA1/EA2550.htm" target="_self">
+<area shape="rect" coords="461,3836,551,3943" href="EA2594.htm" target="_self">
+<area shape="rect" coords="453,3701,543,3818" href="EA2617.htm" target="_self">
+<area shape="rect" coords="30,3659,120,3750" href="../EA3/EA1/EA2554.htm" target="_self">
+<area shape="rect" coords="470,3501,560,3608" href="EA2596.htm" target="_self">
+<area shape="rect" coords="453,3376,560,3483" href="EA2623.htm" target="_self">
+<area shape="rect" coords="453,3248,560,3355" href="EA2621.htm" target="_self">
+<area shape="rect" coords="30,3399,120,3490" href="../EA3/EA1/EA2556.htm" target="_self">
+<area shape="rect" coords="372,2713,462,2820" href="EA2598.htm" target="_self">
+<area shape="rect" coords="362,2597,452,2701" href="EA2616.htm" target="_self">
+<area shape="rect" coords="362,2485,497,2576" href="EA2675.htm" target="_self">
+<area shape="rect" coords="35,2509,125,2600" href="../EA3/EA1/EA2563.htm" target="_self">
+<area shape="rect" coords="383,2202,473,2335" href="EA2615.htm" target="_self">
+<area shape="rect" coords="383,2360,473,2467" href="EA2722.htm" target="_self">
+<area shape="rect" coords="383,2088,473,2195" href="EA2620.htm" target="_self">
+<area shape="rect" coords="30,2078,120,2169" href="../EA3/EA1/EA2558.htm" target="_self">
+<area shape="rect" coords="359,1892,449,1999" href="EA2729.htm" target="_self">
+<area shape="rect" coords="359,1753,449,1873" href="EA2618.htm" target="_self">
+<area shape="rect" coords="359,1639,449,1759" href="EA2619.htm" target="_self">
+<area shape="rect" coords="35,1712,125,1803" href="../EA3/EA1/EA2561.htm" target="_self">
+<area shape="rect" coords="359,1344,449,1464" href="EA2715.htm" target="_self">
+<area shape="rect" coords="34,1292,124,1396" href="../EA3/EA2510.htm" target="_self">
+<area shape="rect" coords="375,1098,465,1218" href="EA2724.htm" target="_self">
+<area shape="rect" coords="358,925,448,1058" href="EA2614.htm" target="_self">
+<area shape="rect" coords="37,925,127,995" href="../EA3/EA2502.htm" target="_self">
+<area shape="rect" coords="385,773,475,893" href="EA2734.htm" target="_self">
+<area shape="rect" coords="38,600,128,691" href="../EA3/EA2516.htm" target="_self">
+<area shape="rect" coords="374,600,464,733" href="EA2622.htm" target="_self">
+<area shape="rect" coords="374,415,464,548" href="EA2727.htm" target="_self">
+<area shape="rect" coords="365,228,455,319" href="EA2624.htm" target="_self">
+<area shape="rect" coords="46,201,136,292" href="../EA3/EA2512.htm" target="_self">
+<area shape="rect" coords="613,4432,703,4523" href="EA2720.htm" target="_self">
+<area shape="rect" coords="444,4533,534,4624" href="EA2717.htm" target="_self">
+<area shape="rect" coords="10,10,793,6739" href="EA2567.htm" target="_self">
+</MAP>
+ </div>
+	<div class="ObjectTitle">Causes - SG4 : SysML Block Definition diagram</div>
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">28.07.2025 11:33:32</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">01.08.2025 23:28:05</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><button onclick="switchProjectProperties()"><img src="../../images/plus03.gif" align="absmiddle" id="proj" /></button>Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">rekas</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><button onclick="switchAdvancedProperties()"><img src="../../images/plus03.gif" align="absmiddle" id="adv" /></button>Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{FB0908A1-82E6-4c52-A1E3-90CC63553714}</td>
+		</tr>
+	</table>
+	
+</div>
+
+ </td>
+				</tr>
+			</tbody>
+		</table>
+		
+</div>
+</body>
+</html>
+

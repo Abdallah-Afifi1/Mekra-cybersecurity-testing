@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testseries>
+	<meta>
+		<title />
+		<description>&lt;description text&gt;</description>
+		<author>Ehu Li</author>
+		<date>2026-08-14T09:46:59</date>
+		<version />
+		<last_revision />
+		<hardwareversion>B-Sample</hardwareversion>
+		<softwareversion>---</softwareversion>
+		<customer>Volvo</customer>
+		<project>MVC</project>
+		<department>MEKRA_T-EQV</department>
+	</meta>
+	<testsequences>
+		<testsequence source="Shutter_Control.seq" />
+	</testsequences>
+</testseries>

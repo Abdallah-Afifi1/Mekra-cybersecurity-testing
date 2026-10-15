@@ -1,0 +1,30 @@
+Dongle-DLL v5.1 (x64)
+# #####################################################################
+# Checking License: TestToolkit v2.2.1...
+# #####################################################################
+D-USB-2020-B-00DB TestToolkit 2.2.x
+PASSED
+# License valid
+[verifyFeature] ttk_checks 1.7.0
+
+> An exception occurred:
+>  Type:      SyntaxError
+>  Exception: invalid syntax (dhcp_server.py, line 263)
+--Traceback:-------------------------------------------
+Traceback (most recent call last):
+  File "D:\Releases\TestSupport\test_support312\test_runner_base.py", line 289, in runTest
+  File "D:\VSC-GitLab\11_p_01467_mekra_vision_controller\Python\TestPool\development_support\FF_Chip_test_1.py", line 18, in <module>
+    from _automation_wrapper_ import TestEnv
+  File "D:\VSC-GitLab\11_p_01467_mekra_vision_controller\Python\TestPool\_automation_wrapper_.py", line 73, in <module>
+    from tools.dhcp.dhcp_server import DHCPServer
+  File "D:\VSC-GitLab\11_p_01467_mekra_vision_controller\Python\TestLibraries\tools\dhcp\dhcp_server.py", line 263
+    <<<<<<< HEAD
+    ^^
+SyntaxError: invalid syntax
+
+-------------------------------------------------------
+# No viable test results detected.
+# Updating results with error information...
+XML... ...writing......done
+# Updated results stored to "SingleTest_s00t00.xml".
+[[test_runner_finally]]

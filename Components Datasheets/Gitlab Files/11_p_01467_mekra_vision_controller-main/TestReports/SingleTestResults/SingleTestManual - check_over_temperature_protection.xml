@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<singletest source="Heating/check_over-temperature_protection.py">
+	<meta>
+		<title>check over-temperature protection</title>
+		<description />
+		<author>N.N.</author>
+		<date>00.00.0000</date>
+		<version>0.0.0</version>
+		<last_revision>no description</last_revision>
+		<starttime>2026-07-31T09:33:39</starttime>
+		<endtime>2026-07-31T09:34:31</endtime>
+		<hil_computername>TTE-SOW2-W11</hil_computername>
+		<hil_project_path>D:\VSC-GitLab\11_p_01467_mekra_vision_controller</hil_project_path>
+		<hil_username>svc_systessow2</hil_username>
+	</meta>
+	<results>
+		<result>
+			<description>Climate chamber not available: [WinError 10060] Ein Verbindungsversuch ist fehlgeschlagen, da die Gegenstelle nach einer bestimmten Zeitspanne nicht richtig reagiert hat, oder die hergestellte Verbindung war fehlerhaft, da der verbundene Host nicht reagiert hat</description>
+			<verdict>INFO</verdict>
+			<deltatime>21.303</deltatime>
+		</result>
+		<result>
+			<description>SW config 10C0 (rcam_2): Tauto_on = 15.0 degC (0x00F0), Tauto_off = 20.0 degC (0x0140), 2 ROIs</description>
+			<verdict>INFO</verdict>
+			<deltatime>21.306</deltatime>
+		</result>
+		<result>
+			<description>
+
+Preconditions
+			</description>
+			<verdict />
+		</result>
+		<result>
+			<description> U_in = 0.0 V</description>
+			<verdict />
+		</result>
+		<result>
+			<description>Channel 1 disabled, DUT powered down</description>
+			<verdict>INFO</verdict>
+			<deltatime>23.326</deltatime>
+		</result>
+		<result>
+			<description> U_in = 28.0 V</description>
+			<verdict />
+		</result>
+		<result>
+			<description>
+Supply voltage on channel 1
+Expected value: 28.000 V
+Current value:  28.000 V (voltage_ch1)
+Absolute Tolerance:  +/- 0.100 V
+			</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-92351 - Check heating modes during runtime (OP inactive)</testcase_id>
+			<deltatime>24.388</deltatime>
+		</result>
+		<result>
+			<description> DHCP address allocation</description>
+			<verdict />
+		</result>
+		<result>
+			<description>DHCP lease 192.168.120.10 acknowledged to the DUT</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-92351 - Check heating modes during runtime (OP inactive)</testcase_id>
+			<deltatime>40.263</deltatime>
+		</result>
+		<result>
+			<description> DUT reaches OPERATIONAL state</description>
+			<verdict />
+		</result>
+		<result>
+			<description>SD OfferService received after 0.1 s -&gt; DUT has an IP address and is in OPERATIONAL state</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-92351 - Check heating modes during runtime (OP inactive)</testcase_id>
+			<deltatime>40.424</deltatime>
+		</result>
+		<result>
+			<description>OfferService announces service 0x433F instance 0x000A at 192.168.120.10:30501 | config {'mac_address': '98D3D2003203', 'serial_nb': '00012803', 'device_type': 'rcam_2'}</description>
+			<verdict>INFO</verdict>
+			<deltatime>40.428</deltatime>
+		</result>
+		<result>
+			<description>SOME/IP endpoint: local ('192.168.120.1', 50010) -&gt; target 192.168.120.10:30501</description>
+			<verdict>INFO</verdict>
+			<deltatime>40.435</deltatime>
+		</result>
+		<result>
+			<description> SOME/IP connectivity</description>
+			<verdict />
+		</result>
+		<result>
+			<description>Camera answers getCamIdentification (0x0010) after 0.3 s with message type 0x80, return code 0x00 -&gt; SOME/IP transport works</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-92351 - Check heating modes during runtime (OP inactive)</testcase_id>
+			<deltatime>40.739</deltatime>
+		</result>
+		<result>
+			<description>
+
+Phase 1: Tambient = 30.0 degC (warm)
+			</description>
+			<verdict />
+		</result>
+		<result>
+			<description>Climate chamber not available, 30.0 degC not set</description>
+			<verdict>INFO</verdict>
+			<deltatime>40.741</deltatime>
+		</result>
+		<result>
+			<description>Imager warmer than the automatic switch-off limit: imager temperature not readable (message type 0x81, return code 0x03 (E_UNKNOWN_METHOD))</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>MVC-92351 - Check heating modes during runtime (OP inactive)</testcase_id>
+			<deltatime>41.043</deltatime>
+		</result>
+		<result>
+			<description>getCamControl (read heating state): method 0x0203, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-92351 - Check heating modes during runtime (OP inactive)</testcase_id>
+			<deltatime>41.346</deltatime>
+		</result>
+		<result>
+			<description>Heating shall be in automatic mode and off: payload 0x07040000 (expected 0x07040000)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-92351 - Check heating modes during runtime (OP inactive)</testcase_id>
+			<deltatime>41.346</deltatime>
+		</result>
+		<result>
+			<description>setCamExclusive (lock camera for 1 s): method 0x0011, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-92351 - Check heating modes during runtime (OP inactive)</testcase_id>
+			<deltatime>42.650</deltatime>
+		</result>
+		<result>
+			<description>setCamControl (switch to in manual mode and on): method 0x0201, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-92351 - Check heating modes during runtime (OP inactive)</testcase_id>
+			<deltatime>42.952</deltatime>
+		</result>
+		<result>
+			<description>getCamControl (read heating state): method 0x0203, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-92351 - Check heating modes during runtime (OP inactive)</testcase_id>
+			<deltatime>43.253</deltatime>
+		</result>
+		<result>
+			<description>Heating shall be in manual mode and on: payload 0x07020001 (expected 0x07020001)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-92351 - Check heating modes during runtime (OP inactive)</testcase_id>
+			<deltatime>43.253</deltatime>
+		</result>
+		<result>
+			<description>setCamExclusive (lock camera for 1 s): method 0x0011, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-92351 - Check heating modes during runtime (OP inactive)</testcase_id>
+			<deltatime>44.557</deltatime>
+		</result>
+		<result>
+			<description>setCamControl (switch to in manual mode and off): method 0x0201, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-92351 - Check heating modes during runtime (OP inactive)</testcase_id>
+			<deltatime>44.860</deltatime>
+		</result>
+		<result>
+			<description>getCamControl (read heating state): method 0x0203, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-92351 - Check heating modes during runtime (OP inactive)</testcase_id>
+			<deltatime>45.163</deltatime>
+		</result>
+		<result>
+			<description>Heating shall be in manual mode and off: payload 0x07020000 (expected 0x07020000)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-92351 - Check heating modes during runtime (OP inactive)</testcase_id>
+			<deltatime>45.164</deltatime>
+		</result>
+		<result>
+			<description>
+
+Phase 2: Tambient = -25.0 degC (cold)
+			</description>
+			<verdict />
+		</result>
+		<result>
+			<description>Climate chamber not available, -25.0 degC not set</description>
+			<verdict>INFO</verdict>
+			<deltatime>45.165</deltatime>
+		</result>
+		<result>
+			<description>Imager colder than the automatic switch-on limit: imager temperature not readable (message type 0x81, return code 0x03 (E_UNKNOWN_METHOD))</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>MVC-92351 - Check heating modes during runtime (OP inactive)</testcase_id>
+			<deltatime>45.467</deltatime>
+		</result>
+		<result>
+			<description>getCamControl (read heating state): method 0x0203, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-92351 - Check heating modes during runtime (OP inactive)</testcase_id>
+			<deltatime>45.769</deltatime>
+		</result>
+		<result>
+			<description>Heating shall be in manual mode and off: payload 0x07020000 (expected 0x07020000)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-92351 - Check heating modes during runtime (OP inactive)</testcase_id>
+			<deltatime>45.770</deltatime>
+		</result>
+		<result>
+			<description>setCamExclusive (lock camera for 1 s): method 0x0011, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-92351 - Check heating modes during runtime (OP inactive)</testcase_id>
+			<deltatime>47.072</deltatime>
+		</result>
+		<result>
+			<description>setCamControl (switch to in manual mode and on): method 0x0201, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-92351 - Check heating modes during runtime (OP inactive)</testcase_id>
+			<deltatime>47.375</deltatime>
+		</result>
+		<result>
+			<description>getCamControl (read heating state): method 0x0203, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-92351 - Check heating modes during runtime (OP inactive)</testcase_id>
+			<deltatime>47.677</deltatime>
+		</result>
+		<result>
+			<description>Heating shall be in manual mode and on: payload 0x07020001 (expected 0x07020001)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-92351 - Check heating modes during runtime (OP inactive)</testcase_id>
+			<deltatime>47.678</deltatime>
+		</result>
+		<result>
+			<description>
+
+Phase 3: Tambient = 20.0 degC (warm)
+			</description>
+			<verdict />
+		</result>
+		<result>
+			<description>Climate chamber not available, 20.0 degC not set</description>
+			<verdict>INFO</verdict>
+			<deltatime>47.680</deltatime>
+		</result>
+		<result>
+			<description>Imager warmer than the automatic switch-off limit: imager temperature not readable (message type 0x81, return code 0x03 (E_UNKNOWN_METHOD))</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>MVC-92351 - Check heating modes during runtime (OP inactive)</testcase_id>
+			<deltatime>47.981</deltatime>
+		</result>
+		<result>
+			<description>setCamExclusive (lock camera for 1 s): method 0x0011, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-92351 - Check heating modes during runtime (OP inactive)</testcase_id>
+			<deltatime>49.284</deltatime>
+		</result>
+		<result>
+			<description>setCamControl (switch to in manual mode and off): method 0x0201, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-92351 - Check heating modes during runtime (OP inactive)</testcase_id>
+			<deltatime>49.587</deltatime>
+		</result>
+		<result>
+			<description>getCamControl (read heating state): method 0x0203, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-92351 - Check heating modes during runtime (OP inactive)</testcase_id>
+			<deltatime>49.888</deltatime>
+		</result>
+		<result>
+			<description>Heating shall be in manual mode and off: payload 0x07020000 (expected 0x07020000)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-92351 - Check heating modes during runtime (OP inactive)</testcase_id>
+			<deltatime>49.889</deltatime>
+		</result>
+		<result>
+			<description>setCamExclusive (lock camera for 1 s): method 0x0011, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-92351 - Check heating modes during runtime (OP inactive)</testcase_id>
+			<deltatime>51.192</deltatime>
+		</result>
+		<result>
+			<description>setCamControl (switch to in automatic mode and off): method 0x0201, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-92351 - Check heating modes during runtime (OP inactive)</testcase_id>
+			<deltatime>51.494</deltatime>
+		</result>
+		<result>
+			<description>getCamControl (read heating state): method 0x0203, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-92351 - Check heating modes during runtime (OP inactive)</testcase_id>
+			<deltatime>51.797</deltatime>
+		</result>
+		<result>
+			<description>Heating shall be in automatic mode and off: payload 0x07040000 (expected 0x07040000)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-92351 - Check heating modes during runtime (OP inactive)</testcase_id>
+			<deltatime>51.797</deltatime>
+		</result>
+		<result>
+			<description>Imager warmer than the automatic switch-off limit: imager temperature not readable (message type 0x81, return code 0x03 (E_UNKNOWN_METHOD))</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>MVC-92351 - Check heating modes during runtime (OP inactive)</testcase_id>
+			<deltatime>52.099</deltatime>
+		</result>
+		<result>
+			<description> U_in = 0.0 V</description>
+			<verdict />
+		</result>
+	</results>
+</singletest>

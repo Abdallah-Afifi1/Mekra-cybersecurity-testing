@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<singletest source="Shutter_Control/MVC-100610-Shutter_not_Supported.py">
+	<meta>
+		<title>MVC-100610-Shutter not Supported</title>
+		<description>MVC does not support a shutter (only valid for DUTs without a shutter)</description>
+		<author>Ehu Li</author>
+		<date>04.08.2026</date>
+		<version>1.0.0</version>
+		<last_revision>initial</last_revision>
+		<starttime>2026-08-05T10:36:52</starttime>
+		<endtime>2026-08-05T10:37:17</endtime>
+		<hil_computername>TTE-SOW2-W11</hil_computername>
+		<hil_project_path>D:\VSC-GitLab\11_p_01467_mekra_vision_controller</hil_project_path>
+		<hil_username>svc_systessow2</hil_username>
+	</meta>
+	<results>
+		<result>
+			<description>
+
+Preconditions
+			</description>
+			<verdict />
+		</result>
+		<result>
+			<description>SW config 10C1 (rcam_2): service port 30501, SD 239.120.1.1:30490, 8 ROIs, Tauto 15.0/20.0 degC, Tprotection 45.0/40.0 degC</description>
+			<verdict>INFO</verdict>
+			<deltatime>0.328</deltatime>
+		</result>
+		<result>
+			<description>Production data Volvo_Standard_1Gbit_SN00012803.py: MAC 98:d3:d2:00:32:03, serial 00012803, hwVer 01H-</description>
+			<verdict>INFO</verdict>
+			<deltatime>0.333</deltatime>
+		</result>
+		<result>
+			<description> U_in = 0.0 V</description>
+			<verdict />
+		</result>
+		<result>
+			<description>Channel 1 disabled, DUT powered down</description>
+			<verdict>INFO</verdict>
+			<deltatime>0.352</deltatime>
+		</result>
+		<result>
+			<description> U_in = 24.0 V</description>
+			<verdict />
+		</result>
+		<result>
+			<description>
+Supply voltage on channel 1
+Expected value: 24.000 V
+Current value:  24.000 V (voltage_ch1)
+Absolute Tolerance:  +/- 0.100 V
+			</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-100610</testcase_id>
+			<deltatime>3.408</deltatime>
+		</result>
+		<result>
+			<description> DHCP address allocation</description>
+			<verdict />
+		</result>
+		<result>
+			<description>DHCP lease 192.168.120.10 acknowledged to the DUT</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-100610</testcase_id>
+			<deltatime>19.277</deltatime>
+		</result>
+		<result>
+			<description> DUT reaches OPERATIONAL state</description>
+			<verdict />
+		</result>
+		<result>
+			<description>SD OfferService received after 0.1 s -&gt; DUT has an IP address and is in OPERATIONAL state</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-100610</testcase_id>
+			<deltatime>19.430</deltatime>
+		</result>
+		<result>
+			<description>OfferService announces service 0x433F at 192.168.120.10:30501 | config {'mac_address': '98D3D2003203', 'serial_nb': '00012803', 'device_type': 'rcam_2'}</description>
+			<verdict>INFO</verdict>
+			<deltatime>19.431</deltatime>
+		</result>
+		<result>
+			<description>SOME/IP endpoint: local ('192.168.120.1', 50010) -&gt; target 192.168.120.10:30501</description>
+			<verdict>INFO</verdict>
+			<deltatime>19.431</deltatime>
+		</result>
+		<result>
+			<description>Waiting 5.0 s for the DUT to finish its startup</description>
+			<verdict>INFO</verdict>
+			<deltatime>19.431</deltatime>
+		</result>
+		<result>
+			<description>
+
+The shutter control index is rejected
+			</description>
+			<verdict />
+		</result>
+		<result>
+			<description>getCamControl shutter after startup: method 0x0203, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX), expected 0x81 / 0x35</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-100610</testcase_id>
+			<deltatime>24.442</deltatime>
+		</result>
+		<result>
+			<description>
+
+A running video stream does not create a shutter
+			</description>
+			<verdict />
+		</result>
+		<result>
+			<description>subscribeROIVideo (0xC0000003, ROI 3): method 0x0131, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-100610</testcase_id>
+			<deltatime>24.634</deltatime>
+		</result>
+		<result>
+			<description>getCamControl shutter while the stream is active: method 0x0203, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX), expected 0x81 / 0x35</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-100610</testcase_id>
+			<deltatime>24.645</deltatime>
+		</result>
+		<result>
+			<description>
+
+Writing the shutter control is rejected as well
+			</description>
+			<verdict />
+		</result>
+		<result>
+			<description>setCamExclusive (lock camera for 360 s): method 0x0011, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-100610</testcase_id>
+			<deltatime>24.653</deltatime>
+		</result>
+		<result>
+			<description>setCamControl shutter ManualModified ON: method 0x0201, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX), expected 0x81 / 0x35</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-100610</testcase_id>
+			<deltatime>24.663</deltatime>
+		</result>
+		<result>
+			<description>getCamControl shutter after the rejected write: method 0x0203, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX), expected 0x81 / 0x35</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-100610</testcase_id>
+			<deltatime>24.673</deltatime>
+		</result>
+		<result>
+			<description>
+
+Postcondition: the service stays usable
+			</description>
+			<verdict />
+		</result>
+		<result>
+			<description>unSubscribeROIVideo (0xC0000003, ROI 3): method 0x0132, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-100610</testcase_id>
+			<deltatime>24.683</deltatime>
+		</result>
+		<result>
+			<description>getCamControl shutter after the stream was stopped: method 0x0203, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX), expected 0x81 / 0x35</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-100610</testcase_id>
+			<deltatime>24.691</deltatime>
+		</result>
+		<result>
+			<description>eraseCamExclusive (release the lock): method 0x0019, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-100610</testcase_id>
+			<deltatime>24.703</deltatime>
+		</result>
+		<result>
+			<description> U_in = 0.0 V</description>
+			<verdict />
+		</result>
+		<result>
+			<description>Channel 1 disabled, DUT powered down</description>
+			<verdict>INFO</verdict>
+			<deltatime>24.723</deltatime>
+		</result>
+	</results>
+</singletest>

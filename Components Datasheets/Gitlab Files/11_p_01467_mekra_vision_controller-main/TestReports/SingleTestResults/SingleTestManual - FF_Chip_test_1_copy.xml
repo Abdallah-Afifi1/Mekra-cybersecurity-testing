@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<singletest source="FF_Chip_test_1 copy.py">
+	<meta>
+		<title>FF Chip test 1 copy</title>
+		<description>basic access tests for climate chamber access</description>
+		<author>ReinerS</author>
+		<date>15.12.2025</date>
+		<version>1.0.0</version>
+		<last_revision>initial</last_revision>
+		<starttime>2026-04-21T13:19:40</starttime>
+		<endtime>2026-04-21T13:20:19</endtime>
+		<hil_computername>TTE-SOW2-W11</hil_computername>
+		<hil_project_path>d:\VSC-GitLab\11_p_01467_mekra_vision_controller</hil_project_path>
+		<hil_username>svc_systessow2</hil_username>
+	</meta>
+	<results>
+		<result>
+			<description>
+Current temperature should be within climate chamber limits
+Value:     47.2 °C (temperature)
+Min value: -72.0 °C
+Max value: 180.0 °C
+			</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>FF_Chip_test_1</testcase_id>
+			<deltatime>0.425</deltatime>
+		</result>
+		<result>
+			<description>
+Active temperature setpoint should be within climate chamber limits
+Value:     70.0 °C (temperature_setpoint)
+Min value: -72.0 °C
+Max value: 180.0 °C
+			</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>FF_Chip_test_1</testcase_id>
+			<deltatime>0.427</deltatime>
+		</result>
+		<result>
+			<description>Power supply set to 28.0 V</description>
+			<verdict>INFO</verdict>
+			<deltatime>0.486</deltatime>
+		</result>
+		<result>
+			<description>
+Check PSU output voltage
+Expected value: 28.000 V
+Current value:  27.998 V (voltage_ch4)
+Absolute Tolerance:  +/- 0.020 V
+			</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>FF_Chip_test_1</testcase_id>
+			<deltatime>0.517</deltatime>
+		</result>
+		<result>
+			<description>
+
+Setpoint: 70 °C
+			</description>
+			<verdict />
+		</result>
+		<result>
+			<description>Setting setpoint to 70 °C and waiting to temperature to settle</description>
+			<verdict>INFO</verdict>
+			<deltatime>10.522</deltatime>
+		</result>
+	</results>
+</singletest>

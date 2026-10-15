@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<singletest source="ees_basics.py">
+	<meta>
+		<title>ees basics</title>
+		<description>basic access tests for TE-2004 Enhanced Ethernet Switch</description>
+		<author>Tremmel</author>
+		<date>23.06.2025</date>
+		<version>1.0.0</version>
+		<last_revision>initial, (very) basic example</last_revision>
+		<starttime>2025-06-23T16:18:21</starttime>
+		<endtime>2025-06-23T16:18:27</endtime>
+		<hil_computername>ISYCWS050</hil_computername>
+		<hil_project_path>D:\HIL-Projekte\Mekra_SOW2</hil_project_path>
+		<hil_username>JoTremmel</hil_username>
+	</meta>
+	<results>
+		<result>
+			<description>
+Enhanced Ethernet Switch should report 'alive'
+Current status:  True
+Expected status: True
+			</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>ees_basics</testcase_id>
+			<deltatime>0.012</deltatime>
+		</result>
+		<result>
+			<description>getting current EES configuration</description>
+			<verdict>INFO</verdict>
+			<deltatime>0.012</deltatime>
+		</result>
+		<result>
+			<description>validateConfig: Configuration is valid</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>ees_basics</testcase_id>
+			<deltatime>0.033</deltatime>
+		</result>
+		<result>
+			<description>
+write back current configuration (in non-persistent mode)
+Note: A 'warm' reset is required for non-persistent configuration changes to become active
+			</description>
+			<verdict>INFO</verdict>
+			<deltatime>0.033</deltatime>
+		</result>
+		<result>
+			<description>Configuration successfully written</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>ees_basics</testcase_id>
+			<deltatime>0.042</deltatime>
+		</result>
+		<result>
+			<description>performing a warm reset</description>
+			<verdict>INFO</verdict>
+			<deltatime>0.056</deltatime>
+		</result>
+		<result>
+			<description>EES Status: EES back to 'alive' state after 5.6s</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>ees_basics</testcase_id>
+			<deltatime>5.721</deltatime>
+		</result>
+		<result>
+			<description>
+Enhanced Ethernet Switch should report 'alive' after the configration change
+Current status:  True
+Expected status: True
+			</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>ees_basics</testcase_id>
+			<deltatime>5.733</deltatime>
+		</result>
+	</results>
+</singletest>

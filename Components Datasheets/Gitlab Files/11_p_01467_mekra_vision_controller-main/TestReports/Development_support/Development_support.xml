@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testreport version="1.0" source="Development_support.ser" xmlns:iTS="http://www.isyst.de/iTestStudio.xsd">
+	<meta>
+		<title />
+		<description>&lt;description text&gt;</description>
+		<author>Stefan Reiner</author>
+		<date>2026-06-30T16:53:55</date>
+		<version />
+		<last_revision />
+		<hardwareversion>B-Sample</hardwareversion>
+		<softwareversion>---</softwareversion>
+		<customer>Volvo</customer>
+		<project>MVC</project>
+		<created_on>2026-06-30T16:54:50</created_on>
+		<department>MEKRA_T-EQV</department>
+	</meta>
+	<testsequences>
+		<testsequence source="FF_chip_test.seq">
+			<meta>
+				<title>FF_Chip_Test</title>
+				<description>
+Test-1: 70°C -&gt; 85°C in (2°C stepps/20min) stepps.
+Test-2: 85°C  infinitely.
+				</description>
+				<author>Stefan Reiner</author>
+				<date>2026-06-30T16:43:29</date>
+				<version />
+				<last_revision />
+			</meta>
+			<singletests>
+				<singletest source="development_support/FF_Chip_test_1.py">
+					<meta>
+						<title>FF Chip test 1</title>
+						<description>basic access tests for climate chamber access</description>
+						<author>ReinerS</author>
+						<date>15.12.2025</date>
+						<version>1.0.0</version>
+						<last_revision>initial</last_revision>
+						<starttime>2026-06-30T16:54:09</starttime>
+						<endtime>2026-06-30T16:54:22</endtime>
+						<hil_computername>TTE-SOW2-W11</hil_computername>
+						<hil_project_path>D:\VSC-GitLab\11_p_01467_mekra_vision_controller</hil_project_path>
+						<hil_username>svc_systessow2</hil_username>
+					</meta>
+					<results>
+						<result>
+							<description>Climate chamber set to manual mode / start</description>
+							<verdict>INFO</verdict>
+							<deltatime>1.410</deltatime>
+						</result>
+						<result>
+							<description>
+Current temperature should be within climate chamber limits
+Value:     26.3 °C (temperature)
+Min value: -72.0 °C
+Max value: 180.0 °C
+							</description>
+							<verdict>PASSED</verdict>
+							<testcase_id>FF_Chip_test_1</testcase_id>
+							<deltatime>1.412</deltatime>
+						</result>
+						<result>
+							<description>
+Active temperature setpoint should be within climate chamber limits
+Value:     20.0 °C (temperature_setpoint)
+Min value: -72.0 °C
+Max value: 180.0 °C
+							</description>
+							<verdict>PASSED</verdict>
+							<testcase_id>FF_Chip_test_1</testcase_id>
+							<deltatime>1.415</deltatime>
+						</result>
+						<result>
+							<description>Test script aborted with errors.</description>
+							<verdict>FAILED</verdict>
+							<testcase_id>FF_Chip_test_1</testcase_id>
+							<deltatime>12.679</deltatime>
+						</result>
+						<result>
+							<description>
+Traceback (most recent call last):
+  File "D:\Releases\TestSupport\test_support312\test_runner_base.py", line 289, in runTest
+  File "D:\VSC-GitLab\11_p_01467_mekra_vision_controller\Python\TestPool\development_support\FF_Chip_test_1.py", line 93, in &lt;module&gt;
+    rx =someip_commands.subscribeROIVideo(b'\xC0\x00\x00\x03')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\VSC-GitLab\11_p_01467_mekra_vision_controller\Python\TestLibraries\tools\SOMEIP\someip_commands.py", line 238, in subscribeROIVideo
+    return sendPack(txpacket), exppacket
+           ^^^^^^^^^^^^^^^^^^
+  File "D:\VSC-GitLab\11_p_01467_mekra_vision_controller\Python\TestLibraries\tools\SOMEIP\someip_commands.py", line 270, in sendPack
+    someip_client.send_packet(
+  File "D:\VSC-GitLab\11_p_01467_mekra_vision_controller\Python\TestLibraries\tools\SOMEIP\someip_client.py", line 315, in send_packet
+    self.someip_rx_packet = self.receive_packet()
+                            ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\VSC-GitLab\11_p_01467_mekra_vision_controller\Python\TestLibraries\tools\SOMEIP\someip_client.py", line 342, in receive_packet
+    data, addr = self.hostSocket.recvfrom(receive_max_bytes)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [WinError 10054] Eine vorhandene Verbindung wurde vom Remotehost geschlossen
+
+							</description>
+							<verdict>ERROR</verdict>
+							<testcase_id>FF_Chip_test_1</testcase_id>
+							<deltatime>12.679</deltatime>
+						</result>
+					</results>
+				</singletest>
+			</singletests>
+		</testsequence>
+	</testsequences>
+</testreport>

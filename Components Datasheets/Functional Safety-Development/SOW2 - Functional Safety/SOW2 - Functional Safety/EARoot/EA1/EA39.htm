@@ -1,0 +1,1202 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>[complete] FTA (SG1:Path1) - in ImageAcquisition</title>
+<link href="../../css/ea.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="../../js/displayToc.js" type="text/javascript"></script>
+<script>
+
+  function switchProjectProperties() {
+			if (document.getElementById("proj00").style.display == "none") {
+				document.getElementById("proj00").style.display = "revert";
+				document.getElementById("proj01").style.display = "revert";
+				document.getElementById("proj02").style.display = "revert";
+				document.getElementById("proj03").style.display = "revert";
+				document.getElementById("proj04").style.display = "revert";
+				document.getElementById("proj05").style.display = "revert";
+			} else {
+				document.getElementById("proj00").style.display = "none";
+				document.getElementById("proj01").style.display = "none";
+				document.getElementById("proj02").style.display = "none";
+				document.getElementById("proj03").style.display = "none";
+				document.getElementById("proj04").style.display = "none";
+				document.getElementById("proj05").style.display = "none";
+			}
+}
+
+		function switchAdvancedProperties(){
+
+			if (document.getElementById("adv00").style.display == "none") {;
+				document.getElementById("adv00").style.display = "revert";
+				document.getElementById("adv01").style.display = "revert";
+			} else {
+				document.getElementById("adv00").style.display = "none";
+				document.getElementById("adv01").style.display = "none";
+			}
+		}
+		function initPage()
+        {			
+			var divs = document.getElementsByClassName("ObjectDetailsNotes");
+			for (var j = 0; j < divs.length; j++) {
+				var tmpStr = divs[j].innerHTML;
+				tmpStr = tmpStr.replace(/#gt;/g, "&gt;");
+				tmpStr = tmpStr.replace(/#lt;/g, "&lt;");
+
+				tmpStr = tmpStr.replace(/&gt;/g, ">");
+				tmpStr = tmpStr.replace(/&lt;/g, "<");
+
+				divs[j].innerHTML = tmpStr;
+			}
+
+            if (document.getElementById('TableGroup') != null)
+            {
+                toggleItem(document.getElementById('TableGroup').getElementsByTagName('li')[0].id.replace("Title", ""));
+            }
+
+        }
+</script>
+<style>
+
+</style>
+</head>
+<body onload="initPage();">
+<div class="section group" >
+
+		<div class="col span_2_of_2 header_frame">
+			<h1> [complete] FTA (SG1:Path1) - in ImageAcquisition </h1>
+			<!-- <img class="header_image" src="../../images/mekraLangGermany.PNG" align="right" alt="Header Image" />-->
+			<img class="header_image" src="../../images/mekraLangGermany.PNG" align="right" alt="Header Image" />
+		</div>
+		<div class="col span_2_of_2 breadcrumb_frame">
+			<p><a href="../EA5.htm">FunctionalSafety</a> / <a href="EA55.htm">FTA</a> / <a href="EA39.htm">[complete] FTA (SG1:Path1) - in ImageAcquisition</a></p>
+		</div>
+			
+		<table class="contentmaintable">
+			<!-- <tfoot>
+				<tr>
+					<td>foot1</td>
+					<td>foot2</td>
+				</tr>
+			</tfoot> -->
+			<tbody>
+				<tr>
+					<td class="indexcell">
+						<div class="projectBrowserTitle">Project: </div>
+						<ul>
+<li><img src="../../images/175.png" alt="Diagram"/> <a href="EA37.htm">[complete] FTA (SG1:Path1) - frame frome the past sent at the output:Fault in ImageProcessing Stage</a></li>
+<li><img src="../../images/175.png" alt="Diagram"/> <a href="EA39.htm">[complete] FTA (SG1:Path1) - in ImageAcquisition</a></li>
+<li><img src="../../images/175.png" alt="Diagram"/> <a href="EA41.htm">FTA (SG1:Path2)</a></li>
+<li><img src="../../images/175.png" alt="Diagram"/> <a href="EA43.htm">[complete] FTA (SG1:Path1) - frame frome the past sent at the output:Fault in ImageOutput Stage</a></li>
+<li><img src="../../images/175.png" alt="Diagram"/> <a href="EA45.htm">[complete] FTA (SG1:Path1) - time basis not correct:Fault in ImageProcessing Stage</a></li>
+<li><img src="../../images/175.png" alt="Diagram"/> <a href="EA47.htm">[complete] [Root] FTA (SG1:Path1) - time basis not correct:Fault in ImageOutput Stage</a></li>
+<li><img src="../../images/175.png" alt="Diagram"/> <a href="EA49.htm">[complete] FTA (SG1:Path1) - too low processing capability:Fault in ImageOutput Stage</a></li>
+<li><img src="../../images/175.png" alt="Diagram"/> <a href="EA51.htm">[complete] FTA (SG1:Path1) - too low processing capability:Fault in ImageProcessing Stage</a></li>
+<li><img src="../../images/175.png" alt="Diagram"/> <a href="EA53.htm">Requirements - FTA (SG1:Path1) - time basis not correct::Fault in ImageProcessing</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA66.htm"> NOT Correct Amount of Data</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA63.htm">	Fault in DRAM Communication with Static Bad Pixel Correction</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA64.htm">	Fault in DRAM Communication with Static Bad Pixel Correction</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA65.htm">	Fault in DRAM Communication with Static Bad Pixel Correction</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA139.htm">AdvancedSpatialFilter generates excessive amount of data</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA140.htm">AdvancedSpatialFilter NOT Correct (too low) Processing Velocity</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA145.htm">BasicEvent1</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA146.htm">BlackLevelCorrection generates excessive amount of data</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA147.htm">BlackLevelCorrection NOT Correct (too low) Processing Velocity</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA148.htm">CbCr generates excessive amount of data</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA149.htm">CbCr NOT Correct (too low) Processing Velocity</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA150.htm">CFA Leakage/Anti-aliasing Filtering generates excessive amount of data</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA151.htm">CFA Leakage/Anti-aliasing Filtering NOT Correct (too low) Processing Velocity</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA152.htm">CFA Noise Filtering generates excessive amount of data</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA153.htm">CFA Noise Filtering NOT Correct (too low) Processing Velocity</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA154.htm">ChromaMedianFiltering generates excessive amount of data</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA155.htm">ChromaMedianFiltering NOT Correct (too low) Processing Velocity</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA156.htm">ChromaNoiseFiltering generates excessive amount of data</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA157.htm">ChromaNoiseFiltering NOT Correct (too low) Processing Velocity</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA158.htm">ChromaResize generates excessive amount of data</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA159.htm">ChromaResize NOT Correct (too low) Processing Velocity</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA160.htm">ChromaScale generates excessive amount of data</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA161.htm">ChromaScale NOT Correct (too low) Processing Velocity</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA162.htm">Chromatic Aberration Correction generates excessive amount of data</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA163.htm">Chromatic Aberration Correction NOT Correct (too low) Processing Velocity</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA164.htm">ColorCorrection generates excessive amount of data</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA165.htm">ColorCorrection NOT Correct (too low) Processing Velocity</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA169.htm">Contrast Enhancement generates excessive amount of data</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA170.htm">Contrast Enhancement NOT Correct (too low) Processing Velocity</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA171.htm">current frame gets repeated at the output</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA173.htm">DC generates excessive amount of data</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA174.htm">DC NOT Correct (too low) Processing Velocity</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA175.htm">Demosaic time basis not correct generates excessive amount of data</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA176.htm">Demosaic time basis not correct NOT Correct (too low) Processing Velocity</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA177.htm">DigitalGain generates excessive amount of data</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA178.htm">DigitalGain NOT Correct (too low) Processing Velocity</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA179.htm">DRAM NOT Correct (too low) Processing Velocity</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA180.htm">DRAM returns excessive amount of data</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA181.htm">DRAM returns expired image</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA182.htm">Dynamic Bad Pixel Detection/Correction generates generates excessive amount of data</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA183.htm">Dynamic Bad Pixel Detection/Correction NOT Correct (too low) Processing Velocity</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA184.htm">EMC interference</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA186.htm">Falut in ImageOutput (A53): faulty frame identification (label retrieval)</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA187.htm">Falut in ImageOutput (A53): faulty frame identification (label retrieval): label invalid</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA188.htm">Falut in ImageOutput (A53): faulty frame identification (label retrieval): label retrieved from false position</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA190.htm">Fault A53 Communication: too low processing capability</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA191.htm">Fault A53 Communication: too low processing capability:: NOT correct (too big) amount of data</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA192.htm">Fault A53 Communication: too low processing capability:: NOT Correct (too low) Processing Velocity</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA193.htm">Fault A53: time base Communication: NOT OK</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA194.htm">Fault A53: time base NOT OK</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA195.htm">Fault A53: too low processing capability</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA196.htm">Fault A53: too low processing capability:: NOT correct (too big) amount of data</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA197.htm">Fault A53: too low processing capability:: NOT correct (too big) amount of data:::Data to A53 from DRAM: The amount of data received shall be less or equal the amount requested. </a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA198.htm">Fault A53: too low processing capability:: NOT correct (too big) amount of data:::Generated Ethernet Package too big</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA199.htm">Fault A53: too low processing capability:: NOT Correct (too low) Processing Velocity</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA200.htm">Fault H.264 from ImageProcessing Communication: velocity shall be not less than ABC</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA201.htm">Fault H.264 to A53 Communication: velocity shall be not less than ABC</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA202.htm">Fault H.264 to DRAM Communication: velocity shall be not less than ABC</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA205.htm">Fault in A53 Communication from DRAM(Buffer): too low processing capability:: NOT Correct (too low) Processing Velocity</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA207.htm">Fault in A53 Communication from DRAM: too low processing capability:: NOT correct (too big) amount of data:::faulty buffer size (too big) compared to the reqested</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA211.htm">Fault in A53 Communication from H.264: too low processing capability:: NOT correct (too big) amount of data:::faulty buffer size (too big) compared to the reqested</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA212.htm">Fault in A53 Communication from H.264: too low processing capability:: NOT Correct (too low) Processing Velocity</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA217.htm">Fault in A53 Communication to Ethernet: too low processing capability:: NOT correct (too big) amount of data:::faulty Ethernet Frame size (too big) </a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA218.htm">Fault in A53 Communication to Ethernet: too low processing capability:: NOT Correct (too low) Processing Velocity</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA223.htm">Fault in A53 from DRAM: too low processing capability:: NOT Correct (too low) Processing Velocity</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA225.htm">Fault in A53 from H.264:  too low processing capability:: NOT Correct (too low) Processing Velocity</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA227.htm">Fault in AdvancedSpatialFilter Communication with LumaResize</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA889.htm">Fault in AdvancedSpatialFilter Communication with LumaResize</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA228.htm">Fault in AdvancedSpatialFilter Communication with LumaResize</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA229.htm">Fault in AdvancedSpatialFilter: time basis not correct</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA230.htm">Fault in BlackLevelCorrection Communication (Input): time basis NOT OK</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA231.htm">Fault in BlackLevelCorrection Communication with DigitalGain</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA232.htm">Fault in BlackLevelCorrection Communication with DigitalGain</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA233.htm">Fault in BlackLevelCorrection Communication with DigitalGain</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA234.htm">Fault in BlackLevelCorrection Communication with ImageAcquisition</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA235.htm">Fault in BlackLevelCorrection Communication with ImageAcquisition</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA236.htm">Fault in BlackLevelCorrection Communication with ImageAcquisition</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA237.htm">Fault in BlackLevelCorrection: time basis not correct</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA238.htm">Fault in CbCr Communication with ChromaScale</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA890.htm">Fault in CbCr Communication with ChromaScale</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA239.htm">Fault in CbCr Communication with ChromaScale</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA240.htm">Fault in CbCr: time basis not correct</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA241.htm">Fault in CFA Leakage/Anti-aliasing Filtering Communication with GbGr Mismatch</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA891.htm">Fault in CFA Leakage/Anti-aliasing Filtering Communication with GbGr Mismatch</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA242.htm">Fault in CFA Leakage/Anti-aliasing Filtering Communication with GbGr Mismatch</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA243.htm">Fault in CFA Leakage/Anti-aliasing Filtering: time basis not correct</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA244.htm">Fault in CFA Noise Filtering Communication with Demosaic</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA892.htm">Fault in CFA Noise Filtering Communication with Demosaic</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA245.htm">Fault in CFA Noise Filtering Communication with Demosaic</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA246.htm">Fault in CFA Noise Filtering: time basis not correct</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA247.htm">Fault in ChromaMedianFiltering Communication with ChromaNoiseFiltering</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA893.htm">Fault in ChromaMedianFiltering Communication with ChromaNoiseFiltering</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA248.htm">Fault in ChromaMedianFiltering Communication with ChromaNoiseFiltering</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA249.htm">Fault in ChromaMedianFiltering: time basis not correct</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA250.htm">Fault in ChromaNoiseFiltering Communication with ChromaResize</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA894.htm">Fault in ChromaNoiseFiltering Communication with ChromaResize </a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA251.htm">Fault in ChromaNoiseFiltering Communication with ChromaResize </a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA252.htm">Fault in ChromaNoiseFiltering: time basis not correct</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA253.htm">Fault in ChromaResize Communication with LensWarpCorrection</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA895.htm">Fault in ChromaResize Communication with LensWarpCorrection</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA254.htm">Fault in ChromaResize Communication with LensWarpCorrection</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA255.htm">Fault in ChromaResize: time basis not correct</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA256.htm">Fault in ChromaScale Communication with ChromaMedianFiltering</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA896.htm">Fault in ChromaScale Communication with ChromaMedianFiltering</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA257.htm">Fault in ChromaScale Communication with ChromaMedianFiltering </a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA258.htm">Fault in ChromaScale: time basis not correct</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA259.htm">Fault in Chromatic Aberration Correction Communication with CFA Noise Filtering</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA897.htm">Fault in Chromatic Aberration Correction Communication with CFA Noise Filtering</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA260.htm">Fault in Chromatic Aberration Correction Communication with CFA Noise Filtering </a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA261.htm">Fault in Chromatic Aberration Correction: time basis not correct</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA262.htm">Fault in ColorCorrection Communication with ToneCurve</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA898.htm">Fault in ColorCorrection Communication with ToneCurve</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA263.htm">Fault in ColorCorrection Communication with ToneCurve</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA264.htm">Fault in ColorCorrection: time basis not correct</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA265.htm">Fault in Communication to/from the Component</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA266.htm">Fault in Communication to/from the Component</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA267.htm">Fault in Communication to/from the Component</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA268.htm">Fault in Communication to/from the Component</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA269.htm">Fault in Communication to/from the Component</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA270.htm">Fault in Communication to/from the Component</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA271.htm">Fault in Communication to/from the Component</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA272.htm">Fault in Communication to/from the Component</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA273.htm">Fault in Communication to/from the Component</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA274.htm">Fault in Contrast Enhancement Communication with Chromatic Aberration Correction</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA899.htm">Fault in Contrast Enhancement Communication with Chromatic Aberration Correction</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA275.htm">Fault in Contrast Enhancement Communication with Chromatic Aberration Correction</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA276.htm">Fault in Contrast Enhancement: time basis not correct</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA277.htm">Fault in DC Communication (Input): time basis NOT OK</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA278.htm">Fault in DC Communication with BlackLevelCorrection</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA279.htm">Fault in DC Communication with BlackLevelCorrection</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA280.htm">Fault in DC Communication with BlackLevelCorrection</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA281.htm">Fault in DC Communication with ImageAcquisition</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA282.htm">Fault in DC Communication with ImageAcquisition</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA283.htm">Fault in DC Communication with ImageAcquisition</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA284.htm">Fault in DC: time basis not correct<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA285.htm">Fault in Demosaic Communication with ColorCorrection</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA900.htm">Fault in Demosaic Communication with ColorCorrection</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA286.htm">Fault in Demosaic Communication with ColorCorrection</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA287.htm">Fault in Demosaic time basis not correct</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA288.htm">Fault in Deserializer : pointer to past frame</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA289.htm">Fault in Deserializer Communication to Monitor(ARM A53): NOT Correct Amount of Data </a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA290.htm">Fault in Deserializer Communication to Monitor(ARM A53): NOT Correct Processing Velocity</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA291.htm">Fault in Deserializer Communication to SOW1: NOT Correct Amount of Data</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA292.htm">Fault in Deserializer Communication to SOW1: NOT Correct Processing Velocity</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA293.htm">Fault in Deserializer Communication to SOW1: time base NOT OK</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA294.htm">Fault in Deserializer Communication to SOW1: time based settings NOT OK</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA295.htm">Fault in Deserializer Communication to VIN MIPI:  NOT Correct Amount of Data</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA296.htm">Fault in Deserializer Communication to VIN MIPI: NOT Correct Processing Velocity</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA297.htm">Fault in Deserializer Communication to VIN MIPI: pointer to past frame</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA298.htm">Fault in Deserializer Communication to VIN MIPI: time base NOT OK</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA299.htm">Fault in Deserializer: NOT Correct Amount of Data <br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA300.htm">Fault in Deserializer: NOT Correct Processing Velocity</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA301.htm">Fault in Deserializer: SOW1 time based setting NOT OK</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA302.htm">Fault in Deserializer: time base NOT OK</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA303.htm">Fault in DigitalGain Communication with HDR Blend with LFM</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA304.htm">Fault in DigitalGain Communication with HDR Blend with LFM</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA305.htm">Fault in DigitalGain Communication with HDR Blend with LFM</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA306.htm">Fault in DigitalGain: time basis not correct</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA307.htm">Fault in DRAM Communication with LumaResize</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA308.htm">Fault in DRAM Communication with LumaResize</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA309.htm">Fault in DRAM Communication with LumaResize</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA310.htm">Fault in DRAM Communication with MCTF</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA311.htm">Fault in DRAM Communication with MCTF</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA312.htm">Fault in DRAM Communication with MCTF</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA313.htm">Fault in DRAM Communication with ToneCurve Correction</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA314.htm">Fault in DRAM Communication with ToneCurve Correction</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA315.htm">Fault in DRAM Communication with ToneCurve Correction</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA316.htm">Fault in DRAM Communication with VignetteCompensation</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA317.htm">Fault in DRAM Communication with VignetteCompensation</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA318.htm">Fault in DRAM Communication with VignetteCompensation</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA319.htm">Fault in DRAM Communication with Y </a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA320.htm">Fault in DRAM Communication with Y </a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA321.htm">Fault in DRAM Communication with Y </a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA322.htm">Fault in DRAM(RAW Data) Communication to ImageProcessingStage:  NOT Correct Amount of Data</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA323.htm">Fault in DRAM(RAW Data) Communication to ImageProcessingStage:  pointer to past frame</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA324.htm">Fault in DRAM(RAW Data) Communication to ImageProcessingStage: NOT Correct Processing Velocity</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA325.htm">Fault in DRAM(RAW Data) Communication to ImageProcessingStage: time base NOT OK</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA326.htm">Fault in DRAM(RAW Data): NOT Correct Amount of Data  <br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA327.htm">Fault in DRAM(RAW Data): NOT Correct Processing Velocity </a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA328.htm">Fault in DRAM(RAW Data): pointer to past frame</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA329.htm">Fault in DRAM(RAW Data): time base NOT OK</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA330.htm">Fault in DRAM: time basis not correct</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA331.htm">Fault in Dynamic Bad Pixel Detection/Correction Communication with Static Bad Pixel Correction</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA901.htm">Fault in Dynamic Bad Pixel Detection/Correction Communication with Static Bad Pixel Correction</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA902.htm">Fault in Dynamic Bad Pixel Detection/Correction Communication with Static Bad Pixel Correction</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA332.htm">Fault in Dynamic Bad Pixel Detection/Correction: time basis not correct</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA333.htm">Fault in Ethernet</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA334.htm">Fault in GbGr Mismatch Communication with Contrast Enhancement</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA903.htm">Fault in GbGr Mismatch Communication with Contrast Enhancement</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA335.htm">Fault in GbGr Mismatch Communication with Contrast Enhancement</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA336.htm">Fault in GbGr Mismatch: time basis not correct</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA341.htm">Fault in H.264</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA343.htm">Fault in HDR Blend with LFM Communication with VignetteCompensation</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA904.htm">Fault in HDR Blend with LFM Communication with VignetteCompensation</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA344.htm">Fault in HDR Blend with LFM Communication with VignetteCompensation</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA345.htm">Fault in HDR Blend with LFM: time basis not correct</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA346.htm">Fault in HistogramGenerator Communication (Input): time basis NOT OK<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA347.htm">Fault in HistogramGenerator Communication with DRAM</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA348.htm">Fault in HistogramGenerator Communication with DRAM</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA349.htm">Fault in HistogramGenerator Communication with DRAM</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA350.htm">Fault in HistogramGenerator Communication with ImageAcquisition<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA351.htm">Fault in HistogramGenerator Communication with ImageAcquisition<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA352.htm">Fault in HistogramGenerator Communication with ImageAcquisition<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA353.htm">Fault in HistogramGenerator: time basis not correct</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA354.htm">Fault in I2C Communication to Deserializer: NOT Correct Amount of Data</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA355.htm">Fault in I2C Communication to Deserializer: NOT Correct Processing Velocity</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA356.htm">Fault in I2C Communication to Deserializer: time base NOT OK</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA357.htm">Fault in I2C Communication to Deserializer: time based settings NOT OK</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA358.htm">Fault in I2C: NOT Correct Amount of Data  <br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA359.htm">Fault in I2C: NOT Correct Processing Velocity Setting</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA360.htm">Fault in I2C: SOW1 time based setting NOT OK</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA361.htm">Fault in I2C: time base NOT OK</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA362.htm">Fault in ImageAcquisition</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA363.htm">Fault in ImageAcquisition</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA364.htm">Fault in ImageAcquisition</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA365.htm">Fault in ImageAcquisition</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA366.htm">Fault in ImageAcquisition</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA367.htm">Fault in ImageAcquisition</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA368.htm">Fault in ImageAcquisition</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA369.htm">Fault in ImageAcquisition (DRAM (RAW Data)): fault in label embedding in the frame</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA370.htm">Fault in ImageAcquisition (DRAM (RAW Data)): fault in label embedding in the frame: false content</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA371.htm">Fault in ImageAcquisition (DRAM (RAW Data)): fault in label embedding in the frame: false position</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA372.htm">Fault in ImageOutput</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA373.htm">Fault in ImageOutput</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA374.htm">Fault in ImageOutput Stage</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA375.htm">fault in ImageOutput to Monitor Communication</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA376.htm">Fault in ImageProcesing Stage</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA377.htm">Fault in ImageProcessing</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA378.htm">Fault in ImageProcessing</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA379.htm">Fault in ImageProcessing</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA435.htm">Fault in IO-Automotive Ethernet Communication from A53: too low processing capability:: NOT correct (too big) amount of data:::faulty Ethernet Frame size (too big) </a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA437.htm">Fault in IO-Automotive Ethernet Communication to vehicle: too low processing capability:: NOT correct (too big) amount of data:::faulty Ethernet Frame size (too big) </a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA438.htm">Fault in IO-Buffer (DRAM) Communication (Input): time basis NOT OK</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA439.htm">Fault in IO-H.264 Communication: time base NOT OK</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA440.htm">Fault in IO-H.264 Communication: too low processing capability</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA441.htm">Fault in IO-H.264: faulty processing velocity (less than designed)</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA442.htm">Fault in IO-H.264: NOT Correct Amount of Data</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA443.htm">Fault in IO-H.264: time base NOT OK</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA444.htm">Fault in IO-H.264: too low processing capability</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA384.htm">Fault in IO -AutomoiveEthernet Communication from A53: too low processing capability:::NOT Correct (too low) Processing Velocity</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA389.htm">Fault in IO -AutomoiveEthernet Communication to vehicle: too low processing capability:::NOT Correct (too low) Processing Velocity</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA390.htm">Fault in IO -AutomoiveEthernet Communication: time base NOT OK</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA391.htm">Fault in IO -AutomoiveEthernet Communication: too low processing capability</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA392.htm">Fault in IO -AutomoiveEthernet Communication: too low processing capability:::NOT correct (too big) amount of data</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA393.htm">Fault in IO -AutomoiveEthernet Communication: too low processing capability:::NOT Correct (too low) Processing Velocity</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA394.htm">Fault in IO -AutomoiveEthernet: time base NOT OK</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA395.htm">Fault in IO -AutomoiveEthernet: too low processing capability</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA396.htm">Fault in IO -AutomoiveEthernet: too low processing capability::: NOT Correct (too low) Processing Velocity</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA399.htm">Fault in IO -AutomoiveEthernet: too low processing capability:::NOT correct (too big) amount of data</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA402.htm">Fault in IO -Buffer Communication from ImageProcessing</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA403.htm">Fault in IO -Buffer Communication to/from A53</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA404.htm">Fault in IO -Buffer Communication to/from H.264</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA406.htm">Fault in IO -Buffer Communication: faulty buffer size (too big) compared to the reqested</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA407.htm">Fault in IO -Buffer Communication: faulty processing velocity (less than designed)</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA411.htm">Fault in IO -Buffer Communication: time base NOT OK</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA412.htm">Fault in IO -Buffer Communication: too low processing capability</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA413.htm">Fault in IO -Buffer:  NOT Correct Amount of Data</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA416.htm">Fault in IO -Buffer: NOT Correct Processing Velocity</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA418.htm">Fault in IO -Buffer: time base NOT OK</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA419.htm">Fault in IO -Buffer: too low processing capability</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA421.htm">Fault in IO -H.264 Communication DRAM: faulty buffer size (too big) compared to the reqested/provided</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA426.htm">Fault in IO -H.264 from ImageProcessig Communication : faulty buffer size (too big) compared to the reqested/provided</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA428.htm">Fault in IO -H.264 to A53 Communication: faulty buffer size (too big) provided to A53</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA445.htm">Fault in LensWarpCorrection Communication with MCTF</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA905.htm">Fault in LensWarpCorrection Communication with MCTF</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA446.htm">Fault in LensWarpCorrection Communication with MCTF</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA447.htm">Fault in LensWarpCorrection: time basis not correct</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA448.htm">Fault in LumaResize Communication with LensWarpCorrection</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA449.htm">Fault in LumaResize Communication with LensWarpCorrection</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA906.htm">Fault in LumaResize Communication with LensWarpCorrection </a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA450.htm">Fault in LumaResize: time basis not correct</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA451.htm">Fault in LumaSharpenFilterB Communication with PreviewScaler</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA907.htm">Fault in LumaSharpenFilterB Communication with PreviewScaler</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA452.htm">Fault in LumaSharpenFilterB Communication with PreviewScaler</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA453.htm">Fault in LumaSharpenFilterB: time basis not correct</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA454.htm">Fault in LumaSharpenNoiseFilter Communication with LumaResize</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA908.htm">Fault in LumaSharpenNoiseFilter Communication with LumaResize</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA455.htm">Fault in LumaSharpenNoiseFilter Communication with LumaResize </a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA456.htm">Fault in LumaSharpenNoiseFilter: time basis not correct</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA457.htm">Fault in MCTF Communication with LumaSharpenFilterB</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA909.htm">Fault in MCTF Communication with LumaSharpenFilterB</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA458.htm">Fault in MCTF Communication with LumaSharpenFilterB</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA459.htm">Fault in MCTF expired image used in filtering</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA460.htm">Fault in MCTF: time basis not correct</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA461.htm">Fault in Monitor Communication to I2C: NOT Correct Amount of Data</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA462.htm">Fault in Monitor Communication to I2C: NOT Correct Processing Velocity</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA463.htm">Fault in Monitor Communication to I2C: time base NOT OK</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA464.htm">Fault in Monitor Communication to I2C: time based settings NOT OK</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA465.htm">fault in Monitor to ImageAcquisition Communication</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA466.htm">Fault in Monitor(ARM A53): NOT Correct Amount of Data </a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA467.htm">Fault in Monitor(ARM A53): NOT Correct Processing Velocity</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA468.htm">Fault in Monitor(ARM A53): SOW1 time based setting NOT OK</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA469.htm">Fault in Monitor(ARM A53): time base NOT OK</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA470.htm">Fault in Monitor:  faulty label created </a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA471.htm">Fault in Monitor: faulty decision w.r.t. delay and transition in SafeState</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA472.htm">Fault in Monitor: faulty decision w.r.t. delay and transition in SafeState: false negative (delay &gt; 50ms and the frame is transmitted)</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA473.htm">Fault in Monitor: faulty decision w.r.t. delay and transition in SafeState: false positive (delay &lt; 50ms but transition to SafeState) -&gt; QM</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA474.htm">Fault in Monitor: no local time available</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA475.htm">Fault in PreviewScaler Communication with ImageOutputComponent</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA910.htm">Fault in PreviewScaler Communication with ImageOutputComponent</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA476.htm">Fault in PreviewScaler Communication with ImageOutputComponent</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA477.htm">Fault in PreviewScaler: time basis not correct</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA478.htm">Fault in RGBtoYUV Communication with CbCr</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA911.htm">Fault in RGBtoYUV Communication with CbCr</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA479.htm">Fault in RGBtoYUV Communication with CbCr</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA480.htm">Fault in RGBtoYUV Communication with Y</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA912.htm">Fault in RGBtoYUV Communication with Y</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA481.htm">Fault in RGBtoYUV Communication with Y </a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA482.htm">Fault in RGBtoYUV: time basis not correct</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA483.htm">Fault in SOW1</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA484.htm">Fault in SOW1 </a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA485.htm">Fault in SOW1 Communication to Deserializer: frame from the past (re-)sent at the output</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA486.htm">Fault in SOW1 Communication to Deserializer: NOT Correct Amount of Data </a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA487.htm">Fault in SOW1 Communication to Deserializer: NOT Correct Processing Velocity </a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA488.htm">Fault in SOW1 Communication to Deserializer: time base NOT OK</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA489.htm">Fault in SOW1: frame from the past (re-)sent at the output</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA490.htm">Fault in SOW1: NOT Correct Amount of Data </a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA491.htm">Fault in SOW1: NOT Correct Processing Velocity </a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA492.htm">Fault in SOW1: time base NOT OK</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA493.htm">Fault in SOW2</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA494.htm">Fault in SOW2</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA495.htm">Fault in SOW2</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA496.htm">Fault in Static Bad Pixel Correction Communication with CFA Leakage/Anti-aliasing Filtering</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA497.htm">Fault in Static Bad Pixel Correction Communication with CFA Leakage/Anti-aliasing Filtering</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA913.htm">Fault in Static Bad Pixel Correction Communication with CFA Leakage/Anti-aliasing Filtering </a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA498.htm">Fault in Static Bad Pixel Correction: time basis not correct</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA504.htm">fault in the component</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA499.htm">Fault in the Component</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA500.htm">Fault in the Component</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA501.htm">Fault in the Component</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA502.htm">Fault in the Component</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA503.htm">Fault in the Component</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA505.htm">Fault in the Component</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA506.htm">Fault in the Component</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA507.htm">Fault in the Component</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA508.htm">Fault in ToneCurve Communication with RGBtoYUV</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA914.htm">Fault in ToneCurve Communication with RGBtoYUV</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA509.htm">Fault in ToneCurve Communication with RGBtoYUV</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA510.htm">Fault in ToneCurve: time basis not correct</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA511.htm">Fault in VignetteCompensation Communication with Dynamic Bad Pixel Detection/Correction</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA915.htm">Fault in VignetteCompensation Communication with Dynamic Bad Pixel Detection/Correction </a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA512.htm">Fault in VignetteCompensation Communication with Dynamic Bad Pixel Detection/Correction </a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA513.htm">Fault in VignetteCompensation: time basis not correct</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA514.htm">Fault in VIN MIPI ): pointer to past frame</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA515.htm">Fault in VIN MIPI Communication to DRAM(RAW Data):  NOT Correct Amount of Data</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA516.htm">Fault in VIN MIPI Communication to DRAM(RAW Data):  pointer to past frame</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA517.htm">Fault in VIN MIPI Communication to DRAM(RAW Data): NOT Correct Processing Velocity</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA518.htm">Fault in VIN MIPI Communication to DRAM(RAW Data): time base NOT OK</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA519.htm">Fault in VIN MIPI: NOT Correct Amount of Data  <br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA520.htm">Fault in VIN MIPI: NOT Correct Processing Velocity </a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA521.htm">Fault in VIN MIPI: time base NOT OK</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA522.htm">Fault in Y Communication with AdvancedSpatialFilter</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA916.htm">Fault in Y Communication with AdvancedSpatialFilter</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA523.htm">Fault in Y Communication with AdvancedSpatialFilter</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA524.htm">Fault in Y Communication with LumaSharpenNoiseFilter</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA917.htm">Fault in Y Communication with LumaSharpenNoiseFilter</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA525.htm">Fault in Y Communication with LumaSharpenNoiseFilter</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA526.htm">Fault in Y: time basis not correct</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA527.htm">Faulty Communication between HistogramGenerator and DRAM (HIstogram Statistics)</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA528.htm">Faulty Communication between LumaResize and DRAM (Luma AF Statistics)</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA529.htm">Faulty Communication between LumaResize and DRAM (Luma AF Statistics)</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA530.htm">Faulty Communication between MCTF and DRAM</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA531.htm">Faulty Communication between Static Bad Pixel Correction and DRAM (CFA AAA Statistics-1)</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA532.htm">Faulty Communication between ToneCurve and DRAM (Histogram Statistics)</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA533.htm">Faulty Communication between VignetteCompensation and DRAM (CFA AAA Statistics-2)</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA534.htm">Faulty Communication between Y and DRAM  (Luma AE Statistics, Histogram Statistics)</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA535.htm">Faulty data generated in HistogramGenerator</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA536.htm">Faulty data generated in LumaResize</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA537.htm">Faulty data generated in Static Bad Pixel Correction</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA538.htm">Faulty data generated in ToneCurve</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA539.htm">Faulty data generated in VignetteCompensation</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA540.htm">Faulty data generated in Y</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA541.htm">Faulty environemnt input</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA542.htm">Faulty frame requested from BlackLevelCorrection</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA543.htm">Faulty frame requested from BlackLevelCorrection induced by communication fault</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA544.htm">Faulty frame requested from DC</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA545.htm">Faulty frame requested from DC induced by communication fault</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA546.htm">Faulty frame requested from HistogramGenerator</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA547.htm">Faulty frame requested from HistogramGenerator induced by communication fault</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA548.htm">Faulty input to ImageAcquisition Stage</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA549.htm">Faulty input to ImageAcquisition Stage</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA550.htm">Faulty input to ImageAcquisition Stage</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA551.htm">Faulty input to ImageAcquisition Stage</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA552.htm">Faulty input to ImageAcquisition Stage</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA553.htm">Faulty input to ImageAcquisition Stage</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA554.htm">Faulty input to ImageAcquisiton-Stage</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA555.htm">Faulty input to ImageOutput-Stage</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA556.htm">Faulty input to ImageOutput-Stage</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA557.htm">Faulty input to ImageOutput-Stage</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA558.htm">Faulty input to ImageOutput-Stage: NOT Correct Amount of Data</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA559.htm">Faulty input to ImageOutput-Stage:NOT Correct Processing Velocity</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA563.htm">Faulty input to ImageProcessing-Stage</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA560.htm">Faulty input to ImageProcessing Stage</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA561.htm">Faulty input to ImageProcessing Stage</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA562.htm">Faulty input to ImageProcessing Stage</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA566.htm">Faulty input to SOW2</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA564.htm">Faulty Input to SOW2</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA565.htm">Faulty Input to SOW2</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA567.htm">Faulty SOW1 Output</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA568.htm">Faulty SOW1 to SOW2 transmission </a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA569.htm">frame appears too late at the output </a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA570.htm">frame appears too late at the output </a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA571.htm">frame from the past (re-)sent at the output</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA572.htm">frame from the past (re-)sent at the output</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA573.htm">frame from the past requested</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA574.htm">frame from the past returned</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA575.htm">frame gets stuck in the system </a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA576.htm">GbGr Mismatch generates excessive amount of data</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA577.htm">GbGr Mismatch NOT Correct (too low) Processing Velocity</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA578.htm">H.264 Communication (Input): time basis NOT OK</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA579.htm">HDR Blend with LFM generates excessive amount of data</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA580.htm">HDR Blend with LFM NOT Correct (too low) Processing Velocity</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA581.htm">HistogramGenerator generates excessive amount of data</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA582.htm">HistogramGenerator NOT Correct (too low) Processing Velocity<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA659.htm">If Time base of the DigitalGain Communication with HDR Blend with LFM is NOT OK the system shall enter SafeState</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA668.htm">ImageAcquisition delivers frame from the past to BlackLevelCorrection</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA669.htm">ImageAcquisition delivers frame from the past to DC</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA670.htm">ImageAcquisition delivers frame from the past to HistogramGenerator</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA701.htm">LensWarpCorrection generates excessive amount of data</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA702.htm">LensWarpCorrection NOT Correct (too low) Processing Velocity</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA704.htm">LumaResize generates excessive amount of data</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA705.htm">LumaResize NOT Correct (too low) Processing Velocity</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA706.htm">LumaSharpenFilterB generates excessive amount of data</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA707.htm">LumaSharpenFilterB NOT Correct (too low) Processing Velocity</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA708.htm">LumaSharpenNoiseFilter generates excessive amount of data</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA709.htm">LumaSharpenNoiseFilter NOT Correct (too low) Processing Velocity</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA710.htm">MCTF generates excessive amount of data</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA711.htm">MCTF NOT Correct (too low) Processing Velocity</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA712.htm">Monitor: local timer fault: timer too quick</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA713.htm">Monitor: local timer fault: timer too slow</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA715.htm">not correct amount of data</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA716.htm">not correct amount of data</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA717.htm">not correct processing velocity</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA718.htm">not correct processing velocity</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA719.htm">NOT Correct Processing Velocity</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA722.htm">OR1</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA723.htm">OR10</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA724.htm">OR11</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA725.htm">OR12</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA726.htm">OR13</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA727.htm">OR14</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA728.htm">OR15</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA729.htm">OR16</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA730.htm">OR17</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA731.htm">OR18</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA732.htm">OR19</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA733.htm">OR2 (SOW2 BlackBock)</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA734.htm">OR20</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA735.htm">OR21</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA736.htm">OR22</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA737.htm">OR23</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA738.htm">OR24</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA739.htm">OR25</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA740.htm">OR29</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA741.htm">OR3</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA742.htm">OR30</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA743.htm">OR31</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA744.htm">OR32</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA745.htm">OR33</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA746.htm">OR34 -fault ImageProcessing</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA747.htm">OR35</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA748.htm">OR36</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA749.htm">OR37</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA750.htm">OR38</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA751.htm">OR39</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA752.htm">OR4</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA753.htm">OR40</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA754.htm">OR41</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA755.htm">OR42</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA756.htm">OR43</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA757.htm">OR44</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA758.htm">OR45</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA759.htm">OR46</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA760.htm">OR47</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA761.htm">OR48</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA762.htm">OR49</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA763.htm">OR5</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA764.htm">OR50</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA765.htm">OR51</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA766.htm">OR52</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA767.htm">OR53</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA768.htm">OR54</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA769.htm">OR55</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA770.htm">OR56</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA771.htm">OR57 - fault in ImageAcquisition</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA772.htm">OR58</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA773.htm">OR59</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA774.htm">OR6 - Fault in SOW2</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA775.htm">OR60</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA776.htm">OR61</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA777.htm">OR62</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA778.htm">OR63</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA779.htm">OR64</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA780.htm">OR65</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA781.htm">OR66</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA782.htm">OR67</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA783.htm">OR68</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA784.htm">OR69</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA785.htm">OR7</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA786.htm">OR70</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA787.htm">OR71</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA788.htm">OR72</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA789.htm">OR73</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA790.htm">OR74</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA791.htm">OR75</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA792.htm">OR76</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA793.htm">OR77</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA794.htm">OR79</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA795.htm">OR8</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA796.htm">OR80</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA797.htm">OR81</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA798.htm">OR82</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA799.htm">OR9 - Fault in ImageOutput Stage</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA800.htm">Out of spec temperature</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA802.htm">PreviewScaler generates excessive amount of data</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA803.htm">PreviewScaler NOT Correct (too low) Processing Velocity</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA805.htm">Rectangle1</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA806.htm">Rectangle3</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA807.htm">RGBtoYUV generates excessive amount of data</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA808.htm">RGBtoYUV NOT Correct (too low) Processing Velocity</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA809.htm">RoundRect1</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA810.htm">RoundRect2</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA811.htm">RoundRect3</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA813.htm">Static Bad Pixel Correction generates excessive amount of data</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA814.htm">Static Bad Pixel Correction NOT Correct (too low) Processing Velocity</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA841.htm">Time base of the DigitalGain Communication with HDR Blend with LFM shall be monitored</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA873.htm">time basis not correct</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA880.htm">ToneCurve generates excessive amount of data</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA881.htm">ToneCurve NOT Correct (too low) Processing Velocity</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA882.htm">too low processing capability</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA883.htm">Video stream at the output is older than 50ms from the reality</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA884.htm">VignetteCompensation generates excessive amount of data<br /></a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA885.htm">VignetteCompensation NOT Correct (too low) Processing Velocity</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA887.htm">Y generates excessive amount of data</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="EA888.htm">Y NOT Correct (too low) Processing Velocity</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA88.htm">&#39;pointer to past frame&#39; in the Communication between Deserializer and VIN MIPI shall be monitored</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA89.htm">&#39;pointer to past frame&#39; in the Communication between DRAM(RAW Data) and ImageProcessingStage shall be monitored</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA90.htm">&#39;pointer to past frame&#39; in the Communication between VIN MIPI and DRAM(RAW Data) shall be monitored</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA91.htm">&#39;pointer to past frame&#39; of Deserializer shall be monitored <br /></a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA92.htm">&#39;pointer to past frame&#39; of DRAM(RAW Data) shall be monitored <br /></a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA93.htm">&#39;pointer to past frame&#39; of VIN MIPI shall be monitored <br /></a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA94.htm">&#39;Processed Amount of Data&#39; in the Communication between Deserializer and Monitor shall be monitored<br /></a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA95.htm">&#39;Processed Amount of Data&#39; in the Communication between Deserializer and SOW1 shall be monitored<br /></a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA96.htm">&#39;Processed Amount of Data&#39; in the Communication between Deserializer and VIN MIPI shall be monitored<br /></a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA97.htm">&#39;Processed Amount of Data&#39; in the Communication between DRAM(RAW Data) and ImageProcessingStage shall be monitored<br /></a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA98.htm">&#39;Processed Amount of Data&#39; in the Communication between I2C and Deserializer shall be monitored<br /></a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA99.htm">&#39;Processed Amount of Data&#39; in the Communication between Monitor and I2C shall be monitored<br /></a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA100.htm">&#39;Processed Amount of Data&#39; in the Communication between VIN MIPI and DRAM(RAW Data) shall be monitored<br /></a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA101.htm">&#39;Processed Amount of Data&#39; of Deserializer shall be monitored<br /></a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA102.htm">&#39;Processed Amount of Data&#39; of DRAM(RAW Data) shall be monitored<br /></a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA103.htm">&#39;Processed Amount of Data&#39; of I2C shall be monitored<br /></a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA104.htm">&#39;Processed Amount of Data&#39; of Monitor shall be monitored<br /></a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA105.htm">&#39;Processed Amount of Data&#39; of VIN MIPI shall be monitored<br /></a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA106.htm">&#39;Processing Velocity&#39; in the Communication between Deserializer and Monitor shall be monitored<br /></a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA107.htm">&#39;Processing Velocity&#39; in the Communication between Deserializer and SOW1 shall be monitored<br /></a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA108.htm">&#39;Processing Velocity&#39; in the Communication between Deserializer and VIN MIPI shall be monitored<br /></a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA109.htm">&#39;Processing Velocity&#39; in the Communication between DRAM(RAW Data) and ImageProcessingStage shall be monitored<br /></a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA110.htm">&#39;Processing Velocity&#39; in the Communication between I2C and Deserializer shall be monitored<br /></a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA111.htm">&#39;Processing Velocity&#39; in the Communication between Monitor and I2C shall be monitored</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA112.htm">&#39;Processing Velocity&#39; in the Communication between SOW1 and Deserializer shall be monitored</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA113.htm">&#39;Processing Velocity&#39; in the Communication between VIN MIPI and DRAM(RAW Data) shall be monitored<br /></a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA114.htm">&#39;Processing Velocity&#39; of Deserializer shall be monitored<br /></a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA115.htm">&#39;Processing Velocity&#39; of DRAM(RAW Data) shall be monitored<br /></a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA116.htm">&#39;Processing Velocity&#39; of I2C shall be monitored<br /></a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA117.htm">&#39;Processing Velocity&#39; of Monitor shall be monitored<br /></a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA118.htm">&#39;Processing Velocity&#39; of VIN MIPI shall be monitored<br /></a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA119.htm">&#39;SOW1 time based setting&#39; in the Communication between Deserializer and Monitor shall be monitored</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA120.htm">&#39;SOW1 time based setting&#39; in the Communication between Deserializer and SOW1 shall be monitored</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA121.htm">&#39;SOW1 time based setting&#39; in the Communication between I2C and Deserializer shall be monitored</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA122.htm">&#39;SOW1 time based setting&#39; in the Communication between Monitor and I2C shall be monitored</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA123.htm">&#39;SOW1 time based setting&#39; of Deserializer shall be monitored </a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA124.htm">&#39;SOW1 time based setting&#39; of I2C shall be monitored </a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA125.htm">&#39;SOW1 time based setting&#39; of Monitor shall be monitored </a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA126.htm">&#39;time basis&#39; in the Communication between Deserializer and Monitor shall be monitored</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA127.htm">&#39;time basis&#39; in the Communication between Deserializer and SOW1 shall be monitored</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA128.htm">&#39;time basis&#39; in the Communication between Deserializer and VIN MIPI shall be monitored</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA129.htm">&#39;time basis&#39; in the Communication between DRAM(RAW Data) and ImageProcessingStage shall be monitored</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA130.htm">&#39;time basis&#39; in the Communication between I2C and Deserializer shall be monitored</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA131.htm">&#39;time basis&#39; in the Communication between Monitor and I2C shall be monitored</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA132.htm">&#39;time basis&#39; in the Communication between SOW1 and Deserializer shall be monitored</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA133.htm">&#39;time basis&#39; in the Communication between VIN MIPI and DRAM(RAW Data) shall be monitored</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA134.htm">&#39;time basis&#39; of Deserializer shall be monitored </a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA135.htm">&#39;time basis&#39; of DRAM(RAW Data) shall be monitored</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA136.htm">&#39;time basis&#39; of I2C shall be monitored </a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA137.htm">&#39;time basis&#39; of Monitor shall be monitored </a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA138.htm">&#39;time basis&#39; of VIN MIPI shall be monitored</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA172.htm">Current/Valid Buffer Request/Response to/from H.264 shall be ensured at any time </a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA185.htm">EMC standards shall be ensured</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA189.htm">Faulr in IO-H.264: The amount of data received shall be less or equal the amount requested</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA203.htm">Fault in A53 Communication from  DRAM (Buffer): too low processing capability:: NOT Correct (too low) Processing Velocity:::If Target Processing Velocity between DRAM and A53 is NOT enusred the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA204.htm">Fault in A53 Communication from DRAM (Buffer): too low processing capability:: NOT Correct (too low) Processing Velocity:::Target Processing Velocity between DRAM and A53 shall be ensured</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA206.htm">Fault in A53 Communication from DRAM: too low processing capability:: NOT correct (too big) amount of data:::Faultless A53 to DRAM Communication shall be ensured</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA208.htm">Fault in A53 Communication from H.264: too low processing capability:: NOT correct (too big) amount of data::: If the faultless A53 -DRAM Communication is NOT ensured the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA209.htm">Fault in A53 Communication from H.264: too low processing capability:: NOT correct (too big) amount of data::: If the faultless A53 -H.264 Communication is NOT ensured the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA210.htm">Fault in A53 Communication from H.264: too low processing capability:: NOT correct (too big) amount of data:::Faultless A53 to H.264 Communication shall be ensured</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA213.htm">Fault in A53 Communication from H.264: too low processing capability:: NOT Correct (too low) Processing Velocity:::If Target Processing Velocity between H.264 and A53 is NOT enusred the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA214.htm">Fault in A53 Communication from H.264: too low processing capability:: NOT Correct (too low) Processing Velocity:::Target Processing Velocity between H.264 and A53 shall be ensured</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA215.htm">Fault in A53 Communication to Ethernet: too low processing capability:: NOT correct (too big) amount of data::: If the faultless A53 -Ethernet Communication is NOT ensured the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA216.htm">Fault in A53 Communication to Ethernet: too low processing capability:: NOT correct (too big) amount of data:::Faultless A53 to Ethernet Communication shall be ensured</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA219.htm">Fault in A53 Communication to Ethernet: too low processing capability:: NOT Correct (too low) Processing Velocity:::If Target Processing Velocity between AutomotiveEthernet and A53 is NOT enusred the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA220.htm">Fault in A53 Communication to Ethernet: too low processing capability:: NOT Correct (too low) Processing Velocity:::Target Processing Velocity between AutomotiveEthernet and A53 shall be ensured</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA221.htm">Fault in A53 from DRAM:  too low processing capability:: if the target processing velocity is NOT ensured the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA222.htm">Fault in A53 from DRAM:  too low processing capability::The processing velocity  of the A53 IO-task shall be ensured.</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA224.htm">Fault in A53 from H.264:  too low processing capability:: if the target processing velocity is NOT ensured the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA226.htm">Fault in A53 from H.264:  too low processing capability::The processing velocity of the A53 IO-task shall be ensured.</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA337.htm">Fault in H.254 from ImageProcessing Communication: The processing velocity shall be not less than XYZ</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA338.htm">Fault in H.254 to A53 Communication: The processing velocity shall be not less than XYZ</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA339.htm">Fault in H.254 to DRAM Communication: he amount of data received shall be less or equal the amount requested. </a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA340.htm">Fault in H.254 to DRAM Communication: The processing velocity shall be not less than XYZ</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA342.htm">Fault in H.264: If the amount of data received vs the amount  of data requested is NOT OK the system shall enter SafeState </a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA434.htm">Fault in IO-Automotive Ethernet Communication from A53: too low processing capability:: NOT correct (too big) amount of data:::Faultless A53 to Ethernet Communication shall be ensured</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA436.htm">Fault in IO-Automotive Ethernet Communication from A53: too low processing capability:: NOT correct (too big) amount of data:::If the faultless A53 -Ethernet Communication is NOT ensured the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA380.htm">Fault in IO -A53 from DRAM: The amount of data received shall be less or equal the amount requested. </a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA381.htm">Fault in IO -A53 to Ethernet: If the generated ethernet package is too big the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA382.htm">Fault in IO -A53 to Ethernet: The generated ethernet package too big</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA383.htm">Fault in IO -A53: If the amount of data received vs the amount  of data requested is NOT OK the system shall enter SafeState </a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA385.htm">Fault in IO -AutomoiveEthernet Communication from A53: too low processing capability:::NOT Correct (too low) Processing Velocity:::If Target Processing Velocity between AutomotiveEthernet and A53 is NOT enusred the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA386.htm">Fault in IO -AutomoiveEthernet Communication from A53: too low processing capability:::NOT Correct (too low) Processing Velocity:::If Target Processing Velocity between AutomotiverEthernet and vehicle is NOT enusred the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA387.htm">Fault in IO -AutomoiveEthernet Communication from A53: too low processing capability:::NOT Correct (too low) Processing Velocity:::Target Processing Velocity between AutomotiveEthernet and A53 shall be ensured</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA388.htm">Fault in IO -AutomoiveEthernet Communication from A53: too low processing capability:::NOT Correct (too low) Processing Velocity::Target Processing Velocity between AutomotiveEthernet  and Vehicle shall be ensured</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA397.htm">Fault in IO -AutomoiveEthernet: too low processing capability::: NOT Correct (too low) Processing Velocity:: If the processing velocity  of the IO-Ethernet is NOT ensured the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA398.htm">Fault in IO -AutomoiveEthernet: too low processing capability::: NOT Correct (too low) Processing Velocity:: The processing velocity  of the IO-Ethernet shall be ensured.</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA400.htm">Fault in IO -AutomoiveEthernet: too low processing capability:::NOT correct (too big) amount of data:: If correct amount of sent data is NOT ensured the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA401.htm">Fault in IO -AutomoiveEthernet: too low processing capability:::NOT correct (too big) amount of data:: The correct amount of sent data shall be ensured.</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA405.htm">Fault in IO -Buffer Communication: Faultless IO -Buffer Communication shall be ensured</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA408.htm">Fault in IO -Buffer Communication: If the faultless IO -Buffer Communication is NOT ensured the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA409.htm">Fault in IO -Buffer Communication: IO -Buffer Communication velocity is NOT OK the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA410.htm">Fault in IO -Buffer Communication: IO -Buffer Communication velocity shall be not less than ABC</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA414.htm">Fault in IO -Buffer: If the amount of data received vs the amount  of data requested is NOT OK the system shall enter SafeState </a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA415.htm">Fault in IO -Buffer: If the processing velocity is NOT OK the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA417.htm">Fault in IO -Buffer: The amount of data received shall be less or equal the amount requested. </a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA420.htm">Fault in IO -Buffer:The processing velocity shall be not less than XYZ</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA422.htm">Fault in IO -H.264 Communication:  If the faultless IO -H.264 to A53  Communication is NOT ensured the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA423.htm">Fault in IO -H.264 Communication: Faultless IO -H.264 to A53 Communication shall be ensured</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA424.htm">Fault in IO -H.264 Communication: If the amount of data received vs the amount  of data requested is NOT OK the system shall enter SafeState </a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA425.htm">Fault in IO -H.264 Communication: The amount of data received shall be less or equal the amount requested. </a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA427.htm">Fault in IO -H.264 from ImageProcessing Communication: If the processing velocity is NOT OK the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA429.htm">Fault in IO -H.264 to A53 Communication: If the processing velocity is NOT OK the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA430.htm">Fault in IO -H.264 to DRAM Communication: If he amount of data received is NOT OK the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA431.htm">Fault in IO -H.264 to DRAM Communication: If the processing velocity is NOT OK the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA432.htm">Fault in IO -H.264: If the processing velocity is NOT OK the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA433.htm">Fault in IO -H.264:The processing velocity shall be not less than XYZ</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA585.htm">If Current/Valid Buffer content can NOT be ensured at any time the system sall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA586.htm">If Current/Valid Buffer Request from ImageProcessing can NOT be ensured at any time the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA587.htm">If Current/Valid Buffer Request/Response to/from A53 can NOT be ensured at any time the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA588.htm">If Current/Valid Buffer Request/Response to/from H.264 shall be ensured at any time the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA589.htm">If the &#39;pointer to past frame&#39; of the Deserializer is NOT OK the system shall enter SafeState<br /></a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA590.htm">If the &#39;pointer to past frame&#39; of the DRAM(RAW Data) is NOT OK the system shall enter SafeState<br /></a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA591.htm">If the &#39;pointer to past frame&#39; of the VIN MIPI is NOT OK the system shall enter SafeState<br /></a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA592.htm">If the &#39;Processed Amount of Data&#39; of the Deserializer is NOT OK the system shall enter SafeState<br /></a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA593.htm">If the &#39;Processed Amount of Data&#39; of the DRAM(RAW Data) is NOT OK the system shall enter SafeState<br /></a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA594.htm">If the &#39;Processed Amount of Data&#39; of the I2C is NOT OK the system shall enter SafeState<br /></a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA595.htm">If the &#39;Processed Amount of Data&#39; of the Monitor is NOT OK the system shall enter SafeState<br /></a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA596.htm">If the &#39;Processed Amount of Data&#39; of the VIN MIPI is NOT OK the system shall enter SafeState<br /></a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA597.htm">If the &#39;Processing Velocity&#39; of the Deserializer is NOT OK the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA598.htm">If the &#39;Processing Velocity&#39; of the DRAM(RAW Data) is NOT OK the system shall enter SafeState<br /></a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA599.htm">If the &#39;Processing Velocity&#39; of the I2C is NOT OK the system shall enter SafeState<br /></a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA600.htm">If the &#39;Processing Velocity&#39; of the Monitor is NOT OK the system shall enter SafeState<br /></a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA601.htm">If the &#39;Processing Velocity&#39; of the VIN MIPI is NOT OK the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA602.htm">If the &#39;SOW1 time based setting&#39; of the Deserializer is NOT OK the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA603.htm">If the &#39;SOW1 time based setting&#39; of the I2C is NOT OK the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA604.htm">If the &#39;SOW1 time based setting&#39; of the Monitor is NOT OK the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA605.htm">If the &#39;time basis&#39; of the Deserializer is NOT OK the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA606.htm">If the &#39;time basis&#39; of the DRAM(RAW Data) is NOT OK the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA607.htm">If the &#39;time basis&#39; of the I2C is NOT OK the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA608.htm">If the &#39;time basis&#39; of the Monitor is NOT OK the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA609.htm">If the &#39;time basis&#39; of the VIN MIPI is NOT OK the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA610.htm">if the Operating Temperature of the SOW2 in NOT be ensured the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA611.htm">If the time base of the A53 Communication is NOT OK the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA612.htm">If the time base of the A53 is NOT OK the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA613.htm">If the time base of the AdvancedSpatialFilter is NOT OK the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA614.htm">If the time base of the BlackLevelCorrection is NOT OK the system shall enter SafeState<br /></a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA615.htm">If the time base of the CbCr is NOT OK the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA616.htm">If the time base of the CFA Leakage/Anti-aliasing Filtering is NOT OK the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA617.htm">If the time base of the CFA Noise Filtering is NOT OK the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA618.htm">If the time base of the ChromaMedianFiltering is NOT OK the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA619.htm">If the time base of the ChromaNoiseFiltering is NOT OK the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA620.htm">If the time base of the ChromaResize is NOT OK the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA621.htm">If the time base of the ChromaScale is NOT OK the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA622.htm">If the time base of the Chromatic Aberration Correction is NOT OK the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA623.htm">If the time base of the ColorCorrection is NOT OK the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA624.htm">If the time base of the Contrast Enhancement is NOT OK the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA625.htm">If the time base of the DC is NOT OK the system shall enter SafeState<br /></a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA626.htm">If the time base of the Demosaic time basis not correct is NOT OK the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA627.htm">If the time base of the DigitalGain is NOT OK the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA628.htm">If the time base of the DRAM is NOT OK the system shall enter SafeState<br /></a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA629.htm">If the time base of the Dynamic Bad Pixel Detection/Correction is NOT OK the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA630.htm">If the time base of the GbGr Mismatch is NOT OK the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA631.htm">If the time base of the HDR Blend with LFM is NOT OK the system shall enter SafeState<br /></a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA632.htm">If the time base of the HistogramGenerator is NOT OK the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA635.htm">If the time base of the IO-Buffer (DRAM) Communication is NOT OK the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA636.htm">If the time base of the IO-Buffer (DRAM) is NOT OK the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA637.htm">If the time base of the IO-H.264 Communication is NOT OK the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA638.htm">If the time base of the IO-H.264 is NOT OK the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA633.htm">If the time base of the IO -AutomoiveEthernet  Communication is NOT OK the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA634.htm">If the time base of the IO -AutomoiveEthernet is NOT OK the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA639.htm">If the time base of the LensWarpCorrection is NOT OK the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA640.htm">If the time base of the LumaResize is NOT OK the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA641.htm">If the time base of the LumaSharpenFilterB is NOT OK the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA642.htm">If the time base of the LumaSharpenNoiseFilter is NOT OK the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA643.htm">If the time base of the MCTF is NOT OK the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA644.htm">If the time base of the PreviewScaler is NOT OK the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA645.htm">If the time base of the RGBtoYUV is NOT OK the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA646.htm">If the time base of the Static Bad Pixel Correction is NOT OK the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA647.htm">If the time base of the ToneCurve is NOT OK the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA648.htm">If the time base of the VignetteCompensation is NOT OK the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA649.htm">If the time base of the Y is NOT OK the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA650.htm">If the time basis of the communication to BlackLevelCorrection is NOT OK the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA651.htm">If the time basis of the communication to DC is NOT OK the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA652.htm">If the time basis of the communication to H.264 is NOT OK the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA653.htm">If the time basis of the communication to HistogramGenerator is NOT OK the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA654.htm">If the time basis of the IO-Buffer (DRAM) Communication is NOT OK the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA655.htm">If Time base of the BlackLevelCorrection Communication with DigitalGain is NOT OK the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA656.htm">If Time base of the BlackLevelCorrection Communication with ImageAcquisition is NOT OK the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA657.htm">If Time base of the DC Communication with BlackLevelCorrection is NOT OK the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA658.htm">If Time base of the DC Communication with ImageAcquisition is NOT OK the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA660.htm">If Time base of the DRAM Communication with LumaResize is NOT OK the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA661.htm">If Time base of the DRAM Communication with MCTF is NOT OK the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA662.htm">If Time base of the DRAM Communication with Static Bad Pixel Correction is NOT OK the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA663.htm">If Time base of the DRAM Communication with ToneCurve is NOT OK the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA664.htm">If Time base of the DRAM Communication with VignetteCompensation is NOT OK the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA665.htm">If Time base of the DRAM Communication with Y is NOT OK the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA666.htm">If Time base of the HistogramGenerator Communication with DRAM is NOT OK the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA667.htm">If Time base of the HistogramGenerator Communication with ImageAcquisition is NOT OK the system shall enter SafeState<br /></a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA671.htm">It the &#39;pointer to past frame&#39; in the Communication between Deserializer and VIN MIPI is NOT OK, the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA672.htm">It the &#39;pointer to past frame&#39; in the Communication between DRAM(RAW Data) and ImageProcessingStage is NOT OK, the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA673.htm">It the &#39;pointer to past frame&#39; in the Communication between VIN MIPI and DRAM(RAW Data) is NOT OK, the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA674.htm">It the &#39;Processed Amount of Data&#39; in the Communication between Deserializer and Monitor is NOT OK, the system shall enter SafeState<br /></a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA675.htm">It the &#39;Processed Amount of Data&#39; in the Communication between Deserializer and SOW1 is NOT OK, the system shall enter SafeState<br /></a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA676.htm">It the &#39;Processed Amount of Data&#39; in the Communication between Deserializer and VIN MIPI is NOT OK, the system shall enter SafeState<br /></a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA677.htm">It the &#39;Processed Amount of Data&#39; in the Communication between DRAM(RAW Data) and ImageProcessingStage is NOT OK, the system shall enter SafeState<br /></a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA678.htm">It the &#39;Processed Amount of Data&#39; in the Communication between I2C and Deserializer is NOT OK, the system shall enter SafeState<br /></a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA679.htm">It the &#39;Processed Amount of Data&#39; in the Communication between Monitor and I2C is NOT OK, the system shall enter SafeState<br /></a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA680.htm">It the &#39;Processed Amount of Data&#39; in the Communication between VIN MIPI and DRAM(RAW Data) is NOT OK, the system shall enter SafeState<br /></a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA681.htm">It the &#39;Processing Velocity&#39; in the Communication between Deserializer and Monitor is NOT OK, the system shall enter SafeState<br /></a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA682.htm">It the &#39;Processing Velocity&#39; in the Communication between Deserializer and SOW1 is NOT OK, the system shall enter SafeState<br /></a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA683.htm">It the &#39;Processing Velocity&#39; in the Communication between Deserializer and VIN MIPI is NOT OK, the system shall enter SafeState<br /></a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA684.htm">It the &#39;Processing Velocity&#39; in the Communication between DRAM(RAW Data) and ImageProcessingStage is NOT OK, the system shall enter SafeState<br /></a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA685.htm">It the &#39;Processing Velocity&#39; in the Communication between I2C and Deserializer is NOT OK, the system shall enter SafeState<br /></a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA686.htm">It the &#39;Processing Velocity&#39; in the Communication between Monitor and I2C is NOT OK, the system shall enter SafeState<br /></a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA687.htm">It the &#39;Processing Velocity&#39; in the Communication between SOW1 Deserializer is NOT OK, the system shall enter SafeState<br /></a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA688.htm">It the &#39;Processing Velocity&#39; in the Communication between VIN MIPI and DRAM(RAW Data) is NOT OK, the system shall enter SafeState<br /></a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA689.htm">It the &#39;SOW1 time based setting&#39; in the Communication between Deserializer and Monitor is NOT OK, the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA690.htm">It the &#39;SOW1 time based setting&#39; in the Communication between Deserializer and SOW1 is NOT OK, the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA691.htm">It the &#39;SOW1 time based setting&#39; in the Communication between I2C and Deserializer is NOT OK, the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA692.htm">It the &#39;SOW1 time based setting&#39; in the Communication between Monitor and I2C is NOT OK, the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA693.htm">It the &#39;time basis&#39; in the Communication between Deserializer and Monitor is NOT OK, the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA694.htm">It the &#39;time basis&#39; in the Communication between Deserializer and SOW1 is NOT OK, the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA695.htm">It the &#39;time basis&#39; in the Communication between Deserializer and VIN MIPI is NOT OK, the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA696.htm">It the &#39;time basis&#39; in the Communication between DRAM(RAW Data) and ImageProcessingStage is NOT OK, the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA697.htm">It the &#39;time basis&#39; in the Communication between I2C and Deserializer is NOT OK, the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA698.htm">It the &#39;time basis&#39; in the Communication between Monitor and I2C is NOT OK, the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA699.htm">It the &#39;time basis&#39; in the Communication between SOW1 Deserializer is NOT OK, the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA700.htm">It the &#39;time basis&#39; in the Communication between VIN MIPI and DRAM(RAW Data) is NOT OK, the system shall enter SafeState</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA721.htm">Operating Temperature of the SOW2 shall be ensured</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA821.htm">Time base of the A53 Communication: shall be monitored.</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA822.htm">Time base of the A53 shall be monitored.</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA823.htm">Time base of the AdvancedSpatialFilter shall be monitored<br /></a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA824.htm">Time base of the BlackLevelCorrection Communication with DigitalGain shall be monitored</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA825.htm">Time base of the BlackLevelCorrection Communication with ImageAcquisition shall be monitored</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA826.htm">Time base of the BlackLevelCorrection shall be monitored</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA827.htm">Time base of the CbCr shall be monitored</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA828.htm">Time base of the CFA Leakage/Anti-aliasing Filtering shall be monitored</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA829.htm">Time base of the CFA Noise Filtering shall be monitored</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA830.htm">Time base of the ChromaMedianFiltering shall be monitored</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA831.htm">Time base of the ChromaNoiseFiltering shall be monitored</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA832.htm">Time base of the ChromaResize shall be monitored</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA833.htm">Time base of the ChromaScale shall be monitored</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA834.htm">Time base of the Chromatic Aberration Correction shall be monitored</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA835.htm">Time base of the ColorCorrection shall be monitored</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA836.htm">Time base of the Contrast Enhancement shall be monitored</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA837.htm">Time base of the DC Communication with BlackLevelCorrection shall be monitored</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA838.htm">Time base of the DC Communication with ImageAcquisition shall be monitored</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA839.htm">Time base of the DC shall be monitored</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA840.htm">Time base of the Demosaic time basis not correct shall be monitored</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA842.htm">Time base of the DigitalGain shall be monitored</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA843.htm">Time base of the DRAM Communication with LumaResize shall be monitored</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA844.htm">Time base of the DRAM Communication with MCTF shall be monitored</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA845.htm">Time base of the DRAM Communication with Static Bad Pixel Correction shall be monitored</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA846.htm">Time base of the DRAM Communication with ToneCurve shall be monitored</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA847.htm">Time base of the DRAM Communication with VignetteCompensation shall be monitored</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA848.htm">Time base of the DRAM Communication with Y shall be monitored</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA849.htm">Time base of the DRAM shall be monitored</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA850.htm">Time base of the Dynamic Bad Pixel Detection/Correction shall be monitored</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA851.htm">Time base of the GbGr Mismatch shall be monitored</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA852.htm">Time base of the HDR Blend with LFM shall be monitored</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA853.htm">Time base of the HistogramGenerator Communication with DRAM shall be monitored</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA854.htm">Time base of the HistogramGenerator Communication with ImageAcquisition shall be monitored</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA855.htm">Time base of the HistogramGenerator shall be monitored.</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA858.htm">Time base of the IO-Buffer (DRAM) Communication: shall be monitored.</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA859.htm">Time base of the IO-Buffer (DRAM) shall be monitored.</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA860.htm">Time base of the IO-H.264 Communication: shall be monitored.</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA861.htm">Time base of the IO-H.264 shall be monitored.</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA856.htm">Time base of the IO -AutomoiveEthernet Communication: shall be monitored.</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA857.htm">Time base of the IO -AutomoiveEthernet shall be monitored.</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA862.htm">Time base of the LensWarpCorrection shall be monitored</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA863.htm">Time base of the LumaResize shall be monitored</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA864.htm">Time base of the LumaSharpenFilterB shall be monitored</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA865.htm">Time base of the LumaSharpenNoiseFilter shall be monitored</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA866.htm">Time base of the MCTF shall be monitored</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA867.htm">Time base of the PreviewScaler shall be monitored</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA868.htm">Time base of the RGBtoYUV shall be monitored</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA869.htm">Time base of the Static Bad Pixel Correction shall be monitored</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA870.htm">Time base of the ToneCurve shall be monitored</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA871.htm">Time base of the VignetteCompensation shall be monitored</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA872.htm">Time base of the Y shall be monitored</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA874.htm">Time basis of the communication to BlackLevelCorrection shall be monitored</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA875.htm">Time basis of the communication to DC shall be monitored</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA876.htm">Time basis of the communication to H.264 shall be monitored.</a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA877.htm">Time basis of the communication to HistogramGenerator shall be monitored<br /></a></li>
+<li><img src="../../images/19.png" alt="Requirement"/> <a href="EA878.htm">Time basis of the IO-Buffer (DRAM) Communication: time basis shall be monitored.</a></li>
+<li><img src="../../images/82.png" alt="Artifact"/> <a href="EA141.htm">already covered</a></li>
+<li><img src="../../images/82.png" alt="Artifact"/> <a href="EA142.htm">already covered</a></li>
+<li><img src="../../images/82.png" alt="Artifact"/> <a href="EA143.htm">already covered</a></li>
+<li><img src="../../images/82.png" alt="Artifact"/> <a href="EA144.htm">already covered</a></li>
+<li><img src="../../images/82.png" alt="Artifact"/> <a href="EA166.htm">Considered NOT possible</a></li>
+<li><img src="../../images/82.png" alt="Artifact"/> <a href="EA167.htm">considered out of scope</a></li>
+<li><img src="../../images/82.png" alt="Artifact"/> <a href="EA168.htm">Considered out of scope (cabling is out of scope)</a></li>
+<li><img src="../../images/82.png" alt="Artifact"/> <a href="EA583.htm">i.e. &#39;pull&#39; from the ImageAcquisition</a></li>
+<li><img src="../../images/82.png" alt="Artifact"/> <a href="EA584.htm">i.e. &#39;push&#39; form the ImageAquicistion</a></li>
+<li><img src="../../images/82.png" alt="Artifact"/> <a href="EA703.htm">Literally the same</a></li>
+<li><img src="../../images/82.png" alt="Artifact"/> <a href="EA714.htm">No need for elaboration of this stage: here is the ImageOutput stage anlysed. Input to SOW2 is ImageAcquisition Stage</a></li>
+<li><img src="../../images/82.png" alt="Artifact"/> <a href="EA720.htm">NOT relevant in the context of &#39;push&#39; from the ImageAcquisition - (event faulty) ImageProcessing cannot influence the fault originating in ImageAcquisition</a></li>
+<li><img src="../../images/82.png" alt="Artifact"/> <a href="EA801.htm">Path2 strategy is independent of the input to SOW2 (assumption: SOW1 handles FuSa related issues by itself; no delay in SOW1 possible - no internal buffers exist)</a></li>
+<li><img src="../../images/82.png" alt="Artifact"/> <a href="EA804.htm">Recovery Strategy from SOW1 SafeState</a></li>
+<li><img src="../../images/82.png" alt="Artifact"/> <a href="EA812.htm">SOW1 SafeState impact on SOW2?</a></li>
+<li><img src="../../images/82.png" alt="Artifact"/> <a href="EA815.htm">system lets some frames through despite the time constraint being violated (false negative)</a></li>
+<li><img src="../../images/82.png" alt="Artifact"/> <a href="EA816.htm">system transitions in SafeState despite the time constraint NOT being violated (false positive)</a></li>
+<li><img src="../../images/82.png" alt="Artifact"/> <a href="EA817.htm">the image pipline (as a rule) takes as the input a fraction of the image. (see also notes to this element)</a></li>
+<li><img src="../../images/82.png" alt="Artifact"/> <a href="EA818.htm">the value of transmitted parameters get changed</a></li>
+<li><img src="../../images/82.png" alt="Artifact"/> <a href="EA819.htm">this case is covered by &#39;frame appears too late at the output&#39; under consideration of the Path2 strategy</a></li>
+<li><img src="../../images/82.png" alt="Artifact"/> <a href="EA820.htm">this is FrozenImage Case -&gt; see: SG2</a></li>
+<li><img src="../../images/82.png" alt="Artifact"/> <a href="EA879.htm">TODO</a></li>
+<li><img src="../../images/82.png" alt="Artifact"/> <a href="EA886.htm">what is meant here is a &#39;pointer to frame/image&#39; and NOT the image itself. In the latter case the Communication fault in NOT capable of inducing such fault</a></li>
+</ul>
+
+					</td>
+					<td class="contentcell"><div class="PageBody">
+	<div class="diagram_image"> 
+<img src="EA40.png" usemap="#EA40" border="0" />
+
+<MAP NAME="EA40">
+<area shape="rect" coords="6049,2179,6159,2322" href="EA672.htm" target="_self">
+<area shape="rect" coords="5859,2171,5969,2301" href="EA673.htm" target="_self">
+<area shape="rect" coords="5678,2170,5788,2300" href="EA671.htm" target="_self">
+<area shape="rect" coords="6012,2019,6122,2136" href="EA89.htm" target="_self">
+<area shape="rect" coords="5833,2018,5943,2122" href="EA90.htm" target="_self">
+<area shape="rect" coords="5659,2016,5769,2120" href="EA88.htm" target="_self">
+<area shape="rect" coords="5584,1687,5694,1791" href="EA590.htm" target="_self">
+<area shape="rect" coords="5410,1682,5520,1786" href="EA591.htm" target="_self">
+<area shape="rect" coords="5572,1572,5682,1650" href="EA92.htm" target="_self">
+<area shape="rect" coords="5410,1567,5520,1645" href="EA93.htm" target="_self">
+<area shape="rect" coords="5227,1648,5337,1752" href="EA589.htm" target="_self">
+<area shape="rect" coords="5227,1545,5337,1623" href="EA91.htm" target="_self">
+<area shape="rect" coords="5336,3176,5446,3319" href="EA677.htm" target="_self">
+<area shape="rect" coords="5111,3176,5221,3306" href="EA680.htm" target="_self">
+<area shape="rect" coords="4912,3176,5022,3306" href="EA676.htm" target="_self">
+<area shape="rect" coords="4702,3176,4812,3306" href="EA679.htm" target="_self">
+<area shape="rect" coords="4466,3176,4576,3306" href="EA674.htm" target="_self">
+<area shape="rect" coords="4235,3176,4345,3306" href="EA675.htm" target="_self">
+<area shape="rect" coords="4013,3176,4123,3306" href="EA678.htm" target="_self">
+<area shape="rect" coords="5326,2995,5436,3125" href="EA97.htm" target="_self">
+<area shape="rect" coords="5100,2999,5210,3116" href="EA100.htm" target="_self">
+<area shape="rect" coords="4880,2994,4990,3111" href="EA96.htm" target="_self">
+<area shape="rect" coords="4689,2995,4799,3099" href="EA99.htm" target="_self">
+<area shape="rect" coords="4448,2996,4558,3113" href="EA94.htm" target="_self">
+<area shape="rect" coords="4248,3000,4358,3117" href="EA95.htm" target="_self">
+<area shape="rect" coords="4021,3000,4131,3117" href="EA98.htm" target="_self">
+<area shape="rect" coords="3723,2861,3833,2965" href="EA596.htm" target="_self">
+<area shape="rect" coords="3548,2859,3658,2963" href="EA594.htm" target="_self">
+<area shape="rect" coords="3385,2859,3495,2963" href="EA595.htm" target="_self">
+<area shape="rect" coords="3208,2884,3318,2988" href="EA593.htm" target="_self">
+<area shape="rect" coords="3063,2858,3173,2962" href="EA592.htm" target="_self">
+<area shape="rect" coords="3704,2757,3814,2835" href="EA105.htm" target="_self">
+<area shape="rect" coords="3538,2757,3648,2835" href="EA103.htm" target="_self">
+<area shape="rect" coords="3363,2757,3473,2835" href="EA104.htm" target="_self">
+<area shape="rect" coords="3197,2776,3307,2854" href="EA102.htm" target="_self">
+<area shape="rect" coords="3053,2757,3163,2835" href="EA101.htm" target="_self">
+<area shape="rect" coords="2503,2217,2613,2347" href="EA687.htm" target="_self">
+<area shape="rect" coords="2503,2092,2613,2196" href="EA112.htm" target="_self">
+<area shape="rect" coords="2678,3399,2788,3542" href="EA684.htm" target="_self">
+<area shape="rect" coords="2539,3388,2649,3518" href="EA686.htm" target="_self">
+<area shape="rect" coords="2391,3388,2501,3518" href="EA688.htm" target="_self">
+<area shape="rect" coords="2235,3378,2345,3508" href="EA683.htm" target="_self">
+<area shape="rect" coords="2085,3381,2195,3511" href="EA682.htm" target="_self">
+<area shape="rect" coords="1913,3381,2023,3511" href="EA681.htm" target="_self">
+<area shape="rect" coords="1761,3374,1871,3504" href="EA685.htm" target="_self">
+<area shape="rect" coords="2667,3250,2777,3367" href="EA109.htm" target="_self">
+<area shape="rect" coords="2523,3257,2633,3348" href="EA111.htm" target="_self">
+<area shape="rect" coords="2377,3250,2487,3354" href="EA113.htm" target="_self">
+<area shape="rect" coords="2220,3247,2330,3351" href="EA108.htm" target="_self">
+<area shape="rect" coords="2085,3247,2195,3351" href="EA107.htm" target="_self">
+<area shape="rect" coords="1930,3240,2040,3344" href="EA106.htm" target="_self">
+<area shape="rect" coords="1762,3228,1872,3332" href="EA110.htm" target="_self">
+<area shape="rect" coords="1879,2739,1989,2830" href="EA599.htm" target="_self">
+<area shape="rect" coords="1707,2746,1817,2837" href="EA600.htm" target="_self">
+<area shape="rect" coords="1561,2739,1671,2843" href="EA598.htm" target="_self">
+<area shape="rect" coords="1408,2733,1518,2837" href="EA597.htm" target="_self">
+<area shape="rect" coords="1256,2739,1366,2830" href="EA601.htm" target="_self">
+<area shape="rect" coords="1861,2640,1971,2705" href="EA116.htm" target="_self">
+<area shape="rect" coords="1707,2644,1817,2722" href="EA117.htm" target="_self">
+<area shape="rect" coords="1561,2640,1671,2718" href="EA115.htm" target="_self">
+<area shape="rect" coords="1408,2639,1518,2717" href="EA114.htm" target="_self">
+<area shape="rect" coords="1256,2631,1366,2709" href="EA118.htm" target="_self">
+<area shape="rect" coords="1428,1708,1538,1812" href="EA132.htm" target="_self">
+<area shape="rect" coords="1418,1843,1528,1960" href="EA699.htm" target="_self">
+<area shape="rect" coords="1151,1762,1281,1812" href="EA167.htm" target="_self">
+<area shape="rect" coords="656,4065,766,4195" href="EA689.htm" target="_self">
+<area shape="rect" coords="648,3920,758,4037" href="EA119.htm" target="_self">
+<area shape="rect" coords="471,4045,581,4162" href="EA693.htm" target="_self">
+<area shape="rect" coords="472,3911,582,4015" href="EA126.htm" target="_self">
+<area shape="rect" coords="1163,3547,1273,3677" href="EA690.htm" target="_self">
+<area shape="rect" coords="873,3541,983,3671" href="EA691.htm" target="_self">
+<area shape="rect" coords="592,3540,702,3670" href="EA692.htm" target="_self">
+<area shape="rect" coords="1014,3547,1124,3664" href="EA694.htm" target="_self">
+<area shape="rect" coords="723,3526,833,3643" href="EA697.htm" target="_self">
+<area shape="rect" coords="456,3526,566,3643" href="EA698.htm" target="_self">
+<area shape="rect" coords="773,3107,883,3237" href="EA696.htm" target="_self">
+<area shape="rect" coords="621,3104,731,3221" href="EA700.htm" target="_self">
+<area shape="rect" coords="469,3104,579,3221" href="EA695.htm" target="_self">
+<area shape="rect" coords="1163,3386,1273,3503" href="EA120.htm" target="_self">
+<area shape="rect" coords="873,3386,983,3503" href="EA121.htm" target="_self">
+<area shape="rect" coords="583,3399,693,3503" href="EA122.htm" target="_self">
+<area shape="rect" coords="1018,3399,1128,3503" href="EA127.htm" target="_self">
+<area shape="rect" coords="728,3399,838,3503" href="EA130.htm" target="_self">
+<area shape="rect" coords="438,3412,548,3503" href="EA131.htm" target="_self">
+<area shape="rect" coords="781,2982,891,3099" href="EA129.htm" target="_self">
+<area shape="rect" coords="621,2976,731,3080" href="EA133.htm" target="_self">
+<area shape="rect" coords="469,2976,579,3080" href="EA128.htm" target="_self">
+<area shape="rect" coords="600,2349,710,2453" href="EA602.htm" target="_self">
+<area shape="rect" coords="457,2362,567,2466" href="EA604.htm" target="_self">
+<area shape="rect" coords="321,2352,431,2456" href="EA603.htm" target="_self">
+<area shape="rect" coords="606,2253,716,2331" href="EA123.htm" target="_self">
+<area shape="rect" coords="431,2253,541,2331" href="EA125.htm" target="_self">
+<area shape="rect" coords="304,2253,414,2331" href="EA124.htm" target="_self">
+<area shape="rect" coords="881,1960,991,2051" href="EA607.htm" target="_self">
+<area shape="rect" coords="722,1948,832,2039" href="EA608.htm" target="_self">
+<area shape="rect" coords="269,1948,379,2039" href="EA606.htm" target="_self">
+<area shape="rect" coords="404,1936,514,2027" href="EA609.htm" target="_self">
+<area shape="rect" coords="557,1960,667,2051" href="EA605.htm" target="_self">
+<area shape="rect" coords="862,1834,972,1899" href="EA136.htm" target="_self">
+<area shape="rect" coords="722,1834,832,1899" href="EA137.htm" target="_self">
+<area shape="rect" coords="557,1833,667,1911" href="EA134.htm" target="_self">
+<area shape="rect" coords="400,1833,510,1898" href="EA138.htm" target="_self">
+<area shape="rect" coords="259,1816,369,1894" href="EA135.htm" target="_self">
+<area shape="rect" coords="4441,2831,4531,2935" href="EA289.htm" target="_self">
+<area shape="rect" coords="3383,2636,3473,2727" href="EA466.htm" target="_self">
+<area shape="rect" coords="1918,3093,2008,3197" href="EA290.htm" target="_self">
+<area shape="rect" coords="1660,2492,1750,2583" href="EA467.htm" target="_self">
+<area shape="rect" coords="1376,3172,1616,3195" href="../EA3/EA3/EA1/EA1/EA1/EA1/EA1216.htm" target="_self">
+<area shape="rect" coords="642,3757,732,3861" href="EA939.htm" target="_self">
+<area shape="rect" coords="476,3744,566,3861" href="EA938.htm" target="_self">
+<area shape="rect" coords="1428,1600,1518,1691" href="EA488.htm" target="_self">
+<area shape="rect" coords="2503,1974,2593,2078" href="EA487.htm" target="_self">
+<area shape="rect" coords="4810,2222,4900,2326" href="EA486.htm" target="_self">
+<area shape="rect" coords="4351,1609,4441,1700" href="EA489.htm" target="_self">
+<area shape="rect" coords="4629,1609,4719,1726" href="EA485.htm" target="_self">
+<area shape="rect" coords="4471,1463,4531,1538" href="EA791.htm" target="_self">
+<area shape="rect" coords="4580,2240,4670,2310" href="EA490.htm" target="_self">
+<area shape="rect" coords="4772,2039,4832,2114" href="EA790.htm" target="_self">
+<area shape="rect" coords="2186,1974,2276,2065" href="EA491.htm" target="_self">
+<area shape="rect" coords="2332,1779,2392,1854" href="EA789.htm" target="_self">
+<area shape="rect" coords="1302,1360,1362,1435" href="EA788.htm" target="_self">
+<area shape="rect" coords="1171,1621,1261,1691" href="EA492.htm" target="_self">
+<area shape="rect" coords="4655,2844,4745,2935" href="EA461.htm" target="_self">
+<area shape="rect" coords="4227,2818,4317,2935" href="EA291.htm" target="_self">
+<area shape="rect" coords="4013,2831,4103,2935" href="EA354.htm" target="_self">
+<area shape="rect" coords="723,3388,963,3411" href="../EA3/EA3/EA1/EA1/EA1/EA1/EA1220.htm" target="_self">
+<area shape="rect" coords="2502,3106,2592,3197" href="EA462.htm" target="_self">
+<area shape="rect" coords="2064,3080,2154,3197" href="EA292.htm" target="_self">
+<area shape="rect" coords="1772,3093,1862,3197" href="EA355.htm" target="_self">
+<area shape="rect" coords="1176,3274,1266,3378" href="EA294.htm" target="_self">
+<area shape="rect" coords="1024,3274,1114,3378" href="EA293.htm" target="_self">
+<area shape="rect" coords="884,3274,974,3378" href="EA357.htm" target="_self">
+<area shape="rect" coords="736,3287,826,3378" href="EA356.htm" target="_self">
+<area shape="rect" coords="579,3287,669,3378" href="EA464.htm" target="_self">
+<area shape="rect" coords="443,3287,533,3378" href="EA463.htm" target="_self">
+<area shape="rect" coords="497,2625,627,2697" href="EA818.htm" target="_self">
+<area shape="rect" coords="5964,1850,6054,1967" href="EA323.htm" target="_self">
+<area shape="rect" coords="5802,1863,5892,1967" href="EA516.htm" target="_self">
+<area shape="rect" coords="5648,1863,5738,1967" href="EA297.htm" target="_self">
+<area shape="rect" coords="5542,1429,5632,1520" href="EA328.htm" target="_self">
+<area shape="rect" coords="5385,1430,5475,1500" href="EA514.htm" target="_self">
+<area shape="rect" coords="5248,1409,5338,1500" href="EA288.htm" target="_self">
+<area shape="rect" coords="5522,1250,5582,1325" href="EA787.htm" target="_self">
+<area shape="rect" coords="2556,2919,2796,2939" href="EA351.htm" target="_self">
+<area shape="rect" coords="5297,2818,5387,2935" href="EA322.htm" target="_self">
+<area shape="rect" coords="5083,2831,5173,2935" href="EA515.htm" target="_self">
+<area shape="rect" coords="4869,2831,4959,2935" href="EA295.htm" target="_self">
+<area shape="rect" coords="4260,2478,4320,2553" href="EA786.htm" target="_self">
+<area shape="rect" coords="3782,2211,3842,2286" href="EA784.htm" target="_self">
+<area shape="rect" coords="4027,2327,4117,2418" href="EA273.htm" target="_self">
+<area shape="rect" coords="3432,2372,3522,2442" href="EA507.htm" target="_self">
+<area shape="rect" coords="2738,3208,2978,3228" href="EA352.htm" target="_self">
+<area shape="rect" coords="2648,3080,2738,3197" href="EA324.htm" target="_self">
+<area shape="rect" coords="2356,3093,2446,3197" href="EA517.htm" target="_self">
+<area shape="rect" coords="2210,3093,2300,3197" href="EA296.htm" target="_self">
+<area shape="rect" coords="2186,2830,2246,2905" href="EA783.htm" target="_self">
+<area shape="rect" coords="1816,1899,1876,1974" href="EA782.htm" target="_self">
+<area shape="rect" coords="1657,2089,1747,2159" href="EA506.htm" target="_self">
+<area shape="rect" coords="2125,2402,2215,2493" href="EA272.htm" target="_self">
+<area shape="rect" coords="777,2860,867,2964" href="EA325.htm" target="_self">
+<area shape="rect" coords="256,2774,316,2849" href="EA781.htm" target="_self">
+<area shape="rect" coords="219,1297,279,1372" href="EA780.htm" target="_self">
+<area shape="rect" coords="238,1437,328,1528" href="EA271.htm" target="_self">
+<area shape="rect" coords="76,1437,166,1507" href="EA505.htm" target="_self">
+<area shape="rect" coords="567,2697,807,2717" href="EA560.htm" target="_self">
+<area shape="rect" coords="630,2867,720,2958" href="EA518.htm" target="_self">
+<area shape="rect" coords="508,2860,598,2964" href="EA298.htm" target="_self">
+<area shape="rect" coords="3548,2657,3638,2727" href="EA358.htm" target="_self">
+<area shape="rect" coords="3218,2636,3308,2727" href="EA326.htm" target="_self">
+<area shape="rect" coords="3713,2646,3803,2716" href="EA519.htm" target="_self">
+<area shape="rect" coords="3053,2636,3143,2727" href="EA299.htm" target="_self">
+<area shape="rect" coords="1672,2254,1732,2329" href="EA779.htm" target="_self">
+<area shape="rect" coords="1797,2492,1887,2583" href="EA359.htm" target="_self">
+<area shape="rect" coords="1523,2492,1613,2583" href="EA327.htm" target="_self">
+<area shape="rect" coords="1249,2492,1339,2583" href="EA520.htm" target="_self">
+<area shape="rect" coords="1386,2492,1476,2583" href="EA300.htm" target="_self">
+<area shape="rect" coords="573,2120,663,2211" href="EA301.htm" target="_self">
+<area shape="rect" coords="872,1709,962,1779" href="EA361.htm" target="_self">
+<area shape="rect" coords="269,2133,359,2203" href="EA360.htm" target="_self">
+<area shape="rect" coords="719,1699,809,1790" href="EA469.htm" target="_self">
+<area shape="rect" coords="425,2113,515,2217" href="EA468.htm" target="_self">
+<area shape="rect" coords="248,1709,338,1779" href="EA329.htm" target="_self">
+<area shape="rect" coords="378,1709,468,1779" href="EA521.htm" target="_self">
+<area shape="rect" coords="508,1709,598,1779" href="EA302.htm" target="_self">
+<area shape="rect" coords="90,1622,150,1697" href="EA778.htm" target="_self">
+<area shape="rect" coords="3447,2531,3507,2606" href="EA777.htm" target="_self">
+<area shape="rect" coords="4441,1213,4531,1283" href="EA554.htm" target="_self">
+<area shape="rect" coords="5432,1074,5522,1144" href="EA363.htm" target="_self">
+<area shape="rect" coords="3636,929,3696,1004" href="EA742.htm" target="_self">
+<area shape="rect" coords="452,815,582,865" href="EA703.htm" target="_self">
+<area shape="rect" coords="4027,1996,4117,2066" href="EA552.htm" target="_self">
+<area shape="rect" coords="3692,1925,3782,1995" href="EA367.htm" target="_self">
+<area shape="rect" coords="1957,1628,2047,1698" href="EA551.htm" target="_self">
+<area shape="rect" coords="1687,1671,1777,1741" href="EA366.htm" target="_self">
+<area shape="rect" coords="3707,1535,3767,1610" href="EA776.htm" target="_self">
+<area shape="rect" coords="1746,1454,1806,1529" href="EA775.htm" target="_self">
+<area shape="rect" coords="876,655,966,725" href="EA565.htm" target="_self">
+<area shape="rect" coords="3501,743,3591,813" href="EA494.htm" target="_self">
+<area shape="rect" coords="906,498,966,573" href="EA740.htm" target="_self">
+<area shape="rect" coords="2668,1346,2758,1416" href="EA66.htm" target="_self">
+<area shape="rect" coords="2007,1316,2097,1386" href="EA719.htm" target="_self">
+<area shape="rect" coords="2331,1170,2391,1245" href="EA771.htm" target="_self">
+<area shape="rect" coords="851,929,966,1039" href="EA56.htm" target="_self">
+<area shape="rect" coords="875,1219,965,1289" href="EA548.htm" target="_self">
+<area shape="rect" coords="101,1245,191,1315" href="EA362.htm" target="_self">
+<area shape="rect" coords="147,1095,207,1170" href="EA763.htm" target="_self">
+<area shape="rect" coords="634,949,724,1019" href="EA882.htm" target="_self">
+<area shape="rect" coords="117,949,207,1019" href="EA873.htm" target="_self">
+<area shape="rect" coords="96,823,156,898" href="EA774.htm" target="_self">
+<area shape="rect" coords="385,655,475,725" href="EA564.htm" target="_self">
+<area shape="rect" coords="65,654,155,724" href="EA493.htm" target="_self">
+<area shape="rect" coords="118,480,178,555" href="EA733.htm" target="_self">
+<area shape="rect" coords="565,343,655,413" href="EA43.htm" target="_self">
+<area shape="rect" coords="694,260,784,330" href="EA171.htm" target="_self">
+<area shape="rect" coords="179,54,269,145" href="EA883.htm" target="_self">
+<area shape="rect" coords="103,350,193,420" href="EA569.htm" target="_self">
+<area shape="rect" coords="672,170,762,240" href="EA575.htm" target="_self">
+<area shape="rect" coords="194,188,254,263" href="EA722.htm" target="_self">
+<area shape="rect" coords="456,3728,814,3890" href="EA806.htm" target="_self">
+<area shape="rect" coords="10,10,6196,4232" href="EA37.htm" target="_self">
+</MAP>
+ </div>
+	<div class="ObjectTitle">[complete] FTA (SG1:Path1) - in ImageAcquisition : SysML Block Definition diagram</div>
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">06.06.2025 12:59:04</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">27.06.2025 16:29:38</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><button onclick="switchProjectProperties()"><img src="../../images/plus03.gif" align="absmiddle" id="proj" /></button>Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">rekas</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><button onclick="switchAdvancedProperties()"><img src="../../images/plus03.gif" align="absmiddle" id="adv" /></button>Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{5E5918E9-A965-41b2-A977-9E6D30FAA523}</td>
+		</tr>
+	</table>
+	
+</div>
+
+ </td>
+				</tr>
+			</tbody>
+		</table>
+		
+</div>
+</body>
+</html>
+

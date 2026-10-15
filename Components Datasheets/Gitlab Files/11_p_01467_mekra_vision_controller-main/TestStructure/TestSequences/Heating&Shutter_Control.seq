@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsequence>
+	<meta>
+		<title>Heating_Control</title>
+		<description>&lt;description text&gt;</description>
+		<author>Ehu Li</author>
+		<date>2026-08-17T09:32:48</date>
+		<version />
+		<last_revision />
+	</meta>
+	<singletests>
+		<singletest source="Heating_Control/MVC-100352-Check_heating_modes_during_runtime_while_streaming_OP_active.py" />
+		<singletest source="Heating_Control/MVC-100354-Switch_heating_modes_while_streaming(Heating is ON).py" />
+		<singletest source="Heating_Control/MVC-100355-Switch_heating_modes_while_streaming(Heating is OFF).py" />
+		<singletest source="Heating_Control/MVC-92351-Check_heating_modes_during_runtime_while_streaming_OP_inactive.py" />
+	</singletests>
+</testsequence>

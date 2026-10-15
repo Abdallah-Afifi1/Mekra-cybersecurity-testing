@@ -1,0 +1,10 @@
+tocTab[tocTab.length] = new Array("0.2.2.21:2", "", "20", "EARoot/EA2/EA2/EA21/EA1149.htm", "175.png", "265", "0", "", "Logical diagram0","{990C74F4-2C45-C7F8-988D-6898CCC22F1A}");
+tocTab[tocTab.length] = new Array("0.2.2.21:3", "", "«FMEAItem» 20", "EARoot/EA2/EA2/EA21/EA1152.htm", "5.png", "E1977", "0", "", "Class0","{B7E452B8-7973-D0AB-AF81-2B5688BF3519}");
+tocTab[tocTab.length] = new Array("0.2.2.21:1", "", "20", "EARoot/EA2/EA2/EA21/EA1147.htm", "182.png", "299", "E1977", "", "CompositeStructure diagram0","{F0799CCC-5B6C-4ce9-B10F-2C23DB0F4CCD}");
+tocTab[tocTab.length] = new Array("0.2.2.21:4", "", "AP", "EARoot/EA2/EA2/EA21/EA1153.htm", "118.png", "E1978", "E1977", "", "Part0","{A9B97A16-60A8-03DC-96B1-039EC55E4064}");
+tocTab[tocTab.length] = new Array("0.2.2.21:5", "", "AP_aux", "EARoot/EA2/EA2/EA21/EA1154.htm", "118.png", "E1979", "E1977", "", "Part0","{B57A7582-0252-77C4-B1BA-86E0451FBA7A}");
+tocTab[tocTab.length] = new Array("0.2.2.21:6", "", "Cause: function &#39;provideImageMetaData&#39; faulty (contrast-brightness)<br />", "EARoot/EA2/EA2/EA21/EA1155.htm", "118.png", "E1980", "E1977", "", "Part0","{B59235BC-58D4-17A5-814B-8809C7C227E9}");
+tocTab[tocTab.length] = new Array("0.2.2.21:7", "", "DetMeasure: Review (if the prosposed technical solution suffice)", "EARoot/EA2/EA2/EA21/EA1156.htm", "118.png", "E1984", "E1977", "", "Part0","{B9011917-26EE-3162-B95E-9EB93B2CD90E}");
+tocTab[tocTab.length] = new Array("0.2.2.21:8", "", "Effect: Details lost due to incorrect contrast or brightness", "EARoot/EA2/EA2/EA21/EA1157.htm", "118.png", "E1983", "E1977", "", "Part0","{9D36C443-4940-1F53-A273-CC80A587D31F}");
+tocTab[tocTab.length] = new Array("0.2.2.21:9", "", "FailureMode: Stream with incorrect contrast or brightness", "EARoot/EA2/EA2/EA21/EA1158.htm", "118.png", "E1981", "E1977", "", "Part0","{900EFD31-F5F5-3A0A-B4C4-5DF7454ACA9D}");
+tocTab[tocTab.length] = new Array("0.2.2.21:10", "", "PrevMeasure: fault (contrast-brightness) free &#39;provideImageMetaData&#39; (function) shall be ensured<br />", "EARoot/EA2/EA2/EA21/EA1159.htm", "118.png", "E1982", "E1977", "", "Part0","{88895470-01C9-9FE7-B303-C162EBDA17B3}");

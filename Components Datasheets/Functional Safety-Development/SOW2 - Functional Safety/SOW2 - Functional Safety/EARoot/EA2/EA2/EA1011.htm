@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title></title>
+<link href="../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="../../../js/displayToc.js" type="text/javascript"></script>
+<script>
+
+  function switchProjectProperties() {
+			if (document.getElementById("proj00").style.display == "none") {
+				document.getElementById("proj00").style.display = "revert";
+				document.getElementById("proj01").style.display = "revert";
+				document.getElementById("proj02").style.display = "revert";
+				document.getElementById("proj03").style.display = "revert";
+				document.getElementById("proj04").style.display = "revert";
+				document.getElementById("proj05").style.display = "revert";
+			} else {
+				document.getElementById("proj00").style.display = "none";
+				document.getElementById("proj01").style.display = "none";
+				document.getElementById("proj02").style.display = "none";
+				document.getElementById("proj03").style.display = "none";
+				document.getElementById("proj04").style.display = "none";
+				document.getElementById("proj05").style.display = "none";
+			}
+}
+
+		function switchAdvancedProperties(){
+
+			if (document.getElementById("adv00").style.display == "none") {;
+				document.getElementById("adv00").style.display = "revert";
+				document.getElementById("adv01").style.display = "revert";
+			} else {
+				document.getElementById("adv00").style.display = "none";
+				document.getElementById("adv01").style.display = "none";
+			}
+		}
+		function initPage()
+        {			
+			var divs = document.getElementsByClassName("ObjectDetailsNotes");
+			for (var j = 0; j < divs.length; j++) {
+				var tmpStr = divs[j].innerHTML;
+				tmpStr = tmpStr.replace(/#gt;/g, "&gt;");
+				tmpStr = tmpStr.replace(/#lt;/g, "&lt;");
+
+				tmpStr = tmpStr.replace(/&gt;/g, ">");
+				tmpStr = tmpStr.replace(/&lt;/g, "<");
+
+				divs[j].innerHTML = tmpStr;
+			}
+
+            if (document.getElementById('TableGroup') != null)
+            {
+                toggleItem(document.getElementById('TableGroup').getElementsByTagName('li')[0].id.replace("Title", ""));
+            }
+
+        }
+</script>
+<style>
+
+</style>
+</head>
+<body onload="initPage();">
+<div class="section group" >
+
+		<div class="col span_2_of_2 header_frame">
+			<h1>  </h1>
+			<!-- <img class="header_image" src="../../../images/mekraLangGermany.PNG" align="right" alt="Header Image" />-->
+			<img class="header_image" src="../../../images/mekraLangGermany.PNG" align="right" alt="Header Image" />
+		</div>
+		<div class="col span_2_of_2 breadcrumb_frame">
+			<p><a href="../../EA5.htm">FunctionalSafety</a> / <a href="../EA940.htm">Behavior</a> / <a href="EA966.htm">Activities</a> / <a href="EA967.htm">[Root] Transmission of video frames older than 50ms shall be avoided</a> / <a href="../../../index.htm">{ }</a> / <a href="EA1011.htm"></a></p>
+		</div>
+			
+		<table class="contentmaintable">
+			<!-- <tfoot>
+				<tr>
+					<td>foot1</td>
+					<td>foot2</td>
+				</tr>
+			</tfoot> -->
+			<tbody>
+				<tr>
+					<td class="indexcell">
+						<div class="projectBrowserTitle">Project: </div>
+						<ul>
+<a href="../../../index.htm">{ }</a></ul>
+
+					</td>
+					<td class="contentcell"><div class="pageHeader"></div>
+<div class="PageBody">
+	<span class="ObjectTitle">  : Public   Note</span>
+	<table border="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">10.04.2025 14:06:16</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic">Modified:</td>
+			<td class="ObjectDetailsValue">11.04.2025 17:22:56</td>
+		</tr>
+		<tr style="height: 10px"><td colspan="2"></td></tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><button onclick="switchProjectProperties()"><img src="../../../images/plus03.gif" align="absmiddle" id="proj" /></button>Project:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td class="ObjectDetailsValue">rekas</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj02" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Phase:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj03" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Status:</td>
+			<td class="ObjectDetailsValue">Proposed</td>
+		</tr>
+		<tr id="proj04" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Complexity:</td>
+			<td class="ObjectDetailsValue">Easy</td>
+		</tr>
+		<tr id="proj05" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Difficulty:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj06" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Priority:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj05" style="display: none;">
+			<td class="ObjectDetailsTopic" >Multiplicity:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><button onclick="switchAdvancedProperties()"><img src="../../../images/plus03.gif" align="absmiddle" id="adv" /></button>Advanced:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
+			<td class="ObjectDetailsValue">{2AFE2F23-B7C4-4e81-A4A2-8EA9C8586804}</td>
+		</tr>
+		<tr id="adv01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
+			<td class="ObjectDetailsValue"><a href="EA958.htm">[Root] Transmission of video frames older than 50ms shall be avoided</a></td>
+		</tr>
+	</table>
+	<div class="ObjectDetailsNotes">&lt;ol&gt;<br />&lt;li&gt;additional code/configuration has to be developed acc. to ASIL A. The rest is provided by the SoC provider&lt;/li&gt;&lt;li&gt;V&amp;V (including integration) shall be performed acc. to ASIL C&lt;/li&gt;&lt;/ol&gt;<br />&lt;ul&gt;<br />&lt;li&gt;to have FEMEA (preventive/detective) can be here useful - on the level of the of the &#39;system scope&#39;: i.e. additional code/configuration (my code)&lt;/li&gt;&lt;/ul&gt;<br />&lt;ul&gt;<br />&lt;li&gt;focus: additional (my code) with context/operational situation (fog, slippery road)&lt;/li&gt;&lt;/ul&gt;<br />&lt;ol&gt;<br />&lt;li&gt;no need for deeper failure analysis due to existing ASIL assignement of the SoC (provided that the UseCase/Requirement are equivalent: SEooC and system in question)&lt;/li&gt;&lt;li&gt;What if OS is not ASIL &quot;certified&quot;?&lt;/li&gt;&lt;/ol&gt;<br />&lt;ul&gt;<br />&lt;li&gt;FMEA/FTA: OS as BlackBox - not realistic due to complexity of the OS&lt;/li&gt;&lt;li&gt;request analysis reports (static tool analysis, MISRA conformity, etc...)&lt;/li&gt;&lt;li&gt;TCL for compiler/linker, ALM, versioning System&lt;/li&gt;&lt;li&gt;identify critical parts of the OS and test them (e.g. real time test with testcases targeting SafetyGoal in defined scenario (e.g.: 24 h trip))&lt;/li&gt;&lt;li&gt;OS as BlackBox and SafetyMechanism around the OS to make sure that the SafetyGoal will not be violated&lt;/li&gt;&lt;/ul&gt;<br />&lt;br/&gt;Decomposition&lt;br/&gt;ASIL C == ASIL QM(C) + ASIL C(C)&lt;br/&gt;ASIL C(C) == ASIL B(C) + ASIL A(C)&lt;br/&gt;&lt;br/&gt;in our decomposition scheme the &#39;intended functionality&#39; is assigned: ASIL Q(C). This is bare processing pipe without the possibility to prevent the failure to occur (or react on the occurrence thereof)&#160;&#160;other than good management practice. &lt;br/&gt;All reactions (SafetyMechanisms) on the fault that can cause failure are placed in the ASIL C(C) &quot;package&quot;. This &quot;package&quot; requires to have two strategies defined - in order to be able to lower the ASIL assignement via decomposition scheme.&lt;br/&gt;</div>
+
+ </div>
+ </td>
+				</tr>
+			</tbody>
+		</table>
+		
+</div>
+</body>
+</html>
+

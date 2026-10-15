@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<singletest source="cc_test.py">
+	<meta>
+		<title>cc test</title>
+		<description>basic access tests for climate chamber access</description>
+		<author>Tremmel</author>
+		<date>16.06.2025</date>
+		<version>1.0.0</version>
+		<last_revision>initial</last_revision>
+		<starttime>2025-06-26T09:27:53</starttime>
+		<endtime>2025-06-26T09:46:40</endtime>
+		<hil_computername>TTE-SOW2-W10</hil_computername>
+		<hil_project_path>D:\VSC-GitLab\11_p_01467_mekra_vision_controller</hil_project_path>
+		<hil_username>svc_systessow2</hil_username>
+	</meta>
+	<results>
+		<result>
+			<description>Climate chamber set to manual mode / start</description>
+			<verdict>INFO</verdict>
+			<deltatime>0.067</deltatime>
+		</result>
+		<result>
+			<description>
+Current temperature should be within climate chamber limits
+Value:     24.0 °C (temperature)
+Min value: -72.0 °C
+Max value: 180.0 °C
+			</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>cc_basics</testcase_id>
+			<deltatime>0.067</deltatime>
+		</result>
+		<result>
+			<description>
+Active temperature setpoint should be within climate chamber limits
+Value:     -40.0 °C (temperature_setpoint)
+Min value: -72.0 °C
+Max value: 180.0 °C
+			</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>cc_basics</testcase_id>
+			<deltatime>0.067</deltatime>
+		</result>
+		<result>
+			<description>
+
+Setpoint: 40 °C
+			</description>
+			<verdict />
+		</result>
+		<result>
+			<description>Setting setpoint to 40 °C and waiting to temperature to settle</description>
+			<verdict>INFO</verdict>
+			<deltatime>0.067</deltatime>
+		</result>
+		<result>
+			<description>Chamber reached target temperature after 190.0s</description>
+			<verdict>INFO</verdict>
+			<deltatime>190.061</deltatime>
+		</result>
+		<result>
+			<description>
+Current chamber temperature
+Expected value: 40.0 °C
+Current value:  39.9 °C (temperature)
+Absolute Tolerance:  +/- 0.5 °C
+			</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>cc_basics</testcase_id>
+			<deltatime>190.061</deltatime>
+		</result>
+		<result>
+			<description>
+
+Setpoint: -10 °C
+			</description>
+			<verdict />
+		</result>
+		<result>
+			<description>Setting setpoint to -10 °C and waiting to temperature to settle</description>
+			<verdict>INFO</verdict>
+			<deltatime>190.061</deltatime>
+		</result>
+		<result>
+			<description>Chamber reached target temperature after 669.1s</description>
+			<verdict>INFO</verdict>
+			<deltatime>859.131</deltatime>
+		</result>
+		<result>
+			<description>
+Current chamber temperature
+Expected value: -10.0 °C
+Current value:  -9.8 °C (temperature)
+Absolute Tolerance:  +/- 0.5 °C
+			</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>cc_basics</testcase_id>
+			<deltatime>859.132</deltatime>
+		</result>
+		<result>
+			<description>
+
+Setpoint: 20 °C
+			</description>
+			<verdict />
+		</result>
+		<result>
+			<description>Setting setpoint to 20 °C and waiting to temperature to settle</description>
+			<verdict>INFO</verdict>
+			<deltatime>859.132</deltatime>
+		</result>
+		<result>
+			<description>Chamber reached target temperature after 267.6s</description>
+			<verdict>INFO</verdict>
+			<deltatime>1126.701</deltatime>
+		</result>
+		<result>
+			<description>
+Current chamber temperature
+Expected value: 20.0 °C
+Current value:  19.9 °C (temperature)
+Absolute Tolerance:  +/- 0.5 °C
+			</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>cc_basics</testcase_id>
+			<deltatime>1126.703</deltatime>
+		</result>
+		<result>
+			<description>Climate chamber manual mode cleared / stop</description>
+			<verdict>INFO</verdict>
+			<deltatime>1126.705</deltatime>
+		</result>
+	</results>
+</singletest>

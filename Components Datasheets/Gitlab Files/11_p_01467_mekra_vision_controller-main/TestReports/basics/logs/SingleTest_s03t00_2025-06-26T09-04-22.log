@@ -1,0 +1,85 @@
+Dongle-DLL v5.1 (x64)
+# #####################################################################
+# Checking License: TestToolkit v2.2.1...
+# #####################################################################
+D-USB-2020-B-00DB TestToolkit 2.2.x
+PASSED
+# License valid
+[verifyFeature] ttk_checks 1.7.0
+
+== ees_basics.py ===============================================================
+[[setup]]
+################################################################################
+# Technica TE-2004 @ 192.168.10.30
+# Hardware: Release R3.2
+# System:   Release R.014.002
+# App:      Release R014.002.000
+# S/N 2004320025110001
+################################################################################
+ PASSED - Enhanced Ethernet Switch should report 'alive'
+          Current status:  True
+          Expected status: True
+          Delta time: 0.01s
+          Testcase-ID: ees_basics
+-- getConfig -----------------------------------------------------
+  INFO  - getting current EES configuration
+          Delta time: 0.01s
+dict_keys(['ports', 'global', 'ptp', 'macsec', 'mka', 'network', 'arl', 'advanced_filter', 'Qav', 'power', 'file'])
+-- validateConfig ------------------------------------------------
+ PASSED - validateConfig: Configuration is valid
+          Delta time: 0.02s
+          Testcase-ID: ees_basics
+-- writeConfig ---------------------------------------------------
+  INFO  - write back current configuration (in non-persistent mode)
+          Note: A 'warm' reset is required for non-persistent configuration changes to become active
+          Delta time: 0.02s
+[writeConfig] OK
+ PASSED - Configuration successfully written
+          Delta time: 0.03s
+          Testcase-ID: ees_basics
+ees.checkAlive() = True
+-- warmReset ------------------------------------------------------
+  INFO  - performing a warm reset
+          Delta time: 0.05s
+# warm reset: OK
+# Checking if EES is alive... ...dead (ERROR)
+# Checking if EES is alive... ...dead (<timeout>)
+# Checking if EES is alive... ...dead (<timeout>)
+# Checking if EES is alive... ...dead (<timeout>)
+# Checking if EES is alive... ...dead (<timeout>)
+# Checking if EES is alive... ...dead (<timeout>)
+# Checking if EES is alive... ...ok, alive
+ PASSED - EES Status: EES back to 'alive' state after 5.7s
+          Delta time: 5.72s
+          Testcase-ID: ees_basics
+ PASSED - Enhanced Ethernet Switch should report 'alive' after the configration change
+          Current status:  True
+          Expected status: True
+          Delta time: 5.74s
+          Testcase-ID: ees_basics
+
+[[breakdown]]
+
+--Elapsed Time:----------------
+  5.7 seconds
+
+--Results:---------------------
+  PASSED  - Enhanced Ethernet Switch should report 'alive'\nCurrent status:  True\nExpected status: True
+   INFO   - getting current EES configuration
+  PASSED  - validateConfig: Configuration is valid
+   INFO   - write back current configuration (in non-persistent mode)\nNote: A 'warm' reset is required for non-persistent configuration changes to become active
+  PASSED  - Configuration successfully written
+   INFO   - performing a warm reset
+  PASSED  - EES Status: EES back to 'alive' state after 5.7s
+  PASSED  - Enhanced Ethernet Switch should report 'alive' after the configration change\nCurrent status:  True\nExpected status: True
+
+--Summary:---------------------
+  FAILED : 0
+  PASSED : 5
+  INFO   : 3
+-------------------------------
+
+XML... ...writing......done
+# Results stored to "SingleTest_s03t00.xml".
+Done.
+[[test_runner_finally]]

@@ -1,0 +1,9 @@
+tocTab[tocTab.length] = new Array("0.3.4:1", "", "Interfaces (Internal)", "EARoot/EA3/EA4/EA1402.htm", "175.png", "72", "0", "", "Logical diagram0","{90B69088-9D0A-D4B7-AE3A-172D17BE814F}");
+tocTab[tocTab.length] = new Array("0.3.4:2", "", "«InterfaceBlock» SafetyControl", "EARoot/EA3/EA4/EA1405.htm", "5.png", "E561", "0", "", "Class0","{7D56DF7C-DBF5-4cf6-BBE8-8E68641EDC9D}");
+tocTab[tocTab.length] = new Array("0.3.4:3", "", "«InterfaceBlock» SafetyDiagnostics", "EARoot/EA3/EA4/EA1406.htm", "5.png", "E560", "0", "", "Class0","{F38F1C30-816B-4f43-ACBF-E3EE717A18FF}");
+tocTab[tocTab.length] = new Array("0.3.4:4", "", "«InterfaceBlock» VideoStream", "EARoot/EA3/EA4/EA1407.htm", "5.png", "E698", "0", "", "Class0","{50D7FB73-DF1A-4ec8-95F9-BD147F6FE958}");
+tocTab[tocTab.length] = new Array("0.3.4:5", "", "«FlowProperty» fpStatus: SafetyStatus", "EARoot/EA3/EA4/EA1408.htm", "118.png", "E565", "E560", "", "Part0","{5C5EE0CC-7DFD-4614-A059-0D47050DA5CB}");
+tocTab[tocTab.length] = new Array("0.3.4:6", "", "«FlowProperty» fpSafetySetting: SafetySetting", "EARoot/EA3/EA4/EA1409.htm", "118.png", "E567", "E561", "", "Part0","{1E5293E7-64F9-49d9-AA51-2BED4214EBA0}");
+tocTab[tocTab.length] = new Array("0.3.4:7", "", "«FlowProperty» fpSafetyStatus: SafetyStatus", "EARoot/EA3/EA4/EA1410.htm", "118.png", "E568", "E561", "", "Part0","{9B1AC5ED-B033-4a6f-96A8-8B22CCA114C8}");
+tocTab[tocTab.length] = new Array("0.3.4:8", "", "«FlowProperty» fpVideoStream: VideoStream", "EARoot/EA3/EA4/EA1411.htm", "118.png", "E699", "E698", "", "Part0","{17D246AF-3338-43b8-B081-9D89AAD2C714}");
+tocTab[tocTab.length] = new Array("0.3.4:9", "", "«FlowProperty» fpVideoStreamControl: VideoStreamControl", "EARoot/EA3/EA4/EA1412.htm", "118.png", "E713", "E698", "", "Part0","{7C2F348C-61E6-44f9-ACF8-BCCFA45ECF36}");

@@ -1,0 +1,10 @@
+tocTab[tocTab.length] = new Array("0.2.2.36:2", "", "34", "EARoot/EA2/EA2/EA36/EA1344.htm", "175.png", "269", "0", "", "Logical diagram0","{A1AD2766-8C9C-C8C8-9E24-E5412F94BA05}");
+tocTab[tocTab.length] = new Array("0.2.2.36:3", "", "«FMEAItem» 34", "EARoot/EA2/EA2/EA36/EA1347.htm", "5.png", "E2013", "0", "", "Class0","{ADE27886-A879-581D-B5A9-5C20FAC9A159}");
+tocTab[tocTab.length] = new Array("0.2.2.36:1", "", "34", "EARoot/EA2/EA2/EA36/EA1342.htm", "182.png", "314", "E2013", "", "CompositeStructure diagram0","{D13971F1-42FD-428d-A774-61C68F702833}");
+tocTab[tocTab.length] = new Array("0.2.2.36:4", "", "AP", "EARoot/EA2/EA2/EA36/EA1348.htm", "118.png", "E2014", "E2013", "", "Part0","{B373B8E8-26C8-8543-B345-8C4C3E05130E}");
+tocTab[tocTab.length] = new Array("0.2.2.36:5", "", "AP_aux", "EARoot/EA2/EA2/EA36/EA1349.htm", "118.png", "E2015", "E2013", "", "Part0","{90569F44-A8D9-50C8-BE0E-2F2C4C26A9D0}");
+tocTab[tocTab.length] = new Array("0.2.2.36:6", "", "Cause: invocation of &#39;disable stream&#39; function faulty (contrast-brightness)", "EARoot/EA2/EA2/EA36/EA1350.htm", "118.png", "E2016", "E2013", "", "Part0","{84977588-A11C-E15B-9177-F25F4149FBB4}");
+tocTab[tocTab.length] = new Array("0.2.2.36:7", "", "DetMeasure: Review (if the prosposed technical solution suffice)", "EARoot/EA2/EA2/EA36/EA1351.htm", "118.png", "E2020", "E2013", "", "Part0","{9EF8F955-3860-7C5F-81F3-AF4E01DB6168}");
+tocTab[tocTab.length] = new Array("0.2.2.36:8", "", "Effect: Details lost due to incorrect contrast or brightness", "EARoot/EA2/EA2/EA36/EA1352.htm", "118.png", "E2019", "E2013", "", "Part0","{B54E8BC5-9362-0F07-8451-8808CBC3C183}");
+tocTab[tocTab.length] = new Array("0.2.2.36:9", "", "FailureMode: Stream with incorrect contrast or brightness", "EARoot/EA2/EA2/EA36/EA1353.htm", "118.png", "E2017", "E2013", "", "Part0","{93915B4B-BA68-5702-B8F9-3367138C585A}");
+tocTab[tocTab.length] = new Array("0.2.2.36:10", "", "PrevMeasure: fault (contrast-brightness) free invocation of &#39;disable stream&#39; function shall be ensured<br />", "EARoot/EA2/EA2/EA36/EA1354.htm", "118.png", "E2018", "E2013", "", "Part0","{B8F09045-59B6-0D2A-8286-399A9BDB3C62}");

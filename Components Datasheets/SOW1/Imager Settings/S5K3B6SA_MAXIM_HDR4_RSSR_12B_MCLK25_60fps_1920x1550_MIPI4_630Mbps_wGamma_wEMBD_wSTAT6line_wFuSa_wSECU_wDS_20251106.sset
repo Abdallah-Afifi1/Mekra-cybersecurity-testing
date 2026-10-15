@@ -1,0 +1,1008 @@
+//$MV4[MCLK:25.0,mipi_phy_type:Dphy,mipi_lane:4,mipi_datarate:630]
+//$MV4_CPHY_LRTE[enable:0,longPacketSpace:5,shortPacketSpace:5]
+//$MV4_Scramble[enable:0]
+//$MV4_MainData[width:1920,height:1550,data_type:MIPI_RAW12 (0x2C),virtual_channel:0]
+//$MV4_InterleavedData[isUsed:0,width:0,height:0,data_type:User_Defined_1 (0x30),virtual_channel:1]
+//$MV4_InterleavedData[isUsed:0,width:0,height:0,data_type:User_Defined_1 (0x30),virtual_channel:1]
+//$MV4_InterleavedData[isUsed:0,width:0,height:0,data_type:User_Defined_1 (0x30),virtual_channel:1]
+//$MV4_Start[]
+
+
+p50
+
+//Ser Device Address : 0x80 Pipe Y
+//Des Device Address : 0x90
+
+// Serializer/Deserializer GMSL link reset.
+I2C [90]
+I2C 001031 //one shot reset
+
+I2C [80]
+I2C 033000 //don't care always 1x4
+I2C 0332E4 // Straight mapping
+I2C 0333E4 // Straight mapping
+I2C 033130 // 4-lane
+I2C 0311F0 // Port B start
+//I2C 030862 //Port B to pipe Y 0x64(pipe Z)
+I2C 030864
+
+p100
+I2C 0314A2 // VS_VC_Check
+//I2C 03166C // Pipe Y RAW12 filter 0x318 = 0x6C
+I2C 03186C
+//I2C 000223 // VID_TX_EN from Pipe Y 0x43 for using pipe Z
+I2C 000243 
+p100
+
+I2C [90]
+I2C 033004 //2x4 mode
+I2C 03334E // straight mapping
+I2C 0334E4 // straight mapping
+p100
+I2C 040A00 
+I2C 044AD0 // 4-lane Port A
+I2C 048AD0 // 4-lane port B
+I2C 04CA00
+p100
+I2C 031D2F //
+I2C 03202C //1.2Gbps MIPI Data
+I2C 03232F //1.5Gbps MIPI Data
+I2C 03262F
+p100
+I2C 005001 // X from Y 
+I2C 005102 // Y from Z
+I2C 005202 // Z from Z
+I2C 005303 // U from U
+I2C 0332F0
+p100
+
+I2C [80]
+I2C 02be80 //GPIO0 low
+p100
+I2C 02be90 // GPIO0 high
+p1000
+p15	
+
+//+++===============================+++ 
+//||	HDR4_NEW MergeCompress12		   ||  
+//+++===============================+++ 
+//||--------------------------------------------------------------------------- 
+//|| Data            | Xsize | Ysize | DataType | DataFormat | VirtualChannel |
+//||---------------------------------------------------------------------------
+//|| Embedded header | 1920  |   3   |   0x2C   |   RAW12    |       0        |  
+//|| Test pattern    | 1920  |   4   |   0x2C   |   RAW12    |       0        |  
+//|| Active image    | 1920  | 1536  |   0x2C   |   RAW12    |       0        |
+//|| Statistics      | 1920  |   6   |   0x2C   |   RAW12    |       0        | 
+//|| Embedded footer | 1920  |   1   |   0x2C   |   RAW12    |       0        | 
+//||--------------------------------------------------------------------------- 
+
+
+//+++=============================================+++
+//	2xSPD_12B				   || 
+//+++=============================================+++
+//++=========================================+++
+//| ACLK:1800Mhz,DCLK:128.5Mhz,DBRCLK:128.571Mhz||
+//++=========================================+++
+s101C0003	//sys_pll_sys_p
+s101E00d8	//sys_pll_sys_m
+s10200000	//sys_pll_sys_s
+s10220000	//sys_pll_sys_k
+s10260011	//sys_pll_sys_div
+s10281EE1	//sys_pll_sys_div2
+
+//++===========================================================+++
+//||	BIT_CLK_630Mbps_Word_clock_39.32Mhz_DBR_CLK_89.881Mhz	||  
+//++===========================================================+++
+s102A0003	//sys_pll_int_p
+s102C0097	 //sys_pll_int_m
+s102E0002	//sys_pll_int_s
+s103A0000	//sys_pll_int_ctl2
+s103E001e	//sys_pll_int_ctl4
+s100C00F0	//sys_acg
+
+//MIPI_TX - 630Mbps from Supplement v2p1
+s70C40014		//outregs_dphy_clk_prpr_ctl
+s70D80006		//outregs_dphy_clk_zero_ctl
+s70DA0014		//outregs_dphy_clk_post_ctl
+s70DC0021		//outregs_dphy_clk_trail_ctl
+s70C20016		//outregs_dphy_hs_prpr_ctl
+s70C00001		//outregs_dphy_hs_zero_ctl
+s70D60025 	//outregs_dphy_hs_trail_ctl
+s70D40010		//outregs_dphy_tlpx_ctl
+s70B00001		//outregs_dphy_hs_exit_ctl
+
+s709E0078   //outregs_auto_periodic_skewcal_enable(off)
+s70A00003   //outregs_dphy_continous_clock_vblank_disable
+
+//++===========================================+++
+//||	 - TG - Digital				||
+//++===========================================+++
+s021e0002 	//tgr_exposure_type
+s021c0000       //tgr_short_readout_start_pnt
+s02200001	//tgr_long_readout_type 
+s02220002 	//tgr_spd_type
+s02240000 	//tgr_cg_type
+s04020000 	//tgr_addtional_en
+s0202042A 	//tgr_coarse_integration_time_lpd
+s0216042A 	//tgr_coarse_integration_time_spd
+s02000489	//tgr_fine_integration_time 
+s03000239	//tgr_fine_integration_time_spd 
+
+s0340064C 	//tgr_frmae_length_lines
+s03420530 	//tgr_line_length_pck 
+
+s32580008 	//tgr_h_desc5_addr_start
+s325A0780 	//tgr_h_desc5_addr_width 
+s32E80028	//tgr_v_desc8_addr_start
+s32EA0608	//tgr_v_desc8_addr_width
+
+//++===========================================+++
+//||	 - TG - Analog				||
+//++===========================================+++
+
+// ADC Timing
+s3500DB91      // aig_ct_option1 9A19h -> DB91h, wx_en_mf on, drs_en off, rx_en_spd/mf off
+s35020B69      // aig_ct_option1 0BC9h -> 0BE9h, switch_en_mf on, dshut_spd_en off
+s3504E282      // aig_ct_option3 02A2h -> E2A2h -> E282h, pxbst_sig_en on, abx_srx_off
+s350E2405      // aig_ct_option8, pre_scx, pre_sdswx, pre_srgdx off
+s35D2A2E0     // VLOAD_SMP signal toggle
+s361C0A78      // rdv_option, 0A7C -> 0A78, anti-blooming shutter not same shutter timing
+s35E00D00      // RMP power save disable during V-blank
+s3510000c   //aig_ct_pbr_start
+s35140010   //aig_ct_pbr_width
+s35160014   //aig_ct_pbr_width_ll_mf
+s351a001C   //aig_ct_pbs_start_ll_mf, 41 --> 1C
+s351c004D   //aig_ct_pbs_width, 14 -> 4D
+s351e006A   //aig_ct_pbs_width_ll_mf, 14 --> 6A
+s35200006   //aig_ct_ld_start
+s35220004   //aig_ct_ld_end
+s35240004   //aig_ct_ld_end_mf
+s35260012   //aig_ct_vsl_en_start
+s35280004   //aig_ct_vsl_en_end
+s352a0004   //aig_ct_vsl_en_end_mf
+s352c000a   //aig_ct_vsl_en_on_margin
+s35300006   //aig_ct_sl_end
+s35320006   //aig_ct_sl_end_ll
+s35340006   //aig_ct_sl_end_mf
+s35360008   //aig_ct_sl_off_margin
+s35380038   //aig_ct_rx_start
+s353a0038   //aig_ct_rx_start_spd
+s353e0006   //aig_ct_rx_end
+s35400006   //aig_ct_rx_end_ll
+s35420006   //aig_ct_rx_end_spd
+s35440006   //aig_ct_rx_end_mf
+s354600B6   //aig_ct_rx_start2_ll, 06 -> B6
+s35480006   //aig_ct_rx_start2_mf
+s354a0061   //aig_ct_rx_width_ll
+s354c0096   //aig_ct_rx_width_mf, 89 -> 96
+s354e0042   //aig_ct_drx_start
+s35500004   //aig_ct_drx_start_ll
+s35520008   //aig_ct_wx_start_mf
+s35560075   //aig_ct_wx_start2_mf
+s3558004E   //aig_ct_wx_width_mf, 11 -> 4E
+s355a0006   //aig_ct_wx_end_mf
+s35640006   //aig_ct_cx_end
+s35660006   //aig_ct_cx_end_ll
+s35680006   //aig_ct_cx_end_spd
+s356a0006   //aig_ct_cx_end_mf
+s35740006   //aig_ct_rgdx_end
+s35760006   //aig_ct_rgdx_end_ll
+s35780006   //aig_ct_rgdx_end_spd
+s357a0006   //aig_ct_rgdx_end_mf
+s35840006   //aig_ct_dswx_end
+s35860006   //aig_ct_dswx_end_ll
+s35880006   //aig_ct_dswx_end_spd
+s358a0006   //aig_ct_dswx_end_mf
+s358e008B   //aig_ct_scx_end, c4 -> 6C -> 5C -> 8B
+s3a02008B   //aig_ct_srgdx_end, c4 -> 6C -> 5C -> 8B
+s3a06008B   //aig_ct_sdswx_end, c4 -> 6C -> 5C -> 8B
+s3a080021   //aig_ct_swx_margin_mf_spd
+s3a0a0048   //aig_ct_cds_start
+s3a0c0044   //aig_ct_cds_start_ll_mf, 3C -> 44
+s3a0e0006   //aig_ct_s1s_start
+s3a100006   //aig_ct_s1s_start_ll_mf
+s3a120051   //aig_ct_s3_width
+s3a140051   //aig_ct_s3_width_ll_mf
+s3a160004   //aig_ct_s3_margin
+s3a180010   //aig_ct_s3_width2
+s3a1c002c   //aig_ct_s4_width
+s3a1e002c   //aig_ct_s4_width_ll_mf
+s3a20002e   //aig_ct_s4d_width
+s3a22002e   //aig_ct_s4d_width_ll_mf
+s3a240029   //aig_ct_crs1_start
+s3a280029   //aig_ct_crs2_start
+s3a2e0028   //aig_ct_vload_smp_start_ll_mf
+s3a300020   //aig_vlosd_smp_end, 00 -> 20
+s3a34002b   //aig_ct_vload_smpdmy_start_ll_mf
+s3a3a0003   //aig_ct_offr_start
+s3a3c006e   //aig_ct_rmp_rst_cnt_start, 5e -> 6e
+s3a3e0054   //aig_ct_rmp_rst_cnt_start_ll_mf,  0044 -> 0054
+s3a400087   //aig_ct_rmp_rst_cnt_width
+s3a4200D8   //aig_ct_rmp_sig_cnt_start,  0074 -> 00D8
+s3a440081   //aig_ct_rmp_sig_cnt_start_ll_mf, 0061 -> 0081
+s3a4601ac   //aig_ct_rmp_sig_cnt_width
+s3a480009   //aig_ct_tx_lpd_start
+s3a4a000d   //aig_ct_tx_lpd_start_ll
+s3a4c0041   //aig_ct_tx_lpd_width
+s3a4e0041   //aig_ct_tx_lpd_width_ll
+s3a500009   //aig_ct_tx_spd_start_spd, 000F -> 0009
+s3a52000d   //aig_ct_tx_spd_start_mf
+s3a540041   //aig_ct_tx_spd_width_mf_spd
+s3a5a0010   //aig_ct_rmp_rst_start2
+s3a5c0003   //aig_ct_rmp_rst_start3
+s3a5e0005   //aig_ct_rmp_rst_width
+s3a600008   //aig_ct_rmp_offr_end
+s3a62001f   //aig_ct_rmp_smp_start
+s3a64001f   //aig_ct_rmp_smp_start_ll_mf
+s3a680005   //aig_ct_rmp_as_gain_start
+s3a6a0005   //aig_ct_rmp_as_gain_start_ll_mf
+s3a6c0005   //aig_ct_rmp_as_gain_os_width
+s3a6e039f   //aig_ct_rmp_os_start
+s3a7003d0   //aig_ct_rmp_os_start_ll_mf
+s3a72001f   //aig_ct_ref_smp_start
+s3a74001f   //aig_ct_ref_smp_start_ll_mf
+s3a780008   //aig_ct_ref_shbn_cmp1_start
+s3a7a0008   //aig_ct_ref_shbn_cmp1_start_ll_mf
+s3a7c0350   //aig_ct_ref_shbn_cmp1_end
+s3a7e0363   //aig_ct_ref_shbn_cmp1_end_ll_mf
+s3a800360   //aig_ct_ref_shbn_cmp2_start
+s3a820372   //aig_ct_ref_shbn_cmp2_start_ll_mf
+s3a840371   //aig_ct_ref_shbn_cmp2_end
+s3a860383   //aig_ct_ref_shbn_cmp2_end_ll_mf
+s3a880008   //aig_ct_ref_shbn_cmp_sw1_start
+s3a8a0008   //aig_ct_ref_shbn_cmp_sw1_start_ll_mf
+s3a8c0350   //aig_ct_ref_shbn_cmp_sw1_end
+s3a8e0363   //aig_ct_ref_shbn_cmp_sw1_end_ll_mf
+s3a900360   //aig_ct_ref_shbn_cmp_sw2_start
+s3a920372   //aig_ct_ref_shbn_cmp_sw2_start_ll_mf
+s3a940371   //aig_ct_ref_shbn_cmp_sw2_end
+s3a960383   //aig_ct_ref_shbn_cmp_sw2_end_ll_mf
+s3a980041   //aig_ct_stx_width
+s3a9a0027   //aig_ct_dstx_width
+s3a9c001a   //aig_ct_stx_variable1
+s3a9e0057   //aig_ct_dstx_variable1
+s3aa001FF   //aig_ct_abs_tx_start, 038c -> 01FF
+s3aa20040   //aig_ct_abs_tx_width, 0027 -> 0040
+s3aa40057   //aig_ct_dabs_tx_variable1
+s3aa6001a   //aig_ct_abs_rx_margin
+s3aa80007   //aig_ct_mon_lat_start
+s3aaa0007   //aig_ct_mon_lat_width
+s3aac0004   //aig_ct_dssl_margin
+s3aae0004   //aig_ct_ssl_margin
+s3ab0002b   //aig_ct_pre_stx_width
+s3ab20023   //aig_ct_pre_dstx_width
+s3ab40010   //aig_ct_pre_stx_variable1
+s3ab6038c   //aig_ct_pre_stx_start
+s3ab80004   //aig_ct_pre_swx_margin
+s3aba0004   //aig_ct_pre_dswx_margin
+s3abc0009   //aig_ct_adlc_tx_lpd_start
+s3abe000d   //aig_ct_adlc_tx_lpd_start_ll
+s3ac00041   //aig_ct_adlc_tx_lpd_width
+s3ac20041   //aig_ct_adlc_tx_lpd_width_ll
+s3ac4000d   //aig_ct_adlc_tx_spd_start_mf
+s3ac6000f   //aig_ct_adlc_tx_spd_start_spd
+s3ac80034   //aig_ct_adlc_tx_spd_width_mf
+s3ad20038   //aig_ct_adlc_rx_start
+s3ad40038   //aig_ct_adlc_rx_start_spd
+s3ad60006   //aig_ct_adlc_rx_start_mf
+s3ad80006   //aig_ct_adlc_rx_end
+s3ada0006   //aig_ct_adlc_rx_end_ll
+s3adc0006   //aig_ct_adlc_rx_end_spd
+s3ade0006   //aig_ct_adlc_rx_end_mf
+s3ae00006   //aig_ct_adlc_rx_start2_ll
+s3ae20006   //aig_ct_adlc_rx_start2_mf
+s3ae40081   //aig_ct_adlc_rx_width_ll
+s3ae60081   //aig_ct_adlc_rx_width_mf
+s3aea0006   //aig_ct_cla_sl_hcg_s_end
+s3aee0011   //aig_ct_cla_sl_spd2x_r_end_spd
+s3af00029   //aig_ct_nrc_r_start
+s3af20028   //aig_ct_nrc_r_dmy_start
+s3af40047   //aig_ct_nrc_s_start
+s3af60047   //aig_ct_nrc_s_start_ll_mf
+s3af80045   //aig_ct_nrc_s_dmy_start
+s3afa0045   //aig_ct_nrc_s_dmy_start_ll_mf
+s3afc0028   //aig_ct_clpr_en_start
+s3b000009   //aig_ct_clpr_en_start_ll_mf
+s3b0c0009   //aig_ct_adlc_rx_low_end
+s3b0e006f   //aig_ct_adlc_rx_low_end_mf
+s3b160007   //aig_ct_cnt_comp_en_width
+//s3b1c001c   //aig_ct_rd_en_bit_to_bit_width
+//s3b1e0019   //aig_ct_rd_en_width
+s3b200071   //aig_ct_rd_en_first_start, bottom pattern image improve 01F1 -> 21
+s3b220171   //aig_ct_rd_en_first_start_ll
+s3b240071   //aig_ct_rd_en_first_start_mf
+//s3b280038   //aig_ct_rd_en_a_margin
+s3b2c0009   //aig_ct_conv_en_width
+s3b300009   //aig_ct_conv_width
+s3b32000e   //aig_ct_clstr_rst_p0
+s3b340005   //aig_ct_clstr_rst_p1
+s3b36000e   //aig_ct_rst_adder_p0
+s3b38008e   //aig_ct_rst_adder_p1
+s3b3a000e   //aig_ct_lat2_rst
+s3b3e0006   //aig_ct_to_fa_p1
+s3b40004f   //aig_ct_evalcarry
+s3b420015   //aig_ct_rors
+s3b440015   //aig_ct_rors_ll_mf
+s3b4600e0   //aig_ct_rors_width
+s3b480117   //aig_ct_rors_width_ll_mf
+s3b4a000e   //aig_ct_col_rst_p0
+s3b4c000f   //aig_ct_col_rst_width
+s3b500010   //aig_ct_pinv_width_ll_mf
+s3b520010   //aig_ct_drs_preset_ll_mf
+s3b540008   //aig_ct_wr_en
+s3b56004f   //aig_ct_cnt_bist_rst_width
+s3b5a01ac   //aig_ct_cnt_bist_sig_width
+s3b5c017c   //aig_ct_cnt_bist_sig_width_ll_mf, 01ac -> 017c
+s3b620070   //aig_ct_p_adc_off_width0
+s3b640070   //aig_ct_p_adc_off_width0_ll_mf
+s3b6600b8   //aig_ct_p_adc_off_p1
+s3b6800a7   //aig_ct_p_adc_off_p1_ll_mf
+s3b6a0117   //aig_ct_p_adc_off_width1
+s3b6c0038   //aig_ct_p_adc_off_width1_ll_mf
+s3b6e01fb   //aig_ct_p_adc_off_p2
+s3b700187   //aig_ct_p_adc_off_p2_ll_mf
+s3b7201a7   //aig_ct_p_adc_off_width2
+s3b740038   //aig_ct_p_adc_off_width2_ll_mf
+s3b900008   //aig_ct_rmp_drs_end_ll_mf
+s3b920014   //aig_ct_vda_margin
+s3b940014   //aig_ct_vda_width
+s3b96051C   //aig_ct_lat_start 04C8 ->4FC -> 530
+s3b98051C   //aig_ct_lat_start_ll_mf 04C8 ->4FC -> 530
+s3b9a0009   //aig_ct_lat_width
+s3b9c0077   //aig_ct_vda_test_set_start
+s3b9e0077   //aig_ct_vda_test_set_start_ll_mf
+s3ba0000c   //aig_ct_vda_test_set_width
+s3ba2003c   //aig_ct_vda_test_rst_start
+s3ba4003c   //aig_ct_vda_test_rst_start_ll_mf
+s3ba6000c   //aig_ct_vda_test_rst_width
+s3ba80007   //aig_ct_rdv_cnt_rst_start
+s3baa0007   //aig_ct_rdv_cnt_rst_width
+s3bac0006   //aig_ct_hblk_start
+s3bae0006   //aig_ct_hblk_start_ll_mf
+s3bb00024   //aig_ct_hblk_width
+s3bb20024   //aig_ct_hblk_width_ll_mf
+s3bb40006   //aig_ct_spd1_srx_start1_mf
+s3bb60006   //aig_ct_spd2_srx_start1_mf
+s3bb80397   //aig_ct_spd1_srx_start2_mf
+s3bba0397   //aig_ct_spd2_srx_start2_mf
+s3bbc0023   //aig_ct_srx_width_mf
+s3bbe03f6   //aig_ct_spd1_srx_end_mf
+s3bc003f6   //aig_ct_spd2_srx_end_mf
+s3bc2015a   //aig_ct_sm_rmp_rst_start
+s3bc40006   //aig_ct_sm_rmp_rst_width
+s3bc60056   //aig_ct_sm_rmp_preset_start
+s3bc80034   //aig_ct_sm_rmp_preset_width
+s3bd00056   //aig_ct_sm_rmp_p1_start
+s3bd20097   //aig_ct_sm_rmp_p1_width
+s3bd60005   //aig_ct_sm_rmp_p2_width_ll_mf
+s3bd8004a   //aig_ct_ref_adlc_smp1_end
+s3bda0004   //aig_ct_ref_adlc_smp1_end_ll
+s3bdc0041   //aig_ct_ref_adlc_smp1_end_spd
+s3bde0009   //aig_ct_ref_adlc_smp1_end_mf
+s3be00171   //aig_ct_ref_adlc_smp2_start
+s3be20009   //aig_ct_ref_adlc_smp2_start_ll
+s3be40177   //aig_ct_ref_adlc_smp2_start_spd
+s3be6000a   //aig_ct_ref_adlc_smp2_start_mf
+s3be801c3   //aig_ct_ref_adlc_smp2_end
+s3bea005f   //aig_ct_ref_adlc_smp2_end_ll
+s3bec01bd   //aig_ct_ref_adlc_smp2_end_spd
+s3bee0049   //aig_ct_ref_adlc_smp2_end_mf
+s3bf003d0   //aig_ct_ref_adlc_smp3_start
+s3bf20159   //aig_ct_ref_adlc_smp3_start_ll
+s3bf403c9   //aig_ct_ref_adlc_smp3_start_spd
+s3bf60159   //aig_ct_ref_adlc_smp3_start_mf
+s3bf803d1   //aig_ct_ref_adlc_smp3_end
+s3bfa01eb   //aig_ct_ref_adlc_smp3_end_ll
+s3bfc03ca   //aig_ct_ref_adlc_smp3_end_spd
+s3c0001eb   //aig_ct_ref_adlc_smp3_end_mf
+s3c0203d9   //aig_ct_ref_adlc_smp4_start
+s3c0403cd   //aig_ct_ref_adlc_smp4_start_ll
+s3c0603d2   //aig_ct_ref_adlc_smp4_start_spd
+s3c0803f6   //aig_ct_ref_adlc_smp4_start_mf
+s3c0a0484   //aig_ct_st_lat_flag_start
+s3c0c04c4   //aig_ct_st_lat_flag_start_ll_mf, 0480h -> 04C4h
+s3c0e0005   //aig_ct_st_lat_flag_width
+s3c100005   //aig_ct_st_lat_flag_width_ll_mf
+s3c16004c   //aig_ct_rmp_bst_start2
+s3c18004c   //aig_ct_rmp_bst_start2_ll_mf
+s3c220005   //aig_ct_rmp_bst_width
+s3c240005   //aig_ct_rmp_bst_width_ll_mf
+s3c280006   //aig_ct_tswx0_end_mf
+s3c2c0006   //aig_ct_tswx1_end_spd
+s3c300080  //aig_ct_stswx0_spd1_end, c4 -> 80
+s3c340080   //aig_ct_stswx0_spd2_end, c4 -> 80
+s3c4a0009   //aig_ct_asil_drx_margin
+s3c4c0050   //aig_ct_vda_set_start1
+s3c4e008c   //aig_ct_vda_set_start2
+s3c5000c8   //aig_ct_vda_set_start3
+s3c520104   //aig_ct_vda_set_start4
+s3c540140   //aig_ct_vda_set_start5
+s3c56017c   //aig_ct_vda_set_start6
+s3c5801b8   //aig_ct_vda_set_start7
+s3c5a01f4   //aig_ct_vda_set_start8
+s3c5c0480   //aig_ct_asd_sl_spd_start
+s3c5e0029   //aig_ct_asd_sl_spd_width
+s3c60001a   //aig_ct_dasd_sl_spd_variable
+s3c62001a   //aig_ct_dasd_sl_spd_width
+s3c64001d   //aig_ct_asil_sl_start
+ 
+// APS DC-Voltage(DBR Voltage)
+s366E000C      // aig_dbr_tune_lntg 0Dh -> 0Ch, -1.14V -> -1.08V
+s389E0004      // aig_dbr_tune_sntg 0Dh -> 0Ch, -1.14V -> -1.08V -> -0.4V -> -0.72V -> -0.6V, 220810
+s375A0009      // aig_dbr_tune_ltg, 2.64V
+s375C000A      // aig_dbr_tune_stg, 2.64V -> 2.7V, 220805
+s375E0014      // aig_dbr_tune_rg 18h -> 14h, 3.6V -> 3.34V
+s36800003      // aig_dbr_tune_mim_vpix, 2.28V -> 2.83V
+s364C0020      // aig_dbr_option[5] 0 ->1, aig_dbr_tune_mim_vpix, 2.28V -> 2.83V
+s37620001      // aig_dbr_tune_vmim_eit_tune, 1.66V -> 2.3V -> 1.4V -> 1.53, 220810
+
+// ADC SAT & Analog Gain
+s35DA004C      // HCG ADC_SAT 862mV -> 900mV
+s3938004C      // HCG ADC_SAT 862mV -> 900mV
+s02040080      // HCG Analog Gain x4
+s3636004C      // LCG ADC_SAT 730mV -> 800mV -> 900mV
+s393A004C      // LCG ADC_SAT 730mV -> 800mV -> 900mV
+s020A0029      // LCG Analog Gain x1.125 -> x1.281
+s3814004C      // SPD-CDS ADC_SAT 400mV -> 900mV
+s393E004C      // SPD-CDS ADC_SAT 400mV -> 900mV 
+s02040080      // HCG Analog Gain x4
+s02080100     // SPD_CDS Analog Gain x8
+s85120100     // msm_pdestal_medium
+s85000000   // Digital Gain enable
+s02380580    // SPD_CDS Digital Gain x3.8 -> x4.9 220805 -> x5.5 220810
+s3638004C      // SPD-LOF ADC_SAT 862mV -> 900mV
+s393C004C      // SPD-LOF ADC_SAT 862mV -> 900mV
+
+// Bias
+s37040010      // Pix bias 000E -> 0010, 4.0uA -> 4.5uA
+s370E0010      // Pix bias 000E -> 0010, 4.0uA -> 4.5uA
+s37060008      // Pix bias bst 0007 -> 0008, 2.0uA -> 2.25uA
+s37100008      // Pix bias bst 0007 -> 0008, 2.0uA -> 2.25uA
+s37080009      // Pix bias bst Inv 0009, 2.5uA
+s37120009      // Pix bias bst Inv 0009, 2.5uA
+s37020005      // Comp bias 0004 -> 0005, OTA1 1.5uA, OTA2 0.375uA
+s370C0005      // Comp bias 0004 -> 0005, OTA1 1.5uA, OTA2 0.375uA
+s37000001      // CRB bias 0003 -> 0001, 1uA -> 0.5uA
+s370A0001      // CRB bias 0003 -> 0001, 1uA -> 0.5uA
+
+// PSRR setting
+s36082280       // PSRR_CG_MODE Enable
+s371C006E       // PSRR_TUNE HCG TOP ADC
+s3724006E       // PSRR_TUNE HCG BOT ADC
+s371E0000       // PSRR_TUNE LCG TOP ADC
+s37260000       // PSRR_TUNE LCG BOT ADC
+s37200000       // PSRR_TUNE SPD TOP ADC
+s37280000       // PSRR_TUNE SPD BOT ADC
+
+// CLP setting
+s36000031  // HCG TOP RESET CLP	- pixout_1.366V 220805
+s36020031  // HCG BOTTOM RESET CLP - pixout_1.366V 220805
+s3940002E  // LCG TOP RESET CLP - pixout_1.297V 220805
+s394A002E // LCG BOTTOM RESET CLP - pixout_1.297V 220805
+s36080280 // SPD_RST in-pixel CLP on
+s350C243E  // SPD_LOF Rest CLP en on
+s39540001		// Change to legacy mode of CDS SM (3B6 type --> 1H1 type)
+s38420040   // CDS OPTION[38] 0 -> 1, SPD RST CLP on
+s3944002E   // SPD_LOF Reset CLP lvl_T  - pixout_1.297V 220805
+s394E002E   // SPD_LOF Reset CLP lvl_B  - pixout_1.297V 220805
+
+// TMC ADC
+s35cc0050    // TMC ADC SAT
+s35d00050   //  TMC ADC SAT
+
+// SM3 Counter Bist
+s3b56001F  // CNT ASIL, RS RST BIST CNT Width 4F --> 3F --> 1F
+s3b58003F  // CNT ASIL, DRS Reset BIST CNT Width 9E --> 3F
+s36680CCC
+s366A1333
+s37720333
+s37741CCC
+
+//SM1 ADC
+s36E80FFF
+s36EE0200
+
+// SM6 VMC/TMC
+s37AC1FFF
+s37B21002
+s37B40452
+s37B6052B
+s37B80668
+s37BA0920
+s37BC069A
+s37BE0966
+s37C00821
+s37C20B86
+s381E06D3
+s382009DD
+s3822045D
+s38240618
+s382603BD
+s38280555
+s382A0A64
+s382C0B7C
+s382E06A4
+s3830076C
+s383203B6
+s3834047E
+s383A0677
+s383C096A
+s383E09A0
+s38400BF4
+s37C4DEBC  // SFM enable_T
+s37C6DEBC  // SFM enable_B
+s39560045   // A-gain criteria
+s39580045   // A-gain criteria
+s395A0000	// aig_gain_sm_enable_top
+s607200B0	// tempera_error_H
+s60740007	// tempera_error_L (-44C)
+
+// rd dummy
+s36280020   // read dummy address 24h -> 20h
+s36200000   // LPD shutter dummy disable
+s363C0000  // SPD shutter dummy disable
+
+//DBR settling time 
+s313C064C // tgr_atx_length_lines
+s31480530 // tgr_atx_length_lines
+
+//LP_VBLK Power Save
+s35B20000
+s3C3C008B
+s3C40008B
+s3C44008B
+s350E2785
+s35D40908     // E908h -> 0908h, S4 Buffer Strength x32 -> x4
+s37020006      // Comp bias 0004 -> 0005 -> 0006, OTA1 1.75uA, OTA2 0.4375uA
+s370C0006      // Comp bias 0004 -> 0005 -> 0006, OTA1 1.75uA, OTA2 0.4375uA
+s392C0006      // Comp bias 0004 -> 0006, SPD
+s392E0006      // Comp bias 0004 -> 0006, SPD
+
+//HDR Ratio
+s020E1860	//tgr_system_gain1_LPD_HCG		//Need to change New value 	          
+s021005C0	//tgr_system_gain1_LPD_LCG		//Need to change New value            
+s02140020	//tgr_system_gain1_LPD_VS/SPD_RS	//fix
+s02120020	//tgr_system_gain1_SPD_SR		//fix            
+s02260080	//tgr_system_gain2_LPD_HCG		//lens compensation      
+s02280080	//tgr_system_gain2_LPD_LCG		//lens compensation      
+s022C0010	//tgr_system_gain2_LPD_VS/SPD_RS	//fix
+s022A0010	//tgr_system_gain2_SPD_SR		//fix       
+s02700384	//tgr_system_gain3_LPD_HCG (900mV)     
+s02720384	//tgr_system_gain3_LPD_LCG (900mV)      
+s02760384	//tgr_system_gain3_LPD_VS/SPD_RS (900mV)
+s02740384	//tgr_system_gain3_SPD_SR (900mV)     
+
+
+//++===========================================+++
+//||		ISPFE				||
+//++===========================================+++
+s602A7D33		//Calibration_comp_value
+
+//++===========================================+++
+//||		 ASP				||
+//++===========================================+++
+s80000000	//asp_12bit_12bit_ASP_asp_out_mode_sel
+s80060000	//asp_12bit_12bit_ASP_asp_gamma_comp_mode
+
+s83000001	//crop_start0_crop_bypass
+s84000001	//crop_start1_crop_bypass
+
+s85000000 	//msm_asp0_msm_bypass
+s8504FFFE	//msm_asp0_msm_byr_periodic_mismatch_config
+s850e0100	//msm_asp0_msm_pedestal_long_high
+s85100100	//msm_asp0_msm_pedestal_long_low
+s85120100	//msm_asp0_msm_pedestal_medium
+s85140100	//msm_asp0_msm_pedestal_short
+
+s86000001	//phasecorrection_0_bypass
+
+s89000000	//mergerlms_0_bypass
+s89020008	//mergerlms_0_wdr_automotive_merger_config
+s89080100	//mergerlms_pedestal_0_0
+s890a0100	//mergerlms_pedestal_0_1
+s890c0100	//mergerlms_pedestal_0_2
+s890e0100	//mergerlms_pedestal_0_3
+s891200A0	//mergerlms_hdr_pedestal
+
+s8D000000	//gamma_1tbl_bypass
+s90000001	//gamma_2tbl_bypass
+s93000001	//lmsinterleaver_bypass
+s96000001	//sniffer_aspv40_bypass
+s97000001	//hqdns_1_bypass
+s98000001	//nsnorm_1_bypass
+s9A000001	//msm_0_bypass
+s9B000001	//crop_afr_crop_bypass
+s9C000001	//crop_bp_crop_bypass
+s9D000001	//crop_mrgr_crop_bypass
+s9E000001	//aspstats_0_bypass
+sA3000001	//hqdns_0_exp_0_bypass
+sA3720001	//hqdns_1_exp_1_bypass
+
+//SBPC (Static Bad Pixel Correction)
+s87000000	//bpmlc_asp_bypass
+s87020008	//bpmlc_asp_embedded_line
+s87040008 	//bpmlc_asp_x_origin
+s87060030 	//bpmlc_asp_y_origin
+s88000000	//dspcllc_0_bypass
+s88040001	//dspcllc_0_correction_mode
+
+s809e0001 	//asp_12bit_12bit_ASP_asp_dcg_en
+s80dc0000 	//asp_12bit_12bit_ASP_asp_afr_spd_exp_sel
+
+s8bea000b   	//mergerlms_0_out_maps_config
+s8c000fdf		//mergerlms_0_saturation_val
+
+//24 TO 12 BIT - GAMMA(COMPANDING)TABLE 
+//ME PWL 
+//0					->		0
+//256				->		256
+//512				->		512
+//1024			->		640
+//2048			->		768
+//4096			->		1024
+//8192			->		1280
+//16384			->		1536
+//32768			->		2048
+//65536			->		2176
+//131072		->		2304
+//262144		->		2432
+//524288		->		2688
+//1048576		->		2944
+//2097152		->		3200
+//4194304		->		3456
+//8388608		->		3712
+//16777216	->		3968
+
+s8e7e0012          //gamma_1tbl_num_of_points_used
+s8d420000           //gamma_1tbl_x_points_table_msb_0_0
+s8d440000           //gamma_1tbl_x_points_table_msb_0_1
+s8d460000           //gamma_1tbl_x_points_table_msb_0_2
+s8d480000           //gamma_1tbl_x_points_table_msb_0_3
+s8d4a0000           //gamma_1tbl_x_points_table_msb_0_4
+s8d4c0000           //gamma_1tbl_x_points_table_msb_0_5
+s8d4e0000           //gamma_1tbl_x_points_table_msb_0_6
+s8d500000           //gamma_1tbl_x_points_table_msb_0_7
+s8d520000           //gamma_1tbl_x_points_table_msb_0_8
+s8d540001           //gamma_1tbl_x_points_table_msb_0_9
+s8d560002           //gamma_1tbl_x_points_table_msb_0_10
+s8d580004           //gamma_1tbl_x_points_table_msb_0_11
+s8d5a0008           //gamma_1tbl_x_points_table_msb_0_12
+s8d5c0010           //gamma_1tbl_x_points_table_msb_0_13
+s8d5e0020           //gamma_1tbl_x_points_table_msb_0_14
+s8d600040           //gamma_1tbl_x_points_table_msb_0_15
+s8d620080           //gamma_1tbl_x_points_table_msb_0_16
+s8d6400FF           //gamma_1tbl_x_points_table_msb_0_17
+
+s8d020000           //gamma_1tbl_x_points_table_lsb_0_0
+s8d040100           //gamma_1tbl_x_points_table_lsb_0_0
+s8d060200           //gamma_1tbl_x_points_table_lsb_0_0
+s8d080400           //gamma_1tbl_x_points_table_lsb_0_0
+s8d0a0800           //gamma_1tbl_x_points_table_lsb_0_0
+s8d0c1000           //gamma_1tbl_x_points_table_lsb_0_0
+s8d0e2000           //gamma_1tbl_x_points_table_lsb_0_0
+s8d104000           //gamma_1tbl_x_points_table_lsb_0_0
+s8d128000           //gamma_1tbl_x_points_table_lsb_0_0
+s8d140000           //gamma_1tbl_x_points_table_lsb_0_0
+s8d160000           //gamma_1tbl_x_points_table_lsb_0_0
+s8d180000           //gamma_1tbl_x_points_table_lsb_0_0
+s8d1a0000           //gamma_1tbl_x_points_table_lsb_0_0
+s8d1c0000           //gamma_1tbl_x_points_table_lsb_0_0
+s8d1e0000           //gamma_1tbl_x_points_table_lsb_0_0
+s8d200000           //gamma_1tbl_x_points_table_lsb_0_0
+s8d220000           //gamma_1tbl_x_points_table_lsb_0_0
+s8d24FFFF           //gamma_1tbl_x_points_table_lsb_0_0
+
+s8dc20000           //gamma_1tbl_y_points_table_msb_0_0
+s8dc40010           //gamma_1tbl_y_points_table_msb_0_0
+s8dc60020           //gamma_1tbl_y_points_table_msb_0_0
+s8dc80028           //gamma_1tbl_y_points_table_msb_0_0
+s8dca0030           //gamma_1tbl_y_points_table_msb_0_0
+s8dcc0040           //gamma_1tbl_y_points_table_msb_0_0
+s8dce0050           //gamma_1tbl_y_points_table_msb_0_0
+s8dd00060           //gamma_1tbl_y_points_table_msb_0_0
+s8dd20080           //gamma_1tbl_y_points_table_msb_0_0
+s8dd40088           //gamma_1tbl_y_points_table_msb_0_0
+s8dd60090           //gamma_1tbl_y_points_table_msb_0_0
+s8dd80098           //gamma_1tbl_y_points_table_msb_0_0
+s8dda00A8           //gamma_1tbl_y_points_table_msb_0_0
+s8ddc00B8           //gamma_1tbl_y_points_table_msb_0_0
+s8dde00C8           //gamma_1tbl_y_points_table_msb_0_0
+s8de000D8           //gamma_1tbl_y_points_table_msb_0_0
+s8de200E8           //gamma_1tbl_y_points_table_msb_0_0
+s8de400F8           //gamma_1tbl_y_points_table_msb_0_0
+
+s8d820000           //gamma_1tbl_y_points_table_lsb_0_0
+s8d840000           //gamma_1tbl_y_points_table_lsb_0_0
+s8d860000           //gamma_1tbl_y_points_table_lsb_0_0
+s8d880000           //gamma_1tbl_y_points_table_lsb_0_0
+s8d8a0000           //gamma_1tbl_y_points_table_lsb_0_0
+s8d8c0000           //gamma_1tbl_y_points_table_lsb_0_0
+s8d8e0000           //gamma_1tbl_y_points_table_lsb_0_0
+s8d900000           //gamma_1tbl_y_points_table_lsb_0_0
+s8d920000           //gamma_1tbl_y_points_table_lsb_0_0
+s8d940000           //gamma_1tbl_y_points_table_lsb_0_0
+s8d960000           //gamma_1tbl_y_points_table_lsb_0_0
+s8d980000           //gamma_1tbl_y_points_table_lsb_0_0
+s8d9a0000           //gamma_1tbl_y_points_table_lsb_0_0
+s8d9c0000           //gamma_1tbl_y_points_table_lsb_0_0
+s8d9e0000           //gamma_1tbl_y_points_table_lsb_0_0
+s8da00000           //gamma_1tbl_y_points_table_lsb_0_0
+s8da20000           //gamma_1tbl_y_points_table_lsb_0_0
+s8da40000           //gamma_1tbl_y_points_table_lsb_0_0
+
+s8e400014           //gamma_1tbl_shift_points_table_0_0
+s8e420014           //gamma_1tbl_shift_points_table_0_0
+s8e440015           //gamma_1tbl_shift_points_table_0_0
+s8e460016           //gamma_1tbl_shift_points_table_0_0
+s8e480017           //gamma_1tbl_shift_points_table_0_0
+s8e4a0018           //gamma_1tbl_shift_points_table_0_0
+s8e4c0019           //gamma_1tbl_shift_points_table_0_0
+s8e4e001A           //gamma_1tbl_shift_points_table_0_0
+s8e50001B           //gamma_1tbl_shift_points_table_0_0
+s8e52001C           //gamma_1tbl_shift_points_table_0_0
+s8e54001D           //gamma_1tbl_shift_points_table_0_0
+s8e56001E           //gamma_1tbl_shift_points_table_0_0
+s8e58001F           //gamma_1tbl_shift_points_table_0_0
+s8e5a0020           //gamma_1tbl_shift_points_table_0_0
+s8e5c0021           //gamma_1tbl_shift_points_table_0_0
+s8e5e0022           //gamma_1tbl_shift_points_table_0_0
+s8e600022           //gamma_1tbl_shift_points_table_0_0
+
+s8e021000           //gamma_1tbl_mult_points_table_0_0
+s8e041000           //gamma_1tbl_mult_points_table_0_0
+s8e061000           //gamma_1tbl_mult_points_table_0_0
+s8e081000           //gamma_1tbl_mult_points_table_0_0
+s8e0a1000           //gamma_1tbl_mult_points_table_0_0
+s8e0c1000           //gamma_1tbl_mult_points_table_0_0
+s8e0e1000           //gamma_1tbl_mult_points_table_0_0
+s8e101000           //gamma_1tbl_mult_points_table_0_0
+s8e121000           //gamma_1tbl_mult_points_table_0_0
+s8e141000           //gamma_1tbl_mult_points_table_0_0
+s8e161000           //gamma_1tbl_mult_points_table_0_0
+s8e181000           //gamma_1tbl_mult_points_table_0_0
+s8e1a1000           //gamma_1tbl_mult_points_table_0_0
+s8e1c1000           //gamma_1tbl_mult_points_table_0_0
+s8e1e1000           //gamma_1tbl_mult_points_table_0_0
+s8e201000           //gamma_1tbl_mult_points_table_0_0
+s8e220801           //gamma_1tbl_mult_points_table_0_0
+
+
+//Linearity Calibration
+s02260089	//tgr_sensitivity_long_hcg
+s02280091	//tgr_sensitivity_long_lcg	
+s85680800	//msm_asp0_msm_long_high_periodic_gains_0_1
+s856A0800	//msm_asp0_msm_long_high_periodic_gains_1_0
+s85580805	//msm_asp0_msm_long_low_periodic_gains_0_1
+s855A0805	//msm_asp0_msm_long_low_periodic_gains_1_0
+s8528086D	//msm_asp0_msm_short_low_periodic_gains_0_1
+s852A085A	//msm_asp0_msm_short_low_periodic_gains_1_0
+s8548086D	//msm_asp0_msm_medium_periodic_gains_0_1
+s854A085A	//msm_asp0_msm_medium_periodic_gains_1_0
+
+
+//++=============================================+++
+//||		ELG															 				  ||	
+//++=============================================+++
+s10780000	//sys_asp_num_embd
+s800A0008	//asp_12bit_12bit_ASP_asp_active_start_y
+s85A20008	//msm_asp0_msm_residual_y_start
+s89140008 	//mergerlms_1_residual_y_start
+sC9140008	//mergerlms_1_residual_y_start_setb
+s901C0008	//gamma_2tbl_residual_y_start
+
+s70F00003	//outregs_type_nof_emb_start
+sB1020003	//elgregs_type_nof_emb_start
+sB0000780	//elgregs_embd_header_x_output_size
+sB00A0001	//elg_embd_header_split_en
+sB0120003	//embd_insertion_line_sel
+sB01600F0	//embd_data_valid_width
+sB02000F0	//embd_data_footer_valid_width
+	
+	
+sB1040001	//embd_data_config
+sB0380001	//embd_mask_line
+sB0060530	//elgregs_line_length_pck
+
+sF03C0780	//isp_sthdr_formatter_emb_header_x_output_size
+sF05C0B40	//isp_sthdr_formatter_emb_header_x_length_size
+sF08C0050	//isp_sthdr_formatter_emb_header_num_of_ram_lines
+sF03E0780	//isp_sthdr_formatter_emb_footer_x_output_size
+sF05E0B40	//isp_sthdr_formatter_emb_footer_x_length_size
+sF08E0050	//isp_sthdr_formatter_emb_footer_num_of_ram_lines
+sF0762424	//isp_sthdr_formatter_offset_emb
+sF0E60C0C	//isp_sthdr_formatter_data_format_emb
+sF0262C2C	//isp_sthdr_formatter_data_type_emb
+
+//++=============================================+++
+//||		STAT														 				  ||	
+//++=============================================+++
+sF0742424	//isp_sthdr_formatter_offset_ddm_stat
+sF024322C	//isp_sthdr_formatter_data_type_ddm_stat
+sF0E4080C	//isp_sthdr_formatter_data_format_ddm_stat
+sF0380780	//isp_sthdr_formatter_stat_x_output_size
+sF0580B40	//isp_sthdr_formatter_stat_x_length_size
+sF0880050	//isp_sthdr_formatter_stat_num_of_ram_lines
+
+s106E0003	//sys_sys_dummy2
+s81220002	//asp_12bit_12bit_ASP_aspstats_output_mode
+
+s80680440     	 //asp_12bit_12bit_ASP_asp_stats_readout_eol_gap
+s806a0440				//asp_12bit_12bit_ASP_asp_stats_readout_eof_gap
+
+s9e000000                  // aspstats_0_bypass 
+sa17c0000                  // aspstats_0_roi_x0_0    
+sa17e0008                  // aspstats_0_roi_y0_0    
+sa1800780                  // aspstats_0_roi_width_0 
+sa1820600                  // aspstats_0_roi_height_0
+sa1840B61                  // aspstats_0_roi_size_inv_0
+sa186001F                  // aspstats_0_roi_size_shift_0
+sa1880000                  // aspstats_0_roi_x0_1    
+sa18a0008                  // aspstats_0_roi_y0_1    
+sa18c0780                  // aspstats_0_roi_width_1 
+sa18e0600                  // aspstats_0_roi_height_1
+sa1900B61                  // aspstats_0_roi_size_inv_0
+sa192001F                  // aspstats_0_roi_size_shift
+sa1940000                  // aspstats_0_roi_x0_2    
+sa1960008                  // aspstats_0_roi_y0_2    
+sa1980780                  // aspstats_0_roi_width_2 
+sa19a0600                  // aspstats_0_roi_height_2
+sa19c0B61                  // aspstats_0_roi_size_inv_0
+sa19e001F                  // aspstats_0_roi_size_shift
+
+
+//++=============================================+++
+//||	- FORMATTER - 				  ||	
+//++=============================================+++
+sF0202C2C		//isp_sthdr_formatter_data_type_1_2
+sF0222C2C		//isp_sthdr_formatter_data_type_3_4
+
+sF0300780		//outregs_isp_sthdr_formatter_isp1_x_output_size
+sF0320780		//outregs_isp_sthdr_formatter_isp2_x_output_size
+sF0340780		//outregs_isp_sthdr_formatter_isp3_x_output_size
+sF0360780		//outregs_isp_sthdr_formatter_isp4_x_output_size
+
+sF0500B40		//outregs_isp_sthdr_formatter_isp1_x_length_size
+sF0520B40		//outregs_isp_sthdr_formatter_isp2_x_length_size
+sF0540B40		//outregs_isp_sthdr_formatter_isp3_x_length_size
+sF0560B40		//outregs_isp_sthdr_formatter_isp4_x_length_size
+
+sF0702424		//isp_sthdr_formatter_offset_1_2
+sF0722424		//isp_sthdr_formatter_offset_3_4
+
+sF0800050		//outregs_isp_sthdr_formatter_isp1_num_of_ram_lines
+sF0820050		//outregs_isp_sthdr_formatter_isp2_num_of_ram_lines
+sF0840050		//outregs_isp_sthdr_formatter_isp3_num_of_ram_lines
+sF0860050		//outregs_isp_sthdr_formatter_isp4_num_of_ram_lines
+
+sF0A0FFFF		//outregs_isp_sthdr_formatter_isp1_lines_threshold
+sF0A2FFFF		//outregs_isp_sthdr_formatter_isp2_lines_threshold
+sF0A4FFFF		//outregs_isp_sthdr_formatter_isp3_lines_threshold
+sF0A6FFFF		//outregs_isp_sthdr_formatter_isp4_lines_threshold
+
+sF0E00C0C		//isp_sthdr_formatter_data_format_1_2
+sF0E20C0C		//isp_sthdr_formatter_data_format_3_4
+
+
+//++=============================================+++
+//||		OUTIF 				  ||	
+//++=============================================+++
+s71680139		//outregs_dphy_b_ctl_15_0
+s71380001		//outregs_dphy_m_ctl_15_0
+
+s70F2060E	//outif_num_of_video_lines
+s70BA060E	//outif_global_y_output_size
+
+//++===================================+++ 
+//|| 	HDR4_NEW_MC12 : FUNCTIONAL_SAFETY	||		
+//++===================================+++ 
+sB1AA35BF   //blocks_err_flag_en (error active low)
+s10480020   //sys_gpio_ctrl 			[5] sys_gpio5_out_en 
+s10568002   //sys_test_flag_ctrl 	[15] sys_err_flag_out_en 
+s0106FFC0   //tgr_safety_option (safe state enabled)
+s82E20000   //contint_status_mask 
+s82460000   //contint_ecc_sec_err_int_mask 
+s824a0000   //contint_ecc_ded_err_int_mask 
+//s82e43fff   //contint_auto_clear
+s38540001 // aig_asil_err_to_footer
+sB1181904 // embd_data_footer_start_pnt
+
+//SM7-2 REG CRC
+s11640003		//sys_reg_crc
+s116822C8		//sys_reg_crc_expect
+s330E0003		//tgr_reg_crc_en
+s330CEEF1		//tgr_reg_expect_crc
+s39700003		//aig_reg_crc_en
+s396EC471		//aig_reg_expect_crc
+s34380003		//ds_reg_crc_en
+s343682D3		//ds_reg_expect_crc
+s5ba20003		//nvm_reg_crc
+s5BA67D7B		//nvm_reg_crc_expect
+s60620003		//ispfe_reg_crc
+s6066F591		//ispfe_reg_crc_expect
+s61D00000		//ispfe_adlc_reg_crc
+s61D4FFFF		//ispfe_adlc_reg_crc_expect
+sb1c00003		//elg_crc_config
+sB1CCAC0E		//elg_frame_crc_expect
+
+// SM15 MIPI_E2E_CRC
+s10980100		// stat data excluded at meta data CRC calculation , [8] embd footer include @ meta crc (0: no include, 1: include)
+s10C2003C		// embd footer crc stop
+s109A3210		// image data for raw12
+s109C7654		// image data for raw12
+s10BA3210		// meta data data for raw12
+s10BC7654		// meta data data for raw12
+s10BE3210		// stat data for RAW12
+s10C07654		// stat data for RAW12
+
+// SM18 Test Pattern
+s110e01b9		//SM18 test pattern CRC enable
+s111e0008		//sys_crc_isp_sm_pattern_v_width
+s600e0017		//atopif_qec
+s60401111		//dtpgen_test_pattern_mode - solid
+s60420fff		//dtpgen_test_data_red
+s60440fff		//dtpgen_test_data_greenR
+s60460000		//dtpgen_test_data_blue
+s60480000		//dtpgen_test_data_greenB
+s61428400  	//ob_data_transfer_fob
+s61460000		//ob_data_transfer_addr_min
+s61480008		//ob_data_transfer_addr_max
+s60220000		//rand_pattern_v_min
+s60240008		//rand_pattern_v_max
+s859c0001  		//msm_asp0_dither_skip_mode
+s85a00008  		//msm_asp0_y_dither_start
+s9a260001  		//msm_0_dither_skip_mode
+s9a2a0008  		//msm_0_y_dither_start
+sa4260001  		//msm_1_dither_skip_mode
+sa42a0008  		//msm_1_y_dither_start
+s111c0780			//sys_crc_isp_sm_pattern_h_width
+
+//SM19 CLOCK_MONITOR_SET
+s10A21A35                          //clock monit - LSB of system pll low
+s10A4001A                          //clock monit - MSB of system pll low
+s10A68650                          //clock monit - LSB of system pll high
+s10A8001A                          //clock monit - MSB of system pll high
+s10AA98B8                          //clock monit - LSB of interface pll low
+s10AC0003                          //clock monit - MSB of interface pll low
+s10AEAE67                          //clock monit - LSB of interface pll high
+s10B00003                          //clock monit - MSB of interface pll high
+
+//SM20 DIGITAL INPUT SIGNAL CHECK
+s11480a88		//[3] sys_input_monitor_tst_check_en
+			//[7] sys_input_monitor_sce_check_en
+			//[11] sys_input_monitor_vsync_in_check_en
+			//[15] sys_input_monitor_hsync_in_check_en
+
+//SM21 DUP_REGISTER_BASED_M12
+s80DE0000 	//asp_12bit_12bit_ASP_asp_reg_comp_dup_en
+sA8060000 	//asp_12bit_12bit_ASP_asp_reg_comp_dup_en_dup
+
+
+//SM23 WATCHDOG_SET
+s80DA0000   //asp_watchdog_timer_en
+s824E0000   //contint_watchdog_int_mask 
+
+//++=============================================+++
+//||		Security 				  ||	
+//++=============================================+++
+
+//AES_CMAC setting
+s41400002	//aes key size 256bit
+s41020000	//security select set_A
+s410C0604	//image vertical size
+s70AC0604	//image vertical size
+s411E0003	//secu_embh_vsize
+s41160003	//secu_exp_type_image
+s41180003	//secu_exp_type_embh
+sB1C80001	//elg_Include_header
+
+//++=============================================+++
+//||		Dual Sync 				  ||	
+//++=============================================+++
+s105E0000	//Master - [0] sys_r_vsync_in_oe
+s34000003	//ds_dual_sync_en_ctrl
+s34020002	//dual_sync_auto_mode (0 : Auto off / 1 : Semi-Auto on / 2 : Auto on)
+s34040004	//max diff line num        
+s3408002C	//pre_vsync_margin
+
+
+s01000001		//stream_en=

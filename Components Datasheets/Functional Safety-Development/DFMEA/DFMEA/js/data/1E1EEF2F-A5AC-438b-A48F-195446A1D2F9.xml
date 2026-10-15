@@ -1,0 +1,14 @@
+tocTab[tocTab.length] = new Array("0.5:1", "", "DetectionMeasure - SG2", "EARoot/EA5/EA2742.htm", "175.png", "48", "0", "", "Logical diagram0","{E58AEB7D-798E-4a9d-B226-348A4E457076}");
+tocTab[tocTab.length] = new Array("0.5:2", "", "DetectionMeasure - SG4", "EARoot/EA5/EA2744.htm", "175.png", "93", "0", "", "Logical diagram0","{E13697C7-1EFD-4309-970E-58B88F57F2AE}");
+tocTab[tocTab.length] = new Array("0.5:3", "", "«DetectionMeasure» DetectionMeasure1", "EARoot/EA5/EA2747.htm", "5.png", "E494", "0", "", "Class0","{81EDF8F9-E275-4f33-AC9D-F2CF39E5796F}");
+tocTab[tocTab.length] = new Array("0.5:4", "", "«DetectionMeasure» N.A.", "EARoot/EA5/EA2748.htm", "5.png", "E967", "0", "", "Class0","{31A269E2-08DA-445f-9F9E-695A26A9F901}");
+tocTab[tocTab.length] = new Array("0.5:5", "", "«DetectionMeasure» Review (if the prosposed technical solution suffice)", "EARoot/EA5/EA2749.htm", "5.png", "E478", "0", "", "Class0","{5EC328CD-D09F-4f21-BEB2-216CC38388C9}");
+tocTab[tocTab.length] = new Array("0.5:6", "", "«DetectionMeasure» Review: Design Verification: &#39;image ready&#39; message shall point to the valid (newest/latest/current) image.", "EARoot/EA5/EA2750.htm", "5.png", "E505", "0", "", "Class0","{FEE3DDC4-3A11-457c-8750-34F3E9A1B617}");
+tocTab[tocTab.length] = new Array("0.5:7", "", "«DetectionMeasure» Simulation: concept of a buffer must be tested (depth, art of buffer (circular vs queue, etc...)", "EARoot/EA5/EA2751.htm", "5.png", "E493", "0", "", "Class0","{2E32BF63-88C7-4e57-99C6-48885574C964}");
+tocTab[tocTab.length] = new Array("0.5:8", "", "«DetectionMeasure» Test: fault injection: generate SOW1-SafeState condition on the SOW1-SOW2 interface. Observe reaction of SOW2", "EARoot/EA5/EA2752.htm", "5.png", "E633", "0", "", "Class0","{371DFED3-16BD-462f-A233-917099C93713}");
+tocTab[tocTab.length] = new Array("0.5:9", "", "detectability", "EARoot/EA5/EA2753.htm", "118.png", "E552", "E478", "", "Part0","{944E8057-9CE1-476b-A43C-2E22A06F535D}");
+tocTab[tocTab.length] = new Array("0.5:10", "", "detectability_aux", "EARoot/EA5/EA2754.htm", "118.png", "E582", "E478", "", "Part0","{FE7F1D21-FE2F-4f55-A3B1-986D11F60DBA}");
+tocTab[tocTab.length] = new Array("0.5:11", "", "detectability", "EARoot/EA5/EA2755.htm", "118.png", "E553", "E493", "", "Part0","{C7D93E4F-778B-4b78-BB48-F69775721B9F}");
+tocTab[tocTab.length] = new Array("0.5:12", "", "detectability_aux", "EARoot/EA5/EA2756.htm", "118.png", "E583", "E493", "", "Part0","{4BFF5572-CB2B-4b1a-B3C2-E7ED467398B5}");
+tocTab[tocTab.length] = new Array("0.5:13", "", "detectability", "EARoot/EA5/EA2757.htm", "118.png", "E554", "E505", "", "Part0","{A5AC8D50-7736-4d10-A38B-6698AA09A950}");
+tocTab[tocTab.length] = new Array("0.5:14", "", "detectability_aux", "EARoot/EA5/EA2758.htm", "118.png", "E584", "E505", "", "Part0","{2243069C-2C0F-4bdb-953B-AB26094CB3A0}");

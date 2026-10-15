@@ -1,0 +1,10 @@
+tocTab[tocTab.length] = new Array("0.2.2.8:1", "", "7", "EARoot/EA2/EA2/EA8/EA978.htm", "175.png", "145", "0", "", "Logical diagram0","{A681F2BE-80CA-4f7b-8F66-637E968982D2}");
+tocTab[tocTab.length] = new Array("0.2.2.8:3", "", "«FMEAItem» 7", "EARoot/EA2/EA2/EA8/EA983.htm", "5.png", "E1313", "0", "", "Class0","{84231A18-E05F-4273-ABB7-CCA86E10EC7C}");
+tocTab[tocTab.length] = new Array("0.2.2.8:2", "", "7", "EARoot/EA2/EA2/EA8/EA980.htm", "182.png", "180", "E1313", "", "CompositeStructure diagram0","{A7367130-7F52-4987-83A4-2F8B6C2FB3C9}");
+tocTab[tocTab.length] = new Array("0.2.2.8:4", "", "AP", "EARoot/EA2/EA2/EA8/EA984.htm", "118.png", "E1437", "E1313", "", "Part0","{5AC3721C-2233-4a24-BC35-A7380B7C7D12}");
+tocTab[tocTab.length] = new Array("0.2.2.8:5", "", "AP_aux", "EARoot/EA2/EA2/EA8/EA985.htm", "118.png", "E1443", "E1313", "", "Part0","{5F23FD3C-CEF3-4590-97B6-672DB034B8E6}");
+tocTab[tocTab.length] = new Array("0.2.2.8:6", "", "Cause: indication of &#39;image ready&#39; (function) faulty (contrast-brightness)<br />", "EARoot/EA2/EA2/EA8/EA986.htm", "118.png", "E1442", "E1313", "", "Part0","{B8DB5BA0-798B-4b74-A7D6-D36C308B7B35}");
+tocTab[tocTab.length] = new Array("0.2.2.8:7", "", "DetMeasure: N.A.", "EARoot/EA2/EA2/EA8/EA987.htm", "118.png", "E1441", "E1313", "", "Part0","{4226C22D-35B3-4206-B88A-7A5D20198B86}");
+tocTab[tocTab.length] = new Array("0.2.2.8:8", "", "Effect: N.A.", "EARoot/EA2/EA2/EA8/EA988.htm", "118.png", "E1440", "E1313", "", "Part0","{D775E0B8-C537-48be-923D-6AE5E56E32C1}");
+tocTab[tocTab.length] = new Array("0.2.2.8:9", "", "FailureMode: N.A.", "EARoot/EA2/EA2/EA8/EA989.htm", "118.png", "E1439", "E1313", "", "Part0","{EA3FEAF3-1C71-4444-AF18-B63D35DD5526}");
+tocTab[tocTab.length] = new Array("0.2.2.8:10", "", "PrevMeasure: N.A.", "EARoot/EA2/EA2/EA8/EA990.htm", "118.png", "E1438", "E1313", "", "Part0","{0345F78F-2AFB-4949-A05A-227056EA4522}");

@@ -1,0 +1,1464 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Ontology::Cause</title>
+<link href="../../css/ea.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="../../js/displayToc.js" type="text/javascript"></script>
+<script>
+
+  function switchProjectProperties() {
+			if (document.getElementById("proj00").style.display == "none") {
+				document.getElementById("proj00").style.display = "revert";
+				document.getElementById("proj01").style.display = "revert";
+				document.getElementById("proj02").style.display = "revert";
+				document.getElementById("proj03").style.display = "revert";
+				document.getElementById("proj04").style.display = "revert";
+				document.getElementById("proj05").style.display = "revert";
+			} else {
+				document.getElementById("proj00").style.display = "none";
+				document.getElementById("proj01").style.display = "none";
+				document.getElementById("proj02").style.display = "none";
+				document.getElementById("proj03").style.display = "none";
+				document.getElementById("proj04").style.display = "none";
+				document.getElementById("proj05").style.display = "none";
+			}
+}
+
+		function switchAdvancedProperties(){
+
+			if (document.getElementById("adv00").style.display == "none") {;
+				document.getElementById("adv00").style.display = "revert";
+				document.getElementById("adv01").style.display = "revert";
+			} else {
+				document.getElementById("adv00").style.display = "none";
+				document.getElementById("adv01").style.display = "none";
+			}
+		}
+		function initPage()
+        {			
+			var divs = document.getElementsByClassName("ObjectDetailsNotes");
+			for (var j = 0; j < divs.length; j++) {
+				var tmpStr = divs[j].innerHTML;
+				tmpStr = tmpStr.replace(/#gt;/g, "&gt;");
+				tmpStr = tmpStr.replace(/#lt;/g, "&lt;");
+
+				tmpStr = tmpStr.replace(/&gt;/g, ">");
+				tmpStr = tmpStr.replace(/&lt;/g, "<");
+
+				divs[j].innerHTML = tmpStr;
+			}
+
+            if (document.getElementById('TableGroup') != null)
+            {
+                toggleItem(document.getElementById('TableGroup').getElementsByTagName('li')[0].id.replace("Title", ""));
+            }
+
+        }
+</script>
+<style>
+
+</style>
+</head>
+<body onload="initPage();">
+<div class="section group" >
+
+		<div class="col span_2_of_2 header_frame">
+			<h1> Ontology::Cause </h1>
+			<!-- <img class="header_image" src="../../images/mekraLangGermany.PNG" align="right" alt="Header Image" />-->
+			<img class="header_image" src="../../images/mekraLangGermany.PNG" align="right" alt="Header Image" />
+		</div>
+		<div class="col span_2_of_2 breadcrumb_frame">
+			<p><a href="../EA5.htm">DFMEA</a> / <a href="EA2998.htm">Ontology</a> / <a href="EA3001.htm">Cause</a></p>
+		</div>
+			
+		<table class="contentmaintable">
+			<!-- <tfoot>
+				<tr>
+					<td>foot1</td>
+					<td>foot2</td>
+				</tr>
+			</tfoot> -->
+			<tbody>
+				<tr>
+					<td class="indexcell">
+						<div class="projectBrowserTitle">Project: </div>
+						<ul>
+<li><img src="../../images/118.png" alt="Part"/> <a href="EA3013.htm">causeOccurrence: Integer</a></li>
+</ul>
+
+					</td>
+					<td class="contentcell"><div class="pageHeader"></div>
+<div class="PageBody">
+	<span class="ObjectTitle">Cause  : Public  &lt;&lt;Situation&gt;&gt; Situation</span>
+	<table border="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">16.07.2025 16:38:10</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic">Modified:</td>
+			<td class="ObjectDetailsValue">17.07.2025 07:51:53</td>
+		</tr>
+		<tr style="height: 10px"><td colspan="2"></td></tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><button onclick="switchProjectProperties()"><img src="../../images/plus03.gif" align="absmiddle" id="proj" /></button>Project:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td class="ObjectDetailsValue">rekas</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj02" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Phase:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj03" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Status:</td>
+			<td class="ObjectDetailsValue">Proposed</td>
+		</tr>
+		<tr id="proj04" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Complexity:</td>
+			<td class="ObjectDetailsValue">Easy</td>
+		</tr>
+		<tr id="proj05" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Difficulty:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj06" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Priority:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj05" style="display: none;">
+			<td class="ObjectDetailsTopic" >Multiplicity:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><button onclick="switchAdvancedProperties()"><img src="../../images/plus03.gif" align="absmiddle" id="adv" /></button>Advanced:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
+			<td class="ObjectDetailsValue">{A6DB1A8E-4C16-DBD1-A0DC-453555A90190}</td>
+		</tr>
+		<tr id="adv01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
+			<td class="ObjectDetailsValue"><a href="EA2994.htm">DFMEA Ontology</a>, <a href="../EA4/EA2567.htm">Causes - SG2</a></td>
+		</tr>
+	</table>
+	
+	<div class="TableGroup" id="TableGroup">
+		<ul class="ItemTitle">
+			<li onClick="parent != null ? parent.toggleItem('AssociationsTo') : toggleItem('AssociationsTo');" id="AssociationsToTitle">Associations To</li>
+			<li onClick="parent != null ? parent.toggleItem('CustomProperties') : toggleItem('CustomProperties');" id="CustomPropertiesTitle">Advanced</li>
+			<li onClick="parent != null ? parent.toggleItem('Links') : toggleItem('Links');" id="LinksTitle">Other Links</li>
+		</ul>
+		<div class="ItemBody" id="AssociationsToTable">
+			<table class="Table ea_table">
+				<tr>
+					<td width="40%" class="TableHeading">Element</td>
+					<td width="30%" class="TableHeading">Source Role</td>
+					<td width="30%" class="TableHeading">Target Role</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="EA3002.htm">«FMEAItem» DFMEA</a><br />
+						FMEAItem &nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> Cause<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> item<br />
+						&nbsp;	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><button onclick="switchProjectProperties()"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink38" /></button>Details:
+							<div id="detailsDIVLink38" class="DetailsDiv" >
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>
+
+			</table>
+		</div>
+		<div class="ItemBody" id="CustomPropertiesTable">
+			<table class="Table ea_table">
+				<tr>
+					<td width="30%" class="TableHeading">Property</td>
+					<td width="70%" class="TableHeading">Value</td>
+				</tr>
+			<tr>
+				<td width="30%" class="TableRow">_HideUmlLinks:</td>
+				<td width="70%" class="TableRow">true</td>
+			</tr>
+
+			<tr>
+				<td width="30%" class="TableRow">_defaultDiagramType:</td>
+				<td width="70%" class="TableRow">SysML1.4::InternalBlock</td>
+			</tr>
+
+			<tr>
+				<td width="30%" class="TableRow">isFinalSpecialization:</td>
+				<td width="70%" class="TableRow">0</td>
+			</tr>
+
+
+			</table>
+		</div>		<div class="ItemBody" id="LinksTable">
+			<table class="Table ea_table">
+				<tr>
+					<td width="30%" class="TableHeading">Object</td>
+					<td width="10%" class="TableHeading">Type</td>
+					<td width="10%" class="TableHeading">Connection</td>
+					<td width="10%" class="TableHeading">Direction</td>
+					<td width="40%" class="TableHeading">Notes</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2710.htm">«Situation» function 'switchVideoStraemOff' faulty (FoV)
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2684.htm">«Situation» function 'configureStream' faulty (frozen image)
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2683.htm">«Situation» function 'configureStream' faulty (FoV)
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2736.htm">«Situation» provision of the same image (no provision of consecutive data)</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2657.htm">«Situation» faulty input (FoV) of 'VideoProcessingConfiguration' in 'configureProcessing' function
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2705.htm">«Situation» function 'storeVideoStreamConfiguration' faulty (frozen image)
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2713.htm">«Situation» image stored in faulty way (wrong image position)</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2694.htm">«Situation» function 'provideConfiguration' faulty (contrast-brightness)
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2738.htm">occurrence</a></td>
+					<td width="10%" class="TableRow" valign="top">Property</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2685.htm">«Situation» function 'disableStream' faulty (contrast-brightness)
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2651.htm">«Situation» faulty input (FoV) of 'ImageMetaData' in 'analyseImageMetaData' function
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2659.htm">«Situation» faulty input (FoV) of 'VideoStreamOff-Command' in 'switchVideoStraemOff' function
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2693.htm">«Situation» function 'handleDiagnostics' faulty (frozen image)
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2729.htm">«Situation» reception of 'raw image' (function) faulty (FoV)</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2661.htm">«Situation» faulty input (frozen image) of 'DiagnosticsInformation' in 'receiveDiagnosticsInformation' function
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2640.htm">«Situation» faulty input (contrast-brightness) of 'RAWStreamConfiguration' in 'configureRAWStream' function
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2584.htm">«Situation» 'configureProcessing' (function) faulty ( integrity loss (contrast-brightness) of 'ProcessingConfiguration')
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2696.htm">«Situation» function 'provideConfiguration' faulty (frozen image)
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="EA3002.htm">«FMEAItem» DFMEA</a></td>
+					<td width="10%" class="TableRow" valign="top">FMEAItem</td>
+					<td width="10%" class="TableRow" valign="top">Weak</td>
+					<td width="10%" class="TableRow" valign="top">To</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2604.htm">«Situation» faulty (contrast-brightness) input of  'VideoConfiguration' to 'processingImage'
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2583.htm">«Situation» 'configureEncoding' (function) faulty (integrity loss (frozen image) of 'EncodingConfiguration') </a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2653.htm">«Situation» faulty input (FoV) of 'RAWStreamConfiguration' in 'configureRAWStream' function</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2602.htm">«Situation» faulty (contrast-brightness) input  of 'RAWDataImage' to 'provison of RAW Data'
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2658.htm">«Situation» faulty input (FoV) of 'VideoStreamConfiguration' in 'configureStream' function
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2675.htm">«Situation» fauty (FoV) input of 'FullResolutionProcessedImage' to 'scale image'</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2614.htm">«Situation» faulty (FoV) input  of 'RAWDataImage' to 'provison of RAW Data'</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2590.htm">«Situation» 'configureScaling' (function) faulty ( integrity loss (FoV) of 'ScalingConfiguration')
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2691.htm">«Situation» function 'handleDiagnostics' faulty (contrast-brightness)
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2689.htm">«Situation» function 'enableStream' faulty (FoV)
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2611.htm">«Situation» faulty (contrast-brightness) input of 'tmpDataImage' in temporary storage of RAW Data
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2628.htm">«Situation» faulty (frozen image) reception (input) of consecutive RAW Images (consecutiveness not guaranteed)</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2673.htm">«Situation» faulty input (frozen image) of 'VideoStreamOff-Command' in 'switchVideoStraemOff' function
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2641.htm">«Situation» faulty input (contrast-brightness) of 'RegularDiagnostics' in 'handleDiagnostics' function
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2608.htm">«Situation» faulty (contrast-brightness) input of 'RAWImage' in 'processImage'
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2598.htm">«Situation» 'scale image' (function) faulty (FoV)</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2702.htm">«Situation» function 'receiveDiagnosticsInformation' faulty (frozen image)
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2676.htm">«Situation» function 'acquireDiagnostics' faulty (contrast-brightness)
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2697.htm">«Situation» function 'provideImageMetaData' faulty (contrast-brightness)
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2636.htm">«Situation» faulty input (contrast-brightness) of 'FunctionalSafetyDiagnostics' in 'acquireDiagnostics' function
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2634.htm">«Situation» faulty input (contrast-brightness) of 'DispatchmentConfiguration' in 'configureDispatchment' function
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2644.htm">«Situation» faulty input (contrast-brightness) of 'VideoStreamConfiguration' in 'configureStream' function
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2605.htm">«Situation» faulty (contrast-brightness) input of 'encodedImage' to 'dispatch image'
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2666.htm">«Situation» faulty input (frozen image) of 'ProcessingConfiguration' in 'configureProcessing' function</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2737.htm">occurrence</a></td>
+					<td width="10%" class="TableRow" valign="top">Property</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2627.htm">«Situation» faulty (frozen image) input of RAW Stream via input interface</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2642.htm">«Situation» faulty input (contrast-brightness) of 'ScalingConfiguration' in 'configureScaling' function
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2625.htm">«Situation» faulty (frozen image) input  of 'RAWDataImage' to 'provison of RAW Data'</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2664.htm">«Situation» faulty input (frozen image) of 'FunctionalSafetyDiagnostics' in 'acquireDiagnostics' function
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2699.htm">«Situation» function 'provideImageMetaData' faulty (frozen image)</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2635.htm">«Situation» faulty input (contrast-brightness) of 'EncodingConfiguration' in 'configureEncoding' function
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2612.htm">«Situation» faulty (contrast-brightness) input of 'VideoConfiguration' in 'encode image'
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2715.htm">«Situation» indication of 'image ready' (function) faulty (FoV)</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2663.htm">«Situation» faulty input (frozen image) of 'EncodingConfiguration' in 'configureEncoding' function</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2700.htm">«Situation» function 'receiveDiagnosticsInformation' faulty (contrast-brightness)
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2589.htm">«Situation» 'configureRAWStream' (function) faulty ( integrity loss (frozen image) of 'RAWStreamConfiguration')</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2669.htm">«Situation» faulty input (frozen image) of 'RegularDiagnostics' in 'handleDiagnostics' function
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2603.htm">«Situation» faulty (contrast-brightness) input of  'VideoConfiguration' in 'scale image'
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2630.htm">«Situation» faulty (no consecutive) reception of  'Target Resolution Image'</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2708.htm">«Situation» function 'switchVideoSreamOn' faulty (frozen image)
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2617.htm">«Situation» faulty (FoV) input of 'encodedImage' to 'dispatch image'</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2665.htm">«Situation» faulty input (frozen image) of 'ImageMetaData' in 'analyseImageMetaData' function
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2638.htm">«Situation» faulty input (contrast-brightness) of 'ProcessingConfiguration' in 'configureProcessing' function
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2650.htm">«Situation» faulty input (FoV) of 'FunctionalSafetyDiagnostics' in 'acquireDiagnostics' function
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2624.htm">«Situation» faulty (FoV) input of RAW Stream via input interface</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2622.htm">«Situation» faulty (FoV) input of 'tmpDataImage' in temporary storage of RAW Data</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2632.htm">«Situation» faulty (no consecutive) reception of 'Full Resolution Processed Image'</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2639.htm">«Situation» faulty input (contrast-brightness) of 'RAWDataImage' in 'provideImageMetaData' function
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2656.htm">«Situation» faulty input (FoV) of 'VideoConfiguration' in 'storeVideoStreamConfiguration' function
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2704.htm">«Situation» function 'storeVideoStreamConfiguration' faulty (FoV)
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2660.htm">«Situation» faulty input (FoV) of 'VideoStreamOn-Command' in 'switchVideoSreamOn' function
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2667.htm">«Situation» faulty input (frozen image) of 'RAWDataImage' in 'provideImageMetaData' function</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2615.htm">«Situation» faulty (FoV) input of  'VideoConfiguration' to 'processingImage'</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2735.htm">«Situation» pointing to the same image</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2610.htm">«Situation» faulty (contrast-brightness) input of 'TargetResolutionImage' to 'encode image'
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2587.htm">«Situation» 'configureRAWStream' (function) faulty ( integrity loss (contrast-brightness) of 'RAWStreamConfiguration')
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2686.htm">«Situation» function 'disableStream' faulty (FoV)
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2649.htm">«Situation» faulty input (FoV) of 'EncodingConfiguration' in 'configureEncoding' function
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2674.htm">«Situation» faulty input (frozen image) of 'VideoStreamOn-Command' in 'switchVideoSreamOn' function
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2577.htm">$matrix://</a></td>
+					<td width="10%" class="TableRow" valign="top">Text</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2637.htm">«Situation» faulty input (contrast-brightness) of 'ImageMetaData' in 'analyseImageMetaData' function
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2712.htm">«Situation» image processing faulty (does not guarantee consecutiveness)</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2606.htm">«Situation» faulty (contrast-brightness) input of 'FullResolutionProcessedImage' in 'scale image'
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2727.htm">«Situation» reception (functionality) of RAW Stream via Input Interface faulty (FoV)</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2631.htm">«Situation» faulty (no consecutive) reception of  RAW Image</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2721.htm">«Situation» processing image (function) faulty (contrast-brightness)
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2672.htm">«Situation» faulty input (frozen image) of 'VideoStreamConfiguration' in 'configureStream' function
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2714.htm">«Situation» indication of 'image ready' (function) faulty (contrast-brightness)
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2580.htm">«Situation» 'configureDispatchment' (function) faulty (integrity loss (frozen image) of 'DispatchmentConfiguration') </a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2655.htm">«Situation» faulty input (FoV) of 'ScalingConfiguration' in 'configureScaling' function
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2654.htm">«Situation» faulty input (FoV) of 'RegularDiagnostics' in 'handleDiagnostics' function
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2595.htm">«Situation» 'encode image' (function) faulty (contrast-brightness)
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2677.htm">«Situation» function 'acquireDiagnostics' faulty (FoV)
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2680.htm">«Situation» function 'analyseImageMetaData' faulty (FoV)
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2647.htm">«Situation» faulty input (FoV) of 'DiagnosticsInformation' in 'receiveDiagnosticsInformation' function
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2652.htm">«Situation» faulty input (FoV) of 'RAWDataImage' in 'provideImageMetaData' function
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2732.htm">«Situation» SOW1-SafeState request is not detected OR 'switch Stream off' signal is NOT generated</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2579.htm">«Situation» 'configureDispatchment' (function) faulty (integrity loss (FoV) of 'DispatchmentConfiguration') 
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2621.htm">«Situation» faulty (FoV) input of 'TargetResolutionImage' to 'encode image'</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2688.htm">«Situation» function 'enableStream' faulty (contrast-brightness)
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2588.htm">«Situation» 'configureRAWStream' (function) faulty ( integrity loss (FoV) of 'RAWStreamConfiguration')
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2582.htm">«Situation» 'configureEncoding' (function) faulty (integrity loss (FoV) of 'EncodingConfiguration') 
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2734.htm">«Situation» storage (functionality) of 'tmpDataImage' faulty (FoV)</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2597.htm">«Situation» 'scale image' (function) faulty (contrast-brightness)
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2730.htm">«Situation» reception of newImageIndicator faulty (does not guarantee consecutiveness)</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2620.htm">«Situation» faulty (FoV) input of 'RAWImage' to 'processImage'</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2648.htm">«Situation» faulty input (FoV) of 'DispatchmentConfiguration' in 'configureDispatchment' function
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2695.htm">«Situation» function 'provideConfiguration' faulty (FoV)
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2643.htm">«Situation» faulty input (contrast-brightness) of 'VideoConfiguration' in 'storeVideoStreamConfiguration' function
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2690.htm">«Situation» function 'enableStream' faulty (frozen image)</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2618.htm">«Situation» faulty (FoV) input of 'newImageIndicator' in 'recceive RAW image'</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2578.htm">«Situation» 'configureDispatchment' (function) faulty (integrity loss (contrast-brightness) of 'DispatchmentConfiguration') 
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2633.htm">«Situation» faulty input (contrast-brightness) of 'DiagnosticsInformation' in 'receiveDiagnosticsInformation' function
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2671.htm">«Situation» faulty input (frozen image) of 'VideoConfiguration' in 'storeVideoStreamConfiguration' function
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2679.htm">«Situation» function 'analyseImageMetaData' faulty (contrast-brightness)
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2731.htm">«Situation» scale image faulty (does not guarantee consecutiveness)</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2645.htm">«Situation» faulty input (contrast-brightness) of 'VideoStreamOff-Command' in 'switchVideoStraemOff' function
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2681.htm">«Situation» function 'analyseImageMetaData' faulty (frozen image)
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2670.htm">«Situation» faulty input (frozen image) of 'ScalingConfiguration' in 'configureScaling' function</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2586.htm">«Situation» 'configureProcessing' (function) faulty ( integrity loss (frozen image) of 'ProcessingConfiguration')</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2623.htm">«Situation» faulty (FoV) input of 'VideoConfiguration' to 'encode image'</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2596.htm">«Situation» 'encode image' (function) faulty (FoV)</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2629.htm">«Situation» faulty (no consecutive) reception of  'Encoded Image'</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2723.htm">«Situation» provision of RAW  Data Image (function) faulty (contrast-brightness) 
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2646.htm">«Situation» faulty input (contrast-brightness) of 'VideoStreamOn-Command' in 'switchVideoSreamOn' function
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2728.htm">«Situation» reception of 'raw image' (function) faulty (contrast-brightness)
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2613.htm">«Situation» faulty (contrast-brightness) input of RAW Stream via input interface
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2585.htm">«Situation» 'configureProcessing' (function) faulty ( integrity loss (FoV) of 'ProcessingConfiguration')
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2739.htm">occurrence</a></td>
+					<td width="10%" class="TableRow" valign="top">Property</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2707.htm">«Situation» function 'switchVideoSreamOn' faulty (FoV)
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2698.htm">«Situation» function 'provideImageMetaData' faulty (FoV)
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2607.htm">«Situation» faulty (contrast-brightness) input of 'newImageIndicator' in 'recceive RAW image'
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2581.htm">«Situation» 'configureEncoding' (function) faulty (integrity loss (contrast-brightness) of 'EncodingConfiguration') 
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2741.htm">causeOccurrence</a></td>
+					<td width="10%" class="TableRow" valign="top">Property</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2703.htm">«Situation» function 'storeVideoStreamConfiguration' faulty (contrast-brightness)
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2725.htm">«Situation» reception (functionality) of RAW images faulty (does not guarantee consecutiveness)</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2668.htm">«Situation» faulty input (frozen image) of 'RAWStreamConfiguration' in 'configureRAWStream' function</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2594.htm">«Situation» 'dispatch image' (function) faulty (FoV)</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2687.htm">«Situation» function 'disableStream' faulty (frozen image)</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2682.htm">«Situation» function 'configureStream' faulty (contrast-brightness)
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2678.htm">«Situation» function 'acquireDiagnostics' faulty (frozen image)
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2692.htm">«Situation» function 'handleDiagnostics' faulty (FoV)
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2706.htm">«Situation» function 'switchVideoSreamOn' faulty (contrast-brightness)
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2662.htm">«Situation» faulty input (frozen image) of 'DispatchmentConfiguration' in 'configureDispatchment' function</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2616.htm">«Situation» faulty (FoV) input of  'VideoConfiguration' to 'scale image'</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2626.htm">«Situation» faulty (frozen image) input of 'RAWDataImage' in 'temporary storage...'</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2711.htm">«Situation» function 'switchVideoStraemOff' faulty (frozen image)
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2726.htm">«Situation» reception (functionality) of RAW Stream via Input Interface faulty (contrast-brightness)
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2591.htm">«Situation» 'configureScaling' (function) faulty ( integrity loss (frozen image) of 'ScalingConfiguration')</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2722.htm">«Situation» processing image (function) faulty (FoV)</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2733.htm">«Situation» storage (functionality) of 'tmpDataImage' faulty (contrast-brightness)
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2609.htm">«Situation» faulty (contrast-brightness) input of 'rawImage' in 'receive RAW image'
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2592.htm">«Situation» 'configureScaling' (function) faulty (integrity loss (contrast-brightness) of 'ScalingConfiguration')
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2709.htm">«Situation» function 'switchVideoStraemOff' faulty (contrast-brightness)
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2600.htm">«Situation» dispatch image faulty (does not guarantee consecutiveness)</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2619.htm">«Situation» faulty (FoV) input of 'rawImage' in 'receive RAW image'</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2740.htm">causeOccurrence</a></td>
+					<td width="10%" class="TableRow" valign="top">Property</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2601.htm">«Situation» encode image faulty (does not guarantee consecutiveness)</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2701.htm">«Situation» function 'receiveDiagnosticsInformation' faulty (FoV)
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2724.htm">«Situation» provision of RAW  Data Image (function) faulty (FoV) </a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2593.htm">«Situation» 'dispatch image' (function) faulty (contrast-brightness)
+</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA4/EA2599.htm">«Situation» (frame reception delivers the same frame) sequence integrity: frame repetition</a></td>
+					<td width="10%" class="TableRow" valign="top">Situation</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+
+			</table>
+		</div>
+	</div>
+ </div>
+ </td>
+				</tr>
+			</tbody>
+		</table>
+		
+</div>
+</body>
+</html>
+

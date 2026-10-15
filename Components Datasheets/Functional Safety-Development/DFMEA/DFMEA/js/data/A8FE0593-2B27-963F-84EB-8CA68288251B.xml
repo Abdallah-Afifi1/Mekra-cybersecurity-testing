@@ -1,0 +1,10 @@
+tocTab[tocTab.length] = new Array("0.2.2.13:2", "", "12", "EARoot/EA2/EA2/EA13/EA1045.htm", "175.png", "160", "0", "", "Logical diagram0","{A3FDE150-8228-BC9B-8926-42541DA6060F}");
+tocTab[tocTab.length] = new Array("0.2.2.13:3", "", "«FMEAItem» 12", "EARoot/EA2/EA2/EA13/EA1048.htm", "5.png", "E1335", "0", "", "Class0","{A2063181-7331-4CFF-A9E7-7252801EEAA7}");
+tocTab[tocTab.length] = new Array("0.2.2.13:1", "", "12", "EARoot/EA2/EA2/EA13/EA1043.htm", "182.png", "185", "E1335", "", "CompositeStructure diagram0","{978F9217-7E54-4785-AA78-086C61066A1E}");
+tocTab[tocTab.length] = new Array("0.2.2.13:4", "", "AP", "EARoot/EA2/EA2/EA13/EA1049.htm", "118.png", "E1479", "E1335", "", "Part0","{3F2F28B8-FDCD-41ef-A754-C6C84130EFEE}");
+tocTab[tocTab.length] = new Array("0.2.2.13:5", "", "AP_aux", "EARoot/EA2/EA2/EA13/EA1050.htm", "118.png", "E1485", "E1335", "", "Part0","{56A88764-4ADB-4ccd-B897-098D367BB15B}");
+tocTab[tocTab.length] = new Array("0.2.2.13:6", "", "Cause: reception of &#39;raw image&#39; (function) faulty (contrast-brightness)<br />", "EARoot/EA2/EA2/EA13/EA1051.htm", "118.png", "E1484", "E1335", "", "Part0","{96B08CC0-8B66-4ce3-B193-5D34218EBA19}");
+tocTab[tocTab.length] = new Array("0.2.2.13:7", "", "DetMeasure: Review (if the prosposed technical solution suffice)", "EARoot/EA2/EA2/EA13/EA1052.htm", "118.png", "E1483", "E1335", "", "Part0","{5F5B6B16-CCF7-4d9b-839B-EE9D44BDF625}");
+tocTab[tocTab.length] = new Array("0.2.2.13:8", "", "Effect: Details lost due to incorrect contrast or brightness", "EARoot/EA2/EA2/EA13/EA1053.htm", "118.png", "E1482", "E1335", "", "Part0","{C6956795-4B5B-4f7e-857B-978B159FFDFC}");
+tocTab[tocTab.length] = new Array("0.2.2.13:9", "", "FailureMode: Stream with incorrect contrast or brightness", "EARoot/EA2/EA2/EA13/EA1054.htm", "118.png", "E1481", "E1335", "", "Part0","{33F6DE03-722F-4bcb-95F3-6ADEC65228A1}");
+tocTab[tocTab.length] = new Array("0.2.2.13:10", "", "PrevMeasure: fault (contrast-brightness) free reception of &#39;raw image&#39; (function) shall be ensured", "EARoot/EA2/EA2/EA13/EA1055.htm", "118.png", "E1480", "E1335", "", "Part0","{233C0F93-E460-42c5-A568-39737C6FB0CC}");

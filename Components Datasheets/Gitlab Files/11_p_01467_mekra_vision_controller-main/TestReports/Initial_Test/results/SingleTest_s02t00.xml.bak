@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<singletest source="MVC-12345-B-Sample_functional_B.py">
+	<meta>
+		<title>MVC-12345-B-Sample functional B</title>
+		<description>basic access tests for climate chamber access</description>
+		<author>ReinerS</author>
+		<date>12.02.2026</date>
+		<version>1.0.0</version>
+		<last_revision>initial</last_revision>
+		<starttime>2026-05-28T15:09:58</starttime>
+		<endtime>2026-05-28T15:11:16</endtime>
+		<hil_computername>VVE-KAMTEST-W10</hil_computername>
+		<hil_project_path>C:\Users\systest_MCP2\Documents\11_p_01467_mekra_vision_controller</hil_project_path>
+		<hil_username>systest_MCP2</hil_username>
+	</meta>
+	<results>
+		<result>
+			<description>
+
+24548571&amp;260521&amp;12953&amp;98D3D2-003299&amp;B03
+			</description>
+			<verdict>INFO</verdict>
+			<deltatime>14.849</deltatime>
+		</result>
+		<result>
+			<description> Power supply set to 28.0 V</description>
+			<verdict />
+		</result>
+		<result>
+			<description>
+Check PSU output voltage
+Expected value: 28.000 V
+Current value:  27.997 V (voltage_ch4)
+Absolute Tolerance:  +/- 0.020 V
+			</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-12345-B-Sample_functional_B</testcase_id>
+			<deltatime>15.983</deltatime>
+		</result>
+	</results>
+</singletest>

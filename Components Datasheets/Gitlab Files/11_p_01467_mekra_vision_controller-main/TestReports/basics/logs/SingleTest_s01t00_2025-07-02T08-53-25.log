@@ -1,0 +1,110 @@
+Dongle-DLL v5.1 (x64)
+# #####################################################################
+# Checking License: TestToolkit v2.2.1...
+# #####################################################################
+D-USB-2020-B-00DB TestToolkit 2.2.x
+PASSED
+# License valid
+[verifyFeature] ttk_checks 1.7.0
+
+== dmm_test.py =================================================================
+[[setup]]
+# #############################################################
+# Connected to TCPIP0::192.168.10.10:
+# Device: Rohde&Schwarz NGP824
+#         5601.4007k03/111087,02.025 02E3A3C161
+# #############################################################
+# #############################################################
+# Connected to TCPIP0::192.168.10.20:
+# Device: Siglent Technologies SDM3065X
+#         SDM36HCX800721,3.02.01.13
+# #############################################################
+  INFO  - Power supply set to 2.22 V
+          Delta time: 0.30s
+voltage_preset_ch1: 2.220 V
+voltage_ch1: 2.066 V
+ PASSED - Check PSU output voltage
+          Expected value: 2.220 V
+          Current value:  2.219 V (voltage_ch1)
+          Absolute Tolerance:  +/- 0.020 V
+          Delta time: 0.32s
+          Testcase-ID: dmm_basics
+ PASSED - Check DMM voltage (autorange)
+          Expected value: 2.2200 V
+          Current value:  2.2190 V (voltage)
+          Absolute Tolerance:  +/- 0.0200 V
+          Delta time: 2.34s
+          Testcase-ID: dmm_basics
+[value] '+2.21901121E+00\n'
+ PASSED - Check DMM voltage (20V range)
+          Expected value: 2.2200 V
+          Current value:  2.2190 V (voltage_20V)
+          Absolute Tolerance:  +/- 0.0200 V
+          Delta time: 4.26s
+          Testcase-ID: dmm_basics
+[value] '+9.90000000E+37\n'
+ PASSED - Check DMM voltage (200mV range) => out-of-range
+          Expected value: ≠ 2220.0000 mV
+          Current value:  nan mV (voltage_200mV)
+          Absolute Tolerance:  +/- 0.0200 mV
+          Delta time: 6.76s
+          Testcase-ID: dmm_basics
+  INFO  - Power supply set to 12.0 V
+          Delta time: 6.79s
+voltage_preset_ch1: 12.000 V
+voltage_ch1: 11.996 V
+ PASSED - Check PSU output voltage
+          Expected value: 12.000 V
+          Current value:  11.997 V (voltage_ch1)
+          Absolute Tolerance:  +/- 0.020 V
+          Delta time: 6.81s
+          Testcase-ID: dmm_basics
+ PASSED - Check DMM voltage (autorange)
+          Expected value: 12.0000 V
+          Current value:  11.9984 V (voltage)
+          Absolute Tolerance:  +/- 0.0200 V
+          Delta time: 8.88s
+          Testcase-ID: dmm_basics
+[value] '+1.19994041E+01\n'
+ PASSED - Check DMM voltage (20V range)
+          Expected value: 12.0000 V
+          Current value:  11.9994 V (voltage_20V)
+          Absolute Tolerance:  +/- 0.0200 V
+          Delta time: 10.81s
+          Testcase-ID: dmm_basics
+[value] '+9.90000000E+37\n'
+ PASSED - Check DMM voltage (2V range) => out-of-range
+          Expected value: ≠ 12.0000 V
+          Current value:  nan V (voltage_2V)
+          Absolute Tolerance:  +/- 0.0200 V
+          Delta time: 13.28s
+          Testcase-ID: dmm_basics
+voltage: 1.2333 V
+
+[[breakdown]]
+
+--Elapsed Time:----------------
+  15.2 seconds
+
+--Results:---------------------
+   INFO   - Power supply set to 2.22 V
+  PASSED  - Check PSU output voltage\nExpected value: 2.220 V\nCurrent value:  2.219 V (voltage_ch1)\nAbsolute Tolerance:  +/- 0.020 V
+  PASSED  - Check DMM voltage (autorange)\nExpected value: 2.2200 V\nCurrent value:  2.2190 V (voltage)\nAbsolute Tolerance:  +/- 0.0200 V
+  PASSED  - Check DMM voltage (20V range)\nExpected value: 2.2200 V\nCurrent value:  2.2190 V (voltage_20V)\nAbsolute Tolerance:  +/- 0.0200 V
+  PASSED  - Check DMM voltage (200mV range) => out-of-range\nExpected value: ≠ 2220.0000 mV\nCurrent value:  nan mV (voltage_200mV)\nAbsolute Tolerance:  +/- 0.0200 mV
+   INFO   - Power supply set to 12.0 V
+  PASSED  - Check PSU output voltage\nExpected value: 12.000 V\nCurrent value:  11.997 V (voltage_ch1)\nAbsolute Tolerance:  +/- 0.020 V
+  PASSED  - Check DMM voltage (autorange)\nExpected value: 12.0000 V\nCurrent value:  11.9984 V (voltage)\nAbsolute Tolerance:  +/- 0.0200 V
+  PASSED  - Check DMM voltage (20V range)\nExpected value: 12.0000 V\nCurrent value:  11.9994 V (voltage_20V)\nAbsolute Tolerance:  +/- 0.0200 V
+  PASSED  - Check DMM voltage (2V range) => out-of-range\nExpected value: ≠ 12.0000 V\nCurrent value:  nan V (voltage_2V)\nAbsolute Tolerance:  +/- 0.0200 V
+
+--Summary:---------------------
+  FAILED : 0
+  PASSED : 8
+  INFO   : 2
+-------------------------------
+
+XML... ...writing......done
+# Results stored to "SingleTest_s01t00.xml".
+Done.
+[[test_runner_finally]]

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<singletest source="test_results_extended_formats.py">
+	<meta>
+		<title>Test Results – Extended Formats</title>
+		<description>Test result entries with extended formats</description>
+		<author>Tremmel</author>
+		<date>22.05.2023</date>
+		<version>1.2.0</version>
+		<last_revision>migrated from base project examples</last_revision>
+		<starttime>2026-02-24T12:46:06</starttime>
+		<endtime>2026-02-24T12:46:06</endtime>
+		<hil_computername>TTE-SOW2-W11</hil_computername>
+		<hil_project_path>d:\VSC-GitLab\11_p_01467_mekra_vision_controller</hil_project_path>
+		<hil_username>svc_systessow2</hil_username>
+	</meta>
+	<results>
+		<result>
+			<description>
+
+Test Results With Images
+			</description>
+			<verdict />
+		</result>
+		<result>
+			<description>My hovercraft is full of eels.</description>
+			<verdict>FIXME</verdict>
+			<object name="hovercraft.cc0.jpg" source="data/hovercraft.cc0.jpg" type="image/jpeg" />
+		</result>
+		<result>
+			<description>I will not buy this tobacconist's; it is scratched.</description>
+			<verdict>FAILED</verdict>
+			<object name="scratched.cc0.jpg" source="d:/VSC-GitLab/11_p_01467_mekra_vision_controller/TestReports/SingleTestResults/scratched.cc0.jpg" type="image/jpeg" />
+		</result>
+		<result>
+			<description>
+My hovercraft is full of eels and has multiple images plus
+ • one generic object that may get linked to in html reports and 
+ • one text/plain object that will be embedded in html reports.
+			</description>
+			<verdict>FAILED</verdict>
+			<object name="hovercraft.cc0.jpg" source="data/hovercraft.cc0.jpg" type="image/jpeg" />
+			<object name="eel.cc0.png" source="data/eel.cc0.png" type="image/png" />
+			<object name="eel_distribution.mat" source="data/eel_distribution.mat" type="" />
+			<object name="lorem_ipsum.txt" source="data/lorem_ipsum.txt" type="text/plain" />
+		</result>
+		<result>
+			<description>How not to be seen.(files missing at report generation time will be added as a notice)</description>
+			<verdict>PASSED</verdict>
+			<object name="missing file.gone" source="data/missing file.gone" type="" />
+			<object name="nada.png" source="data/nada.png" type="image/png" />
+		</result>
+		<result>
+			<description>A result entry with a plotted figure (stored alongside the single test result)</description>
+			<verdict>INFO</verdict>
+			<object name="SingleTestManual - test_results_extended_formats.png" source="d:/VSC-GitLab/11_p_01467_mekra_vision_controller/TestReports/SingleTestResults/SingleTestManual - test_results_extended_formats.png" type="image/png" />
+		</result>
+		<result>
+			<description>A result entry with an image (stored in container data folder, if available)</description>
+			<verdict>INFO</verdict>
+			<object name="test.png" source="d:/VSC-GitLab/11_p_01467_mekra_vision_controller/TestReports/SingleTestResults/SingleTestManual - test_results_extended_formats/test.png" type="image/png" />
+		</result>
+		<result>
+			<description>
+
+Test Results With Test Case IDs
+			</description>
+			<verdict />
+		</result>
+		<result>
+			<description>Test step with a single test case ID</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>1970</testcase_id>
+		</result>
+		<result>
+			<description>Test step with two test case IDs</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>1970</testcase_id>
+			<testcase_id>MPFC_S2E12</testcase_id>
+		</result>
+		<result>
+			<description>
+
+Test Results - Odds &amp; Ends
+			</description>
+			<verdict />
+		</result>
+		<result>
+			<description>
+Test result with a directly added comment:
+
+I will not buy this tobacconist's
+			</description>
+			<verdict>INFO</verdict>
+			<comment>it is scratched!</comment>
+		</result>
+		<result>
+			<description>
+Test result with manually added delta time stamp:
+
+And now for something completely different
+			</description>
+			<verdict>INFO</verdict>
+			<deltatime>12.346</deltatime>
+		</result>
+	</results>
+</singletest>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<singletest source="test_someip">
+	<meta>
+		<title>test someip</title>
+		<description />
+		<author>N.N.</author>
+		<date>00.00.0000</date>
+		<version>0.0.0</version>
+		<last_revision>no description</last_revision>
+		<starttime>2026-07-23T10:48:37</starttime>
+		<endtime>2026-07-23T10:49:17</endtime>
+		<hil_computername>TTE-SOW2-W11</hil_computername>
+		<hil_project_path>d:\VSC-GitLab\11_p_01467_mekra_vision_controller</hil_project_path>
+		<hil_username>svc_systessow2</hil_username>
+		<name />
+		<testcase>SOME/IP message-header conformance - data-driven negative tests</testcase>
+		<usage>edit TEST_CASES (add / change rows) and SELECTED (which ones to run).</usage>
+		<verifies>
+each header field, when set to an invalid value, is answered with
+the correct SOME/IP error response (message_type 0x81 + return_code).
+		</verifies>
+	</meta>
+	<results>
+		<result>
+			<description>
+
+Precondition: power on -&gt; camera OPERATIONAL
+			</description>
+			<verdict />
+		</result>
+		<result>
+			<description>OfferService seen (camera OPERATIONAL)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>SOME/IP header conformance (data-driven)</testcase_id>
+			<deltatime>31.098</deltatime>
+		</result>
+		<result>
+			<description>
+
+Positive control
+			</description>
+			<verdict />
+		</result>
+		<result>
+			<description>[92411 - Successfully processed Request] response received</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>SOME/IP header conformance (data-driven)</testcase_id>
+			<deltatime>32.645</deltatime>
+		</result>
+		<result>
+			<description>
+
+Header negative cases
+			</description>
+			<verdict />
+		</result>
+		<result>
+			<description>[92403_unknown_service - Unknown Service ID] response received</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>SOME/IP header conformance (data-driven)</testcase_id>
+			<deltatime>34.177</deltatime>
+		</result>
+		<result>
+			<description>[92417_unknown_method - Unknown Method ID] response received</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>SOME/IP header conformance (data-driven)</testcase_id>
+			<deltatime>35.722</deltatime>
+		</result>
+		<result>
+			<description>[92416_wrong_protocol - Wrong Protocol Version] response received</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>SOME/IP header conformance (data-driven)</testcase_id>
+			<deltatime>37.255</deltatime>
+		</result>
+		<result>
+			<description>[92419_wrong_interface - Wrong Interface Version] response received</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>SOME/IP header conformance (data-driven)</testcase_id>
+			<deltatime>38.788</deltatime>
+		</result>
+		<result>
+			<description>[92404_wrong_msgtype - Wrong Message Type] response received</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>SOME/IP header conformance (data-driven)</testcase_id>
+			<deltatime>40.308</deltatime>
+		</result>
+	</results>
+</singletest>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testreport version="1.0" source="basics.ser" xmlns:iTS="http://www.isyst.de/iTestStudio.xsd">
+	<meta>
+		<title />
+		<description>Basic Tests for SOW2 test environment</description>
+		<author>J. Völler &amp; S. Reiner</author>
+		<date>2025-07-25T11:55:22</date>
+		<version />
+		<last_revision />
+		<hardwareversion>0</hardwareversion>
+		<softwareversion>0</softwareversion>
+		<customer>Volvo</customer>
+		<project>SOW 2 - Rear and Trailer Camera RFP - Volvo</project>
+		<created_on>2025-07-31T09:35:37</created_on>
+		<department>T-EQS</department>
+	</meta>
+	<testsequences>
+		<testsequence source="someip_test.seq">
+			<meta>
+				<title />
+				<description>&lt;description text&gt;</description>
+				<author>Justin Case</author>
+				<date>2025-07-25T11:55:12</date>
+				<version />
+				<last_revision />
+			</meta>
+			<singletests>
+				<singletest source="someip_test.py">
+					<meta>
+						<title>someip test</title>
+						<description>basic test for dhcp server</description>
+						<author>Völler J</author>
+						<date>02.07.2025</date>
+						<version>1.0.0</version>
+						<last_revision>initial</last_revision>
+						<starttime />
+						<endtime />
+						<imports />
+					</meta>
+					<results>
+						<result>
+							<description>Test script aborted with errors.</description>
+							<verdict>FAILED</verdict>
+						</result>
+						<result>
+							<description>
+Traceback (most recent call last):
+  File "D:\Releases\TestSupport\test_support312\test_runner_base.py", line 289, in runTest
+  File "D:\VSC-GitLab\11_p_01467_mekra_vision_controller\Python\TestPool\someip_test.py", line 17, in &lt;module&gt;
+    from _automation_wrapper_ import TestEnv
+  File "D:\VSC-GitLab\11_p_01467_mekra_vision_controller\Python\TestPool\_automation_wrapper_.py", line 73, in &lt;module&gt;
+    from tools.dhcp.dhcp_server import DHCPServer
+  File "D:\VSC-GitLab\11_p_01467_mekra_vision_controller\Python\TestLibraries\tools\dhcp\dhcp_server.py", line 263
+    &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+    ^^
+SyntaxError: invalid syntax
+
+							</description>
+							<verdict>ERROR</verdict>
+						</result>
+					</results>
+				</singletest>
+			</singletests>
+		</testsequence>
+	</testsequences>
+</testreport>

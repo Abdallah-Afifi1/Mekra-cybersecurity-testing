@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<singletest source="Heating_Control/MVC-100352-Check_heating_modes_during_runtime_while_streaming_OP_active.py">
+	<meta>
+		<title>MVC-100352-Check heating modes during runtime while streaming OP active</title>
+		<description>
+Heating modes while the overheat protection is active and the camera
+streams, the heating has to stay off even when it is switched on manually
+		</description>
+		<author>Ehu Li</author>
+		<date>03.08.2026</date>
+		<version>1.0.0</version>
+		<last_revision>initial</last_revision>
+		<starttime>2026-08-17T13:47:08</starttime>
+		<endtime>2026-08-17T14:03:05</endtime>
+		<hil_computername>TTE-SOW2-W11</hil_computername>
+		<hil_project_path>D:\VSC-GitLab\11_p_01467_mekra_vision_controller</hil_project_path>
+		<hil_username>svc_systessow2</hil_username>
+	</meta>
+	<results>
+		<result>
+			<description>
+
+Preconditions
+			</description>
+			<verdict />
+		</result>
+		<result>
+			<description>SW config 10C1 (rcam_2): service port 30501, SD 239.120.1.1:30490, 8 ROIs, Tauto 15.0/20.0 degC, Tprotection 45.0/40.0 degC</description>
+			<verdict>INFO</verdict>
+			<deltatime>1.081</deltatime>
+		</result>
+		<result>
+			<description>Production data Volvo_Standard_1Gbit_SN00012803.py: MAC 98:d3:d2:00:32:03, serial 00012803, hwVer 01H-</description>
+			<verdict>INFO</verdict>
+			<deltatime>1.115</deltatime>
+		</result>
+		<result>
+			<description> U_in = 0.0 V</description>
+			<verdict />
+		</result>
+		<result>
+			<description>Channel 1 disabled, DUT powered down</description>
+			<verdict>INFO</verdict>
+			<deltatime>1.130</deltatime>
+		</result>
+		<result>
+			<description> U_in = 28.0 V</description>
+			<verdict />
+		</result>
+		<result>
+			<description>
+Supply voltage on channel 1
+Expected value: 28.000 V
+Current value:  28.000 V (voltage_ch1)
+Absolute Tolerance:  +/- 0.100 V
+			</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-100352</testcase_id>
+			<deltatime>4.195</deltatime>
+		</result>
+		<result>
+			<description> DHCP address allocation</description>
+			<verdict />
+		</result>
+		<result>
+			<description>DHCP lease 192.168.120.10 acknowledged to the DUT</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-100352</testcase_id>
+			<deltatime>15.878</deltatime>
+		</result>
+		<result>
+			<description> DUT reaches OPERATIONAL state</description>
+			<verdict />
+		</result>
+		<result>
+			<description>SD OfferService received after 0.2 s -&gt; DUT has an IP address and is in OPERATIONAL state</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-100352</testcase_id>
+			<deltatime>16.031</deltatime>
+		</result>
+		<result>
+			<description>OfferService announces service 0x433F at 192.168.120.10:30501 | config {'mac_address': '98D3D2003203', 'serial_nb': '00012803', 'device_type': 'rcam_2'}</description>
+			<verdict>INFO</verdict>
+			<deltatime>16.033</deltatime>
+		</result>
+		<result>
+			<description>SOME/IP endpoint: local ('192.168.120.1', 50010) -&gt; target 192.168.120.10:30501</description>
+			<verdict>INFO</verdict>
+			<deltatime>16.035</deltatime>
+		</result>
+		<result>
+			<description>Waiting 2.0 s for the DUT to finish its startup</description>
+			<verdict>INFO</verdict>
+			<deltatime>16.035</deltatime>
+		</result>
+		<result>
+			<description>subscribeROIVideo (0xC0000003, ROI 3): method 0x0131, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-100352</testcase_id>
+			<deltatime>18.139</deltatime>
+		</result>
+		<result>
+			<description>RTP stream active after subscribeROIVideo on port 5015: 57 bytes from 192.168.120.10:5004</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-100352</testcase_id>
+			<deltatime>18.206</deltatime>
+		</result>
+		<result>
+			<description>
+
+Protection state at Tambient = 50 degC
+			</description>
+			<verdict />
+		</result>
+		<result>
+			<description>Tambient reached 49.1 degC (target 50.0 +/- 1.0 degC) after 270 s</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-100352</testcase_id>
+			<deltatime>288.251</deltatime>
+		</result>
+		<result>
+			<description>Timager &gt;= 45.0 degC or Tser &gt; 40.0 degC: Timager 36.80 degC [payload 0x00000000001700], Tser 43.00 degC [block 0x0002/0x0000, 2 bytes, payload 0x000000021580, 43.00 degC] after 0 s (Tambient 49.1 degC)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-100352</testcase_id>
+			<deltatime>288.274</deltatime>
+		</result>
+		<result>
+			<description>getCamControl (read control 0x09): method 0x0203, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-100352</testcase_id>
+			<deltatime>288.282</deltatime>
+		</result>
+		<result>
+			<description>Control 0x09 shall be in automatic mode and off: payload 0x07040000 (expected 0x07040000)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-100352</testcase_id>
+			<deltatime>288.282</deltatime>
+		</result>
+		<result>
+			<description>setCamExclusive (lock camera for 1 s): method 0x0011, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-100352</testcase_id>
+			<deltatime>289.292</deltatime>
+		</result>
+		<result>
+			<description>setCamControl (in manual mode and off although ON was written): method 0x0201, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-100352</testcase_id>
+			<deltatime>289.302</deltatime>
+		</result>
+		<result>
+			<description>getCamControl (read control 0x09): method 0x0203, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-100352</testcase_id>
+			<deltatime>289.312</deltatime>
+		</result>
+		<result>
+			<description>Control 0x09 shall be in manual mode and off although ON was written: payload 0x07020000 (expected 0x07020000)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-100352</testcase_id>
+			<deltatime>289.312</deltatime>
+		</result>
+		<result>
+			<description>setCamExclusive (lock camera for 1 s): method 0x0011, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-100352</testcase_id>
+			<deltatime>290.319</deltatime>
+		</result>
+		<result>
+			<description>setCamControl (in manual mode and off): method 0x0201, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-100352</testcase_id>
+			<deltatime>290.329</deltatime>
+		</result>
+		<result>
+			<description>getCamControl (read control 0x09): method 0x0203, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-100352</testcase_id>
+			<deltatime>290.339</deltatime>
+		</result>
+		<result>
+			<description>Control 0x09 shall be in manual mode and off: payload 0x07020000 (expected 0x07020000)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-100352</testcase_id>
+			<deltatime>290.340</deltatime>
+		</result>
+		<result>
+			<description>
+
+Normal operation at Tambient = 20 degC
+			</description>
+			<verdict />
+		</result>
+		<result>
+			<description>Tambient reached 19.9 degC (target 20.0 +/- 1.0 degC) after 360 s</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-100352</testcase_id>
+			<deltatime>650.398</deltatime>
+		</result>
+		<result>
+			<description>Timager 36.00 degC [payload 0x00000000001680], Tser 42.00 degC [block 0x0002/0x0000, 2 bytes, payload 0x000000021500, 42.00 degC], Tambient 19.9 degC (0 s elapsed)</description>
+			<verdict>INFO</verdict>
+			<deltatime>650.427</deltatime>
+		</result>
+		<result>
+			<description>Timager &lt;= 40.0 degC and Tser &lt;= 35.0 degC and Timager &gt; 20.0 degC: Timager 29.60 degC [payload 0x00000000001280], Tser 34.00 degC [block 0x0002/0x0000, 2 bytes, payload 0x000000021100, 34.00 degC] after 300 s (Tambient 20.0 degC)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-100352</testcase_id>
+			<deltatime>955.030</deltatime>
+		</result>
+		<result>
+			<description>getCamControl (read control 0x09): method 0x0203, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-100352</testcase_id>
+			<deltatime>955.042</deltatime>
+		</result>
+		<result>
+			<description>Control 0x09 shall be in manual mode and off: payload 0x07020000 (expected 0x07020000)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-100352</testcase_id>
+			<deltatime>955.042</deltatime>
+		</result>
+		<result>
+			<description>setCamExclusive (lock camera for 1 s): method 0x0011, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-100352</testcase_id>
+			<deltatime>955.052</deltatime>
+		</result>
+		<result>
+			<description>setCamControl (in automatic mode): method 0x0201, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-100352</testcase_id>
+			<deltatime>955.061</deltatime>
+		</result>
+		<result>
+			<description>getCamControl (read control 0x09): method 0x0203, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-100352</testcase_id>
+			<deltatime>955.072</deltatime>
+		</result>
+		<result>
+			<description>Control 0x09 shall be in automatic mode and off: payload 0x07040000 (expected 0x07040000)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-100352</testcase_id>
+			<deltatime>955.072</deltatime>
+		</result>
+		<result>
+			<description>still out of protection after the switch to automatic: Timager 29.60 degC [payload 0xc0a87801001280], Tser 34.00 degC [block 0x0002/0x0000, 2 bytes, payload 0x000000021100, 34.00 degC] after 0 s (Tambient 20.0 degC)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-100352</testcase_id>
+			<deltatime>955.102</deltatime>
+		</result>
+		<result>
+			<description>
+
+Postcondition: stream off
+			</description>
+			<verdict />
+		</result>
+		<result>
+			<description>unSubscribeROIVideo (0xC0000003, ROI 3): method 0x0132, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-100352</testcase_id>
+			<deltatime>955.208</deltatime>
+		</result>
+		<result>
+			<description>RTP stream off after unSubscribeROIVideo on port 5015: no packet within 2.0 s</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-100352</testcase_id>
+			<deltatime>957.217</deltatime>
+		</result>
+		<result>
+			<description> U_in = 0.0 V</description>
+			<verdict />
+		</result>
+		<result>
+			<description>Channel 1 disabled, DUT powered down</description>
+			<verdict>INFO</verdict>
+			<deltatime>957.238</deltatime>
+		</result>
+	</results>
+</singletest>

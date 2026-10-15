@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<singletest source="development_support/FF_Chip_test_1.py">
+	<meta>
+		<title>FF Chip test 1</title>
+		<description>basic access tests for climate chamber access</description>
+		<author>ReinerS</author>
+		<date>15.12.2025</date>
+		<version>1.0.0</version>
+		<last_revision>initial</last_revision>
+<<<<<<< HEAD
+<<<<<<< HEAD
+		<starttime>2026-04-30T08:06:38</starttime>
+		<endtime>2026-04-30T08:07:50</endtime>
+=======
+		<starttime>2026-07-06T15:07:56</starttime>
+		<endtime>2026-07-06T15:09:04</endtime>
+>>>>>>> 93d6095 (Update)
+=======
+		<starttime>2026-07-06T15:07:56</starttime>
+		<endtime>2026-07-06T15:09:04</endtime>
+>>>>>>> cd6bea95eb16eb82cfdd1fad980b69f85f9eab72
+		<hil_computername>TTE-SOW2-W11</hil_computername>
+		<hil_project_path>D:\VSC-GitLab\11_p_01467_mekra_vision_controller</hil_project_path>
+		<hil_username>svc_systessow2</hil_username>
+	</meta>
+	<results>
+		<result>
+			<description>Climate chamber set to manual mode / start</description>
+			<verdict>INFO</verdict>
+<<<<<<< HEAD
+<<<<<<< HEAD
+			<deltatime>1.366</deltatime>
+=======
+			<deltatime>0.572</deltatime>
+>>>>>>> 93d6095 (Update)
+=======
+			<deltatime>0.572</deltatime>
+>>>>>>> cd6bea95eb16eb82cfdd1fad980b69f85f9eab72
+		</result>
+		<result>
+			<description>
+Current temperature should be within climate chamber limits
+<<<<<<< HEAD
+<<<<<<< HEAD
+Value:     26.2 °C (temperature)
+=======
+Value:     84.9 °C (temperature)
+>>>>>>> 93d6095 (Update)
+=======
+Value:     84.9 °C (temperature)
+>>>>>>> cd6bea95eb16eb82cfdd1fad980b69f85f9eab72
+Min value: -72.0 °C
+Max value: 180.0 °C
+			</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>FF_Chip_test_1</testcase_id>
+<<<<<<< HEAD
+<<<<<<< HEAD
+			<deltatime>1.369</deltatime>
+=======
+			<deltatime>0.574</deltatime>
+>>>>>>> 93d6095 (Update)
+=======
+			<deltatime>0.574</deltatime>
+>>>>>>> cd6bea95eb16eb82cfdd1fad980b69f85f9eab72
+		</result>
+		<result>
+			<description>
+Active temperature setpoint should be within climate chamber limits
+Value:     70.0 °C (temperature_setpoint)
+Min value: -72.0 °C
+Max value: 180.0 °C
+			</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>FF_Chip_test_1</testcase_id>
+<<<<<<< HEAD
+<<<<<<< HEAD
+			<deltatime>1.371</deltatime>
+=======
+			<deltatime>0.577</deltatime>
+>>>>>>> 93d6095 (Update)
+=======
+			<deltatime>0.577</deltatime>
+>>>>>>> cd6bea95eb16eb82cfdd1fad980b69f85f9eab72
+		</result>
+		<result>
+			<description>Test script aborted with errors.</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>FF_Chip_test_1</testcase_id>
+<<<<<<< HEAD
+<<<<<<< HEAD
+			<deltatime>71.919</deltatime>
+=======
+			<deltatime>67.473</deltatime>
+>>>>>>> 93d6095 (Update)
+=======
+			<deltatime>67.473</deltatime>
+>>>>>>> cd6bea95eb16eb82cfdd1fad980b69f85f9eab72
+		</result>
+		<result>
+			<description>Keyboard Interrupt detected, current test aborted.</description>
+			<verdict>ERROR</verdict>
+			<testcase_id>FF_Chip_test_1</testcase_id>
+<<<<<<< HEAD
+<<<<<<< HEAD
+			<deltatime>71.919</deltatime>
+=======
+			<deltatime>67.473</deltatime>
+>>>>>>> 93d6095 (Update)
+=======
+			<deltatime>67.473</deltatime>
+>>>>>>> cd6bea95eb16eb82cfdd1fad980b69f85f9eab72
+		</result>
+	</results>
+</singletest>

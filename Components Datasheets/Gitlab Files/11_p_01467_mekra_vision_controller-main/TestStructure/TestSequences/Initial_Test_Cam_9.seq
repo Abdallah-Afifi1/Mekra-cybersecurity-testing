@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsequence>
+	<meta>
+		<title>Initial_test_9</title>
+		<description>&lt;description text&gt;</description>
+<<<<<<< HEAD
+<<<<<<< HEAD
+		<author>Stefan Reiner</author>
+		<date>2026-03-05T08:59:45</date>
+=======
+		<author>Ehu Li</author>
+		<date>2026-08-14T09:45:13</date>
+>>>>>>> cd6bea9 (Initial Branch)
+=======
+		<author>Ehu Li</author>
+		<date>2026-08-14T09:45:13</date>
+>>>>>>> cd6bea95eb16eb82cfdd1fad980b69f85f9eab72
+		<version />
+		<last_revision />
+	</meta>
+	<singletests>
+		<singletest source="Shutter_Control/MVC-92785-Shutter_mode_activation_during_runtime.py" />
+	</singletests>
+</testsequence>

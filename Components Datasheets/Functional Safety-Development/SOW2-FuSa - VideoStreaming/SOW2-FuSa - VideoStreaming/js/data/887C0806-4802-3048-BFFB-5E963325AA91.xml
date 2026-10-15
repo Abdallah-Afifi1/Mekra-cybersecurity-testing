@@ -1,0 +1,6 @@
+tocTab[tocTab.length] = new Array("0.2.1.1:1", "", "«Non-HumanActor» CameraHead(SOW1)", "EARoot/EA2/EA1/EA1/EA417.htm", "6.png", "E480", "0", "", "Actor0","{4AD05C3F-5ED6-4135-A37A-7FDFED01EB97}");
+tocTab[tocTab.length] = new Array("0.2.1.1:2", "", "User", "EARoot/EA2/EA1/EA1/EA418.htm", "6.png", "E478", "0", "", "Actor0","{0F152729-C1B3-4637-8D65-ABA8C6AA6297}");
+tocTab[tocTab.length] = new Array("0.2.1.1:3", "", "pVideoStream: ifVideoStream", "EARoot/EA2/EA1/EA1/EA419.htm", "95.png", "E498", "E478", "", "Port0","{D6D8922A-C971-4c28-8CE2-3570572FD02D}");
+tocTab[tocTab.length] = new Array("0.2.1.1:4", "", "pVideoStreamControl: ifVideoStreamControl", "EARoot/EA2/EA1/EA1/EA420.htm", "95.png", "E488", "E478", "", "Port0","{1FCE9E77-4BA0-4f75-860D-EB796D79C270}");
+tocTab[tocTab.length] = new Array("0.2.1.1:5", "", "pVideoStream: ifRAWVideoStream", "EARoot/EA2/EA1/EA1/EA421.htm", "95.png", "E499", "E480", "", "Port0","{3F0547EE-6504-44d6-83BC-3A7BD91B375D}");
+tocTab[tocTab.length] = new Array("0.2.1.1:6", "", "pVideoStreamControl: ifRAWVideoStreamControl", "EARoot/EA2/EA1/EA1/EA422.htm", "95.png", "E500", "E480", "", "Port0","{5842BC5D-DB6C-429e-9475-194E9554398A}");

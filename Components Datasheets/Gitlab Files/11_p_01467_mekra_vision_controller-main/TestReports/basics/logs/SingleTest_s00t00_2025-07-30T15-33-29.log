@@ -1,0 +1,111 @@
+Dongle-DLL v5.1 (x64)
+# #####################################################################
+# Checking License: TestToolkit v2.2.1...
+# #####################################################################
+D-USB-2020-B-00DB TestToolkit 2.2.x
+PASSED
+# License valid
+[verifyFeature] ttk_checks 1.7.0
+self.hostIP:  192.168.120.1
+self.serverIP:  192.168.120.4
+self.hostPort:  50010
+self.destinationPort:  30501
+hostSocket:  <socket.socket fd=972, family=2, type=2, proto=0>
+hostSocket:  <socket.socket fd=972, family=2, type=2, proto=0>
+host_data:  ('192.168.120.1', 50010)
+hostSocket:  <socket.socket fd=972, family=2, type=2, proto=0, laddr=('192.168.120.1', 50010)>
+self.hostIP:  192.168.120.1
+self.serverIP:  192.168.120.10
+self.hostPort:  50010
+self.destinationPort:  30501
+hostSocket:  <socket.socket fd=1008, family=2, type=2, proto=0>
+hostSocket:  <socket.socket fd=1008, family=2, type=2, proto=0>
+host_data:  ('192.168.120.1', 50010)
+hostSocket:  <socket.socket fd=1008, family=2, type=2, proto=0, laddr=('192.168.120.1', 50010)>
+self.hostIP:  192.168.120.250
+self.serverIP:  192.168.120.10
+self.hostPort:  50010
+self.destinationPort:  30501
+hostSocket:  <socket.socket fd=840, family=2, type=2, proto=0>
+hostSocket:  <socket.socket fd=840, family=2, type=2, proto=0>
+host_data:  ('192.168.120.250', 50010)
+hostSocket:  <socket.socket fd=840, family=2, type=2, proto=0, laddr=('192.168.120.250', 50010)>
+
+== someip_test.py ==============================================================
+[[setup]]
+# #############################################################
+# Connected to TCPIP0::192.168.10.10:
+# Device: Rohde&Schwarz NGP824
+#         5601.4007k03/111087,02.025 02E3A3C161
+# #############################################################
+  INFO  - Power supply set to 28.0 V
+          Delta time: 0.59s
+voltage_preset_ch4: 28.000 V
+voltage_ch4: 27.997 V
+ PASSED - Check PSU output voltage
+          Expected value: 28.000 V
+          Current value:  27.997 V (voltage_ch4)
+          Absolute Tolerance:  +/- 0.100 V
+          Delta time: 0.62s
+          Testcase-ID: someip_test
+DHCP server is starting...
+DHCP Discover received.
+Sending DHCP Offer.
+Waiting for DHCP Request after Offer.
+l_readable:  [<socket.socket fd=1236, family=2, type=2, proto=0, laddr=('192.168.120.1', 67)>]
+DHCP Request received. Sending DHCP Acknowledge.
+ACK client IP: [192, 168, 120, 10] cycles: 0
+No incoming message received...
+
+[[breakdown]]
+
+--Elapsed Time:----------------
+  12.8 seconds
+
+--Results:---------------------
+   INFO   - Power supply set to 28.0 V
+  PASSED  - Check PSU output voltage\nExpected value: 28.000 V\nCurrent value:  27.997 V (voltage_ch4)\nAbsolute Tolerance:  +/- 0.100 V
+
+--Summary:---------------------
+  FAILED : 0
+  PASSED : 1
+  INFO   : 1
+-------------------------------
+
+XML... ...writing......done
+# Results stored to "SingleTest_s00t00.xml".
+
+> An exception occurred:
+>  Type:      TimeoutExpired
+>  Exception: Command 'D:\VSC-GitLab\11_p_01467_mekra_vision_controller\Python\TestLibraries\tools\GStreamer\gstreamer_lib\bin\gst-launch-1.0.exe udpsrc port=5015 caps="application/x-rtp,media=video,encoding-name=H264,payload=96" ! rtpjitterbuffer ! rtph264depay ! h264parse ! openh264dec ! autovideosink sync=false async=false' timed out after 2.0 seconds
+--Traceback:-------------------------------------------
+Traceback (most recent call last):
+  File "D:\Releases\TestSupport\test_support312\test_runner_base.py", line 289, in runTest
+  File "D:\VSC-GitLab\11_p_01467_mekra_vision_controller\Python\TestPool\someip_test.py", line 72, in <module>
+    gst.stream(port=5015, encoding='H264')
+  File "D:\VSC-GitLab\11_p_01467_mekra_vision_controller\Python\TestLibraries\tools\GStreamer\gstreamer.py", line 88, in stream
+    self.launch_pipeline(pipeline, timeout)
+  File "D:\VSC-GitLab\11_p_01467_mekra_vision_controller\Python\TestLibraries\tools\GStreamer\gstreamer.py", line 155, in launch_pipeline
+    result = subprocess.run(str(gst_basepath) + pipeline,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\subprocess.py", line 550, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\subprocess.py", line 1228, in communicate
+    sts = self.wait(timeout=self._remaining_time(endtime))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\subprocess.py", line 1264, in wait
+    return self._wait(timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\subprocess.py", line 1593, in _wait
+    raise TimeoutExpired(self.args, timeout)
+subprocess.TimeoutExpired: Command 'D:\VSC-GitLab\11_p_01467_mekra_vision_controller\Python\TestLibraries\tools\GStreamer\gstreamer_lib\bin\gst-launch-1.0.exe udpsrc port=5015 caps="application/x-rtp,media=video,encoding-name=H264,payload=96" ! rtpjitterbuffer ! rtph264depay ! h264parse ! openh264dec ! autovideosink sync=false async=false' timed out after 2.0 seconds
+
+-------------------------------------------------------
+# Found test environment instance 'testenv'
+# Updating results with error information...
+XML... ...writing......done
+# Results stored to "SingleTest_s00t00.xml".
+D:\Releases\TestSupport\test_support312\test_runner_base.py:1218: ResourceWarning: unclosed <socket.socket fd=1236, family=2, type=2, proto=0, laddr=('192.168.120.1', 67)>
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+[[test_runner_finally]]

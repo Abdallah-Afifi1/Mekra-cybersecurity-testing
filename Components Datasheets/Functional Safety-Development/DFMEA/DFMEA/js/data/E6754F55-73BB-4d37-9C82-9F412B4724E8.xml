@@ -1,0 +1,4 @@
+tocTab[tocTab.length] = new Array("0.1:1", "", "Interface", "EARoot/EA1/EA20.htm", "175.png", "58", "0", "", "Logical diagram0","{DA0FAD90-FF60-4829-8278-432BCF7C69F1}");
+tocTab[tocTab.length] = new Array("0.1:2", "", "«InterfaceBlock» ImageControl", "EARoot/EA1/EA24.htm", "5.png", "E509", "0", "", "Class0","{EB2500E7-C273-4ac2-B4E9-43C0DEC449DE}");
+tocTab[tocTab.length] = new Array("0.1:3", "", "«FlowProperty» fpImageConfig", "EARoot/EA1/EA25.htm", "118.png", "E511", "E509", "", "Part0","{C5247F0E-8129-446b-B532-B427060518B4}");
+tocTab[tocTab.length] = new Array("0.1:4", "", "«FlowProperty» fpImageDiagnostics", "EARoot/EA1/EA26.htm", "118.png", "E510", "E509", "", "Part0","{1EA42523-1848-4ab0-BD3D-E2049E3AEF42}");

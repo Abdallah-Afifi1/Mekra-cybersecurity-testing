@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<singletest source="workbench/probe_dmm_sample_rate.py">
+	<meta>
+		<title>probe dmm sample rate</title>
+		<description>
+Find out how fast the DMM can deliver current readings, MVC-92786 needs
+about 10 ms per sample to resolve a 0.7 s shutter movement
+		</description>
+		<author> </author>
+		<date>05.08.2026</date>
+		<version>1.0.0</version>
+		<last_revision>initial version</last_revision>
+		<starttime>2026-08-06T13:04:02</starttime>
+		<endtime>2026-08-06T13:05:23</endtime>
+		<hil_computername>TTE-SOW2-W11</hil_computername>
+		<hil_project_path>D:\VSC-GitLab\11_p_01467_mekra_vision_controller</hil_project_path>
+		<hil_username>svc_systessow2</hil_username>
+	</meta>
+	<results />
+</singletest>

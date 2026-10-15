@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<singletest source="Shutter_Control/MVC-92785-Shutter_mode_activation_during_runtime.py">
+	<meta>
+		<title>MVC-92785-Shutter mode activation during runtime</title>
+		<description>Shutter mode activation during runtime</description>
+		<author>Ehu Li</author>
+		<date>03.08.2026</date>
+		<version>1.0.0</version>
+		<last_revision>initial</last_revision>
+		<starttime>2026-08-14T09:47:10</starttime>
+		<endtime>2026-08-14T09:47:41</endtime>
+		<hil_computername>TTE-SOW2-W11</hil_computername>
+		<hil_project_path>D:\VSC-GitLab\11_p_01467_mekra_vision_controller</hil_project_path>
+		<hil_username>svc_systessow2</hil_username>
+	</meta>
+	<results>
+		<result>
+			<description>
+
+Preconditions
+			</description>
+			<verdict />
+		</result>
+		<result>
+			<description>SW config 10C1 (rcam_2): service port 30501, SD 239.120.1.1:30490, 8 ROIs, Tauto 15.0/20.0 degC, Tprotection 45.0/40.0 degC</description>
+			<verdict>INFO</verdict>
+			<deltatime>0.923</deltatime>
+		</result>
+		<result>
+			<description>Production data Volvo_Standard_1Gbit_SN00012803.py: MAC 98:d3:d2:00:32:03, serial 00012803, hwVer 01H-</description>
+			<verdict>INFO</verdict>
+			<deltatime>0.936</deltatime>
+		</result>
+		<result>
+			<description> U_in = 0.0 V</description>
+			<verdict />
+		</result>
+		<result>
+			<description>Channel 1 disabled, DUT powered down</description>
+			<verdict>INFO</verdict>
+			<deltatime>0.952</deltatime>
+		</result>
+		<result>
+			<description> U_in = 24.0 V</description>
+			<verdict />
+		</result>
+		<result>
+			<description>
+Supply voltage on channel 1
+Expected value: 24.000 V
+Current value:  24.001 V (voltage_ch1)
+Absolute Tolerance:  +/- 0.100 V
+			</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92785</testcase_id>
+			<deltatime>4.020</deltatime>
+		</result>
+		<result>
+			<description> DHCP address allocation</description>
+			<verdict />
+		</result>
+		<result>
+			<description>DHCP lease 192.168.120.10 acknowledged to the DUT</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92785</testcase_id>
+			<deltatime>19.879</deltatime>
+		</result>
+		<result>
+			<description> DUT reaches OPERATIONAL state</description>
+			<verdict />
+		</result>
+		<result>
+			<description>SD OfferService received after 0.1 s -&gt; DUT has an IP address and is in OPERATIONAL state</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92785</testcase_id>
+			<deltatime>19.992</deltatime>
+		</result>
+		<result>
+			<description>OfferService announces service 0x433F at 192.168.120.10:30501 | config {'mac_address': '98D3D2003203', 'serial_nb': '00012803', 'device_type': 'rcam_2'}</description>
+			<verdict>INFO</verdict>
+			<deltatime>19.993</deltatime>
+		</result>
+		<result>
+			<description>SOME/IP endpoint: local ('192.168.120.1', 50010) -&gt; target 192.168.120.10:30501</description>
+			<verdict>INFO</verdict>
+			<deltatime>19.995</deltatime>
+		</result>
+		<result>
+			<description>Waiting 2.0 s for the DUT to finish its startup</description>
+			<verdict>INFO</verdict>
+			<deltatime>19.995</deltatime>
+		</result>
+		<result>
+			<description>
+
+Automatic mode follows the video stream
+			</description>
+			<verdict />
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92785</testcase_id>
+			<deltatime>21.997</deltatime>
+		</result>
+		<result>
+			<description>subscribeROIVideo (0x00000003, ROI 3): method 0x0131, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92785</testcase_id>
+			<deltatime>22.186</deltatime>
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92785</testcase_id>
+			<deltatime>23.193</deltatime>
+		</result>
+		<result>
+			<description>
+
+ManualModified applies the control value
+			</description>
+			<verdict />
+		</result>
+		<result>
+			<description>setCamExclusive (lock camera for 360 s): method 0x0011, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92785</testcase_id>
+			<deltatime>23.204</deltatime>
+		</result>
+		<result>
+			<description>setCamControl (switch to ManualModified ON): method 0x0201, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92785</testcase_id>
+			<deltatime>23.214</deltatime>
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92785</testcase_id>
+			<deltatime>24.223</deltatime>
+		</result>
+		<result>
+			<description>setCamControl (switch to ManualModified OFF): method 0x0201, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92785</testcase_id>
+			<deltatime>24.234</deltatime>
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92785</testcase_id>
+			<deltatime>25.244</deltatime>
+		</result>
+		<result>
+			<description>
+
+Manual mode ignores the control value
+			</description>
+			<verdict />
+		</result>
+		<result>
+			<description>setCamControl (switch to Manual ON): method 0x0201, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92785</testcase_id>
+			<deltatime>25.254</deltatime>
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92785</testcase_id>
+			<deltatime>26.264</deltatime>
+		</result>
+		<result>
+			<description>setCamControl (switch to Manual OFF): method 0x0201, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92785</testcase_id>
+			<deltatime>26.274</deltatime>
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92785</testcase_id>
+			<deltatime>27.284</deltatime>
+		</result>
+		<result>
+			<description>
+
+Manual mode overrides the video stream
+			</description>
+			<verdict />
+		</result>
+		<result>
+			<description>subscribeROIVideo (0x00000003, ROI 3): method 0x0131, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92785</testcase_id>
+			<deltatime>27.452</deltatime>
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92785</testcase_id>
+			<deltatime>28.460</deltatime>
+		</result>
+		<result>
+			<description>
+
+Automatic mode takes control back
+			</description>
+			<verdict />
+		</result>
+		<result>
+			<description>setCamControl (switch to Automatic): method 0x0201, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92785</testcase_id>
+			<deltatime>28.470</deltatime>
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92785</testcase_id>
+			<deltatime>29.478</deltatime>
+		</result>
+		<result>
+			<description>unSubscribeROIVideo (0x00000003, ROI 3): method 0x0132, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92785</testcase_id>
+			<deltatime>29.487</deltatime>
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92785</testcase_id>
+			<deltatime>30.490</deltatime>
+		</result>
+		<result>
+			<description>eraseCamExclusive (release the lock): method 0x0019, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92785</testcase_id>
+			<deltatime>30.500</deltatime>
+		</result>
+		<result>
+			<description> U_in = 0.0 V</description>
+			<verdict />
+		</result>
+		<result>
+			<description>Channel 1 disabled, DUT powered down</description>
+			<verdict>INFO</verdict>
+			<deltatime>30.527</deltatime>
+		</result>
+	</results>
+</singletest>

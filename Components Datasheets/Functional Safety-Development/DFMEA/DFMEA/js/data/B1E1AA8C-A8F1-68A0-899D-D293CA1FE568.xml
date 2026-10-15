@@ -1,0 +1,10 @@
+tocTab[tocTab.length] = new Array("0.2.1.28:1", "", "23", "EARoot/EA2/EA1/EA28/EA521.htm", "175.png", "375", "0", "", "Logical diagram0","{B39DD7BA-DA28-80EE-8E6B-6A4AA4F51F49}");
+tocTab[tocTab.length] = new Array("0.2.1.28:3", "", "«FMEAItem» 23", "EARoot/EA2/EA1/EA28/EA526.htm", "5.png", "E2398", "0", "", "Class0","{973DA078-DF48-E015-9A2E-AFF9F62F3332}");
+tocTab[tocTab.length] = new Array("0.2.1.28:2", "", "23", "EARoot/EA2/EA1/EA28/EA523.htm", "182.png", "376", "E2398", "", "CompositeStructure diagram0","{A999083E-72D7-1442-807C-FBD989B6EEC7}");
+tocTab[tocTab.length] = new Array("0.2.1.28:4", "", "AP", "EARoot/EA2/EA1/EA28/EA527.htm", "118.png", "E2399", "E2398", "", "Part0","{B7855222-8D15-54B4-B5E3-58C0D031045A}");
+tocTab[tocTab.length] = new Array("0.2.1.28:5", "", "AP_aux", "EARoot/EA2/EA1/EA28/EA528.htm", "118.png", "E2400", "E2398", "", "Part0","{A9B337E1-4CCA-3081-BCF8-F2A6D75A6513}");
+tocTab[tocTab.length] = new Array("0.2.1.28:6", "", "Cause: faulty input (frozen image) of &#39;RegularDiagnostics&#39; in &#39;handleDiagnostics&#39; function<br />", "EARoot/EA2/EA1/EA28/EA529.htm", "118.png", "E2401", "E2398", "", "Part0","{A242432A-3297-A128-8E7C-4E08D3EA9A6A}");
+tocTab[tocTab.length] = new Array("0.2.1.28:7", "", "DetMeasure: Review (if the prosposed technical solution suffice)", "EARoot/EA2/EA1/EA28/EA530.htm", "118.png", "E2405", "E2398", "", "Part0","{BC253FCA-8DE8-A120-B058-09CC0CFE1052}");
+tocTab[tocTab.length] = new Array("0.2.1.28:8", "", "Effect: Frozen Image", "EARoot/EA2/EA1/EA28/EA531.htm", "118.png", "E2404", "E2398", "", "Part0","{9DEA9E95-8ADA-4E9C-9E2F-E6A53FD21A3C}");
+tocTab[tocTab.length] = new Array("0.2.1.28:9", "", "FailureMode: No consecutive VideoStream", "EARoot/EA2/EA1/EA28/EA532.htm", "118.png", "E2402", "E2398", "", "Part0","{90C8D832-61A5-276A-8C99-0E068951F125}");
+tocTab[tocTab.length] = new Array("0.2.1.28:10", "", "PrevMeasure: fault (frozen image) free reception of &#39;DiagnosticsInformation&#39; in &#39;receiveDiagnosticsInformation&#39; function shall be ensured", "EARoot/EA2/EA1/EA28/EA533.htm", "118.png", "E2403", "E2398", "", "Part0","{B45B7341-89F4-3220-BA70-38A42C767FC3}");

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<singletest source="MVC-12345-B-Sample_functional_B.py">
+	<meta>
+		<title>MVC-12345-B-Sample functional B</title>
+		<description>basic access tests for climate chamber access</description>
+		<author>ReinerS</author>
+		<date>12.02.2026</date>
+		<version>1.0.0</version>
+		<last_revision>initial</last_revision>
+		<starttime />
+		<endtime />
+	</meta>
+	<results>
+		<result>
+			<description>Test script aborted with errors.</description>
+			<verdict>FAILED</verdict>
+		</result>
+		<result>
+			<description>Keyboard Interrupt detected, current test aborted.</description>
+			<verdict>ERROR</verdict>
+		</result>
+	</results>
+</singletest>

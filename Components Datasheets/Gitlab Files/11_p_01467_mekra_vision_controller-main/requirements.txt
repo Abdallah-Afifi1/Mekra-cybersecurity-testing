@@ -1,0 +1,51 @@
+###############################################################################
+# Requirements file for use with pip
+# Contains a list of common/default packages for use with Python installations
+# on Win32 for HIL Projects
+#
+# Usage: 
+#   pip install -r requirements.txt
+#
+# See also:
+#   https://pip.pypa.io/en/stable/reference/pip_install/#requirements-file-format
+#
+#******************************************************************************
+# Ver.   | Date       | Name    | Description
+#------------------------------------------------------------------------------
+# 1.0.0  | 26.08.2020 | Tremmel | initial
+# 1.1.0  | 25.03.2023 | Tremmel | adapted for HIL Demo Project
+###############################################################################
+
+# Note: basic requirements w/o version specifiers 
+
+# python win32 extensions (access to windows system functions)
+# This is mainly used in specific tool interfaces / ttk_tools
+pywin32
+
+# plotting of data; also installs numpy, pillow and others as dependency
+# See TestLibraries/plot_utils.py
+matplotlib
+
+# other optional packages
+
+# code-coverage (PyDev uses this for checking coverage)
+# coverage
+
+# "Python for .NET" is needed for ttk_tools.dspace.xil_api
+# (Python interpreters on dSPACE installations include this package by default)
+# pythonnet
+
+# gRPC bindings, also installs grpcio and protobuf (required for iDA access)
+# grpcio-tools
+
+# PyVISA - frontend to the VISA library, requires a VISA backend.
+# See https://pyvisa.readthedocs.io/en/latest/introduction/getting.html
+pyvisa
+
+ 
+# TE-200x EES switch remote API for configuration uses data serialized with 
+# msgpack via http, so:
+msgpack
+requests
+
+

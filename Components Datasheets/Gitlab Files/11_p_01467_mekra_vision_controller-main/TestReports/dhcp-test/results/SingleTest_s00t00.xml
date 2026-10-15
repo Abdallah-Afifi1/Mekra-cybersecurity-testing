@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<singletest source="dhcp_test.py">
+	<meta>
+		<title>dhcp test</title>
+		<description>basic test for dhcp server</description>
+		<author>Völler J</author>
+		<date>02.07.2025</date>
+		<version>1.0.0</version>
+		<last_revision>initial</last_revision>
+		<starttime>2025-07-03T09:33:46</starttime>
+		<endtime>2025-07-03T09:33:48</endtime>
+		<hil_computername>TTE-SOW2-W10</hil_computername>
+		<hil_project_path>D:\VSC-GitLab\11_p_01467_mekra_vision_controller</hil_project_path>
+		<hil_username>svc_systessow2</hil_username>
+		<imports />
+	</meta>
+	<results>
+		<result>
+			<description>Power supply set to 24.0 V</description>
+			<verdict>INFO</verdict>
+			<deltatime>0.301</deltatime>
+		</result>
+		<result>
+			<description>
+Check PSU output voltage
+Expected value: 24.000 V
+Current value:  24.000 V (voltage_ch1)
+Absolute Tolerance:  +/- 0.100 V
+			</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>dhcp_test</testcase_id>
+			<deltatime>0.322</deltatime>
+		</result>
+	</results>
+</singletest>

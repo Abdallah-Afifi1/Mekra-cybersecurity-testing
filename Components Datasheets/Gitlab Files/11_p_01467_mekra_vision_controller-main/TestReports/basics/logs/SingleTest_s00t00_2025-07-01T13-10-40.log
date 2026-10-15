@@ -1,0 +1,70 @@
+Dongle-DLL v5.1 (x64)
+# #####################################################################
+# Checking License: TestToolkit v2.2.1...
+# #####################################################################
+D-USB-2020-B-00DB TestToolkit 2.2.x
+PASSED
+# License valid
+[verifyFeature] ttk_checks 1.7.0
+
+== psu_test.py =================================================================
+[[setup]]
+> NGP800Series: Failed to connect to 'TCPIP0::192.168.10.10':
+> Insufficient location information or the requested device or resource is not present in the system.
+
+-- Available Resources: ---------------------------------------
+
+[[breakdown]]
+
+--Elapsed Time:----------------
+  3.3 seconds
+
+--Results:---------------------
+
+--Summary:---------------------
+  FAILED : 0
+  PASSED : 0
+-------------------------------
+
+XML... ...writing......done
+# Results stored to "SingleTest_s00t00.xml".
+
+> An exception occurred:
+>  Type:      VisaIOError
+>  Exception: VI_ERROR_RSRC_NFOUND (-1073807343): Insufficient location information or the requested device or resource is not present in the system.
+--Traceback:-------------------------------------------
+Traceback (most recent call last):
+  File "D:\Releases\TestSupport\test_support312\test_runner_base.py", line 289, in runTest
+  File "D:\VSC-GitLab\11_p_01467_mekra_vision_controller\Python\TestPool\psu_test.py", line 23, in <module>
+    psu = testenv.getPSU()
+          ^^^^^^^^^^^^^^^^
+  File "D:\VSC-GitLab\11_p_01467_mekra_vision_controller\Python\TestPool\_automation_wrapper_.py", line 142, in getPSU
+    self.psu = psu_ngp800.NGP800Series(visa_address="TCPIP0::192.168.10.10")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\VSC-GitLab\11_p_01467_mekra_vision_controller\Python\TestLibraries\tools\rhode_schwarz\psu_ngp800.py", line 88, in __init__
+    self._dev = self._rm.open_resource(self._address)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\svc_systessow2\AppData\Roaming\Python\Python312\site-packages\pyvisa\highlevel.py", line 3293, in open_resource
+    res.open(access_mode, open_timeout)
+  File "C:\Users\svc_systessow2\AppData\Roaming\Python\Python312\site-packages\pyvisa\resources\resource.py", line 282, in open
+    self.session, status = self._resource_manager.open_bare_resource(
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\svc_systessow2\AppData\Roaming\Python\Python312\site-packages\pyvisa\highlevel.py", line 3218, in open_bare_resource
+    return self.visalib.open(self.session, resource_name, access_mode, open_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\svc_systessow2\AppData\Roaming\Python\Python312\site-packages\pyvisa\ctwrapper\functions.py", line 1853, in open
+    ret = library.viOpen(
+          ^^^^^^^^^^^^^^^
+  File "C:\Users\svc_systessow2\AppData\Roaming\Python\Python312\site-packages\pyvisa\ctwrapper\highlevel.py", line 227, in _return_handler
+    return self.handle_return_value(session, ret_value)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\svc_systessow2\AppData\Roaming\Python\Python312\site-packages\pyvisa\highlevel.py", line 252, in handle_return_value
+    raise errors.VisaIOError(rv)
+pyvisa.errors.VisaIOError: VI_ERROR_RSRC_NFOUND (-1073807343): Insufficient location information or the requested device or resource is not present in the system.
+
+-------------------------------------------------------
+# Found test environment instance 'testenv'
+# Updating results with error information...
+XML... ...writing......done
+# Results stored to "SingleTest_s00t00.xml".
+[[test_runner_finally]]

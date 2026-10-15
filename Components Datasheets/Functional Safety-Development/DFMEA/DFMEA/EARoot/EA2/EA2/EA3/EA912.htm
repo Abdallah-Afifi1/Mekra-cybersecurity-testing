@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>2</title>
+<link href="../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="../../../../js/displayToc.js" type="text/javascript"></script>
+<script>
+
+  function switchProjectProperties() {
+			if (document.getElementById("proj00").style.display == "none") {
+				document.getElementById("proj00").style.display = "revert";
+				document.getElementById("proj01").style.display = "revert";
+				document.getElementById("proj02").style.display = "revert";
+				document.getElementById("proj03").style.display = "revert";
+				document.getElementById("proj04").style.display = "revert";
+				document.getElementById("proj05").style.display = "revert";
+			} else {
+				document.getElementById("proj00").style.display = "none";
+				document.getElementById("proj01").style.display = "none";
+				document.getElementById("proj02").style.display = "none";
+				document.getElementById("proj03").style.display = "none";
+				document.getElementById("proj04").style.display = "none";
+				document.getElementById("proj05").style.display = "none";
+			}
+}
+
+		function switchAdvancedProperties(){
+
+			if (document.getElementById("adv00").style.display == "none") {;
+				document.getElementById("adv00").style.display = "revert";
+				document.getElementById("adv01").style.display = "revert";
+			} else {
+				document.getElementById("adv00").style.display = "none";
+				document.getElementById("adv01").style.display = "none";
+			}
+		}
+		function initPage()
+        {			
+			var divs = document.getElementsByClassName("ObjectDetailsNotes");
+			for (var j = 0; j < divs.length; j++) {
+				var tmpStr = divs[j].innerHTML;
+				tmpStr = tmpStr.replace(/#gt;/g, "&gt;");
+				tmpStr = tmpStr.replace(/#lt;/g, "&lt;");
+
+				tmpStr = tmpStr.replace(/&gt;/g, ">");
+				tmpStr = tmpStr.replace(/&lt;/g, "<");
+
+				divs[j].innerHTML = tmpStr;
+			}
+
+            if (document.getElementById('TableGroup') != null)
+            {
+                toggleItem(document.getElementById('TableGroup').getElementsByTagName('li')[0].id.replace("Title", ""));
+            }
+
+        }
+</script>
+<style>
+
+</style>
+</head>
+<body onload="initPage();">
+<div class="section group" >
+
+		<div class="col span_2_of_2 header_frame">
+			<h1> 2 </h1>
+			<!-- <img class="header_image" src="../../../../images/mekraLangGermany.PNG" align="right" alt="Header Image" />-->
+			<img class="header_image" src="../../../../images/mekraLangGermany.PNG" align="right" alt="Header Image" />
+		</div>
+		<div class="col span_2_of_2 breadcrumb_frame">
+			<p><a href="../../../EA5.htm">DFMEA</a> / <a href="../../EA27.htm">Item</a> / <a href="../EA822.htm">SG3</a> / <a href="EA914.htm">2</a> / <a href="EA915.htm">2</a> / <a href="EA912.htm">2</a></p>
+		</div>
+			
+		<table class="contentmaintable">
+			<!-- <tfoot>
+				<tr>
+					<td>foot1</td>
+					<td>foot2</td>
+				</tr>
+			</tfoot> -->
+			<tbody>
+				<tr>
+					<td class="indexcell">
+						<div class="projectBrowserTitle">Project: </div>
+						<ul>
+<li><img src="../../../../images/182.png" alt="Diagram"/> <a href="EA912.htm">2</a></li>
+<li><img src="../../../../images/118.png" alt="Part"/> <a href="EA916.htm">AP: Integer</a></li>
+<li><img src="../../../../images/118.png" alt="Part"/> <a href="EA917.htm">AP_aux</a></li>
+<li><img src="../../../../images/118.png" alt="Part"/> <a href="EA918.htm">Cause: reception (functionality) of RAW Stream via Input Interface faulty (contrast-brightness)<br /></a></li>
+<li><img src="../../../../images/118.png" alt="Part"/> <a href="EA919.htm">DetMeasure: Review (if the prosposed technical solution suffice)</a></li>
+<li><img src="../../../../images/118.png" alt="Part"/> <a href="EA920.htm">Effect: Details lost due to incorrect contrast or brightness</a></li>
+<li><img src="../../../../images/118.png" alt="Part"/> <a href="EA921.htm">FailureMode: Stream with incorrect contrast or brightness</a></li>
+<li><img src="../../../../images/118.png" alt="Part"/> <a href="EA922.htm">PrevMeasure: fault free reception (functionality) of RAW Stream via Input Interface shall be ensured</a></li>
+</ul>
+
+					</td>
+					<td class="contentcell"><div class="PageBody">
+	<div class="diagram_image"> 
+<img src="EA913.png" usemap="#EA913" border="0" />
+
+<MAP NAME="EA913">
+<area shape="rect" coords="162,80,232,112" href="EA916.htm" target="_self">
+<area shape="rect" coords="52,193,122,275" href="EA920.htm" target="_self">
+<area shape="rect" coords="162,193,232,288" href="EA921.htm" target="_self">
+<area shape="rect" coords="298,393,406,548" href="EA922.htm" target="_self">
+<area shape="rect" coords="180,393,294,522" href="EA919.htm" target="_self">
+<area shape="rect" coords="324,176,394,336" href="EA918.htm" target="_self">
+<area shape="rect" coords="40,70,110,102" href="EA917.htm" target="_self">
+<area shape="rect" coords="20,20,443,585" href="EA915.htm" target="_self">
+</MAP>
+ </div>
+	<div class="ObjectTitle">2 : SysML Internal Block diagram</div>
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">31.07.2025 15:21:08</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">31.07.2025 19:39:19</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><button onclick="switchProjectProperties()"><img src="../../../../images/plus03.gif" align="absmiddle" id="proj" /></button>Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">rekas</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><button onclick="switchAdvancedProperties()"><img src="../../../../images/plus03.gif" align="absmiddle" id="adv" /></button>Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{377D6064-CB78-46dd-9CB5-F9075BA10C79}</td>
+		</tr>
+	</table>
+	
+</div>
+
+ </td>
+				</tr>
+			</tbody>
+		</table>
+		
+</div>
+</body>
+</html>
+

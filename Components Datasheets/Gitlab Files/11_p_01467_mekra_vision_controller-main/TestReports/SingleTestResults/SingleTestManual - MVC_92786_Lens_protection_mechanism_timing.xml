@@ -1,0 +1,1746 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<singletest source="Shutter_Control/MVC-92786-Lens_protection_mechanism_timing.py">
+	<meta>
+		<title>MVC-92786-Lens protection mechanism timing</title>
+		<description>
+Lens protection mechanism: the shutter exposes the lens within
+t_shutter_open over the complete ambient temperature range
+		</description>
+		<author>Ehu Li</author>
+		<date>14.08.2026</date>
+		<version>1.0.0</version>
+		<last_revision>initial version</last_revision>
+		<starttime>2026-08-14T14:42:14</starttime>
+		<endtime>2026-08-14T18:45:37</endtime>
+		<hil_computername>TTE-SOW2-W11</hil_computername>
+		<hil_project_path>D:\VSC-GitLab\11_p_01467_mekra_vision_controller</hil_project_path>
+		<hil_username>svc_systessow2</hil_username>
+	</meta>
+	<results>
+		<result>
+			<description>
+
+Preconditions
+			</description>
+			<verdict />
+		</result>
+		<result>
+			<description>SW config 10C1 (rcam_2): service port 30501, SD 239.120.1.1:30490, 8 ROIs, Tauto 15.0/20.0 degC, Tprotection 45.0/40.0 degC</description>
+			<verdict>INFO</verdict>
+			<deltatime>10.239</deltatime>
+		</result>
+		<result>
+			<description>Production data Volvo_Standard_1Gbit_SN00012803.py: MAC 98:d3:d2:00:32:03, serial 00012803, hwVer 01H-</description>
+			<verdict>INFO</verdict>
+			<deltatime>10.263</deltatime>
+		</result>
+		<result>
+			<description>Current recorded with the DMM log, 2A range, NPLC 0.005, 750 readings per cycle</description>
+			<verdict>INFO</verdict>
+			<deltatime>10.263</deltatime>
+		</result>
+		<result>
+			<description> U_in = 0.0 V</description>
+			<verdict />
+		</result>
+		<result>
+			<description>Channel 1 disabled, DUT powered down</description>
+			<verdict>INFO</verdict>
+			<deltatime>10.282</deltatime>
+		</result>
+		<result>
+			<description> U_in = 24.0 V</description>
+			<verdict />
+		</result>
+		<result>
+			<description>
+Supply voltage on channel 1
+Expected value: 24.000 V
+Current value:  23.999 V (voltage_ch1)
+Absolute Tolerance:  +/- 0.100 V
+			</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>13.361</deltatime>
+		</result>
+		<result>
+			<description> DHCP address allocation</description>
+			<verdict />
+		</result>
+		<result>
+			<description>DHCP lease 192.168.120.10 acknowledged to the DUT</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>29.222</deltatime>
+		</result>
+		<result>
+			<description> DUT reaches OPERATIONAL state</description>
+			<verdict />
+		</result>
+		<result>
+			<description>SD OfferService received after 0.1 s -&gt; DUT has an IP address and is in OPERATIONAL state</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>29.371</deltatime>
+		</result>
+		<result>
+			<description>OfferService announces service 0x433F at 192.168.120.10:30501 | config {'mac_address': '98D3D2003203', 'serial_nb': '00012803', 'device_type': 'rcam_2'}</description>
+			<verdict>INFO</verdict>
+			<deltatime>29.373</deltatime>
+		</result>
+		<result>
+			<description>SOME/IP endpoint: local ('192.168.120.1', 50010) -&gt; target 192.168.120.10:30501</description>
+			<verdict>INFO</verdict>
+			<deltatime>29.377</deltatime>
+		</result>
+		<result>
+			<description>Waiting 2.0 s for the DUT to finish its startup</description>
+			<verdict>INFO</verdict>
+			<deltatime>29.378</deltatime>
+		</result>
+		<result>
+			<description>DUT draws current after startup: PSU 0.1990 A, DMM 0.1972 A</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>31.409</deltatime>
+		</result>
+		<result>
+			<description>
+
+Tambient = 85 degC, 10 movements
+			</description>
+			<verdict />
+		</result>
+		<result>
+			<description>Tambient reached 84.1 degC (target 85.0 +/- 1.0 degC) after 1020 s</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>1051.532</deltatime>
+		</result>
+		<result>
+			<description> U_in = 0.0 V</description>
+			<verdict />
+		</result>
+		<result>
+			<description>Channel 1 disabled, DUT powered down</description>
+			<verdict>INFO</verdict>
+			<deltatime>1051.552</deltatime>
+		</result>
+		<result>
+			<description>Soaking 60 min with the DUT powered off</description>
+			<verdict>INFO</verdict>
+			<deltatime>1051.552</deltatime>
+		</result>
+		<result>
+			<description> U_in = 0.0 V</description>
+			<verdict />
+		</result>
+		<result>
+			<description>Channel 1 disabled, DUT powered down</description>
+			<verdict>INFO</verdict>
+			<deltatime>4651.562</deltatime>
+		</result>
+		<result>
+			<description> U_in = 24.0 V</description>
+			<verdict />
+		</result>
+		<result>
+			<description>
+Supply voltage on channel 1
+Expected value: 24.000 V
+Current value:  24.000 V (voltage_ch1)
+Absolute Tolerance:  +/- 0.100 V
+			</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>4654.634</deltatime>
+		</result>
+		<result>
+			<description> DHCP address allocation</description>
+			<verdict />
+		</result>
+		<result>
+			<description>DHCP lease 192.168.120.10 acknowledged to the DUT</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>4670.495</deltatime>
+		</result>
+		<result>
+			<description> DUT reaches OPERATIONAL state</description>
+			<verdict />
+		</result>
+		<result>
+			<description>SD OfferService received after 0.1 s -&gt; DUT has an IP address and is in OPERATIONAL state</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>4670.644</deltatime>
+		</result>
+		<result>
+			<description>OfferService announces service 0x433F at 192.168.120.10:30501 | config {'mac_address': '98D3D2003203', 'serial_nb': '00012803', 'device_type': 'rcam_2'}</description>
+			<verdict>INFO</verdict>
+			<deltatime>4670.646</deltatime>
+		</result>
+		<result>
+			<description>SOME/IP endpoint: local ('192.168.120.1', 50010) -&gt; target 192.168.120.10:30501</description>
+			<verdict>INFO</verdict>
+			<deltatime>4670.650</deltatime>
+		</result>
+		<result>
+			<description>Waiting 2.0 s for the DUT to finish its startup</description>
+			<verdict>INFO</verdict>
+			<deltatime>4670.650</deltatime>
+		</result>
+		<result>
+			<description>After the soak at 85 degC: Tambient 85.1 degC, Timager not readable (message type 0x81, return code 0x03 (E_UNKNOWN_METHOD)), Tser 90.00 degC (+4.9 K)</description>
+			<verdict>INFO</verdict>
+			<deltatime>4677.239</deltatime>
+		</result>
+		<result>
+			<description>DUT 90.00 degC is +4.9 K from the chamber 85.1 degC (tolerance 5.0 K)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>4677.240</deltatime>
+		</result>
+		<result>
+			<description> Shutter movement at 85 degC loop 1/10</description>
+			<verdict />
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>4677.248</deltatime>
+		</result>
+		<result>
+			<description>subscribeROIVideo (0xC0000003, ROI 3): method 0x0131, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>4678.763</deltatime>
+		</result>
+		<result>
+			<description>Idle 0.2402 A, streaming 0.2394 A, peak 0.3881 A at 1.258 s</description>
+			<verdict>INFO</verdict>
+			<deltatime>4678.764</deltatime>
+		</result>
+		<result>
+			<description>Rise 0.1479 A over idle, 0.1488 A over streaming, threshold 0.2602 A, 750 samples 2.0 ms apart</description>
+			<verdict>INFO</verdict>
+			<deltatime>4678.764</deltatime>
+		</result>
+		<result>
+			<description>85 degC loop 1/10: shutter moved for 0.924 s, at most 0.928 s with a 2.0 ms sample interval (limit 0.70 s)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>4678.764</deltatime>
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>4678.766</deltatime>
+		</result>
+		<result>
+			<description>unSubscribeROIVideo (0xC0000003, ROI 3): method 0x0132, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>4678.776</deltatime>
+		</result>
+		<result>
+			<description> Shutter movement at 85 degC loop 2/10</description>
+			<verdict />
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>4680.286</deltatime>
+		</result>
+		<result>
+			<description>subscribeROIVideo (0xC0000003, ROI 3): method 0x0131, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>4681.743</deltatime>
+		</result>
+		<result>
+			<description>Idle 0.2392 A, streaming 0.2393 A, peak 0.3145 A at 1.193 s</description>
+			<verdict>INFO</verdict>
+			<deltatime>4681.745</deltatime>
+		</result>
+		<result>
+			<description>Rise 0.0753 A over idle, 0.0752 A over streaming, threshold 0.2592 A, 750 samples 1.9 ms apart</description>
+			<verdict>INFO</verdict>
+			<deltatime>4681.745</deltatime>
+		</result>
+		<result>
+			<description>85 degC loop 2/10: shutter moved for 0.873 s, at most 0.877 s with a 1.9 ms sample interval (limit 0.70 s)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>4681.745</deltatime>
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>4681.754</deltatime>
+		</result>
+		<result>
+			<description>unSubscribeROIVideo (0xC0000003, ROI 3): method 0x0132, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>4681.767</deltatime>
+		</result>
+		<result>
+			<description> Shutter movement at 85 degC loop 3/10</description>
+			<verdict />
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>4683.280</deltatime>
+		</result>
+		<result>
+			<description>subscribeROIVideo (0xC0000003, ROI 3): method 0x0131, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>4684.818</deltatime>
+		</result>
+		<result>
+			<description>Idle 0.2399 A, streaming 0.2389 A, peak 0.3027 A at 1.243 s</description>
+			<verdict>INFO</verdict>
+			<deltatime>4684.819</deltatime>
+		</result>
+		<result>
+			<description>Rise 0.0628 A over idle, 0.0637 A over streaming, threshold 0.2599 A, 750 samples 2.0 ms apart</description>
+			<verdict>INFO</verdict>
+			<deltatime>4684.820</deltatime>
+		</result>
+		<result>
+			<description>85 degC loop 3/10: shutter moved for 0.924 s, at most 0.928 s with a 2.0 ms sample interval (limit 0.70 s)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>4684.820</deltatime>
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>4684.826</deltatime>
+		</result>
+		<result>
+			<description>unSubscribeROIVideo (0xC0000003, ROI 3): method 0x0132, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>4684.836</deltatime>
+		</result>
+		<result>
+			<description> Shutter movement at 85 degC loop 4/10</description>
+			<verdict />
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>4686.341</deltatime>
+		</result>
+		<result>
+			<description>subscribeROIVideo (0xC0000003, ROI 3): method 0x0131, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>4687.820</deltatime>
+		</result>
+		<result>
+			<description>Idle 0.2400 A, streaming 0.2392 A, peak 0.3132 A at 1.141 s</description>
+			<verdict>INFO</verdict>
+			<deltatime>4687.821</deltatime>
+		</result>
+		<result>
+			<description>Rise 0.0731 A over idle, 0.0739 A over streaming, threshold 0.2600 A, 750 samples 2.0 ms apart</description>
+			<verdict>INFO</verdict>
+			<deltatime>4687.822</deltatime>
+		</result>
+		<result>
+			<description>85 degC loop 4/10: shutter moved for 0.876 s, at most 0.880 s with a 2.0 ms sample interval (limit 0.70 s)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>4687.823</deltatime>
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>4687.827</deltatime>
+		</result>
+		<result>
+			<description>unSubscribeROIVideo (0xC0000003, ROI 3): method 0x0132, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>4687.836</deltatime>
+		</result>
+		<result>
+			<description> Shutter movement at 85 degC loop 5/10</description>
+			<verdict />
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>4689.340</deltatime>
+		</result>
+		<result>
+			<description>subscribeROIVideo (0xC0000003, ROI 3): method 0x0131, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>4690.859</deltatime>
+		</result>
+		<result>
+			<description>Idle 0.2406 A, streaming 0.2396 A, peak 0.3121 A at 1.179 s</description>
+			<verdict>INFO</verdict>
+			<deltatime>4690.860</deltatime>
+		</result>
+		<result>
+			<description>Rise 0.0714 A over idle, 0.0724 A over streaming, threshold 0.2606 A, 750 samples 2.0 ms apart</description>
+			<verdict>INFO</verdict>
+			<deltatime>4690.860</deltatime>
+		</result>
+		<result>
+			<description>85 degC loop 5/10: shutter moved for 0.905 s, at most 0.909 s with a 2.0 ms sample interval (limit 0.70 s)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>4690.861</deltatime>
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>4690.866</deltatime>
+		</result>
+		<result>
+			<description>unSubscribeROIVideo (0xC0000003, ROI 3): method 0x0132, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>4690.876</deltatime>
+		</result>
+		<result>
+			<description> Shutter movement at 85 degC loop 6/10</description>
+			<verdict />
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>4692.380</deltatime>
+		</result>
+		<result>
+			<description>subscribeROIVideo (0xC0000003, ROI 3): method 0x0131, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>4693.846</deltatime>
+		</result>
+		<result>
+			<description>Idle 0.2408 A, streaming 0.2408 A, peak 0.3118 A at 1.126 s</description>
+			<verdict>INFO</verdict>
+			<deltatime>4693.846</deltatime>
+		</result>
+		<result>
+			<description>Rise 0.0711 A over idle, 0.0710 A over streaming, threshold 0.2608 A, 750 samples 1.9 ms apart</description>
+			<verdict>INFO</verdict>
+			<deltatime>4693.846</deltatime>
+		</result>
+		<result>
+			<description>85 degC loop 6/10: shutter moved for 0.859 s, at most 0.863 s with a 1.9 ms sample interval (limit 0.70 s)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>4693.847</deltatime>
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>4693.850</deltatime>
+		</result>
+		<result>
+			<description>unSubscribeROIVideo (0xC0000003, ROI 3): method 0x0132, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>4693.860</deltatime>
+		</result>
+		<result>
+			<description> Shutter movement at 85 degC loop 7/10</description>
+			<verdict />
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>4695.366</deltatime>
+		</result>
+		<result>
+			<description>subscribeROIVideo (0xC0000003, ROI 3): method 0x0131, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>4696.856</deltatime>
+		</result>
+		<result>
+			<description>Idle 0.2444 A, streaming 0.2407 A, peak 0.3112 A at 1.102 s</description>
+			<verdict>INFO</verdict>
+			<deltatime>4696.858</deltatime>
+		</result>
+		<result>
+			<description>Rise 0.0668 A over idle, 0.0706 A over streaming, threshold 0.2644 A, 750 samples 2.0 ms apart</description>
+			<verdict>INFO</verdict>
+			<deltatime>4696.858</deltatime>
+		</result>
+		<result>
+			<description>85 degC loop 7/10: shutter moved for 0.852 s, at most 0.856 s with a 2.0 ms sample interval (limit 0.70 s)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>4696.859</deltatime>
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>4696.860</deltatime>
+		</result>
+		<result>
+			<description>unSubscribeROIVideo (0xC0000003, ROI 3): method 0x0132, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>4696.870</deltatime>
+		</result>
+		<result>
+			<description> Shutter movement at 85 degC loop 8/10</description>
+			<verdict />
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>4698.378</deltatime>
+		</result>
+		<result>
+			<description>subscribeROIVideo (0xC0000003, ROI 3): method 0x0131, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>4699.869</deltatime>
+		</result>
+		<result>
+			<description>Idle 0.2413 A, streaming 0.2408 A, peak 0.3115 A at 1.153 s</description>
+			<verdict>INFO</verdict>
+			<deltatime>4699.870</deltatime>
+		</result>
+		<result>
+			<description>Rise 0.0701 A over idle, 0.0707 A over streaming, threshold 0.2613 A, 750 samples 2.0 ms apart</description>
+			<verdict>INFO</verdict>
+			<deltatime>4699.871</deltatime>
+		</result>
+		<result>
+			<description>85 degC loop 8/10: shutter moved for 0.878 s, at most 0.882 s with a 2.0 ms sample interval (limit 0.70 s)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>4699.871</deltatime>
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>4699.880</deltatime>
+		</result>
+		<result>
+			<description>unSubscribeROIVideo (0xC0000003, ROI 3): method 0x0132, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>4699.891</deltatime>
+		</result>
+		<result>
+			<description> Shutter movement at 85 degC loop 9/10</description>
+			<verdict />
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>4701.397</deltatime>
+		</result>
+		<result>
+			<description>subscribeROIVideo (0xC0000003, ROI 3): method 0x0131, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>4702.914</deltatime>
+		</result>
+		<result>
+			<description>Idle 0.2414 A, streaming 0.2421 A, peak 0.3131 A at 1.199 s</description>
+			<verdict>INFO</verdict>
+			<deltatime>4702.915</deltatime>
+		</result>
+		<result>
+			<description>Rise 0.0717 A over idle, 0.0709 A over streaming, threshold 0.2614 A, 750 samples 2.0 ms apart</description>
+			<verdict>INFO</verdict>
+			<deltatime>4702.916</deltatime>
+		</result>
+		<result>
+			<description>85 degC loop 9/10: shutter moved for 0.909 s, at most 0.913 s with a 2.0 ms sample interval (limit 0.70 s)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>4702.916</deltatime>
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>4702.926</deltatime>
+		</result>
+		<result>
+			<description>unSubscribeROIVideo (0xC0000003, ROI 3): method 0x0132, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>4702.936</deltatime>
+		</result>
+		<result>
+			<description> Shutter movement at 85 degC loop 10/10</description>
+			<verdict />
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>4704.449</deltatime>
+		</result>
+		<result>
+			<description>subscribeROIVideo (0xC0000003, ROI 3): method 0x0131, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>4705.902</deltatime>
+		</result>
+		<result>
+			<description>Idle 0.2406 A, streaming 0.2416 A, peak 0.3047 A at 1.179 s</description>
+			<verdict>INFO</verdict>
+			<deltatime>4705.904</deltatime>
+		</result>
+		<result>
+			<description>Rise 0.0641 A over idle, 0.0631 A over streaming, threshold 0.2606 A, 750 samples 1.9 ms apart</description>
+			<verdict>INFO</verdict>
+			<deltatime>4705.904</deltatime>
+		</result>
+		<result>
+			<description>85 degC loop 10/10: shutter moved for 0.854 s, at most 0.858 s with a 1.9 ms sample interval (limit 0.70 s)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>4705.906</deltatime>
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>4705.910</deltatime>
+		</result>
+		<result>
+			<description>unSubscribeROIVideo (0xC0000003, ROI 3): method 0x0132, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>4705.920</deltatime>
+		</result>
+		<result>
+			<description>10 of 10 cycles measured at 85 degC, slowest at most 0.928 s (limit 0.70 s)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>4707.421</deltatime>
+		</result>
+		<result>
+			<description>
+
+Tambient = -40 degC, 10 movements
+			</description>
+			<verdict />
+		</result>
+		<result>
+			<description>Tambient reached -39.0 degC (target -40.0 +/- 1.0 degC) after 1980 s</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>6687.653</deltatime>
+		</result>
+		<result>
+			<description> U_in = 0.0 V</description>
+			<verdict />
+		</result>
+		<result>
+			<description>Channel 1 disabled, DUT powered down</description>
+			<verdict>INFO</verdict>
+			<deltatime>6687.674</deltatime>
+		</result>
+		<result>
+			<description>Soaking 60 min with the DUT powered off</description>
+			<verdict>INFO</verdict>
+			<deltatime>6687.674</deltatime>
+		</result>
+		<result>
+			<description> U_in = 0.0 V</description>
+			<verdict />
+		</result>
+		<result>
+			<description>Channel 1 disabled, DUT powered down</description>
+			<verdict>INFO</verdict>
+			<deltatime>10287.688</deltatime>
+		</result>
+		<result>
+			<description> U_in = 24.0 V</description>
+			<verdict />
+		</result>
+		<result>
+			<description>
+Supply voltage on channel 1
+Expected value: 24.000 V
+Current value:  24.000 V (voltage_ch1)
+Absolute Tolerance:  +/- 0.100 V
+			</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>10290.753</deltatime>
+		</result>
+		<result>
+			<description> DHCP address allocation</description>
+			<verdict />
+		</result>
+		<result>
+			<description>DHCP lease 192.168.120.10 acknowledged to the DUT</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>10306.626</deltatime>
+		</result>
+		<result>
+			<description> DUT reaches OPERATIONAL state</description>
+			<verdict />
+		</result>
+		<result>
+			<description>SD OfferService received after 0.1 s -&gt; DUT has an IP address and is in OPERATIONAL state</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>10306.775</deltatime>
+		</result>
+		<result>
+			<description>OfferService announces service 0x433F at 192.168.120.10:30501 | config {'mac_address': '98D3D2003203', 'serial_nb': '00012803', 'device_type': 'rcam_2'}</description>
+			<verdict>INFO</verdict>
+			<deltatime>10306.779</deltatime>
+		</result>
+		<result>
+			<description>SOME/IP endpoint: local ('192.168.120.1', 50010) -&gt; target 192.168.120.10:30501</description>
+			<verdict>INFO</verdict>
+			<deltatime>10306.782</deltatime>
+		</result>
+		<result>
+			<description>Waiting 2.0 s for the DUT to finish its startup</description>
+			<verdict>INFO</verdict>
+			<deltatime>10306.782</deltatime>
+		</result>
+		<result>
+			<description>After the soak at -40 degC: Tambient -40.0 degC, Timager not readable (message type 0x81, return code 0x03 (E_UNKNOWN_METHOD)), Tser not readable (479.00 degC is outside -60..150 degC (block 0x0002/0x0000, 2 bytes, payload 0x00000002ef80, 479.00 degC))</description>
+			<verdict>INFO</verdict>
+			<deltatime>10316.234</deltatime>
+		</result>
+		<result>
+			<description>DUT reached the chamber temperature at -40 degC: no DUT temperature readable</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>10316.234</deltatime>
+		</result>
+		<result>
+			<description> Shutter movement at -40 degC loop 1/10</description>
+			<verdict />
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>10316.245</deltatime>
+		</result>
+		<result>
+			<description>subscribeROIVideo (0xC0000003, ROI 3): method 0x0131, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>10317.709</deltatime>
+		</result>
+		<result>
+			<description>Idle 0.3632 A, streaming 0.4104 A, peak 0.5600 A at 1.277 s</description>
+			<verdict>INFO</verdict>
+			<deltatime>10317.710</deltatime>
+		</result>
+		<result>
+			<description>Rise 0.1968 A over idle, 0.1496 A over streaming, threshold 0.3832 A, 750 samples 1.9 ms apart</description>
+			<verdict>INFO</verdict>
+			<deltatime>10317.711</deltatime>
+		</result>
+		<result>
+			<description>-40 degC loop 1/10: shutter moved for 0.989 s, at most 0.992 s with a 1.9 ms sample interval (limit 0.70 s)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>10317.711</deltatime>
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>10317.723</deltatime>
+		</result>
+		<result>
+			<description>unSubscribeROIVideo (0xC0000003, ROI 3): method 0x0132, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>10317.733</deltatime>
+		</result>
+		<result>
+			<description> Shutter movement at -40 degC loop 2/10</description>
+			<verdict />
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>10319.242</deltatime>
+		</result>
+		<result>
+			<description>subscribeROIVideo (0xC0000003, ROI 3): method 0x0131, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>10320.708</deltatime>
+		</result>
+		<result>
+			<description>Idle 0.3634 A, streaming 0.3636 A, peak 0.4427 A at 1.167 s</description>
+			<verdict>INFO</verdict>
+			<deltatime>10320.710</deltatime>
+		</result>
+		<result>
+			<description>Rise 0.0793 A over idle, 0.0791 A over streaming, threshold 0.3834 A, 750 samples 1.9 ms apart</description>
+			<verdict>INFO</verdict>
+			<deltatime>10320.710</deltatime>
+		</result>
+		<result>
+			<description>-40 degC loop 2/10: shutter moved for 0.909 s, at most 0.912 s with a 1.9 ms sample interval (limit 0.70 s)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>10320.710</deltatime>
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>10320.714</deltatime>
+		</result>
+		<result>
+			<description>unSubscribeROIVideo (0xC0000003, ROI 3): method 0x0132, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>10320.723</deltatime>
+		</result>
+		<result>
+			<description> Shutter movement at -40 degC loop 3/10</description>
+			<verdict />
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>10322.232</deltatime>
+		</result>
+		<result>
+			<description>subscribeROIVideo (0xC0000003, ROI 3): method 0x0131, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>10323.745</deltatime>
+		</result>
+		<result>
+			<description>Idle 0.3708 A, streaming 0.3632 A, peak 0.4426 A at 1.122 s</description>
+			<verdict>INFO</verdict>
+			<deltatime>10323.746</deltatime>
+		</result>
+		<result>
+			<description>Rise 0.0719 A over idle, 0.0794 A over streaming, threshold 0.3908 A, 750 samples 2.0 ms apart</description>
+			<verdict>INFO</verdict>
+			<deltatime>10323.746</deltatime>
+		</result>
+		<result>
+			<description>-40 degC loop 3/10: shutter moved for 0.851 s, at most 0.855 s with a 2.0 ms sample interval (limit 0.70 s)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>10323.747</deltatime>
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>10323.757</deltatime>
+		</result>
+		<result>
+			<description>unSubscribeROIVideo (0xC0000003, ROI 3): method 0x0132, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>10323.767</deltatime>
+		</result>
+		<result>
+			<description> Shutter movement at -40 degC loop 4/10</description>
+			<verdict />
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>10325.276</deltatime>
+		</result>
+		<result>
+			<description>subscribeROIVideo (0xC0000003, ROI 3): method 0x0131, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>10326.751</deltatime>
+		</result>
+		<result>
+			<description>Idle 0.3647 A, streaming 0.3641 A, peak 0.4381 A at 1.129 s</description>
+			<verdict>INFO</verdict>
+			<deltatime>10326.752</deltatime>
+		</result>
+		<result>
+			<description>Rise 0.0734 A over idle, 0.0741 A over streaming, threshold 0.3847 A, 750 samples 2.0 ms apart</description>
+			<verdict>INFO</verdict>
+			<deltatime>10326.753</deltatime>
+		</result>
+		<result>
+			<description>-40 degC loop 4/10: shutter moved for 0.876 s, at most 0.880 s with a 2.0 ms sample interval (limit 0.70 s)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>10326.753</deltatime>
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>10326.760</deltatime>
+		</result>
+		<result>
+			<description>unSubscribeROIVideo (0xC0000003, ROI 3): method 0x0132, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>10326.770</deltatime>
+		</result>
+		<result>
+			<description> Shutter movement at -40 degC loop 5/10</description>
+			<verdict />
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>10328.280</deltatime>
+		</result>
+		<result>
+			<description>subscribeROIVideo (0xC0000003, ROI 3): method 0x0131, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>10329.775</deltatime>
+		</result>
+		<result>
+			<description>Idle 0.3638 A, streaming 0.3639 A, peak 0.4217 A at 1.145 s</description>
+			<verdict>INFO</verdict>
+			<deltatime>10329.776</deltatime>
+		</result>
+		<result>
+			<description>Rise 0.0579 A over idle, 0.0578 A over streaming, threshold 0.3838 A, 750 samples 2.0 ms apart</description>
+			<verdict>INFO</verdict>
+			<deltatime>10329.777</deltatime>
+		</result>
+		<result>
+			<description>-40 degC loop 5/10: shutter moved for 0.901 s, at most 0.905 s with a 2.0 ms sample interval (limit 0.70 s)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>10329.777</deltatime>
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>10329.785</deltatime>
+		</result>
+		<result>
+			<description>unSubscribeROIVideo (0xC0000003, ROI 3): method 0x0132, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>10329.797</deltatime>
+		</result>
+		<result>
+			<description> Shutter movement at -40 degC loop 6/10</description>
+			<verdict />
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>10331.303</deltatime>
+		</result>
+		<result>
+			<description>subscribeROIVideo (0xC0000003, ROI 3): method 0x0131, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>10332.830</deltatime>
+		</result>
+		<result>
+			<description>Idle 0.3630 A, streaming 0.3638 A, peak 0.4263 A at 1.197 s</description>
+			<verdict>INFO</verdict>
+			<deltatime>10332.832</deltatime>
+		</result>
+		<result>
+			<description>Rise 0.0633 A over idle, 0.0625 A over streaming, threshold 0.3830 A, 750 samples 2.0 ms apart</description>
+			<verdict>INFO</verdict>
+			<deltatime>10332.832</deltatime>
+		</result>
+		<result>
+			<description>-40 degC loop 6/10: shutter moved for 0.903 s, at most 0.907 s with a 2.0 ms sample interval (limit 0.70 s)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>10332.833</deltatime>
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>10332.840</deltatime>
+		</result>
+		<result>
+			<description>unSubscribeROIVideo (0xC0000003, ROI 3): method 0x0132, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>10332.850</deltatime>
+		</result>
+		<result>
+			<description> Shutter movement at -40 degC loop 7/10</description>
+			<verdict />
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>10334.356</deltatime>
+		</result>
+		<result>
+			<description>subscribeROIVideo (0xC0000003, ROI 3): method 0x0131, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>10335.826</deltatime>
+		</result>
+		<result>
+			<description>Idle 0.3643 A, streaming 0.3646 A, peak 0.4401 A at 1.155 s</description>
+			<verdict>INFO</verdict>
+			<deltatime>10335.828</deltatime>
+		</result>
+		<result>
+			<description>Rise 0.0758 A over idle, 0.0754 A over streaming, threshold 0.3843 A, 750 samples 2.0 ms apart</description>
+			<verdict>INFO</verdict>
+			<deltatime>10335.829</deltatime>
+		</result>
+		<result>
+			<description>-40 degC loop 7/10: shutter moved for 0.880 s, at most 0.884 s with a 2.0 ms sample interval (limit 0.70 s)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>10335.829</deltatime>
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>10335.840</deltatime>
+		</result>
+		<result>
+			<description>unSubscribeROIVideo (0xC0000003, ROI 3): method 0x0132, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>10335.850</deltatime>
+		</result>
+		<result>
+			<description> Shutter movement at -40 degC loop 8/10</description>
+			<verdict />
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>10337.360</deltatime>
+		</result>
+		<result>
+			<description>subscribeROIVideo (0xC0000003, ROI 3): method 0x0131, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>10338.815</deltatime>
+		</result>
+		<result>
+			<description>Idle 0.3640 A, streaming 0.3644 A, peak 0.4326 A at 1.146 s</description>
+			<verdict>INFO</verdict>
+			<deltatime>10338.817</deltatime>
+		</result>
+		<result>
+			<description>Rise 0.0686 A over idle, 0.0681 A over streaming, threshold 0.3840 A, 750 samples 1.9 ms apart</description>
+			<verdict>INFO</verdict>
+			<deltatime>10338.818</deltatime>
+		</result>
+		<result>
+			<description>-40 degC loop 8/10: shutter moved for 0.873 s, at most 0.877 s with a 1.9 ms sample interval (limit 0.70 s)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>10338.818</deltatime>
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>10338.823</deltatime>
+		</result>
+		<result>
+			<description>unSubscribeROIVideo (0xC0000003, ROI 3): method 0x0132, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>10338.834</deltatime>
+		</result>
+		<result>
+			<description> Shutter movement at -40 degC loop 9/10</description>
+			<verdict />
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>10340.343</deltatime>
+		</result>
+		<result>
+			<description>subscribeROIVideo (0xC0000003, ROI 3): method 0x0131, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>10341.894</deltatime>
+		</result>
+		<result>
+			<description>Idle 0.3644 A, streaming 0.3646 A, peak 0.4259 A at 1.183 s</description>
+			<verdict>INFO</verdict>
+			<deltatime>10341.896</deltatime>
+		</result>
+		<result>
+			<description>Rise 0.0615 A over idle, 0.0613 A over streaming, threshold 0.3844 A, 750 samples 2.1 ms apart</description>
+			<verdict>INFO</verdict>
+			<deltatime>10341.896</deltatime>
+		</result>
+		<result>
+			<description>-40 degC loop 9/10: shutter moved for 0.927 s, at most 0.932 s with a 2.1 ms sample interval (limit 0.70 s)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>10341.897</deltatime>
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>10341.907</deltatime>
+		</result>
+		<result>
+			<description>unSubscribeROIVideo (0xC0000003, ROI 3): method 0x0132, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>10341.917</deltatime>
+		</result>
+		<result>
+			<description> Shutter movement at -40 degC loop 10/10</description>
+			<verdict />
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>10343.427</deltatime>
+		</result>
+		<result>
+			<description>subscribeROIVideo (0xC0000003, ROI 3): method 0x0131, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>10344.909</deltatime>
+		</result>
+		<result>
+			<description>Idle 0.3643 A, streaming 0.3652 A, peak 0.4279 A at 1.144 s</description>
+			<verdict>INFO</verdict>
+			<deltatime>10344.910</deltatime>
+		</result>
+		<result>
+			<description>Rise 0.0636 A over idle, 0.0627 A over streaming, threshold 0.3843 A, 750 samples 2.0 ms apart</description>
+			<verdict>INFO</verdict>
+			<deltatime>10344.911</deltatime>
+		</result>
+		<result>
+			<description>-40 degC loop 10/10: shutter moved for 0.886 s, at most 0.890 s with a 2.0 ms sample interval (limit 0.70 s)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>10344.911</deltatime>
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>10344.920</deltatime>
+		</result>
+		<result>
+			<description>unSubscribeROIVideo (0xC0000003, ROI 3): method 0x0132, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>10344.932</deltatime>
+		</result>
+		<result>
+			<description>10 of 10 cycles measured at -40 degC, slowest at most 0.992 s (limit 0.70 s)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>10346.434</deltatime>
+		</result>
+		<result>
+			<description>
+
+Tambient = 23 degC, 10 movements
+			</description>
+			<verdict />
+		</result>
+		<result>
+			<description>Tambient reached 22.1 degC (target 23.0 +/- 1.0 degC) after 600 s</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>10946.525</deltatime>
+		</result>
+		<result>
+			<description> U_in = 0.0 V</description>
+			<verdict />
+		</result>
+		<result>
+			<description>Channel 1 disabled, DUT powered down</description>
+			<verdict>INFO</verdict>
+			<deltatime>10946.549</deltatime>
+		</result>
+		<result>
+			<description>Soaking 60 min with the DUT powered off</description>
+			<verdict>INFO</verdict>
+			<deltatime>10946.550</deltatime>
+		</result>
+		<result>
+			<description> U_in = 0.0 V</description>
+			<verdict />
+		</result>
+		<result>
+			<description>Channel 1 disabled, DUT powered down</description>
+			<verdict>INFO</verdict>
+			<deltatime>14546.515</deltatime>
+		</result>
+		<result>
+			<description> U_in = 24.0 V</description>
+			<verdict />
+		</result>
+		<result>
+			<description>
+Supply voltage on channel 1
+Expected value: 24.000 V
+Current value:  24.000 V (voltage_ch1)
+Absolute Tolerance:  +/- 0.100 V
+			</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>14549.581</deltatime>
+		</result>
+		<result>
+			<description> DHCP address allocation</description>
+			<verdict />
+		</result>
+		<result>
+			<description>DHCP lease 192.168.120.10 acknowledged to the DUT</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>14565.446</deltatime>
+		</result>
+		<result>
+			<description> DUT reaches OPERATIONAL state</description>
+			<verdict />
+		</result>
+		<result>
+			<description>SD OfferService received after 0.1 s -&gt; DUT has an IP address and is in OPERATIONAL state</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>14565.596</deltatime>
+		</result>
+		<result>
+			<description>OfferService announces service 0x433F at 192.168.120.10:30501 | config {'mac_address': '98D3D2003203', 'serial_nb': '00012803', 'device_type': 'rcam_2'}</description>
+			<verdict>INFO</verdict>
+			<deltatime>14565.598</deltatime>
+		</result>
+		<result>
+			<description>SOME/IP endpoint: local ('192.168.120.1', 50010) -&gt; target 192.168.120.10:30501</description>
+			<verdict>INFO</verdict>
+			<deltatime>14565.602</deltatime>
+		</result>
+		<result>
+			<description>Waiting 2.0 s for the DUT to finish its startup</description>
+			<verdict>INFO</verdict>
+			<deltatime>14565.603</deltatime>
+		</result>
+		<result>
+			<description>After the soak at 23 degC: Tambient 23.1 degC, Timager not readable (message type 0x81, return code 0x03 (E_UNKNOWN_METHOD)), Tser 27.00 degC (+3.9 K)</description>
+			<verdict>INFO</verdict>
+			<deltatime>14572.161</deltatime>
+		</result>
+		<result>
+			<description>DUT 27.00 degC is +3.9 K from the chamber 23.1 degC (tolerance 5.0 K)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>14572.162</deltatime>
+		</result>
+		<result>
+			<description> Shutter movement at 23 degC loop 1/10</description>
+			<verdict />
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>14572.171</deltatime>
+		</result>
+		<result>
+			<description>subscribeROIVideo (0xC0000003, ROI 3): method 0x0131, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>14573.637</deltatime>
+		</result>
+		<result>
+			<description>Idle 0.1992 A, streaming 0.1971 A, peak 0.2811 A at 1.175 s</description>
+			<verdict>INFO</verdict>
+			<deltatime>14573.639</deltatime>
+		</result>
+		<result>
+			<description>Rise 0.0819 A over idle, 0.0840 A over streaming, threshold 0.2192 A, 750 samples 1.9 ms apart</description>
+			<verdict>INFO</verdict>
+			<deltatime>14573.639</deltatime>
+		</result>
+		<result>
+			<description>23 degC loop 1/10: shutter moved for 0.869 s, at most 0.873 s with a 1.9 ms sample interval (limit 0.70 s)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>14573.640</deltatime>
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>14573.649</deltatime>
+		</result>
+		<result>
+			<description>unSubscribeROIVideo (0xC0000003, ROI 3): method 0x0132, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>14573.659</deltatime>
+		</result>
+		<result>
+			<description> Shutter movement at 23 degC loop 2/10</description>
+			<verdict />
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>14575.168</deltatime>
+		</result>
+		<result>
+			<description>subscribeROIVideo (0xC0000003, ROI 3): method 0x0131, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>14576.632</deltatime>
+		</result>
+		<result>
+			<description>Idle 0.1979 A, streaming 0.1971 A, peak 0.2562 A at 1.175 s</description>
+			<verdict>INFO</verdict>
+			<deltatime>14576.633</deltatime>
+		</result>
+		<result>
+			<description>Rise 0.0583 A over idle, 0.0591 A over streaming, threshold 0.2179 A, 750 samples 1.9 ms apart</description>
+			<verdict>INFO</verdict>
+			<deltatime>14576.634</deltatime>
+		</result>
+		<result>
+			<description>23 degC loop 2/10: shutter moved for 0.852 s, at most 0.856 s with a 1.9 ms sample interval (limit 0.70 s)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>14576.634</deltatime>
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>14576.638</deltatime>
+		</result>
+		<result>
+			<description>unSubscribeROIVideo (0xC0000003, ROI 3): method 0x0132, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>14576.652</deltatime>
+		</result>
+		<result>
+			<description> Shutter movement at 23 degC loop 3/10</description>
+			<verdict />
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>14578.162</deltatime>
+		</result>
+		<result>
+			<description>subscribeROIVideo (0xC0000003, ROI 3): method 0x0131, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>14579.663</deltatime>
+		</result>
+		<result>
+			<description>Idle 0.2005 A, streaming 0.1990 A, peak 0.2512 A at 1.133 s</description>
+			<verdict>INFO</verdict>
+			<deltatime>14579.664</deltatime>
+		</result>
+		<result>
+			<description>Rise 0.0506 A over idle, 0.0522 A over streaming, threshold 0.2205 A, 750 samples 2.0 ms apart</description>
+			<verdict>INFO</verdict>
+			<deltatime>14579.665</deltatime>
+		</result>
+		<result>
+			<description>23 degC loop 3/10: shutter moved for 0.874 s, at most 0.878 s with a 2.0 ms sample interval (limit 0.70 s)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>14579.665</deltatime>
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>14579.672</deltatime>
+		</result>
+		<result>
+			<description>unSubscribeROIVideo (0xC0000003, ROI 3): method 0x0132, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>14579.685</deltatime>
+		</result>
+		<result>
+			<description> Shutter movement at 23 degC loop 4/10</description>
+			<verdict />
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>14581.195</deltatime>
+		</result>
+		<result>
+			<description>subscribeROIVideo (0xC0000003, ROI 3): method 0x0131, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>14582.664</deltatime>
+		</result>
+		<result>
+			<description>Idle 0.1990 A, streaming 0.1986 A, peak 0.2456 A at 0.359 s</description>
+			<verdict>INFO</verdict>
+			<deltatime>14582.665</deltatime>
+		</result>
+		<result>
+			<description>Rise 0.0466 A over idle, 0.0470 A over streaming, threshold 0.2190 A, 750 samples 2.0 ms apart</description>
+			<verdict>INFO</verdict>
+			<deltatime>14582.665</deltatime>
+		</result>
+		<result>
+			<description>23 degC loop 4/10: shutter moved for 0.867 s, at most 0.871 s with a 2.0 ms sample interval (limit 0.70 s)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>14582.666</deltatime>
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>14582.675</deltatime>
+		</result>
+		<result>
+			<description>unSubscribeROIVideo (0xC0000003, ROI 3): method 0x0132, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>14582.686</deltatime>
+		</result>
+		<result>
+			<description> Shutter movement at 23 degC loop 5/10</description>
+			<verdict />
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>14584.199</deltatime>
+		</result>
+		<result>
+			<description>subscribeROIVideo (0xC0000003, ROI 3): method 0x0131, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>14585.683</deltatime>
+		</result>
+		<result>
+			<description>Idle 0.1998 A, streaming 0.1982 A, peak 0.2463 A at 1.116 s</description>
+			<verdict>INFO</verdict>
+			<deltatime>14585.684</deltatime>
+		</result>
+		<result>
+			<description>Rise 0.0466 A over idle, 0.0482 A over streaming, threshold 0.2198 A, 750 samples 2.0 ms apart</description>
+			<verdict>INFO</verdict>
+			<deltatime>14585.685</deltatime>
+		</result>
+		<result>
+			<description>23 degC loop 5/10: shutter moved for 0.863 s, at most 0.867 s with a 2.0 ms sample interval (limit 0.70 s)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>14585.686</deltatime>
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>14585.688</deltatime>
+		</result>
+		<result>
+			<description>unSubscribeROIVideo (0xC0000003, ROI 3): method 0x0132, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>14585.699</deltatime>
+		</result>
+		<result>
+			<description> Shutter movement at 23 degC loop 6/10</description>
+			<verdict />
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>14587.202</deltatime>
+		</result>
+		<result>
+			<description>subscribeROIVideo (0xC0000003, ROI 3): method 0x0131, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>14588.675</deltatime>
+		</result>
+		<result>
+			<description>Idle 0.2000 A, streaming 0.1985 A, peak 0.2525 A at 1.130 s</description>
+			<verdict>INFO</verdict>
+			<deltatime>14588.677</deltatime>
+		</result>
+		<result>
+			<description>Rise 0.0525 A over idle, 0.0540 A over streaming, threshold 0.2200 A, 750 samples 2.0 ms apart</description>
+			<verdict>INFO</verdict>
+			<deltatime>14588.677</deltatime>
+		</result>
+		<result>
+			<description>23 degC loop 6/10: shutter moved for 0.867 s, at most 0.871 s with a 2.0 ms sample interval (limit 0.70 s)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>14588.678</deltatime>
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>14588.683</deltatime>
+		</result>
+		<result>
+			<description>unSubscribeROIVideo (0xC0000003, ROI 3): method 0x0132, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>14588.692</deltatime>
+		</result>
+		<result>
+			<description> Shutter movement at 23 degC loop 7/10</description>
+			<verdict />
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>14590.204</deltatime>
+		</result>
+		<result>
+			<description>subscribeROIVideo (0xC0000003, ROI 3): method 0x0131, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>14591.724</deltatime>
+		</result>
+		<result>
+			<description>Idle 0.2003 A, streaming 0.1987 A, peak 0.2511 A at 1.140 s</description>
+			<verdict>INFO</verdict>
+			<deltatime>14591.725</deltatime>
+		</result>
+		<result>
+			<description>Rise 0.0509 A over idle, 0.0524 A over streaming, threshold 0.2203 A, 750 samples 2.0 ms apart</description>
+			<verdict>INFO</verdict>
+			<deltatime>14591.726</deltatime>
+		</result>
+		<result>
+			<description>23 degC loop 7/10: shutter moved for 0.887 s, at most 0.891 s with a 2.0 ms sample interval (limit 0.70 s)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>14591.726</deltatime>
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>14591.735</deltatime>
+		</result>
+		<result>
+			<description>unSubscribeROIVideo (0xC0000003, ROI 3): method 0x0132, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>14591.745</deltatime>
+		</result>
+		<result>
+			<description> Shutter movement at 23 degC loop 8/10</description>
+			<verdict />
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>14593.249</deltatime>
+		</result>
+		<result>
+			<description>subscribeROIVideo (0xC0000003, ROI 3): method 0x0131, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>14594.720</deltatime>
+		</result>
+		<result>
+			<description>Idle 0.1992 A, streaming 0.1976 A, peak 0.2529 A at 1.150 s</description>
+			<verdict>INFO</verdict>
+			<deltatime>14594.721</deltatime>
+		</result>
+		<result>
+			<description>Rise 0.0537 A over idle, 0.0553 A over streaming, threshold 0.2192 A, 750 samples 2.0 ms apart</description>
+			<verdict>INFO</verdict>
+			<deltatime>14594.721</deltatime>
+		</result>
+		<result>
+			<description>23 degC loop 8/10: shutter moved for 0.852 s, at most 0.856 s with a 2.0 ms sample interval (limit 0.70 s)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>14594.721</deltatime>
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>14594.728</deltatime>
+		</result>
+		<result>
+			<description>unSubscribeROIVideo (0xC0000003, ROI 3): method 0x0132, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>14594.738</deltatime>
+		</result>
+		<result>
+			<description> Shutter movement at 23 degC loop 9/10</description>
+			<verdict />
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>14596.252</deltatime>
+		</result>
+		<result>
+			<description>subscribeROIVideo (0xC0000003, ROI 3): method 0x0131, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>14597.749</deltatime>
+		</result>
+		<result>
+			<description>Idle 0.1996 A, streaming 0.1989 A, peak 0.2585 A at 1.150 s</description>
+			<verdict>INFO</verdict>
+			<deltatime>14597.750</deltatime>
+		</result>
+		<result>
+			<description>Rise 0.0590 A over idle, 0.0597 A over streaming, threshold 0.2196 A, 750 samples 2.0 ms apart</description>
+			<verdict>INFO</verdict>
+			<deltatime>14597.751</deltatime>
+		</result>
+		<result>
+			<description>23 degC loop 9/10: shutter moved for 0.889 s, at most 0.893 s with a 2.0 ms sample interval (limit 0.70 s)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>14597.751</deltatime>
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>14597.762</deltatime>
+		</result>
+		<result>
+			<description>unSubscribeROIVideo (0xC0000003, ROI 3): method 0x0132, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>14597.772</deltatime>
+		</result>
+		<result>
+			<description> Shutter movement at 23 degC loop 10/10</description>
+			<verdict />
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>14599.285</deltatime>
+		</result>
+		<result>
+			<description>subscribeROIVideo (0xC0000003, ROI 3): method 0x0131, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>14600.774</deltatime>
+		</result>
+		<result>
+			<description>Idle 0.1985 A, streaming 0.1987 A, peak 0.2571 A at 1.156 s</description>
+			<verdict>INFO</verdict>
+			<deltatime>14600.775</deltatime>
+		</result>
+		<result>
+			<description>Rise 0.0586 A over idle, 0.0584 A over streaming, threshold 0.2185 A, 750 samples 2.0 ms apart</description>
+			<verdict>INFO</verdict>
+			<deltatime>14600.776</deltatime>
+		</result>
+		<result>
+			<description>23 degC loop 10/10: shutter moved for 0.881 s, at most 0.885 s with a 2.0 ms sample interval (limit 0.70 s)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>14600.777</deltatime>
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>14600.785</deltatime>
+		</result>
+		<result>
+			<description>unSubscribeROIVideo (0xC0000003, ROI 3): method 0x0132, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>14600.795</deltatime>
+		</result>
+		<result>
+			<description>10 of 10 cycles measured at 23 degC, slowest at most 0.893 s (limit 0.70 s)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92786</testcase_id>
+			<deltatime>14602.297</deltatime>
+		</result>
+		<result>
+			<description> U_in = 0.0 V</description>
+			<verdict />
+		</result>
+		<result>
+			<description>Channel 1 disabled, DUT powered down</description>
+			<verdict>INFO</verdict>
+			<deltatime>14602.318</deltatime>
+		</result>
+	</results>
+</singletest>

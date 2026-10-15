@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<singletest source="MVC-12345-B-Sample_functional_B.py">
+	<meta>
+		<title>MVC-12345-B-Sample functional B</title>
+		<description>basic access tests for climate chamber access</description>
+		<author>ReinerS</author>
+		<date>12.02.2026</date>
+		<version>1.0.0</version>
+		<last_revision>initial</last_revision>
+		<starttime />
+		<endtime />
+	</meta>
+	<results>
+		<result>
+			<description>Test script aborted with errors.</description>
+			<verdict>FAILED</verdict>
+		</result>
+		<result>
+			<description>
+Traceback (most recent call last):
+  File "D:\Releases\TestSupport\test_support312\test_runner_base.py", line 289, in runTest
+  File "C:\Users\systest_MCP2\Documents\11_p_01467_mekra_vision_controller\Python\TestPool\MVC-12345-B-Sample_functional_B.py", line 21, in &lt;module&gt;
+    from tools.SOMEIP import someip_commands
+  File "C:\Users\systest_MCP2\Documents\11_p_01467_mekra_vision_controller\Python\TestLibraries\tools\SOMEIP\someip_commands.py", line 47, in &lt;module&gt;
+    someip_client = SomeipClient(
+                    ^^^^^^^^^^^^^
+  File "C:\Users\systest_MCP2\Documents\11_p_01467_mekra_vision_controller\Python\TestLibraries\tools\SOMEIP\someip_client.py", line 45, in __init__
+    raise ValueError
+ValueError
+
+			</description>
+			<verdict>ERROR</verdict>
+		</result>
+	</results>
+</singletest>

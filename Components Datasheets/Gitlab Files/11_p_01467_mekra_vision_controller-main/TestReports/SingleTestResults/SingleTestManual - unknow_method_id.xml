@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<singletest source="unknow_method_id">
+	<meta>
+		<title>unknow method id</title>
+		<description />
+		<author>N.N.</author>
+		<date>00.00.0000</date>
+		<version>0.0.0</version>
+		<last_revision>no description</last_revision>
+		<starttime>2026-07-29T11:06:23</starttime>
+		<endtime>2026-07-29T11:06:46</endtime>
+		<hil_computername>TTE-SOW2-W11</hil_computername>
+		<hil_project_path>d:\VSC-GitLab\11_p_01467_mekra_vision_controller</hil_project_path>
+		<hil_username>svc_systessow2</hil_username>
+	</meta>
+	<results>
+		<result>
+			<description>
+
+Preconditions
+			</description>
+			<verdict />
+		</result>
+		<result>
+			<description>DHCP skipped: DUT uses the IP address stored in NVM</description>
+			<verdict>INFO</verdict>
+			<deltatime>0.854</deltatime>
+		</result>
+		<result>
+			<description> Supply voltage U_in = 24.0 V</description>
+			<verdict />
+		</result>
+		<result>
+			<description>
+Supply voltage on channel 1
+Expected value: 24.000 V
+Current value:  23.999 V (voltage_ch1)
+Absolute Tolerance:  +/- 0.100 V
+			</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-92417 - Unknown Method ID</testcase_id>
+			<deltatime>1.919</deltatime>
+		</result>
+		<result>
+			<description> DUT reaches OPERATIONAL state</description>
+			<verdict />
+		</result>
+		<result>
+			<description>SD OfferService received after 19.5 s -&gt; DUT has an IP address and is in OPERATIONAL state</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-92417 - Unknown Method ID</testcase_id>
+			<deltatime>21.449</deltatime>
+		</result>
+		<result>
+			<description>
+
+Positive control: known method is accepted
+			</description>
+			<verdict />
+		</result>
+		<result>
+			<description>Response: 433f 0010 00000017 12345678 01 01 80 00 43245485710001280398d3d2003203</description>
+			<verdict>INFO</verdict>
+			<deltatime>22.058</deltatime>
+		</result>
+		<result>
+			<description>Known method 0x0010 answered with message type 0x80, return code 0x00, length 0x00000017 (expected 0x80 / 0x00 / 0x00000017)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-92417 - Unknown Method ID</testcase_id>
+			<deltatime>22.059</deltatime>
+		</result>
+		<result>
+			<description>
+
+Unknown method IDs are rejected with E_UNKNOWN_METHOD
+			</description>
+			<verdict />
+		</result>
+		<result>
+			<description> Unknown Method ID 0x0000</description>
+			<verdict />
+		</result>
+		<result>
+			<description>Response: 433f 0000 00000008 12345678 01 01 81 03 | payload None | 7.6 ms</description>
+			<verdict>INFO</verdict>
+			<deltatime>22.069</deltatime>
+		</result>
+		<result>
+			<description>Message type is 0x81 (ERROR), received 0x81</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-92417 - Unknown Method ID</testcase_id>
+			<deltatime>22.069</deltatime>
+		</result>
+		<result>
+			<description>Return code is 0x03 E_UNKNOWN_METHOD, received 0x03 (E_UNKNOWN_METHOD)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-92417 - Unknown Method ID</testcase_id>
+			<deltatime>22.070</deltatime>
+		</result>
+		<result>
+			<description>Length field is 0x00000008 and no payload is attached, received 0x00000008 / payload None</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-92417 - Unknown Method ID</testcase_id>
+			<deltatime>22.071</deltatime>
+		</result>
+		<result>
+			<description>Header echoed unchanged (service, method, request id, protocol and interface version): 433f 0000 12345678 01 01 (expected 433f 0000 12345678 01 01)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-92417 - Unknown Method ID</testcase_id>
+			<deltatime>22.071</deltatime>
+		</result>
+		<result>
+			<description>Error response delay 7.6 ms is within 100 ms</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-92417 - Unknown Method ID</testcase_id>
+			<deltatime>22.071</deltatime>
+		</result>
+		<result>
+			<description> Unknown Method ID 0x0003</description>
+			<verdict />
+		</result>
+		<result>
+			<description>Response: 433f 0003 00000008 12345678 01 01 81 03 | payload None | 6.7 ms</description>
+			<verdict>INFO</verdict>
+			<deltatime>22.079</deltatime>
+		</result>
+		<result>
+			<description>Message type is 0x81 (ERROR), received 0x81</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-92417 - Unknown Method ID</testcase_id>
+			<deltatime>22.080</deltatime>
+		</result>
+		<result>
+			<description>Return code is 0x03 E_UNKNOWN_METHOD, received 0x03 (E_UNKNOWN_METHOD)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-92417 - Unknown Method ID</testcase_id>
+			<deltatime>22.080</deltatime>
+		</result>
+		<result>
+			<description>Length field is 0x00000008 and no payload is attached, received 0x00000008 / payload None</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-92417 - Unknown Method ID</testcase_id>
+			<deltatime>22.080</deltatime>
+		</result>
+		<result>
+			<description>Header echoed unchanged (service, method, request id, protocol and interface version): 433f 0003 12345678 01 01 (expected 433f 0003 12345678 01 01)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-92417 - Unknown Method ID</testcase_id>
+			<deltatime>22.081</deltatime>
+		</result>
+		<result>
+			<description>Error response delay 6.7 ms is within 100 ms</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-92417 - Unknown Method ID</testcase_id>
+			<deltatime>22.081</deltatime>
+		</result>
+		<result>
+			<description> Unknown Method ID 0x0022</description>
+			<verdict />
+		</result>
+		<result>
+			<description>Response: 433f 0022 00000008 12345678 01 01 81 03 | payload None | 5.5 ms</description>
+			<verdict>INFO</verdict>
+			<deltatime>22.089</deltatime>
+		</result>
+		<result>
+			<description>Message type is 0x81 (ERROR), received 0x81</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-92417 - Unknown Method ID</testcase_id>
+			<deltatime>22.089</deltatime>
+		</result>
+		<result>
+			<description>Return code is 0x03 E_UNKNOWN_METHOD, received 0x03 (E_UNKNOWN_METHOD)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-92417 - Unknown Method ID</testcase_id>
+			<deltatime>22.089</deltatime>
+		</result>
+		<result>
+			<description>Length field is 0x00000008 and no payload is attached, received 0x00000008 / payload None</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-92417 - Unknown Method ID</testcase_id>
+			<deltatime>22.089</deltatime>
+		</result>
+		<result>
+			<description>Header echoed unchanged (service, method, request id, protocol and interface version): 433f 0022 12345678 01 01 (expected 433f 0022 12345678 01 01)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-92417 - Unknown Method ID</testcase_id>
+			<deltatime>22.090</deltatime>
+		</result>
+		<result>
+			<description>Error response delay 5.5 ms is within 100 ms</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-92417 - Unknown Method ID</testcase_id>
+			<deltatime>22.090</deltatime>
+		</result>
+		<result>
+			<description> Unknown Method ID 0x0202</description>
+			<verdict />
+		</result>
+		<result>
+			<description>Response: 433f 0202 00000008 12345678 01 01 81 03 | payload None | 6.7 ms</description>
+			<verdict>INFO</verdict>
+			<deltatime>22.099</deltatime>
+		</result>
+		<result>
+			<description>Message type is 0x81 (ERROR), received 0x81</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-92417 - Unknown Method ID</testcase_id>
+			<deltatime>22.099</deltatime>
+		</result>
+		<result>
+			<description>Return code is 0x03 E_UNKNOWN_METHOD, received 0x03 (E_UNKNOWN_METHOD)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-92417 - Unknown Method ID</testcase_id>
+			<deltatime>22.099</deltatime>
+		</result>
+		<result>
+			<description>Length field is 0x00000008 and no payload is attached, received 0x00000008 / payload None</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-92417 - Unknown Method ID</testcase_id>
+			<deltatime>22.100</deltatime>
+		</result>
+		<result>
+			<description>Header echoed unchanged (service, method, request id, protocol and interface version): 433f 0202 12345678 01 01 (expected 433f 0202 12345678 01 01)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-92417 - Unknown Method ID</testcase_id>
+			<deltatime>22.100</deltatime>
+		</result>
+		<result>
+			<description>Error response delay 6.7 ms is within 100 ms</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-92417 - Unknown Method ID</testcase_id>
+			<deltatime>22.101</deltatime>
+		</result>
+		<result>
+			<description> Unknown Method ID 0x0306</description>
+			<verdict />
+		</result>
+		<result>
+			<description>Response: 433f 0306 00000008 12345678 01 01 81 03 | payload None | 7.4 ms</description>
+			<verdict>INFO</verdict>
+			<deltatime>22.109</deltatime>
+		</result>
+		<result>
+			<description>Message type is 0x81 (ERROR), received 0x81</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-92417 - Unknown Method ID</testcase_id>
+			<deltatime>22.110</deltatime>
+		</result>
+		<result>
+			<description>Return code is 0x03 E_UNKNOWN_METHOD, received 0x03 (E_UNKNOWN_METHOD)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-92417 - Unknown Method ID</testcase_id>
+			<deltatime>22.110</deltatime>
+		</result>
+		<result>
+			<description>Length field is 0x00000008 and no payload is attached, received 0x00000008 / payload None</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-92417 - Unknown Method ID</testcase_id>
+			<deltatime>22.110</deltatime>
+		</result>
+		<result>
+			<description>Header echoed unchanged (service, method, request id, protocol and interface version): 433f 0306 12345678 01 01 (expected 433f 0306 12345678 01 01)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-92417 - Unknown Method ID</testcase_id>
+			<deltatime>22.110</deltatime>
+		</result>
+		<result>
+			<description>Error response delay 7.4 ms is within 100 ms</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-92417 - Unknown Method ID</testcase_id>
+			<deltatime>22.111</deltatime>
+		</result>
+		<result>
+			<description> Unknown Method ID 0x7FFF</description>
+			<verdict />
+		</result>
+		<result>
+			<description>Response: 433f 7fff 00000008 12345678 01 01 81 03 | payload None | 6.5 ms</description>
+			<verdict>INFO</verdict>
+			<deltatime>22.119</deltatime>
+		</result>
+		<result>
+			<description>Message type is 0x81 (ERROR), received 0x81</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-92417 - Unknown Method ID</testcase_id>
+			<deltatime>22.119</deltatime>
+		</result>
+		<result>
+			<description>Return code is 0x03 E_UNKNOWN_METHOD, received 0x03 (E_UNKNOWN_METHOD)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-92417 - Unknown Method ID</testcase_id>
+			<deltatime>22.119</deltatime>
+		</result>
+		<result>
+			<description>Length field is 0x00000008 and no payload is attached, received 0x00000008 / payload None</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-92417 - Unknown Method ID</testcase_id>
+			<deltatime>22.119</deltatime>
+		</result>
+		<result>
+			<description>Header echoed unchanged (service, method, request id, protocol and interface version): 433f 7fff 12345678 01 01 (expected 433f 7fff 12345678 01 01)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-92417 - Unknown Method ID</testcase_id>
+			<deltatime>22.120</deltatime>
+		</result>
+		<result>
+			<description>Error response delay 6.5 ms is within 100 ms</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-92417 - Unknown Method ID</testcase_id>
+			<deltatime>22.120</deltatime>
+		</result>
+		<result>
+			<description> Unknown Method ID 0xFFFF</description>
+			<verdict />
+		</result>
+		<result>
+			<description>Response: 433f ffff 00000008 12345678 01 01 81 03 | payload None | 7.8 ms</description>
+			<verdict>INFO</verdict>
+			<deltatime>22.128</deltatime>
+		</result>
+		<result>
+			<description>Message type is 0x81 (ERROR), received 0x81</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-92417 - Unknown Method ID</testcase_id>
+			<deltatime>22.129</deltatime>
+		</result>
+		<result>
+			<description>Return code is 0x03 E_UNKNOWN_METHOD, received 0x03 (E_UNKNOWN_METHOD)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-92417 - Unknown Method ID</testcase_id>
+			<deltatime>22.130</deltatime>
+		</result>
+		<result>
+			<description>Length field is 0x00000008 and no payload is attached, received 0x00000008 / payload None</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-92417 - Unknown Method ID</testcase_id>
+			<deltatime>22.131</deltatime>
+		</result>
+		<result>
+			<description>Header echoed unchanged (service, method, request id, protocol and interface version): 433f ffff 12345678 01 01 (expected 433f ffff 12345678 01 01)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-92417 - Unknown Method ID</testcase_id>
+			<deltatime>22.131</deltatime>
+		</result>
+		<result>
+			<description>Error response delay 7.8 ms is within 100 ms</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-92417 - Unknown Method ID</testcase_id>
+			<deltatime>22.132</deltatime>
+		</result>
+		<result>
+			<description>
+
+Postcondition: service still available
+			</description>
+			<verdict />
+		</result>
+		<result>
+			<description>Known method 0x0010 still answered after the rejected requests</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>MVC-92417 - Unknown Method ID</testcase_id>
+			<deltatime>22.433</deltatime>
+		</result>
+	</results>
+</singletest>

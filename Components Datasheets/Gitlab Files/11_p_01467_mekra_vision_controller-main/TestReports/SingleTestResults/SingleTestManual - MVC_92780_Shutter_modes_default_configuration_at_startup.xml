@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<singletest source="Shutter_Control/MVC-92780-Shutter_modes_default_configuration_at_startup.py">
+	<meta>
+		<title>MVC-92780-Shutter modes default configuration at startup</title>
+		<description>Shutter modes: default configuration at startup</description>
+		<author>Ehu Li</author>
+		<date>04.08.2026</date>
+		<version>1.0.0</version>
+		<last_revision>initial</last_revision>
+		<starttime>2026-08-05T10:35:35</starttime>
+		<endtime>2026-08-05T10:36:28</endtime>
+		<hil_computername>TTE-SOW2-W11</hil_computername>
+		<hil_project_path>D:\VSC-GitLab\11_p_01467_mekra_vision_controller</hil_project_path>
+		<hil_username>svc_systessow2</hil_username>
+	</meta>
+	<results>
+		<result>
+			<description>
+
+First startup: shutter defaults to automatic mode
+			</description>
+			<verdict />
+		</result>
+		<result>
+			<description>SW config 10C1 (rcam_2): service port 30501, SD 239.120.1.1:30490, 8 ROIs, Tauto 15.0/20.0 degC, Tprotection 45.0/40.0 degC</description>
+			<verdict>INFO</verdict>
+			<deltatime>0.284</deltatime>
+		</result>
+		<result>
+			<description>Production data Volvo_Standard_1Gbit_SN00012803.py: MAC 98:d3:d2:00:32:03, serial 00012803, hwVer 01H-</description>
+			<verdict>INFO</verdict>
+			<deltatime>0.284</deltatime>
+		</result>
+		<result>
+			<description> U_in = 0.0 V</description>
+			<verdict />
+		</result>
+		<result>
+			<description>Channel 1 disabled, DUT powered down</description>
+			<verdict>INFO</verdict>
+			<deltatime>0.309</deltatime>
+		</result>
+		<result>
+			<description> U_in = 24.0 V</description>
+			<verdict />
+		</result>
+		<result>
+			<description>
+Supply voltage on channel 1
+Expected value: 24.000 V
+Current value:  23.999 V (voltage_ch1)
+Absolute Tolerance:  +/- 0.100 V
+			</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92780</testcase_id>
+			<deltatime>3.373</deltatime>
+		</result>
+		<result>
+			<description> DHCP address allocation</description>
+			<verdict />
+		</result>
+		<result>
+			<description>DHCP lease 192.168.120.10 acknowledged to the DUT</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92780</testcase_id>
+			<deltatime>19.241</deltatime>
+		</result>
+		<result>
+			<description> DUT reaches OPERATIONAL state</description>
+			<verdict />
+		</result>
+		<result>
+			<description>SD OfferService received after 0.1 s -&gt; DUT has an IP address and is in OPERATIONAL state</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92780</testcase_id>
+			<deltatime>19.398</deltatime>
+		</result>
+		<result>
+			<description>OfferService announces service 0x433F at 192.168.120.10:30501 | config {'mac_address': '98D3D2003203', 'serial_nb': '00012803', 'device_type': 'rcam_2'}</description>
+			<verdict>INFO</verdict>
+			<deltatime>19.402</deltatime>
+		</result>
+		<result>
+			<description>SOME/IP endpoint: local ('192.168.120.1', 50010) -&gt; target 192.168.120.10:30501</description>
+			<verdict>INFO</verdict>
+			<deltatime>19.408</deltatime>
+		</result>
+		<result>
+			<description>Waiting 5.0 s for the DUT to finish its startup</description>
+			<verdict>INFO</verdict>
+			<deltatime>19.408</deltatime>
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92780</testcase_id>
+			<deltatime>24.415</deltatime>
+		</result>
+		<result>
+			<description>subscribeROIVideo (0x00000000, ROI 0): method 0x0131, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92780</testcase_id>
+			<deltatime>24.616</deltatime>
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92780</testcase_id>
+			<deltatime>25.622</deltatime>
+		</result>
+		<result>
+			<description>
+
+Second startup: the default is reproducible
+			</description>
+			<verdict />
+		</result>
+		<result>
+			<description> U_in = 0.0 V</description>
+			<verdict />
+		</result>
+		<result>
+			<description>Channel 1 disabled, DUT powered down</description>
+			<verdict>INFO</verdict>
+			<deltatime>25.642</deltatime>
+		</result>
+		<result>
+			<description> U_in = 24.0 V</description>
+			<verdict />
+		</result>
+		<result>
+			<description>
+Supply voltage on channel 1
+Expected value: 24.000 V
+Current value:  23.999 V (voltage_ch1)
+Absolute Tolerance:  +/- 0.100 V
+			</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92780</testcase_id>
+			<deltatime>28.713</deltatime>
+		</result>
+		<result>
+			<description> DHCP address allocation</description>
+			<verdict />
+		</result>
+		<result>
+			<description>DHCP lease 192.168.120.10 acknowledged to the DUT</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92780</testcase_id>
+			<deltatime>44.563</deltatime>
+		</result>
+		<result>
+			<description> DUT reaches OPERATIONAL state</description>
+			<verdict />
+		</result>
+		<result>
+			<description>SD OfferService received after 0.1 s -&gt; DUT has an IP address and is in OPERATIONAL state</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92780</testcase_id>
+			<deltatime>44.717</deltatime>
+		</result>
+		<result>
+			<description>OfferService announces service 0x433F at 192.168.120.10:30501 | config {'mac_address': '98D3D2003203', 'serial_nb': '00012803', 'device_type': 'rcam_2'}</description>
+			<verdict>INFO</verdict>
+			<deltatime>44.727</deltatime>
+		</result>
+		<result>
+			<description>SOME/IP endpoint: local ('192.168.120.1', 50010) -&gt; target 192.168.120.10:30501</description>
+			<verdict>INFO</verdict>
+			<deltatime>44.727</deltatime>
+		</result>
+		<result>
+			<description>Waiting 5.0 s for the DUT to finish its startup</description>
+			<verdict>INFO</verdict>
+			<deltatime>44.727</deltatime>
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92780</testcase_id>
+			<deltatime>49.736</deltatime>
+		</result>
+		<result>
+			<description>subscribeROIVideo (0x00000000, ROI 0): method 0x0131, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92780</testcase_id>
+			<deltatime>49.877</deltatime>
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92780</testcase_id>
+			<deltatime>50.887</deltatime>
+		</result>
+		<result>
+			<description>unSubscribeROIVideo (0x00000000, ROI 0): method 0x0132, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92780</testcase_id>
+			<deltatime>50.896</deltatime>
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x81, return code 0x35 (E_INVALID_CONTROL_INDEX)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92780</testcase_id>
+			<deltatime>51.899</deltatime>
+		</result>
+		<result>
+			<description> U_in = 0.0 V</description>
+			<verdict />
+		</result>
+		<result>
+			<description>Channel 1 disabled, DUT powered down</description>
+			<verdict>INFO</verdict>
+			<deltatime>51.923</deltatime>
+		</result>
+	</results>
+</singletest>

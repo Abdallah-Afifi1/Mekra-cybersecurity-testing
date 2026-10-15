@@ -1,0 +1,10 @@
+tocTab[tocTab.length] = new Array("0.2.2.40:2", "", "38", "EARoot/EA2/EA2/EA40/EA1396.htm", "175.png", "273", "0", "", "Logical diagram0","{A1AD2766-8C9C-C8C8-91A4-88E33EF55E56}");
+tocTab[tocTab.length] = new Array("0.2.2.40:3", "", "«FMEAItem» 38", "EARoot/EA2/EA2/EA40/EA1399.htm", "5.png", "E2049", "0", "", "Class0","{ADE27886-A879-581D-8C25-F8DA5F15A049}");
+tocTab[tocTab.length] = new Array("0.2.2.40:1", "", "38", "EARoot/EA2/EA2/EA40/EA1394.htm", "182.png", "318", "E2049", "", "CompositeStructure diagram0","{6C9AD52A-0EC9-4dcc-9905-24069949FE89}");
+tocTab[tocTab.length] = new Array("0.2.2.40:4", "", "AP", "EARoot/EA2/EA2/EA40/EA1400.htm", "118.png", "E2050", "E2049", "", "Part0","{B373B8E8-26C8-8543-9AE0-09304157E483}");
+tocTab[tocTab.length] = new Array("0.2.2.40:5", "", "AP_aux", "EARoot/EA2/EA2/EA40/EA1401.htm", "118.png", "E2051", "E2049", "", "Part0","{90569F44-A8D9-50C8-88C9-323588E36318}");
+tocTab[tocTab.length] = new Array("0.2.2.40:6", "", "Cause: function &#39;configureStream&#39; faulty (contrast-brightness)<br />", "EARoot/EA2/EA2/EA40/EA1402.htm", "118.png", "E2052", "E2049", "", "Part0","{84977588-A11C-E15B-88F2-5D960DBF9D4A}");
+tocTab[tocTab.length] = new Array("0.2.2.40:7", "", "DetMeasure: Review (if the prosposed technical solution suffice)", "EARoot/EA2/EA2/EA40/EA1403.htm", "118.png", "E2056", "E2049", "", "Part0","{9EF8F955-3860-7C5F-BC4F-4B281D8ADC32}");
+tocTab[tocTab.length] = new Array("0.2.2.40:8", "", "Effect: Details lost due to incorrect contrast or brightness", "EARoot/EA2/EA2/EA40/EA1404.htm", "118.png", "E2055", "E2049", "", "Part0","{B54E8BC5-9362-0F07-B7E8-71751890005C}");
+tocTab[tocTab.length] = new Array("0.2.2.40:9", "", "FailureMode: Stream with incorrect contrast or brightness", "EARoot/EA2/EA2/EA40/EA1405.htm", "118.png", "E2053", "E2049", "", "Part0","{93915B4B-BA68-5702-915C-B0EAE22D7AEA}");
+tocTab[tocTab.length] = new Array("0.2.2.40:10", "", "PrevMeasure: fault (contrast-brightness) free function &#39;configureStream&#39; shall be ensured<br />", "EARoot/EA2/EA2/EA40/EA1406.htm", "118.png", "E2054", "E2049", "", "Part0","{B8F09045-59B6-0D2A-BF8D-6812EA07683B}");

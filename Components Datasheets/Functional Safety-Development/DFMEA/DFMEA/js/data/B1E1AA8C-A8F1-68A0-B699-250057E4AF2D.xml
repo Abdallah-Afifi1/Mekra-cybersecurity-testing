@@ -1,0 +1,10 @@
+tocTab[tocTab.length] = new Array("0.2.1.26:1", "", "21", "EARoot/EA2/EA1/EA26/EA495.htm", "175.png", "371", "0", "", "Logical diagram0","{B39DD7BA-DA28-80EE-8D9A-B19DE11AA780}");
+tocTab[tocTab.length] = new Array("0.2.1.26:3", "", "«FMEAItem» 21", "EARoot/EA2/EA1/EA26/EA500.htm", "5.png", "E2380", "0", "", "Class0","{973DA078-DF48-E015-9E05-A0B35E3CA26A}");
+tocTab[tocTab.length] = new Array("0.2.1.26:2", "", "21", "EARoot/EA2/EA1/EA26/EA497.htm", "182.png", "372", "E2380", "", "CompositeStructure diagram0","{A999083E-72D7-1442-BFD1-49EFAB6F129E}");
+tocTab[tocTab.length] = new Array("0.2.1.26:4", "", "AP", "EARoot/EA2/EA1/EA26/EA501.htm", "118.png", "E2381", "E2380", "", "Part0","{B7855222-8D15-54B4-A341-168E6D5F162F}");
+tocTab[tocTab.length] = new Array("0.2.1.26:5", "", "AP_aux", "EARoot/EA2/EA1/EA26/EA502.htm", "118.png", "E2382", "E2380", "", "Part0","{A9B337E1-4CCA-3081-9C21-895F3327BDEA}");
+tocTab[tocTab.length] = new Array("0.2.1.26:6", "", "Cause: faulty input (frozen image) of &#39;VideoStreamConfiguration&#39; in &#39;configureStream&#39; function<br />", "EARoot/EA2/EA1/EA26/EA503.htm", "118.png", "E2383", "E2380", "", "Part0","{A242432A-3297-A128-8047-12686F4C44D1}");
+tocTab[tocTab.length] = new Array("0.2.1.26:7", "", "DetMeasure: Review (if the prosposed technical solution suffice)", "EARoot/EA2/EA1/EA26/EA504.htm", "118.png", "E2387", "E2380", "", "Part0","{BC253FCA-8DE8-A120-8B39-7AFA36EB4E20}");
+tocTab[tocTab.length] = new Array("0.2.1.26:8", "", "Effect: Frozen Image", "EARoot/EA2/EA1/EA26/EA505.htm", "118.png", "E2386", "E2380", "", "Part0","{9DEA9E95-8ADA-4E9C-9C6E-7F2E020951F9}");
+tocTab[tocTab.length] = new Array("0.2.1.26:9", "", "FailureMode: No consecutive VideoStream", "EARoot/EA2/EA1/EA26/EA506.htm", "118.png", "E2384", "E2380", "", "Part0","{90C8D832-61A5-276A-B91F-1ED748076123}");
+tocTab[tocTab.length] = new Array("0.2.1.26:10", "", "PrevMeasure: fault (frozen image) free reception of &#39;VideoStreamConfiguration&#39; in &#39;configureStream&#39; function shall be ensured", "EARoot/EA2/EA1/EA26/EA507.htm", "118.png", "E2385", "E2380", "", "Part0","{B45B7341-89F4-3220-BA7C-659CC42DEEB8}");

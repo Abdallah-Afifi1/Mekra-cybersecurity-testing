@@ -1,0 +1,17 @@
+tocTab[tocTab.length] = new Array("0.2.4:1", "", "Interfaces (Internal)", "EARoot/EA2/EA4/EA563.htm", "175.png", "108", "0", "", "Logical diagram0","{90B69088-9D0A-D4B7-9CA5-04C33765EBDE}");
+tocTab[tocTab.length] = new Array("0.2.4:2", "", "«InterfaceBlock» [OBSOLETE]iFSDiagnostics", "EARoot/EA2/EA4/EA566.htm", "5.png", "E963", "0", "", "Class0","{C22CE63C-DF22-466e-8D3E-8DE7EAFFD1B5}");
+tocTab[tocTab.length] = new Array("0.2.4:3", "", "«InterfaceBlock» IfEncodedImageControl", "EARoot/EA2/EA4/EA567.htm", "5.png", "E1005", "0", "", "Class0","{DA1AEEF5-D96E-4182-94C3-D6035D0D5870}");
+tocTab[tocTab.length] = new Array("0.2.4:4", "", "«InterfaceBlock» ifInternalImageControl", "EARoot/EA2/EA4/EA568.htm", "5.png", "E999", "0", "", "Class0","{4024DAD0-763E-473f-8B63-6A4190FDAA1F}");
+tocTab[tocTab.length] = new Array("0.2.4:5", "", "«InterfaceBlock» ifProcessedAndScaledImage", "EARoot/EA2/EA4/EA569.htm", "5.png", "E1019", "0", "", "Class0","{F782BBB2-F55D-4d1b-9553-9D4C02FF3DDB}");
+tocTab[tocTab.length] = new Array("0.2.4:6", "", "«InterfaceBlock» ifProcessedImage", "EARoot/EA2/EA4/EA570.htm", "5.png", "E992", "0", "", "Class0","{13951006-4CD9-40ec-AB6E-8AEBCD0771E5}");
+tocTab[tocTab.length] = new Array("0.2.4:7", "", "«InterfaceBlock» ifProcessedImageControl", "EARoot/EA2/EA4/EA571.htm", "5.png", "E721", "0", "", "Class0","{19039C28-D07C-46c1-AC84-CE42B0E5E6C2}");
+tocTab[tocTab.length] = new Array("0.2.4:8", "", "«InterfaceBlock» ifRAWDataImage", "EARoot/EA2/EA4/EA572.htm", "5.png", "E585", "0", "", "Class0","{7DD6F790-B2FE-4451-92AC-A190009BF864}");
+tocTab[tocTab.length] = new Array("0.2.4:9", "", "«InterfaceBlock» ifRAWDataImageControl", "EARoot/EA2/EA4/EA573.htm", "5.png", "E591", "0", "", "Class0","{1147C682-D265-40de-AEEC-784EA6850DA6}");
+tocTab[tocTab.length] = new Array("0.2.4:10", "", "«InterfaceBlock» ifScaledImage", "EARoot/EA2/EA4/EA574.htm", "5.png", "E713", "0", "", "Class0","{EDB658F9-B130-4bc4-9759-B468A1B38F5C}");
+tocTab[tocTab.length] = new Array("0.2.4:11", "", "«FlowProperty» fpRAWDataIamge: RAWDataImage", "EARoot/EA2/EA4/EA575.htm", "118.png", "E586", "E585", "", "Part0","{85653692-D454-464f-B813-85C6096D6F47}");
+tocTab[tocTab.length] = new Array("0.2.4:12", "", "«FlowProperty» fpRAWDataImageCommand: RAWDataImageControl", "EARoot/EA2/EA4/EA576.htm", "118.png", "E592", "E591", "", "Part0","{5942B3B6-9741-40c0-922A-A4B31A90834A}");
+tocTab[tocTab.length] = new Array("0.2.4:13", "", "«FlowProperty» fpScaledImage: ScaledDataImage", "EARoot/EA2/EA4/EA577.htm", "118.png", "E714", "E713", "", "Part0","{65C81AE7-A0DE-40b1-BF19-2D127C41E7C4}");
+tocTab[tocTab.length] = new Array("0.2.4:14", "", "«FlowProperty» fpSwitchOn: StreamSwitchOn", "EARoot/EA2/EA4/EA578.htm", "118.png", "E722", "E721", "", "Part0","{7A9E20DC-C233-4c28-985C-CD1408AB01F0}");
+tocTab[tocTab.length] = new Array("0.2.4:15", "", "«FlowProperty» fpProcessedImage: ProcessedDataImage", "EARoot/EA2/EA4/EA579.htm", "118.png", "E993", "E992", "", "Part0","{9929D03B-590B-4922-A700-484E78830CCD}");
+tocTab[tocTab.length] = new Array("0.2.4:16", "", "«FlowProperty» fpCmd: InternalDataControlCommand", "EARoot/EA2/EA4/EA580.htm", "118.png", "E1001", "E999", "", "Part0","{8F1DAFD2-240E-4b21-A145-06561DEAB026}");
+tocTab[tocTab.length] = new Array("0.2.4:17", "", "«FlowProperty» fpImage: ProcessedAndScaledImage", "EARoot/EA2/EA4/EA581.htm", "118.png", "E1021", "E1019", "", "Part0","{0C5B1DAF-8B9E-42fc-9CAB-AB922982C871}");

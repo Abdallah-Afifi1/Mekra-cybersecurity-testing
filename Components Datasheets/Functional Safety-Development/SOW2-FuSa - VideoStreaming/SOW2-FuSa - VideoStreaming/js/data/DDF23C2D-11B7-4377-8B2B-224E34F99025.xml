@@ -1,0 +1,8 @@
+tocTab[tocTab.length] = new Array("0.1.3:1", "", "UseCases", "EARoot/EA1/EA3/EA374.htm", "180.png", "114", "0", "", "Use Case diagram0","{AE74FEFB-CF4D-43c2-AF00-ACD97644E3F7}");
+tocTab[tocTab.length] = new Array("0.1.3:2", "", "[FuSa]receiveDiagnostics", "EARoot/EA1/EA3/EA377.htm", "7.png", "E532", "0", "", "UseCase0","{2E0BCFBA-4A60-4870-983C-DA83CEC22B42}");
+tocTab[tocTab.length] = new Array("0.1.3:3", "", "configureStreamAutonomously", "EARoot/EA1/EA3/EA378.htm", "7.png", "E821", "0", "", "UseCase0","{E62542F4-12E7-45ef-A1AB-37BD94AAF753}");
+tocTab[tocTab.length] = new Array("0.1.3:4", "", "configureStreamIntern", "EARoot/EA1/EA3/EA379.htm", "7.png", "E820", "0", "", "UseCase0","{8322E2C0-3718-4d4a-9951-6144A1140244}");
+tocTab[tocTab.length] = new Array("0.1.3:5", "", "configureVideoStreamUserEvent", "EARoot/EA1/EA3/EA380.htm", "7.png", "E530", "0", "", "UseCase0","{2DB533DF-2016-49be-99AA-5800229B6B01}");
+tocTab[tocTab.length] = new Array("0.1.3:6", "", "provideStream", "EARoot/EA1/EA3/EA381.htm", "7.png", "E529", "0", "", "UseCase0","{CAD6C346-A541-40c9-A13A-85DD391173CF}");
+tocTab[tocTab.length] = new Array("0.1.3:7", "", "switchStreamOff", "EARoot/EA1/EA3/EA382.htm", "7.png", "E527", "0", "", "UseCase0","{5D5995C3-4445-4488-96C9-7C12CB5D5423}");
+tocTab[tocTab.length] = new Array("0.1.3:8", "", "switchStreamOn", "EARoot/EA1/EA3/EA383.htm", "7.png", "E526", "0", "", "UseCase0","{8493C021-23ED-4679-B1E3-C4D656CF8BB7}");

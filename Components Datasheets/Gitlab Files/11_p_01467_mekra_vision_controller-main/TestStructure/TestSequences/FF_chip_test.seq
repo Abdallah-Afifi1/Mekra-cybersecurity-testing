@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsequence>
+	<meta>
+		<title>FF_Chip_Test</title>
+		<description>
+Test-1: 70°C -&gt; 85°C in (2°C stepps/20min) stepps.
+Test-2: 85°C  infinitely.
+		</description>
+		<author>Stefan Reiner</author>
+		<date>2026-06-30T16:43:29</date>
+		<version />
+		<last_revision />
+	</meta>
+	<singletests>
+		<singletest source="development_support/FF_Chip_test_1.py" />
+	</singletests>
+</testsequence>

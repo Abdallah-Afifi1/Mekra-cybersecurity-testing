@@ -1,0 +1,13 @@
+tocTab[tocTab.length] = new Array("0.2.1.3:1", "", "Interfaces (External)", "EARoot/EA2/EA1/EA3/EA447.htm", "175.png", "111", "0", "", "Logical diagram0","{8EFC5AE5-87B2-C0FF-A5F0-2CD4D603BE51}");
+tocTab[tocTab.length] = new Array("0.2.1.3:2", "", "«InterfaceBlock» [OBSOLETE]iDiagnosticsExternal", "EARoot/EA2/EA1/EA3/EA450.htm", "5.png", "E972", "0", "", "Class0","{13E09854-AC9C-40f0-9DA8-2E6269957AA3}");
+tocTab[tocTab.length] = new Array("0.2.1.3:3", "", "«InterfaceBlock» ifDiagnostics", "EARoot/EA2/EA1/EA3/EA451.htm", "5.png", "E964", "0", "", "Class0","{4596F0A7-FBD8-4fc7-9D6A-1EDD73264547}");
+tocTab[tocTab.length] = new Array("0.2.1.3:4", "", "«InterfaceBlock» ifRAWVideoStream", "EARoot/EA2/EA1/EA3/EA452.htm", "5.png", "E491", "0", "", "Class0","{A9DB559B-2F85-479a-98DE-DC7605D0925A}");
+tocTab[tocTab.length] = new Array("0.2.1.3:5", "", "«InterfaceBlock» ifRAWVideoStreamControl", "EARoot/EA2/EA1/EA3/EA453.htm", "5.png", "E492", "0", "", "Class0","{730F9937-784E-42e1-A0E2-6FD388473DA4}");
+tocTab[tocTab.length] = new Array("0.2.1.3:6", "", "«InterfaceBlock» ifVideoStream", "EARoot/EA2/EA1/EA3/EA454.htm", "5.png", "E489", "0", "", "Class0","{5D0E4725-E5CD-40ac-A8D9-52FDF092FBAF}");
+tocTab[tocTab.length] = new Array("0.2.1.3:7", "", "«InterfaceBlock» ifVideoStreamControl", "EARoot/EA2/EA1/EA3/EA455.htm", "5.png", "E484", "0", "", "Class0","{6A9A256F-8388-4d01-85F0-62790E71CB39}");
+tocTab[tocTab.length] = new Array("0.2.1.3:8", "", "«FlowProperty» fpControlCommand: VideoStreamControlCommand", "EARoot/EA2/EA1/EA3/EA456.htm", "118.png", "E486", "E484", "", "Part0","{330F676F-E53A-47e1-BB5F-0EBCD5B10930}");
+tocTab[tocTab.length] = new Array("0.2.1.3:9", "", "«FlowProperty» fpVideoStream: VideoStream", "EARoot/EA2/EA1/EA3/EA457.htm", "118.png", "E495", "E489", "", "Part0","{E0959630-717D-4fe3-AE35-EDC08BD498A0}");
+tocTab[tocTab.length] = new Array("0.2.1.3:10", "", "«FlowProperty» fpVideoStream: RAWVideoStream", "EARoot/EA2/EA1/EA3/EA458.htm", "118.png", "E501", "E491", "", "Part0","{DCFD5683-3744-495f-98CF-208CE624E399}");
+tocTab[tocTab.length] = new Array("0.2.1.3:11", "", "«FlowProperty» fpControlCommand: RAWVideoStreamControlCommand", "EARoot/EA2/EA1/EA3/EA459.htm", "118.png", "E505", "E492", "", "Part0","{E6B97FD0-1F99-4f06-98E7-1A824AB17274}");
+tocTab[tocTab.length] = new Array("0.2.1.3:12", "", "«FlowProperty» fpDiagnosticsInformation: DiagnosticsInformation", "EARoot/EA2/EA1/EA3/EA460.htm", "118.png", "E965", "E964", "", "Part0","{594A3069-1E4B-4f29-8537-BFE9D2924E32}");
+tocTab[tocTab.length] = new Array("0.2.1.3:13", "", "«FlowProperty» fpDiagnosticsInformation: RAWVideoStreamDiagnostics", "EARoot/EA2/EA1/EA3/EA461.htm", "118.png", "E973", "E972", "", "Part0","{6C98FB6E-091C-48ed-B03C-7D7A7FDF0A0F}");

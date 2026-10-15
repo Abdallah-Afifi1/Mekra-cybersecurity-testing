@@ -1,0 +1,61 @@
+Dongle-DLL v5.1 (x64)
+# #####################################################################
+# Checking License: TestToolkit v2.2.1...
+# #####################################################################
+D-USB-2020-B-00DB TestToolkit 2.2.x
+PASSED
+# License valid
+[verifyFeature] ttk_checks 1.7.0
+
+== dhcp_test.py ================================================================
+[[setup]]
+# #############################################################
+# Connected to TCPIP0::192.168.10.10:
+# Device: Rohde&Schwarz NGP824
+#         5601.4007k03/111087,02.025 02E3A3C161
+# #############################################################
+# #############################################################
+# Connected to TCPIP0::192.168.10.20:
+# Device: Siglent Technologies SDM3065X
+#         SDM36HCX800721,3.02.01.13
+# #############################################################
+  INFO  - Power supply set to 24.0 V
+          Delta time: 0.68s
+voltage_preset_ch1: 24.000 V
+voltage_ch1: 24.000 V
+ PASSED - Check PSU output voltage
+          Expected value: 24.000 V
+          Current value:  24.000 V (voltage_ch1)
+          Absolute Tolerance:  +/- 0.100 V
+          Delta time: 0.71s
+          Testcase-ID: dhcp_test
+DHCP server is starting...
+DHCP Discover received.
+Sending DHCP Offer.
+Waiting for DHCP Request after Offer.
+l_readable:  [<socket.socket fd=1348, family=2, type=2, proto=0, laddr=('192.168.120.1', 67)>]
+DHCP Request received. Sending DHCP Acknowledge.
+ACK client IP: [192, 168, 120, 5] cycles: 0
+D:\VSC-GitLab\11_p_01467_mekra_vision_controller\Python\TestPool\dhcp_test.py:48: ResourceWarning: unclosed <socket.socket fd=1348, family=2, type=2, proto=0, laddr=('192.168.120.1', 67)>
+  my_dhcpserver.server()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+
+[[breakdown]]
+
+--Elapsed Time:----------------
+  1.6 seconds
+
+--Results:---------------------
+   INFO   - Power supply set to 24.0 V
+  PASSED  - Check PSU output voltage\nExpected value: 24.000 V\nCurrent value:  24.000 V (voltage_ch1)\nAbsolute Tolerance:  +/- 0.100 V
+
+--Summary:---------------------
+  FAILED : 0
+  PASSED : 1
+  INFO   : 1
+-------------------------------
+
+XML... ...writing......done
+# Results stored to "SingleTest_s00t00.xml".
+Done.
+[[test_runner_finally]]

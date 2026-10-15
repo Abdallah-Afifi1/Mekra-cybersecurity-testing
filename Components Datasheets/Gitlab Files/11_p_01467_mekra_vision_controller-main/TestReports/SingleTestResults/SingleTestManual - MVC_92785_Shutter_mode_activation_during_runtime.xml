@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<singletest source="Shutter_Control/MVC-92785-Shutter_mode_activation_during_runtime.py">
+	<meta>
+		<title>MVC-92785-Shutter mode activation during runtime</title>
+		<description>Shutter mode activation during runtime</description>
+		<author>Ehu Li</author>
+		<date>03.08.2026</date>
+		<version>1.0.0</version>
+		<last_revision>initial</last_revision>
+		<starttime>2026-08-17T15:29:57</starttime>
+		<endtime>2026-08-17T15:30:32</endtime>
+		<hil_computername>TTE-SOW2-W11</hil_computername>
+		<hil_project_path>D:\VSC-GitLab\11_p_01467_mekra_vision_controller</hil_project_path>
+		<hil_username>svc_systessow2</hil_username>
+	</meta>
+	<results>
+		<result>
+			<description>
+
+Preconditions
+			</description>
+			<verdict />
+		</result>
+		<result>
+			<description>SW config 10C1 (rcam_2): service port 30501, SD 239.120.1.1:30490, 8 ROIs, Tauto 15.0/20.0 degC, Tprotection 45.0/40.0 degC</description>
+			<verdict>INFO</verdict>
+			<deltatime>1.023</deltatime>
+		</result>
+		<result>
+			<description>Production data Volvo_Standard_1Gbit_SN00012803.py: MAC 98:d3:d2:00:32:03, serial 00012803, hwVer 01H-</description>
+			<verdict>INFO</verdict>
+			<deltatime>1.046</deltatime>
+		</result>
+		<result>
+			<description> U_in = 0.0 V</description>
+			<verdict />
+		</result>
+		<result>
+			<description>Channel 1 disabled, DUT powered down</description>
+			<verdict>INFO</verdict>
+			<deltatime>1.063</deltatime>
+		</result>
+		<result>
+			<description> U_in = 24.0 V</description>
+			<verdict />
+		</result>
+		<result>
+			<description>
+Supply voltage on channel 1
+Expected value: 24.000 V
+Current value:  24.000 V (voltage_ch1)
+Absolute Tolerance:  +/- 0.100 V
+			</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92785</testcase_id>
+			<deltatime>4.128</deltatime>
+		</result>
+		<result>
+			<description> DHCP address allocation</description>
+			<verdict />
+		</result>
+		<result>
+			<description>DHCP lease 192.168.120.10 acknowledged to the DUT</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92785</testcase_id>
+			<deltatime>15.966</deltatime>
+		</result>
+		<result>
+			<description> DUT reaches OPERATIONAL state</description>
+			<verdict />
+		</result>
+		<result>
+			<description>SD OfferService received after 0.1 s -&gt; DUT has an IP address and is in OPERATIONAL state</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92785</testcase_id>
+			<deltatime>16.117</deltatime>
+		</result>
+		<result>
+			<description>OfferService announces service 0x433F at 192.168.120.10:30501 | config {'mac_address': '98D3D2003203', 'serial_nb': '00012803', 'device_type': 'rcam_2'}</description>
+			<verdict>INFO</verdict>
+			<deltatime>16.122</deltatime>
+		</result>
+		<result>
+			<description>SOME/IP endpoint: local ('192.168.120.1', 50010) -&gt; target 192.168.120.10:30501</description>
+			<verdict>INFO</verdict>
+			<deltatime>16.127</deltatime>
+		</result>
+		<result>
+			<description>Waiting 2.0 s for the DUT to finish its startup</description>
+			<verdict>INFO</verdict>
+			<deltatime>16.128</deltatime>
+		</result>
+		<result>
+			<description>
+
+Automatic mode follows the video stream
+			</description>
+			<verdict />
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92785</testcase_id>
+			<deltatime>18.139</deltatime>
+		</result>
+		<result>
+			<description>Control 0x50 shall be in automatic mode and closed: payload 0x07040000 (expected 0x07040000)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92785</testcase_id>
+			<deltatime>18.140</deltatime>
+		</result>
+		<result>
+			<description>subscribeROIVideo (0x00000003, ROI 3): method 0x0131, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92785</testcase_id>
+			<deltatime>18.245</deltatime>
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92785</testcase_id>
+			<deltatime>20.256</deltatime>
+		</result>
+		<result>
+			<description>Control 0x50 shall be in automatic mode and open: payload 0x07040001 (expected 0x07040001)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92785</testcase_id>
+			<deltatime>20.257</deltatime>
+		</result>
+		<result>
+			<description>
+
+ManualModified applies the control value
+			</description>
+			<verdict />
+		</result>
+		<result>
+			<description>setCamExclusive (lock camera for 360 s): method 0x0011, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92785</testcase_id>
+			<deltatime>20.266</deltatime>
+		</result>
+		<result>
+			<description>setCamControl (switch to ManualModified ON): method 0x0201, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92785</testcase_id>
+			<deltatime>20.276</deltatime>
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92785</testcase_id>
+			<deltatime>22.280</deltatime>
+		</result>
+		<result>
+			<description>Control 0x50 shall be in manual mode and open: payload 0x07020001 (expected 0x07020001)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92785</testcase_id>
+			<deltatime>22.281</deltatime>
+		</result>
+		<result>
+			<description>setCamControl (switch to ManualModified OFF): method 0x0201, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92785</testcase_id>
+			<deltatime>22.290</deltatime>
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92785</testcase_id>
+			<deltatime>24.294</deltatime>
+		</result>
+		<result>
+			<description>Control 0x50 shall be in manual mode and closed: payload 0x07020000 (expected 0x07020000)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92785</testcase_id>
+			<deltatime>24.295</deltatime>
+		</result>
+		<result>
+			<description>
+
+Manual mode ignores the control value
+			</description>
+			<verdict />
+		</result>
+		<result>
+			<description>setCamControl (switch to Manual ON): method 0x0201, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92785</testcase_id>
+			<deltatime>24.304</deltatime>
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92785</testcase_id>
+			<deltatime>26.309</deltatime>
+		</result>
+		<result>
+			<description>Control 0x50 shall be in manual mode and closed: payload 0x07020000 (expected 0x07020000)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92785</testcase_id>
+			<deltatime>26.310</deltatime>
+		</result>
+		<result>
+			<description>setCamControl (switch to Manual OFF): method 0x0201, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92785</testcase_id>
+			<deltatime>26.319</deltatime>
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92785</testcase_id>
+			<deltatime>28.324</deltatime>
+		</result>
+		<result>
+			<description>Control 0x50 shall be in manual mode and closed: payload 0x07020000 (expected 0x07020000)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92785</testcase_id>
+			<deltatime>28.325</deltatime>
+		</result>
+		<result>
+			<description>
+
+Manual mode overrides the video stream
+			</description>
+			<verdict />
+		</result>
+		<result>
+			<description>subscribeROIVideo (0x00000003, ROI 3): method 0x0131, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92785</testcase_id>
+			<deltatime>28.513</deltatime>
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92785</testcase_id>
+			<deltatime>30.517</deltatime>
+		</result>
+		<result>
+			<description>Control 0x50 shall be in manual mode and closed while the stream is active: payload 0x07020000 (expected 0x07020000)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92785</testcase_id>
+			<deltatime>30.517</deltatime>
+		</result>
+		<result>
+			<description>
+
+Automatic mode takes control back
+			</description>
+			<verdict />
+		</result>
+		<result>
+			<description>setCamControl (switch to Automatic): method 0x0201, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92785</testcase_id>
+			<deltatime>30.526</deltatime>
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92785</testcase_id>
+			<deltatime>32.533</deltatime>
+		</result>
+		<result>
+			<description>Control 0x50 shall be in automatic mode and open: payload 0x07040000 (expected 0x07040001)</description>
+			<verdict>FAILED</verdict>
+			<testcase_id>HIL_Test.MVC-92785</testcase_id>
+			<deltatime>32.535</deltatime>
+		</result>
+		<result>
+			<description>unSubscribeROIVideo (0x00000003, ROI 3): method 0x0132, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92785</testcase_id>
+			<deltatime>32.636</deltatime>
+		</result>
+		<result>
+			<description>getCamControl (read control 0x50): method 0x0203, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92785</testcase_id>
+			<deltatime>34.645</deltatime>
+		</result>
+		<result>
+			<description>Control 0x50 shall be in automatic mode and closed: payload 0x07040000 (expected 0x07040000)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92785</testcase_id>
+			<deltatime>34.646</deltatime>
+		</result>
+		<result>
+			<description>eraseCamExclusive (release the lock): method 0x0019, message type 0x80, return code 0x00 (E_OK)</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>HIL_Test.MVC-92785</testcase_id>
+			<deltatime>34.655</deltatime>
+		</result>
+		<result>
+			<description> U_in = 0.0 V</description>
+			<verdict />
+		</result>
+		<result>
+			<description>Channel 1 disabled, DUT powered down</description>
+			<verdict>INFO</verdict>
+			<deltatime>34.672</deltatime>
+		</result>
+	</results>
+</singletest>

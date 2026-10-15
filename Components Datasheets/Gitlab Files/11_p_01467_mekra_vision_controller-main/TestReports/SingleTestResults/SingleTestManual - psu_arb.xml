@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<singletest source="psu_arb.py">
+	<meta>
+		<title>psu arb</title>
+		<description>power supply unit, arbitrary sequence / waveform generation</description>
+		<author>Tremmel</author>
+		<date>23.06.2025</date>
+		<version>1.0.0</version>
+		<last_revision>initial</last_revision>
+		<starttime>2025-06-24T10:17:06</starttime>
+		<endtime>2025-06-24T10:17:16</endtime>
+		<hil_computername>ISYCWS050</hil_computername>
+		<hil_project_path>D:\HIL-Projekte\Mekra_SOW2</hil_project_path>
+		<hil_username>JoTremmel</hil_username>
+	</meta>
+	<results>
+		<result>
+			<description>Defining an arbitrary sequence on channel 1</description>
+			<verdict>INFO</verdict>
+			<deltatime>0.085</deltatime>
+		</result>
+		<result>
+			<description>Running arbitrary sequence</description>
+			<verdict>INFO</verdict>
+			<deltatime>0.176</deltatime>
+		</result>
+		<result>
+			<description />
+			<verdict>INFO</verdict>
+			<deltatime>10.316</deltatime>
+			<object name="arbitary.png" source="D:/HIL-Projekte/Mekra_SOW2/TestReports/SingleTestResults/SingleTestManual - psu_arb/arbitary.png" type="image/png" />
+		</result>
+	</results>
+</singletest>

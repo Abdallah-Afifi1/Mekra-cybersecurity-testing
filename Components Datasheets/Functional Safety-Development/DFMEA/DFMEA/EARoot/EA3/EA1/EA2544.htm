@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>see MVC::VideoStreaming(Branch)</title>
+<link href="../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="../../../js/displayToc.js" type="text/javascript"></script>
+<script>
+
+  function switchProjectProperties() {
+			if (document.getElementById("proj00").style.display == "none") {
+				document.getElementById("proj00").style.display = "revert";
+				document.getElementById("proj01").style.display = "revert";
+				document.getElementById("proj02").style.display = "revert";
+				document.getElementById("proj03").style.display = "revert";
+				document.getElementById("proj04").style.display = "revert";
+				document.getElementById("proj05").style.display = "revert";
+			} else {
+				document.getElementById("proj00").style.display = "none";
+				document.getElementById("proj01").style.display = "none";
+				document.getElementById("proj02").style.display = "none";
+				document.getElementById("proj03").style.display = "none";
+				document.getElementById("proj04").style.display = "none";
+				document.getElementById("proj05").style.display = "none";
+			}
+}
+
+		function switchAdvancedProperties(){
+
+			if (document.getElementById("adv00").style.display == "none") {;
+				document.getElementById("adv00").style.display = "revert";
+				document.getElementById("adv01").style.display = "revert";
+			} else {
+				document.getElementById("adv00").style.display = "none";
+				document.getElementById("adv01").style.display = "none";
+			}
+		}
+		function initPage()
+        {			
+			var divs = document.getElementsByClassName("ObjectDetailsNotes");
+			for (var j = 0; j < divs.length; j++) {
+				var tmpStr = divs[j].innerHTML;
+				tmpStr = tmpStr.replace(/#gt;/g, "&gt;");
+				tmpStr = tmpStr.replace(/#lt;/g, "&lt;");
+
+				tmpStr = tmpStr.replace(/&gt;/g, ">");
+				tmpStr = tmpStr.replace(/&lt;/g, "<");
+
+				divs[j].innerHTML = tmpStr;
+			}
+
+            if (document.getElementById('TableGroup') != null)
+            {
+                toggleItem(document.getElementById('TableGroup').getElementsByTagName('li')[0].id.replace("Title", ""));
+            }
+
+        }
+</script>
+<style>
+
+</style>
+</head>
+<body onload="initPage();">
+<div class="section group" >
+
+		<div class="col span_2_of_2 header_frame">
+			<h1> see MVC::VideoStreaming(Branch) </h1>
+			<!-- <img class="header_image" src="../../../images/mekraLangGermany.PNG" align="right" alt="Header Image" />-->
+			<img class="header_image" src="../../../images/mekraLangGermany.PNG" align="right" alt="Header Image" />
+		</div>
+		<div class="col span_2_of_2 breadcrumb_frame">
+			<p><a href="../../EA5.htm">DFMEA</a> / <a href="../EA2497.htm">Architecture</a> / <a href="EA2544.htm">see MVC::VideoStreaming(Branch)</a></p>
+		</div>
+			
+		<table class="contentmaintable">
+			<!-- <tfoot>
+				<tr>
+					<td>foot1</td>
+					<td>foot2</td>
+				</tr>
+			</tfoot> -->
+			<tbody>
+				<tr>
+					<td class="indexcell">
+						<div class="projectBrowserTitle">Project: </div>
+						<ul>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA2545.htm">acquireDiagnostics</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA2546.htm">analyseImageMetaData</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA2547.htm">configureDispatchment</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA2548.htm">configureEncoding</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA2549.htm">configureProcessing</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA2550.htm">configureRAWStream</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA2551.htm">configureScaling</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA2552.htm">configureStream</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA2553.htm">disableStream</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA2554.htm">dispatch image</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA2555.htm">enableStream</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA2556.htm">encode image</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA2557.htm">handleDiagnostics</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA2558.htm">process Image</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA2559.htm">provideConfiguration</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA2560.htm">provideImageMetaData</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA2561.htm">receive RAW image</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA2562.htm">receiveDiagnosticsInformation</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA2563.htm">scale image</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA2564.htm">storeVideoStreamConfiguration</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA2565.htm">switchVideoStraemOff</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA2566.htm">switchVideoStreamOn</a></li>
+</ul>
+
+					</td>
+					<td class="contentcell"><div class="pageHeader"></div>
+<div class="PageBody">
+	<span class="ObjectTitle">see MVC::VideoStreaming(Branch)  : Public   Package</span>
+	<table border="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">24.07.2025 15:20:31</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic">Modified:</td>
+			<td class="ObjectDetailsValue">28.07.2025 08:46:14</td>
+		</tr>
+		<tr style="height: 10px"><td colspan="2"></td></tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><button onclick="switchProjectProperties()"><img src="../../../images/plus03.gif" align="absmiddle" id="proj" /></button>Project:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td class="ObjectDetailsValue">rekas</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj02" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Phase:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj03" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Status:</td>
+			<td class="ObjectDetailsValue">Proposed</td>
+		</tr>
+		<tr id="proj04" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Complexity:</td>
+			<td class="ObjectDetailsValue">Easy</td>
+		</tr>
+		<tr id="proj05" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Difficulty:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj06" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Priority:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj05" style="display: none;">
+			<td class="ObjectDetailsTopic" >Multiplicity:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><button onclick="switchAdvancedProperties()"><img src="../../../images/plus03.gif" align="absmiddle" id="adv" /></button>Advanced:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
+			<td class="ObjectDetailsValue">{E7BCB6D5-E29F-4edc-B5A2-409D0D1DA325}</td>
+		</tr>
+		<tr id="adv01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+	</table>
+	
+ </div>
+ </td>
+				</tr>
+			</tbody>
+		</table>
+		
+</div>
+</body>
+</html>
+

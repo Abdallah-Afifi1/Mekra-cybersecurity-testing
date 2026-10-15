@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testseries>
+	<meta>
+		<title />
+		<description>DHCP test server</description>
+		<author>Völler</author>
+		<date>2025-07-02T10:43:22</date>
+		<version />
+		<last_revision />
+		<hardwareversion>A0</hardwareversion>
+		<softwareversion>SW0A1</softwareversion>
+		<customer>Volvo</customer>
+		<project>11_P_01467_MEKRA_Vision_Controller</project>
+		<department>T-EQS</department>
+	</meta>
+	<testsequences>
+		<testsequence source="dhcp_test.seq">
+			<meta>
+				<title>DHCP_Test</title>
+				<description>Basic test to start an DHCP server.</description>
+				<author>Völler J.</author>
+				<date>2025-07-02T10:41:51</date>
+				<version />
+				<last_revision />
+			</meta>
+			<singletests>
+				<singletest source="dhcp_test.py" selected="true" />
+			</singletests>
+		</testsequence>
+	</testsequences>
+</testseries>

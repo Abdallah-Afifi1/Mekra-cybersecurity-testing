@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<singletest source="psu_test.py">
+	<meta>
+		<title>psu test</title>
+		<description>basic access tests for power supply unit</description>
+		<author>Tremmel</author>
+		<date>19.05.2025</date>
+		<version>1.0.1</version>
+		<last_revision />
+		<starttime>2025-05-20T12:41:52</starttime>
+		<endtime>2025-05-20T12:41:52</endtime>
+		<hil_computername>ISYCWS050</hil_computername>
+		<hil_project_path>D:\HIL-Projekte\Mekra_SOW2</hil_project_path>
+		<hil_username>JoTremmel</hil_username>
+	</meta>
+	<results>
+		<result>
+			<description>Current PSU system datetime: 2025-05-20 12:41:41</description>
+			<verdict>INFO</verdict>
+			<deltatime>0.131</deltatime>
+		</result>
+		<result>
+			<description>Power supply set to 2.22 V</description>
+			<verdict>INFO</verdict>
+			<deltatime>0.280</deltatime>
+		</result>
+		<result>
+			<description>
+Check PSU output voltage
+Expected value: 2.220 V
+Current value:  2.222 V (voltage_ch1)
+Absolute Tolerance:  +/- 0.020 V
+			</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>psu_basics</testcase_id>
+			<deltatime>0.308</deltatime>
+		</result>
+		<result>
+			<description>Power supply set to 12.345 V</description>
+			<verdict>INFO</verdict>
+			<deltatime>0.339</deltatime>
+		</result>
+		<result>
+			<description>
+Check PSU output voltage
+Expected value: 12.345 V
+Current value:  12.344 V (voltage_ch1)
+Absolute Tolerance:  +/- 0.020 V
+			</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>psu_basics</testcase_id>
+			<deltatime>0.368</deltatime>
+		</result>
+		<result>
+			<description>Disabled Channel 1 output</description>
+			<verdict>INFO</verdict>
+			<deltatime>0.385</deltatime>
+		</result>
+		<result>
+			<description>
+Voltage of disabled channel should be zero.
+Expected value: 0.000 V
+Current value:  0.001 V (voltage_ch1)
+Absolute Tolerance:  +/- 0.020 V
+			</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>psu_basics</testcase_id>
+			<deltatime>0.431</deltatime>
+		</result>
+		<result>
+			<description>
+Check current temperature of output channel 1
+Value:     28.0 °C (temperature_ch1)
+Min value: 18.0 °C
+Max value: 50.0 °C
+			</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>psu_basics</testcase_id>
+			<deltatime>0.439</deltatime>
+		</result>
+	</results>
+</singletest>

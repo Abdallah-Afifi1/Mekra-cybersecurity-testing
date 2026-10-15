@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<singletest source="dmm_test.py">
+	<meta>
+		<title>dmm test</title>
+		<description>basic access tests for digital multimeter</description>
+		<author>Tremmel</author>
+		<date>26.05.2025</date>
+		<version>1.0.0</version>
+		<last_revision>initial</last_revision>
+		<starttime>2025-06-26T09:09:56</starttime>
+		<endtime>2025-06-26T09:10:11</endtime>
+		<hil_computername>TTE-SOW2-W10</hil_computername>
+		<hil_project_path>D:\VSC-GitLab\11_p_01467_mekra_vision_controller</hil_project_path>
+		<hil_username>svc_systessow2</hil_username>
+	</meta>
+	<results>
+		<result>
+			<description>Power supply set to 2.22 V</description>
+			<verdict>INFO</verdict>
+			<deltatime>0.284</deltatime>
+		</result>
+		<result>
+			<description>
+Check PSU output voltage
+Expected value: 2.220 V
+Current value:  2.219 V (voltage_ch1)
+Absolute Tolerance:  +/- 0.020 V
+			</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>dmm_basics</testcase_id>
+			<deltatime>0.321</deltatime>
+		</result>
+		<result>
+			<description>
+Check DMM voltage (autorange)
+Expected value: 2.2200 V
+Current value:  2.2190 V (voltage)
+Absolute Tolerance:  +/- 0.0200 V
+			</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>dmm_basics</testcase_id>
+			<deltatime>2.302</deltatime>
+		</result>
+		<result>
+			<description>
+Check DMM voltage (20V range)
+Expected value: 2.2200 V
+Current value:  2.2190 V (voltage_20V)
+Absolute Tolerance:  +/- 0.0200 V
+			</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>dmm_basics</testcase_id>
+			<deltatime>4.270</deltatime>
+		</result>
+		<result>
+			<description>
+Check DMM voltage (200mV range) =&gt; out-of-range
+Expected value: ≠ 2220.0000 mV
+Current value:  nan mV (voltage_200mV)
+Absolute Tolerance:  +/- 0.0200 mV
+			</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>dmm_basics</testcase_id>
+			<deltatime>6.734</deltatime>
+		</result>
+		<result>
+			<description>Power supply set to 12.0 V</description>
+			<verdict>INFO</verdict>
+			<deltatime>6.762</deltatime>
+		</result>
+		<result>
+			<description>
+Check PSU output voltage
+Expected value: 12.000 V
+Current value:  11.998 V (voltage_ch1)
+Absolute Tolerance:  +/- 0.020 V
+			</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>dmm_basics</testcase_id>
+			<deltatime>6.792</deltatime>
+		</result>
+		<result>
+			<description>
+Check DMM voltage (autorange)
+Expected value: 12.0000 V
+Current value:  11.9987 V (voltage)
+Absolute Tolerance:  +/- 0.0200 V
+			</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>dmm_basics</testcase_id>
+			<deltatime>8.863</deltatime>
+		</result>
+		<result>
+			<description>
+Check DMM voltage (20V range)
+Expected value: 12.0000 V
+Current value:  11.9998 V (voltage_20V)
+Absolute Tolerance:  +/- 0.0200 V
+			</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>dmm_basics</testcase_id>
+			<deltatime>10.788</deltatime>
+		</result>
+		<result>
+			<description>
+Check DMM voltage (2V range) =&gt; out-of-range
+Expected value: ≠ 12.0000 V
+Current value:  nan V (voltage_2V)
+Absolute Tolerance:  +/- 0.0200 V
+			</description>
+			<verdict>PASSED</verdict>
+			<testcase_id>dmm_basics</testcase_id>
+			<deltatime>13.257</deltatime>
+		</result>
+	</results>
+</singletest>

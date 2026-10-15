@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Behavior</title>
+<link href="../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="../../../js/displayToc.js" type="text/javascript"></script>
+<script>
+
+  function switchProjectProperties() {
+			if (document.getElementById("proj00").style.display == "none") {
+				document.getElementById("proj00").style.display = "revert";
+				document.getElementById("proj01").style.display = "revert";
+				document.getElementById("proj02").style.display = "revert";
+				document.getElementById("proj03").style.display = "revert";
+				document.getElementById("proj04").style.display = "revert";
+				document.getElementById("proj05").style.display = "revert";
+			} else {
+				document.getElementById("proj00").style.display = "none";
+				document.getElementById("proj01").style.display = "none";
+				document.getElementById("proj02").style.display = "none";
+				document.getElementById("proj03").style.display = "none";
+				document.getElementById("proj04").style.display = "none";
+				document.getElementById("proj05").style.display = "none";
+			}
+}
+
+		function switchAdvancedProperties(){
+
+			if (document.getElementById("adv00").style.display == "none") {;
+				document.getElementById("adv00").style.display = "revert";
+				document.getElementById("adv01").style.display = "revert";
+			} else {
+				document.getElementById("adv00").style.display = "none";
+				document.getElementById("adv01").style.display = "none";
+			}
+		}
+		function initPage()
+        {			
+			var divs = document.getElementsByClassName("ObjectDetailsNotes");
+			for (var j = 0; j < divs.length; j++) {
+				var tmpStr = divs[j].innerHTML;
+				tmpStr = tmpStr.replace(/#gt;/g, "&gt;");
+				tmpStr = tmpStr.replace(/#lt;/g, "&lt;");
+
+				tmpStr = tmpStr.replace(/&gt;/g, ">");
+				tmpStr = tmpStr.replace(/&lt;/g, "<");
+
+				divs[j].innerHTML = tmpStr;
+			}
+
+            if (document.getElementById('TableGroup') != null)
+            {
+                toggleItem(document.getElementById('TableGroup').getElementsByTagName('li')[0].id.replace("Title", ""));
+            }
+
+        }
+</script>
+<style>
+
+</style>
+</head>
+<body onload="initPage();">
+<div class="section group" >
+
+		<div class="col span_2_of_2 header_frame">
+			<h1> Behavior </h1>
+			<!-- <img class="header_image" src="../../../images/mekraLangGermany.PNG" align="right" alt="Header Image" />-->
+			<img class="header_image" src="../../../images/mekraLangGermany.PNG" align="right" alt="Header Image" />
+		</div>
+		<div class="col span_2_of_2 breadcrumb_frame">
+			<p><a href="../../EA5.htm">FunctionalSafety</a> / <a href="../EA940.htm">Behavior</a> / <a href="EA1052.htm">UseCases</a> / <a href="EA1050.htm">Behavior</a></p>
+		</div>
+			
+		<table class="contentmaintable">
+			<!-- <tfoot>
+				<tr>
+					<td>foot1</td>
+					<td>foot2</td>
+				</tr>
+			</tfoot> -->
+			<tbody>
+				<tr>
+					<td class="indexcell">
+						<div class="projectBrowserTitle">Project: </div>
+						<ul>
+<li><img src="../../../images/180.png" alt="Diagram"/> <a href="EA1050.htm">Behavior</a></li>
+<li><img src="../../../images/7.png" alt="UseCase"/> <a href="EA1053.htm">Delayed Video frames older than FHTI (see REQ 24548584-76) from actual traffic situation shall not be transmitted</a></li>
+<li><img src="../../../images/7.png" alt="UseCase"/> <a href="EA1054.htm">Fault Handling Time Interval (FHTI) shall be 400 ms</a></li>
+<li><img src="../../../images/7.png" alt="UseCase"/> <a href="EA1055.htm">Frozen Video frames older than FHTI (see REQ 24548584-76) from actual traffic situation shall not be transmitted</a></li>
+<li><img src="../../../images/7.png" alt="UseCase"/> <a href="EA1056.htm">Transmission of flickered frames shall be avoided</a></li>
+<li><img src="../../../images/7.png" alt="UseCase"/> <a href="EA1057.htm">Transmission of frames containing wrong field of view shall be avoided</a></li>
+<li><img src="../../../images/7.png" alt="UseCase"/> <a href="EA1058.htm">Transmission of frozen frame shall be avoided</a></li>
+<li><img src="../../../images/7.png" alt="UseCase"/> <a href="EA1059.htm">Transmission of too bright frames shall be avoided</a></li>
+<li><img src="../../../images/7.png" alt="UseCase"/> <a href="EA1060.htm">Transmission of too dim  frames shall be avoided</a></li>
+<li><img src="../../../images/7.png" alt="UseCase"/> <a href="EA1061.htm">Transmission of too low contrast frames shall be avoided</a></li>
+<li><img src="../../../images/7.png" alt="UseCase"/> <a href="EA1062.htm">Transmission of too low frame rate frames shall be avoided</a></li>
+<li><img src="../../../images/7.png" alt="UseCase"/> <a href="EA1063.htm">Transmission of too much noisy frames shall be avoided</a></li>
+<li><img src="../../../images/7.png" alt="UseCase"/> <a href="EA1064.htm">Transmission of video frames older than 50ms shall be avoided</a></li>
+<li><img src="../../../images/7.png" alt="UseCase"/> <a href="EA1065.htm">Transmission of wrong resolution frames shall be avoided</a></li>
+<li><img src="../../../images/7.png" alt="UseCase"/> <a href="EA1066.htm">Video frames causing an unclear view (too dim, too low contrast, too much disturbances or noise, wrong resolution,flicker, too low frame rate) shall not be transmitted</a></li>
+<li><img src="../../../images/7.png" alt="UseCase"/> <a href="EA1067.htm">Video frames presenting wrong field of view (eg cropped/partial images) not easily detected by the driver shall not betransmitted</a></li>
+<li><img src="../../../images/7.png" alt="UseCase"/> <a href="EA1068.htm">Video frames shall be transmitted within 50 ms from actual traffic situation.</a></li>
+</ul>
+
+					</td>
+					<td class="contentcell"><div class="PageBody">
+	<div class="diagram_image"> 
+<img src="EA1051.png" usemap="#EA1051" border="0" />
+
+<MAP NAME="EA1051">
+<area shape="rect" coords="1298,351,1403,421" href="EA1057.htm" target="_self">
+<area shape="rect" coords="1250,86,1436,210" href="EA1067.htm" target="_self">
+<area shape="rect" coords="1049,466,1154,536" href="EA1062.htm" target="_self">
+<area shape="rect" coords="895,466,1000,536" href="EA1056.htm" target="_self">
+<area shape="rect" coords="759,465,864,535" href="EA1065.htm" target="_self">
+<area shape="rect" coords="1091,351,1196,421" href="EA1063.htm" target="_self">
+<area shape="rect" coords="964,351,1069,421" href="EA1061.htm" target="_self">
+<area shape="rect" coords="837,350,942,420" href="EA1059.htm" target="_self">
+<area shape="rect" coords="694,351,799,421" href="EA1060.htm" target="_self">
+<area shape="rect" coords="837,80,1042,217" href="EA1066.htm" target="_self">
+<area shape="rect" coords="508,335,634,419" href="EA1058.htm" target="_self">
+<area shape="rect" coords="508,99,655,197" href="EA1055.htm" target="_self">
+<area shape="rect" coords="286,282,391,352" href="EA1064.htm" target="_self">
+<area shape="rect" coords="286,99,391,169" href="EA1068.htm" target="_self">
+<area shape="rect" coords="55,328,160,398" href="EA1054.htm" target="_self">
+<area shape="rect" coords="34,97,181,195" href="EA1053.htm" target="_self">
+<area shape="rect" coords="10,10,1473,573" href="EA1050.htm" target="_self">
+</MAP>
+ </div>
+	<div class="ObjectTitle">Behavior : Use Case diagram</div>
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">25.03.2025 14:34:32</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">13.06.2025 14:54:51</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><button onclick="switchProjectProperties()"><img src="../../../images/plus03.gif" align="absmiddle" id="proj" /></button>Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">rekas</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><button onclick="switchAdvancedProperties()"><img src="../../../images/plus03.gif" align="absmiddle" id="adv" /></button>Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{03F65773-4977-40bc-BB25-D664B86B6F72}</td>
+		</tr>
+	</table>
+	
+</div>
+
+ </td>
+				</tr>
+			</tbody>
+		</table>
+		
+</div>
+</body>
+</html>
+

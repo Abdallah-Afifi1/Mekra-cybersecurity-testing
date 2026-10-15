@@ -1,0 +1,10 @@
+tocTab[tocTab.length] = new Array("0.2.2.7:1", "", "6", "EARoot/EA2/EA2/EA7/EA965.htm", "175.png", "144", "0", "", "Logical diagram0","{7AAA2F8D-C3A2-4248-96B2-1FA49F955EDF}");
+tocTab[tocTab.length] = new Array("0.2.2.7:3", "", "«FMEAItem» 6", "EARoot/EA2/EA2/EA7/EA970.htm", "5.png", "E1222", "0", "", "Class0","{C69BF180-390F-4db6-B2AB-9A62ABACCAC1}");
+tocTab[tocTab.length] = new Array("0.2.2.7:2", "", "6", "EARoot/EA2/EA2/EA7/EA967.htm", "182.png", "179", "E1222", "", "CompositeStructure diagram0","{03CF607C-AF40-4e8b-8669-3E7ED101B002}");
+tocTab[tocTab.length] = new Array("0.2.2.7:4", "", "AP", "EARoot/EA2/EA2/EA7/EA971.htm", "118.png", "E1427", "E1222", "", "Part0","{8ABF4736-552C-4f68-87A3-4EDF91258167}");
+tocTab[tocTab.length] = new Array("0.2.2.7:5", "", "AP_aux", "EARoot/EA2/EA2/EA7/EA972.htm", "118.png", "E1433", "E1222", "", "Part0","{4546A12C-6003-4f29-9408-D36CE5683904}");
+tocTab[tocTab.length] = new Array("0.2.2.7:6", "", "Cause: provision of RAW  Data Image (function) faulty (contrast-brightness) <br />", "EARoot/EA2/EA2/EA7/EA973.htm", "118.png", "E1432", "E1222", "", "Part0","{18D4DD8A-F416-4fd9-9A22-BE0929D24AE7}");
+tocTab[tocTab.length] = new Array("0.2.2.7:7", "", "DetMeasure: Review (if the prosposed technical solution suffice)", "EARoot/EA2/EA2/EA7/EA974.htm", "118.png", "E1431", "E1222", "", "Part0","{9275D0F6-169B-4f14-9B62-5625295769DC}");
+tocTab[tocTab.length] = new Array("0.2.2.7:8", "", "Effect: Details lost due to incorrect contrast or brightness", "EARoot/EA2/EA2/EA7/EA975.htm", "118.png", "E1430", "E1222", "", "Part0","{DE722A5D-C13C-446d-B924-6BD01B4A0EE6}");
+tocTab[tocTab.length] = new Array("0.2.2.7:9", "", "FailureMode: Stream with incorrect contrast or brightness", "EARoot/EA2/EA2/EA7/EA976.htm", "118.png", "E1429", "E1222", "", "Part0","{3FC88214-7C6C-4931-A80E-F43D4568FAEA}");
+tocTab[tocTab.length] = new Array("0.2.2.7:10", "", "PrevMeasure: fault (contrast-brightness) free &#39;provision of RAW  Data Image&#39; (function) shall be ensured <br />", "EARoot/EA2/EA2/EA7/EA977.htm", "118.png", "E1428", "E1222", "", "Part0","{92FD81B8-12D7-47a8-8BF0-912C7096AFED}");

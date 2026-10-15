@@ -1,0 +1,48 @@
+system.ituner_rev 8007
+system.sensor_id 
+system.tuning_mode IMG_MODE_VIDEO
+system.raw_path 
+system.raw_width 1920
+system.raw_height 1536
+system.raw_pitch 0
+system.raw_resolution 12
+system.raw_bayer 1
+system.main_width 1920
+system.main_height 1536
+system.input_pic_cnt 0
+system.compressed_raw 0
+system.sensor_readout_mode 0
+system.raw_start_x 0
+system.raw_start_y 4
+
+system.flip_h 0
+system.flip_v 0
+
+warp_compensation.enable 1
+warp_compensation.calib_version 538444801
+warp_compensation.horizontal_grid_number 61
+warp_compensation.vertical_grid_number 49
+warp_compensation.tile_width_exponent 5
+warp_compensation.tile_height_exponent 5
+warp_compensation.vin_sensor_start_x 0
+warp_compensation.vin_sensor_start_y 4
+warp_compensation.vin_sensor_width 1920
+warp_compensation.vin_sensor_height 1536
+warp_compensation.vin_sensor_h_subsample_factor_num 1
+warp_compensation.vin_sensor_h_subsample_factor_den 1
+warp_compensation.vin_sensor_v_subsample_factor_num 1
+warp_compensation.vin_sensor_v_subsample_factor_den 1
+warp_compensation.enb_2stage_compensation 0
+warp_compensation.warp_grid_table_path d:\itn_Warp_Table.bin
+
+dzoom.enable 1
+dzoom.shiftx 0
+dzoom.shifty 0
+dzoom.zoomx 65536
+dzoom.zoomy 65536
+
+active.enable 0
+active.startx 0
+active.starty 0
+active.width 1920
+active.height 1536

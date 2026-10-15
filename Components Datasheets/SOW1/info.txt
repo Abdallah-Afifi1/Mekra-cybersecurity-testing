@@ -1,0 +1,2 @@
+Unter [3 Satalite Camera Architecture](https://erg-polarion-p1.mekra.net/polarion/#/project/11_P_01467_MEKRA_Vision_Controller/wiki/30_System_Architecture/Preliminary_Architecture) 
+findet sich die aktuelle Information dazu.

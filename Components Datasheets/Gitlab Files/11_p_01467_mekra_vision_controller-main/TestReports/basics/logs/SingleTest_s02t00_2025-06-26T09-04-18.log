@@ -1,0 +1,51 @@
+Dongle-DLL v5.1 (x64)
+# #####################################################################
+# Checking License: TestToolkit v2.2.1...
+# #####################################################################
+D-USB-2020-B-00DB TestToolkit 2.2.x
+PASSED
+# License valid
+[verifyFeature] ttk_checks 1.7.0
+
+== cc_test.py ==================================================================
+[[setup]]
+
+[[breakdown]]
+
+--Elapsed Time:----------------
+  2.0 seconds
+
+--Results:---------------------
+
+--Summary:---------------------
+  FAILED : 0
+  PASSED : 0
+-------------------------------
+
+XML... ...writing......done
+# Results stored to "SingleTest_s02t00.xml".
+
+> An exception occurred:
+>  Type:      ConnectionRefusedError
+>  Exception: [WinError 10061] Es konnte keine Verbindung hergestellt werden, da der Zielcomputer die Verbindung verweigerte
+--Traceback:-------------------------------------------
+Traceback (most recent call last):
+  File "D:\Releases\TestSupport\test_support312\test_runner_base.py", line 289, in runTest
+  File "D:\VSC-GitLab\11_p_01467_mekra_vision_controller\Python\TestPool\cc_test.py", line 23, in <module>
+    cc = testenv.getCC()
+         ^^^^^^^^^^^^^^^
+  File "D:\VSC-GitLab\11_p_01467_mekra_vision_controller\Python\TestPool\_automation_wrapper_.py", line 159, in getCC
+    self.cc = cc_vt7004.VT7004(ip_addr="127.0.0.1", timeout_ms=2000) # mock-server
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\VSC-GitLab\11_p_01467_mekra_vision_controller\Python\TestLibraries\tools\voetsch\cc_vt7004.py", line 315, in __init__
+    self._connect()
+  File "D:\VSC-GitLab\11_p_01467_mekra_vision_controller\Python\TestLibraries\tools\voetsch\cc_vt7004.py", line 358, in _connect
+    self._socket.connect((self.ip_addr, self.port))
+ConnectionRefusedError: [WinError 10061] Es konnte keine Verbindung hergestellt werden, da der Zielcomputer die Verbindung verweigerte
+
+-------------------------------------------------------
+# Found test environment instance 'testenv'
+# Updating results with error information...
+XML... ...writing......done
+# Results stored to "SingleTest_s02t00.xml".
+[[test_runner_finally]]

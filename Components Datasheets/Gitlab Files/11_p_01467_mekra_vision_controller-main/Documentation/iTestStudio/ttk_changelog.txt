@@ -1,0 +1,768 @@
+###############################################################################
+## Changelog for iSyst iTestStudio: TestToolkit (TTk), Python 3 branch
+###############################################################################
+
+
+# 2024-06-19 ##################################################################
+# 2.2.1-selftest-preview ## Changeset 1761 ##
+ttk_base 2.2.1
+    [fix] variables_base: explicitly use an empty string for unit=None
+    
+ttk_bus 1.7.0
+    [new] bus_signals_canida: bus_signals variant for iDA Testware 
+
+ttk_checks 1.7.0
+
+ttk_daq 1.3.0
+
+ttk_tools 2.2.1
+    [fix] mdf4_reader: fixed print-representation of integer/float values with 
+          assigned but empty textual representations (new base is MDF4 rev.39)
+    [fix] dspace_utils: fallback to OfflineXilTestbench if .NET XIL assemblies n/a
+
+ttk_selftest 2.0.0-Beta.3
+    [new] added iDA Testware support
+    [fix] added delay after writing value in setVoltage/setPWM, so it can 
+          be phy->raw converted in model before message kickout occurs. 
+
+
+
+# 2024-04-04 ##################################################################
+# 2.2.0 ## Changeset 1740 ##
+
+ttk_base 2.2.0
+    [new] show ttk_build.info on init error
+    
+    [new] siemens_simit: SIMIT signal/variable abstraction
+    [new] isyst_ida:     iDA Testware HIL variable abstraction
+    [new] pyocd:         pyOCD debugger variable abstraction
+    
+    [chg] ttk_base: now expects dongle dll version >= 4.0.0 
+    
+    [enh] ttk_base: support for newer dongle lib/license names and locations, 
+    [enh] ttk_base: better error message if no dongle dll is detected 
+    [enh] ttk_base: list connected but blocked dongles if no licenses are available 
+    [enh] variables_base: ResettableContainers now default to not reset nested 
+          ResettableContainers, e.g. resetting a CanSignal will not also 
+          reset its parent CanMessage
+
+ttk_bus 1.6.2
+    [enh] bus_tests: added info if error injection methods fail
+    
+ttk_checks 1.7.0
+    [new] basic_tests: added checkAbsTol and checkRelTol convenience functions 
+                       as simplified cases of checkTolerance
+    [enh] basic_tests: added option to "invert" check/results for checkBitPattern,
+                       checkTolerance (+ variants) and checkRange. 
+    [fix] basic_tests: updated generated error message descriptions to show
+                       repr() of var if its .alias is empty
+
+ttk_daq 1.3.0
+    [new] daq_utils: shiftTimeAxes - shift time stamps in daq_data
+    [enh] daq_utils: appendDaqData now has a configurable step time between data sets 
+    [chg] daq_utils: printDataInfo utility function is now public
+    
+    [enh] eval_signal: added configurable seek() behavior and strict time range checks
+    
+    [enh] data_sync: updated synchronize() example to use two daq_data dicts
+    [obs] data_sync: removed old twoStepSync() example
+
+ttk_tools 2.2.0
+    [new] isyst.ida_testware: access to iDA Testware variables, values and meta data
+    
+    [new] pyocd.debugger: wrapper for using PyOCD (https://pyocd.io/) as a data
+                          source for HIL tests (preview)
+                          
+    [new] simit_shm: SIMIT signal access via shared memory coupling (preview)
+    
+    [new] can_hal:   access to hardware abstraction layer for CAN interfaces 
+ 
+    [new] xil_net: added listing of available XIL Testbenches
+    [new] xil_net: added detection of used/available XIL API versions
+    [new] xil_net: specific XIL API version to use can now be configured
+                   in hil_project.ini (in section [TestToolkit], parameter
+                   xil_api_version = 2.2.0)
+ 
+    [enh] xil_api: support for pythonnet >= 3.0.0
+    
+    [fix] xil_api_offline_stub: XilTestbench.write now returns the previous value 
+                                (as does the non-stub version)
+                                
+    [enh] canapeapi: optional logging of API calls 
+    [enh] canapeapi_common: updated DATA_TYPE with new types (CANape 18SP8/19)
+    
+    [enh] canapeapi (diag): improved error handling when decoding complex 
+                            response sub-parameter variants (raw/string/numeric)
+    [enh] canapeapi (diag): workaround for sporadic api-timeout issues during 
+                            Asap3DiagGetServiceState. 
+          Note: "Timeout reading response from memory mapped file" errors may 
+          potentially appear on any API call, but the inner wait-for-response 
+          loop has a greater chance to encounter it
+    
+    
+    [chg] canapeapi (diag): skip unknown sub-parameter names in complex responses
+    
+    [fix] canapeapi (diag): fixed cutoff at first 0-byte when requesting/decoding
+                            raw response parameters, fixed size type cast when
+                            setting raw parameters
+    [fix] canapeapi (diag): fixed handling of complex response parameters;
+                            default raw representations are not provided for 
+                            complex parameters themselves
+    [fix] canapeapi (diag): fixed cutoff at first 0-byte when decoding complex 
+                            raw response sub-parameters
+    
+    
+    [new] ida_testware_offline_stub: offline implementation of ida_testware,
+                                     delegates to mwapp/mwrec offline stubs
+    [new] mwrec_client_offline_stub: offline implementation for recorder access
+    [chg] mwapp_client_offline_stub: use only address (w/o port) for offline data
+                                     context to better work with recorder offline stub
+    [enh] mwapp/mwrec_client: use default port if not supplied in target
+    
+    [fix] rst.gamma_api (data acquisition): workaround for FTP SIZE command, 
+          some servers only support SIZE request in binary mode 
+
+
+# 2021-10-22 ##################################################################
+## Release 2.1.1 ## Changeset 1554 ##
+ttk_base 2.1.1
+    [new] license check for standalone features
+    [enh] Configuration.getParsedString: better support for string values 
+          containing newline characters
+    
+ttk_bus 1.6.1
+    [fix] bus_signals_base: fixed missed getFormattedValue interface calls
+    
+ttk_checks 1.6.1
+    [fix] basic_tests: fixed rel_neg value typical range example in checkTolerance
+    
+ttk_daq 1.2.0
+    
+ttk_tools 2.1.1
+    [new] rst.isygamma: access to Gamma V libraries
+    [enh] rst.gamma_api: re-enabled access to Gamma V in Py3-branch, now uses isygamma
+    [fix] rst.gamma_api: re-added workaround for GL_FileName containing a relative path 
+    [fix] rst.gamma_api: fixed FTP daq file path issues
+    [fix] rst.gamma_api: removed leftover references to _info_lookup
+    
+
+# 2020-09-09 ##################################################################
+## Release 2.1.0 ## Changeset 1516 ##
+
+# See Release 2.1.0-Alpha.1 for remaining changes in 2.1.0
+
+general:
+    [new] Support/build for Python 3.8/x64
+    [enh] Separate release-packages for Python 2 and Python 3
+    [enh] Separate documentation generated for Python 2 and Python 3 branches
+          
+ttk_base   2.1.0
+ttk_bus    1.6.0
+ttk_checks 1.6.0
+ttk_daq    1.2.0
+
+ttk_tools 2.1.0
+    [fix] dspace.xil_api: xil_net helper module as workaround for current 
+                          import hook issues between Cython and pythonnet.
+    [enh] dspace.xil_api: moved XIL enums to xil_api_common
+
+
+# 2020-07-28 ##################################################################
+## Release 2.1.0-Alpha.1 ## Changeset 1501 ##
+
+general:
+    [new] Support for Python 3 (3.6/x64)
+
+ttk_base 2.1.0
+    [enh] baseutils: better fallback for non-integer-ish float values in bin/oct/dec/hex formats
+    [enh] baseutils: ustr now always returns unicode text, 
+                     added bstr (always returns raw byte strings)
+    [fix] baseutils: EnumInfo now uses member __info_mapping__ to add mapping info 
+                     (Python 3 compatibility)
+    [obs] baseutils: removed obsolete unistr 
+    
+ttk_tools 2.1.0
+    [enh] dspace.xil_api: added mdf file path sanity check in Capture.setup
+    [fix] dspace.xil_api: fixed string conversion of Var identifiers to .NET 
+                          types in Capture.setup
+    [obs] dspace.dspace_utils: removed getRTApplication, waitForCaptureDone 
+                               and waitForStimulusDone [Py3]
+    
+    [new] ni.labview: basic LabView VI control access
+    
+    [new] vector.canapeapi: added Scripting class (access to extended scripting 
+                            functions added back in CANape 9)
+    [new] vector.canapeapi_common: SCRIPT_STATUS and CANapeScriptError
+    [new] vector.canapeapi: CANapeASAP3 convertData/getAvailableConverters 
+                            (enhanced data conversion)
+    [enh] vector.canapeapi: writeBytes now also supports bytes/bytearrays [Py3]
+    [enh] vector.canapeapi: both set/get error modes now default to "raise exceptions"
+    [obs] vector.canapeapi: removed non-essential canapeapi_common constant imports 
+    [obs] vector.canapeapi: removed superfluous parameter "representation" from getECUVarByAddress 
+    [obs] vector.canapeapi: removed convertMDF2MAT from interface (deprecated since CANape 13)
+    [enh] vector.vflash_api: added vFlash DLL detection from system PATH 
+    [enh] vector.mdflib: added x64 support (requires a CANape x64 release, though)
+
+ttk_bus 1.6.0
+    [new] bus_signals_cangamma: added TxCanBusSignalBasic/RxCanBusSignalBasic 
+                                (for signal entries generated with iSyDBC mode "minimal")
+    [enh] bus_signal_base: added hasStateLookup, hasFormattedRepr and getFormattedValue 
+                           to BusSignal to enable nicer result formatting
+    [enh] bus_tests:   test functions now use ttk_checks.adv_tests
+    [obs] bus signals: removed obsolete signal parameters min_value/max_value
+    [obs] bus signals: removed deprecated method getRangeValues (already removed 
+                       from interface documentation a few versions back)
+
+ttk_checks 1.6.0
+    [new] basic_tests: test function compareCE (a variant of compare)
+    
+    [enh] basic_tests:  show_rel_tol_as_percentage now defaults to True
+    [enh] basic_tests:  checkBitMask mask parameter can now also be a Var instance
+    [enh] basic_checks: checkBitPattern: patterns now get 0x/0b prefixes in output 
+                        to make current mode clearer
+    [enh] basic_checks: enabled float-values-without-defined-tolerance sanity 
+                        check in checkTolerance
+    [enh] basic_checks: updated compare to support bytes and bytearrays [Py3]
+    
+    [fix] checkutils: fixed fallback handling for lookups in updateMetaEntries 
+                      (a variable with fmt and no lookup could interfere with lookup detection),
+    [fix] checkutils: fixed setting of default lookup state in updateMetaInfo 
+                      (all vars defaulted to the first available lookup before)
+    [fix] checkutils: resolved values are used as fallback (if available) to better 
+                      deal with values/vars that have neither getFormattedRepr 
+                      nor a useful string representation.
+    [fix] checkutils: renamed getNaturalNumber => getInteger as that is what 
+                      we actually do there
+    [fix] checkutils: added fallback for cases with VarBase-derived Vars that 
+                      neglect to update member last_value
+    [fix] adv_tests:  var checks may now also show a supplied descr, 
+                      func calls only show ":" if a descr is available
+    [fix] adv_tests:  set/check entries with descr but without var/value will 
+                      now be added as a info/comment line 
+    
+    [obs] checkutils: removed obsolete getMetaInfo
+
+ttk_daq 1.2.0
+    [enh] eval_signal: support for custom find operators 
+    [enh] eval_signal: find tolerances default now to 0, 
+                       updated handling for equality checks with float-as-int-data
+    [fix] daq_utils:   trimDaqData now includes final element 
+    [fix] daq_utils:   fixed index issues in tableLookup 
+    [fix] daq_utils:   fixed getNormalizedDaqData interface call
+
+
+
+Note: No longer available in Python 3 branch:
+    ttk_tools.dspace.sdf_parser (rtplib n/a in Python 3)
+    ttk_tools.rst.gamma_api     (Gamma libraries n/a in Python 3)
+    ttk_daq.matfile
+
+
+
+# 2019-06-13 ##################################################################
+## Release 2.0.4 ## Changeset 1262 ##
+ttk_base 2.0.4
+
+ttk_tools 2.0.4
+    [fix] mdf4reader (vector.canapeapi): workaround for encoding issues when
+          parsing embedded XML data
+    [enh] vector.canapeapi: tweaks for CANape 17.0 x64
+    
+ttk_bus 1.5.3
+ttk_checks 1.5.1
+ttk_daq 1.1.0
+
+
+# 2019-06-11 ##################################################################
+## Release 2.0.3 ## Changeset 1258 ##
+ttk_base 2.0.3
+
+ttk_tools 2.0.3
+    [enh] mdf4reader (vector.canapeapi): added support for conversion type
+          RNG2TXT (value range to text / scale conversion table)
+
+ttk_bus 1.5.3
+    [new] bus_signals_cangamma: initial/preview version, based on interface 
+          description v1.0.0
+
+ttk_checks 1.5.1
+ttk_daq 1.1.0
+
+
+# 2018-12-07 ##################################################################
+## Release 2.0.2 ## Changeset 1192 ##
+
+ttk_base 2.0.2
+    [fix] compatibility fixes for Python 2.5
+
+ttk_tools 2.0.2
+    [fix] vector.canapeapi: initial support for CANape x64
+    [fix] vector.canapeapi: BaseDevice.runScript(): fixed asap3 reference
+    [fix] dspace.xil_api: added explicit conversion of model_paths to str in 
+          Read/Write methods 
+    [fix] dspace.xil_api: added multiple attempts for creating a new MAPort 
+    [fix] dspace.xil_api: fix for integer types in arrays/matrixes
+    
+    [enh] vector.canapeapi: added configurable log output during 
+          Asap3DiagExecute (see CANapeDiag.request_verbosity)
+    [enh] vector.canapeapi: added separate diag timeout exception class 
+    [enh] vector.canapeapi: added CANapeDiag.sendHexRequestSym (send a hex 
+          request, but try to decode symbolic response)
+    [enh] vector.canapeapi: added CANapeASAP3.getDebugWindowText
+    [enh] win32_utils: added support for alternate registry views (32/64-bits)
+    [enh] rst.gamma_api: DAQ: updated PVs for use with GammaLogger v1.0
+    [enh] dspace.xil_api: updated default task_name used for XIL-API-Capture 
+    
+    [new] vector.vflash_api: access to vFlash API functions (initial state, 
+          will be officially supported in TTk 2.1.0)
+
+ttk_bus 1.5.2
+    [fix] bus_signals_base: added XIL-Vars check in _hilVarFactory
+
+ttk_checks 1.5.1
+    [fix] checkutils: fixed edge case in updateMetaEntries that led to missing 
+          units
+    [fix] adv_tests: fixed doubling of meta data in value formatting for simple 
+          scalar values
+    
+# 2018-02-05 ##################################################################
+## Release 2.0.1 ## Changeset 1072 ##
+ttk_base 2.0.1
+    [fix] compatibility fixes for Python 2.5
+
+ttk_tools 2.0.1
+    [fix] compatibility fixes for Python 2.5
+    [fix] vector.canapeapi: no longer attempt to decode response parameters for 
+          negative responses (symbolic requests)
+    [fix] vector.canapeapi: unavailable response parameters will stay at value 
+          None instead of raising DiagExceptions (symbolic requests)
+          
+ttk_bus 1.5.1:
+    [fix] compatibility fixes for Python 2.5
+    [fix] bus_signals_base: added fallback in case xil_api import fails due to 
+          missing dependencies (most likely pythonnet)
+          
+
+# 2017-12-05 ##################################################################
+## Release 2.0.0 ## Changeset 1043 ##
+
+general:
+    [enh] base implementations now provided as pre-compiled pyd libraries
+    [enh] documentation now available in HTML, PDF and CHM (Windows help file) 
+          formats.
+          
+    [fix] package markers once again available in source format, which should 
+          give a better experience when using static code analysis / code auto 
+          completion in development environments
+          
+
+ttk_base 2.0.0
+    [new] baseutils: General utility functions and classes
+    
+    [enh] split device/vendor-specific implementations for variable abstraction
+          into their own sub-packages:
+            * ttk_base.dspace_rtplib 
+            * ttk_base.dspace_xilapi 
+            * ttk_base.rst_gammav 
+            * ttk_base.vector_canape
+          Each package provides its specific Var and VarContainer classes. 
+    [enh] added support for custom value representations (in result strings)
+          via format strings/keywords
+    [enh] revamped license processing and handling
+    [enh] variables_base: added a property lookup to VarBase (as an alias for 
+          state_lookup)
+
+ttk_bus 1.5.0
+    [enh] bus_signals_*: added support for different (vendor-specific) 
+          "HilVar" flavors
+    [enh] bus_signals_ethbs: added EthSignalContainer
+    [enh] bus_signals_ethbs: added AcEthSignel.ac_offset_var
+    
+    [fix] bus_signals_base: moved core getRangeValues to bus_test_utils
+    [fix] bus_signals_frbs: fixed call to initUpdateBitControl
+    [fix] bus_signals_frbs: fixed member name in _enableHilTxEN
+    [fix] bus_signals_ethbs: removed superfluous arguments in EthEvent
+    
+    [obs] bus_signals_base: removed obsolete CrcBusSignalIOUserCustom
+
+ttk_checks 1.5.0
+    [new] checkutils: added interface wrapper
+    
+    [enh] basic_tests: added support for custom value formatting
+    [enh] basic_tests: added option to show relative tolerances as 
+          percentages by default
+    [enh] adv_tests: initial support for custom value formatting (there are 
+          still some edge cases where custom formats will not be applied, though)
+          
+    
+ttk_daq 1.1.0
+    [new] daq_utils: added linearInterpolate, tableLookup, getInterpolatedValue
+    [new] eval_signal: added getEvalRangeData
+    
+    [enh] eval_signal: seek()-methods now return the data value at the sought 
+          time (just as find()-methods return the timestamp at the found value)
+
+ttk_tools 2.0.0
+    [new] win32_utils: utility functions for use on Windows systems 
+    [new] dspace.xil_api: interface to dSPACE XIL-2.x-Testbench implementation.
+    [new] dspace.xil_api_offline_stub: offline stub for xil_api
+    [new] rst.gamma_api_offline_stub: offline stub for gamma_api
+    [new] vector.canapeapi_offline_stub: added interface wrapper
+    
+    [enh] tool interfaces split into vendor specific sub-packages:
+            * ttk_tools.dspace
+            * ttk_tools.rst 
+            * ttk_tools.vector
+    [enh] moved common definitions to shared modules available in source format
+            * dspace.xil_api_common
+            * rst.gamma_api_common
+            * vector.canapeapi_common
+    [enh] vector.canapeapi_common: added new "#defines" from CANape 14
+    [enh] vector.canapeapi: added a basic runScript method to device classes.
+    [enh] vector.canapeapi: added manual exit/release methods to ASAP3 and 
+          device classes
+    [enh] vector.canapeapi: updated raised Exceptions to include API error code 
+          (if available) 
+    [enh] vector.canapeapi: Devices now support additional connection options 
+          via Asap3CreateModule/2/3 (if available, depends on API version)
+          
+    [enh] vector.canapeapi_offline_stub: added getStatus()
+    [enh] vector.canapeapi_offline_stub: tweaked DAQ running/stopped status
+    [enh] vector.mdflib: added error_code to MdfLibError 
+    [enh] vector.mdflib: tweaked handling of undocumented error 1022
+    [enh] rst.gamma_api: removed address_type parameter, now gets auto-detected
+    [enh] rst.gamma_api: initial support for GammaLogger/DAQ/"Capture"
+    [enh] rst.gamma_api: added reading/browsing of available PVs
+    [enh] win32_utils: added disableAppCrashDialog()
+    
+    [fix] rst.gamma_api: spawn a separate (non-connected) console in to prevent 
+          gaservice terminating along with its parent process 
+    [fix] vector.canapeapi_offline_stub: fixed [ms] => [s] conversion in getData
+    [fix] vector.canapeapi: fixed writing of ASCII-type cal objects
+    [fix] vector.canapeapi: tweaked HexList to better handle negative values
+    [fix] vector.canapeapi: LoadLibrary path now gets explicitly encoded
+    [fix] vector.canapeapi_offline_stub: internal variables list in 
+          DataAcquisition now gets cleared on subsequent calls to setup()
+          
+    [obs] vector.canapeapi: renamed AbstractCANapeDevice to BaseDevice 
+          (as it has not been "abstract" for quite some time now)
+    [obs] vector.canapeapi: removed obsolete features: zyklischMessen, logError 
+          and wrappers for old interfaces.
+    [obs] vector.mdflib: removed name-mangling workaround for ctypes 0.6.3 / Python 2.2
+    
+
+# 2016-03-18 ##################################################################
+## Release 1.4.2 ## Changeset 770 ##
+
+ttk_bus 1.4.2
+    [fix] bus_signals_canmmbs: fixed interface calls 
+    [enh] bus_tests: better unicode/encoding handling 
+     
+ttk_checks 1.4.2
+    [enh] basic_tests: tweaks to avoid potential string encoding issues
+    [fix] basic_tests_loc: removed doubled "-" when using checkTolerance with 
+          asymmetric tolerances
+
+# 2016-03-14 ##################################################################
+## Release 1.4.1 ## Changeset 748 ##
+
+ttk_base 1.4.1
+    [enh] values_base: added meta wrappers for lists and tuples and support for 
+          lookup-tables to meta()
+    [fix] raised expected/recommended Dongle-DLL version to 3.0
+    
+ttk_bus 1.4.1
+    [enh] bus_signals_frbs, bus_signals_canmmbs: Added configurable default/ 
+          reset values for "internal" HilVars via class variables 
+    [enh] bus_signals_frbs: added class config variables for Rx-PDU disable 
+          mode and CRC normal/error types (all with prefix cfg_).
+    [enh] bus_signals_canmmbs: added class config variables for some additional
+          signal manipulation options and CRC normal/error types.
+    [enh] bus_signals_frbs, bus_signals_canmmbs: Added FrBusSignalContainer/
+          CanBusSignalContainer that provide a method iterSignals() for 
+          iterating over all signals of a message/PDU
+                    
+ttk_checks 1.4.0
+    [fix] checkutils: better unicode handling when building description strings
+
+ttk_tools 1.4.0
+    [fix] canapeapi: errors while setting/writing values will now properly 
+          raise CANapeErrors (if configured)
+    [fix] gamma_api: fixed log file name check when auto-starting a gamma service
+
+
+# 2015-12-18 ##################################################################
+## Release 1.4.0 ## Changeset 710 ##
+
+ttk_base 1.4.0
+    [enh] added simple "license expires soon" warning
+    
+ttk_bus 1.4.0
+    [new] interface wrappers for bus_signals_*
+    [enh] bus_signals_frbs: added HIL-Rx status variable to TxFrBusSignal
+    [enh] bus_signals_canmmbs: added option for "custom" enable_path to RxCanBusMessage,
+          added time and delta time vars to TxCanBusSignal
+    
+ttk_checks 1.4.0
+    [new] interface wrappers to verdicts.py
+    [new] adv_tests: "Advanced Tests" with function testVar (an enhanced 
+          version of ttk_bus.bus_tests.testSignals)
+    [fix] checkutils: moved main castFloatToLong functionality to getNaturalNumber, 
+          which does not force float->long conversion if input value is already int/long
+    
+ttk_daq 1.0.0
+    [new] daq_utils:   utilities for data acquisition 
+    [new] data_sync:   utilities for daq data synchronization. 
+    [new] eval_signal: evaluation of recorded signal data
+    [new] matfile:     utilities for DAQ-data MAT file access  
+          Note: For now, this module still requires the dSPACE-provided matlablib 
+    
+ttk_tools 1.4.0
+    [new] interface wrapper for process_utils
+    [new] interface wrapper for sdf_parser
+    [enh] process_utils: support for 64bit processes (and unicode process names)
+    [enh] canapeapi: added Tester Present methods to CANapeDiag
+    [enh] canapeapi: added configurable error behavior for get/setECUVar
+    [enh] canapeapi: added CANapeDiag option to restore TP status (after goOffline/goOnline)
+    [enh] canapeapi: added "last error" message to exception for Asap3SetMdfFilename 
+                     (as it actually seems to contain somewhat relevant information)
+    [enh] canapeapi: added attribute extra_delay_before_mdf_read to DataAcquisition 
+                     as workaround for CANape13
+    [enh] dspace_utils: added waitForCaptureDone, waitForStimulusDone (originally from daq_utils.py)
+
+# 2014-10-24 ##################################################################
+## Release 1.3.4 ## Changeset 500 ##
+
+ttk_base 1.3.4
+    [fix] VarBase/CalVar/HilVar: member last_value now also updated properly 
+          in set(), as previous behavior was not intuitive (var.last_value now
+          always contains the last value from get() and set() operations)
+    [enh] support for Type-B Dongles
+    [enh] support for Dongle-DLL 2.0 API
+    [enh] added version check for Dongle-DLL     
+    [enh] VarBase: added verbosity parameter to reset()
+    [enh] VarContainerBase: resetAll() now only tries to reset each variable once
+    [enh] added support for GammaV-variables (GammaVar, GammaVarDeferred)
+    [obs] removed support for old Python 2.2.1
+    
+ttk_bus 1.3.3
+    [fix] bus_tests.testSignals(): checks with shared lookup tables (only one 
+          LUT defined among all involved variables) will now always show the
+          LUT value correctly matching the displayed numeric value
+    [enh] bus_signals_ethbs: "Bus" Signals, dSPACE Ethernet-Blockset flavour
+          ("Ethernet Configuration Package"). While net_signals_ethbs would have 
+          been more precise, it follows the same basic structure as the other 
+          bus_signals_* implementations)
+    [enh] bus_signals_frbs: 
+            • fallback for CRC/AC signals with missing switch variables
+            • added Nullframe status var to FrTxPdu (if available)
+            • added Offset and Countdown Value variables to AC signals
+            • added parameter disable_mode to FrRxPdus (permits to select to 
+              use either a User-Defined Transmission Mode, Update Bit access 
+              or Tx/Hw/SW-Enable Switches to disable PDU transmission)
+    [enh] bus_signals_*: 
+            • removed dependencies on rtplibError to mitigate issues
+              with newer dSPACE-Releases (rtplib2 instead of rtplib)
+            • additional (optional) parameter debounce_time (minimum debounce 
+              delay time between triggered transmissions) for event-based 
+              signals/message/PDUs/events
+    [enh] bus_tests: 
+            • check value may now be a list of expected values (OR-linked) 
+            • added Change Delay to output of testRxSignal/testTxSignal
+            • added optional adaptive re-tests to testRxSignal/testTxSignal
+    
+ttk_checks 1.3.3
+    [fix] checkBitMask() meta data now added as source_value_* for consistency
+    [enh] checkStatus() now supports an "equal" parameter (for == or !=  checks)
+    [enh] compare(): 
+            • now supports separate long and compact format strings
+            • added abs_tol support (for numeric/float values)
+    [enh] basic_tests: better handling of returned error strings in get() calls
+    
+ttk_tools 1.3.3
+    [new] gamma_api: GammaV API access
+    [fix] canapeapi: 
+            • readBytes: fixed return value buffer => byte_buffer
+            • read ASCII-strings (measurements with data type ASCII) 
+              now end properly at zero-termination (previously the full buffer
+              including null-bytes was returned)
+    [enh] canapeapi: 
+            • better error messages in case of missing CANape installation
+            • added verbosity argument to readBytes/writeBytes
+            • prefer bug-fixed function Asap3DiagCreateRawRequest2 over original 
+              Asap3DiagCreateRawRequest, if available (added in CANape 12SP6)
+    [enh] dpace_utils: support for dSPACE-Releases with rtplib2 
+          (import priority is: rtplib => rtplib2 => rtplib offline stub)
+    
+    
+## 1.3.3 => internal development snapshot
+ 
+# 2013-10-11 ##################################################################
+## Intermediate-Release 1.3.2 ## Changeset 315 ##
+ttk_base
+    [enh] added raw_mode switch to CalVar
+    [new] Base classes and definitions for TestToolkit exceptions/errors
+
+ttk_bus 
+    [fix] testRxSignal now uses set() on bus signal (no longer directly on bus_signal.signal_var)
+    [enh] added exception handling to set operations in check functions to improve stability
+    [new] Bus Signals, dSPACE FlexRay-Blockset flavour
+    [new] Bus Signals, dSPACE CANMM-Blockset flavour
+    [new] CRC/AC-signal classes and basic test functions
+    
+ttk_checks
+    [fix] checkRange: original value was not available in test description
+    [enh] added optional non-equal check to checkStatus()
+    [enh] better input type checking for checkTolerance()
+    [enh] compare: 
+            • mixed numeric types (int/long/float) are now comparable
+            • mixed string-types (str/unicode) are now comparable
+            • mixed lists/tuples can now be compared
+            • equal-checks with float values will now raise a BasicChecksException
+    [fix] castFloatToLong now also raises ValueConversionError on non-numeric input values
+    [fix] fixed typo in l10n-key for checkTolerance
+
+ttk_tools
+    [enh] canapeapi: Errors/Exception now inherit from ttk_base.errors
+    [enh] canapeapi: imported CANape 9.0+ communication channel constants
+    [enh] mdflib: MdfLibError now inherits from ttk_base.errors.TTkException
+    [fix] canapeapi: _writeByAddress: fixed typo in format string
+    [fix] canapeapi_ fixed log output in _setEcuState, _getEcuState
+    [fix] rtplib_offline_stub: removed superfluous GetProcessorIndex parameter
+ 
+# 2013-02-20 ##################################################################
+## Release 1.3.0 ## Changeset 209 ##
+    [new] TestToolkit now requires a dongle with valid license to use 
+          (see license.its, https://wiki.isyst.de/wiki/Dongle)
+
+ttk_base 1.3.0
+    [enh] localization:  base class for all packages moved to ttk_base
+    [new] configuration: added configuration; settings, if available, will be 
+          read from a hil_project.ini in the current hil project folder. Right 
+          now only the active locale will be read from section [TestToolkit]
+    [enh] merged functionality from ttk_version; TTk release now follows 
+          version of package ttk_base
+    
+ttk_bus 1.2.0
+    [enh] bus_tests: implemented a (rather generic) function testSignals() to 
+          handle those cases not already covered by the more specific 
+          testRxSignal() and testTxSignal()
+    [enh] updated localization
+    
+ttk_checks 1.3.0
+    [fix] ttk_checks: minor fixes from review findings
+    
+ttk_tools 1.3.0
+    [enh] canapeapi: added explicit restypes for DLL functions and newer device 
+          channel constants
+
+# 2012-10-01 ##################################################################
+## Release 1.2.0 ## Changeset 128 ##
+
+    [new] Added ttk_version.py to track TTk release versions separately of
+          package versions.
+
+ttk_base 1.2.0
+    [enh] variables_base: Added class Snapshot; can be used to create and 
+          restore snapshots of current HilVar/CalVar variable values.
+    [fix] variables_base: getState()/setState() now more robust
+    [fix] variables_base: descr not gets actually stored in VarBase 
+    
+ttk_bus 1.0.0
+    [new] bus_tests: basic functions for interface tests - testRxSignal() and 
+          testTxSignal().  
+    [new] bus_signals: container classes for bus/interface signal descriptions
+    
+ttk_checks 1.2.0
+    [enh] localization: L10N entries may now be set to None to use the default 
+          entry anyway.
+    [enh] verdicts: Added getResultingVerdict()
+    [enh] checkutils: tweaked getMetaInfo(), added updateMetaInfo() to 
+          streamline typical use cases
+    [enh] checkutils: moved updateMetaStateDescr() to checkutils
+    [enh] basic_tests: added checkStatus() as special case of checkTolerance()
+    [enh] basic_tests: updated localizations for state/alias entries, tweaked 
+          output formatting (and input value access in a few cases)
+    [fix] checkutils: castFloatToLong()fix for remainder calculation (it should 
+          now be less picky and behave as specified)
+    [fix] basic_checks: fixed incorrect checkBitMask() status 
+    
+ttk_tools 1.2.0
+    [add] sdmlib_offline_stub: Offline implementation for DSPACE's stimulus 
+          engine library sdmlib
+    [fix] canapeapi: DataAcquisition.getData() now raises a CANapeDaqError if 
+          mdflib.readMdf() failed (and not an MdfLibError)
+
+# 2012-07-31 ##################################################################
+## Release 1.1.0 ## Changeset 86 ##
+
+ttk_base
+    [new] variables_base: added interface wrapper which serves as "interface"
+          to the precompiled module in delivery to enable code completion in 
+          PyDev
+                           
+    [new] values_base: base classes for values that may contain additional meta 
+          information, plus an interface wrapper for factory function meta()
+    
+    [enh] variables_base: added VarContainerBase with resetAll() functionality
+    [enh] variables_base: added parameters default (pre-defined default/reset
+          value) and resettable (to make a variable ignore calls to reset())
+          
+ttk_checks
+    [new] basic_checks: added interface wrapper 
+    [new] basic_tests:  added interface wrapper
+    
+    [enh] checkutils: added state lookup to getMetaInfo()
+    
+    [obs] checkutils: moved factory function meta() to package ttk_base 
+
+ttk_tools
+    [new] canapeapi: added interface wrapper (actual implementation moved to 
+          _canapeapi.py)
+    [new] canapeapi_offline_stub: offline stub for canapeapi
+    [new] rtplib_offline_stub:    offline stub for rtplib
+    [new] offline_data_provider:  data provider for offline stubs
+    [new] dspace_utils: miscellaneous dSPACE utility functions
+
+    [enh] canapeapi: modified "low-level" _writeByAddress() implementation,
+                     added "high-level" methods readBytes()/writeBytes()
+    [enh] canapeapi: added support for complex diag response parameters
+    [enh] canapeapi: _setECUState: now only changes state if necessary
+    [enh] canapeapi: added isOnline() to get current device online status
+    
+    [fix] canapeapi: fix for ASCII data type access
+    [fix] canapeapi: fixed handling of _getECUState() state info
+    [fix] mdflib: changed the way data gets read so measurements beyond 
+          2**15 entries can be read as well
+    [fix] mdflib: added name-mangling lookup for mdfChnReadPhy (for old 
+          installations with the ancient ctypes 0.6.3)
+    
+    [obs] canapeapi: removed deprecated methods checkECUVar/checkECUVarState   
+    
+
+# 2012-01-02 ##################################################################
+## Release 1.0.1 beta ## Changeset 57 ##
+
+ttk_checks
+  [new] basic_checks.py - Basic low-level check functions for test automation
+  [new] basic_tests.py  - Basic test functions for test automation that 
+        generate test report entries
+
+ttk_tools
+  [new] canapeapi.py - CANape access via CANapeAPI
+
+ttk_base
+  [new] variables_base.py - base classes for unified hil/cal variables
+
+
+#####################################################
+# Legend:
+#####################################################
+  [fix] bugfix
+  [enh] enhancement
+  [chg] change
+  [new] new
+  [obs] obsolete
+#####################################################
+
+

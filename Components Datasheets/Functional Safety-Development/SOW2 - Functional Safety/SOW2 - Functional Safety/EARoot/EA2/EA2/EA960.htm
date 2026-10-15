@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Transmission of video frames older than 50ms shall be avoided</title>
+<link href="../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="../../../js/displayToc.js" type="text/javascript"></script>
+<script>
+
+  function switchProjectProperties() {
+			if (document.getElementById("proj00").style.display == "none") {
+				document.getElementById("proj00").style.display = "revert";
+				document.getElementById("proj01").style.display = "revert";
+				document.getElementById("proj02").style.display = "revert";
+				document.getElementById("proj03").style.display = "revert";
+				document.getElementById("proj04").style.display = "revert";
+				document.getElementById("proj05").style.display = "revert";
+			} else {
+				document.getElementById("proj00").style.display = "none";
+				document.getElementById("proj01").style.display = "none";
+				document.getElementById("proj02").style.display = "none";
+				document.getElementById("proj03").style.display = "none";
+				document.getElementById("proj04").style.display = "none";
+				document.getElementById("proj05").style.display = "none";
+			}
+}
+
+		function switchAdvancedProperties(){
+
+			if (document.getElementById("adv00").style.display == "none") {;
+				document.getElementById("adv00").style.display = "revert";
+				document.getElementById("adv01").style.display = "revert";
+			} else {
+				document.getElementById("adv00").style.display = "none";
+				document.getElementById("adv01").style.display = "none";
+			}
+		}
+		function initPage()
+        {			
+			var divs = document.getElementsByClassName("ObjectDetailsNotes");
+			for (var j = 0; j < divs.length; j++) {
+				var tmpStr = divs[j].innerHTML;
+				tmpStr = tmpStr.replace(/#gt;/g, "&gt;");
+				tmpStr = tmpStr.replace(/#lt;/g, "&lt;");
+
+				tmpStr = tmpStr.replace(/&gt;/g, ">");
+				tmpStr = tmpStr.replace(/&lt;/g, "<");
+
+				divs[j].innerHTML = tmpStr;
+			}
+
+            if (document.getElementById('TableGroup') != null)
+            {
+                toggleItem(document.getElementById('TableGroup').getElementsByTagName('li')[0].id.replace("Title", ""));
+            }
+
+        }
+</script>
+<style>
+
+</style>
+</head>
+<body onload="initPage();">
+<div class="section group" >
+
+		<div class="col span_2_of_2 header_frame">
+			<h1> Transmission of video frames older than 50ms shall be avoided </h1>
+			<!-- <img class="header_image" src="../../../images/mekraLangGermany.PNG" align="right" alt="Header Image" />-->
+			<img class="header_image" src="../../../images/mekraLangGermany.PNG" align="right" alt="Header Image" />
+		</div>
+		<div class="col span_2_of_2 breadcrumb_frame">
+			<p><a href="../../EA5.htm">FunctionalSafety</a> / <a href="../EA940.htm">Behavior</a> / <a href="EA966.htm">Activities</a> / <a href="EA969.htm">Transmission of video frames older than 50ms shall be avoided - Path1</a> / <a href="EA960.htm">Transmission of video frames older than 50ms shall be avoided</a></p>
+		</div>
+			
+		<table class="contentmaintable">
+			<!-- <tfoot>
+				<tr>
+					<td>foot1</td>
+					<td>foot2</td>
+				</tr>
+			</tfoot> -->
+			<tbody>
+				<tr>
+					<td class="indexcell">
+						<div class="projectBrowserTitle">Project: </div>
+						<ul>
+<li><img src="../../../images/181.png" alt="Diagram"/> <a href="EA960.htm">Transmission of video frames older than 50ms shall be avoided</a></li>
+<li><img src="../../../images/116.png" alt="ActivityPartition"/> <a href="EA977.htm">:Monitor</a></li>
+<li><img src="../../../images/116.png" alt="ActivityPartition"/> <a href="EA976.htm">:SOW1</a></li>
+<li><img src="../../../images/116.png" alt="ActivityPartition"/> <a href="EA975.htm">:Environment</a></li>
+<li><img src="../../../images/116.png" alt="ActivityPartition"/> <a href="EA974.htm">:Driver</a></li>
+<li><img src="../../../images/116.png" alt="ActivityPartition"/> <a href="EA973.htm">:ImageOutput</a></li>
+<li><img src="../../../images/116.png" alt="ActivityPartition"/> <a href="EA972.htm">:ImageProcessing</a></li>
+<li><img src="../../../images/116.png" alt="ActivityPartition"/> <a href="EA971.htm">:ImageAcquisition</a></li>
+</ul>
+
+					</td>
+					<td class="contentcell"><div class="PageBody">
+	<div class="diagram_image"> 
+<img src="EA961.png" usemap="#EA961" border="0" />
+
+<MAP NAME="EA961">
+<area shape="rect" coords="873,568,913,574" href="EA995.htm" target="_self">
+<area shape="rect" coords="947,838,1017,873" href="EA1001.htm" target="_self">
+<area shape="rect" coords="964,926,984,946" href="EA996.htm" target="_self">
+<area shape="rect" coords="962,199,988,233" href="EA999.htm" target="_self">
+<area shape="rect" coords="1515,838,1605,888" href="EA988.htm" target="_self">
+<area shape="rect" coords="969,762,995,796" href="EA1002.htm" target="_self">
+<area shape="rect" coords="955,277,995,283" href="EA994.htm" target="_self">
+<area shape="rect" coords="969,631,985,647" href="EA1007.htm" target="_self">
+<area shape="rect" coords="947,646,1017,681" href="EA1000.htm" target="_self">
+<area shape="rect" coords="958,452,984,486" href="EA998.htm" target="_self">
+<area shape="rect" coords="719,341,735,357" href="EA1005.htm" target="_self">
+<area shape="rect" coords="751,390,767,406" href="EA1003.htm" target="_self">
+<area shape="rect" coords="783,368,799,384" href="EA1004.htm" target="_self">
+<area shape="rect" coords="699,364,715,380" href="EA1006.htm" target="_self">
+<area shape="rect" coords="714,356,784,391" href="EA979.htm" target="_self">
+<area shape="rect" coords="962,122,982,142" href="EA997.htm" target="_self">
+<area shape="rect" coords="165,342,255,392" href="EA993.htm" target="_self">
+<area shape="rect" coords="381,290,397,306" href="EA992.htm" target="_self">
+<area shape="rect" coords="360,290,376,306" href="EA991.htm" target="_self">
+<area shape="rect" coords="403,290,419,306" href="EA990.htm" target="_self">
+<area shape="rect" coords="354,305,424,340" href="EA989.htm" target="_self">
+<area shape="rect" coords="1468,357,1558,407" href="EA987.htm" target="_self">
+<area shape="rect" coords="1281,348,1297,364" href="EA986.htm" target="_self">
+<area shape="rect" coords="1226,397,1242,413" href="EA984.htm" target="_self">
+<area shape="rect" coords="1206,374,1222,390" href="EA985.htm" target="_self">
+<area shape="rect" coords="1221,363,1291,398" href="EA980.htm" target="_self">
+<area shape="rect" coords="525,340,541,356" href="EA982.htm" target="_self">
+<area shape="rect" coords="556,389,572,405" href="EA981.htm" target="_self">
+<area shape="rect" coords="588,363,604,379" href="EA983.htm" target="_self">
+<area shape="rect" coords="519,355,589,390" href="EA978.htm" target="_self">
+<area shape="rect" coords="839,88,1126,1003" href="EA977.htm" target="_self">
+<area shape="rect" coords="81,88,304,998" href="EA976.htm" target="_self">
+<area shape="rect" coords="304,88,499,998" href="EA975.htm" target="_self">
+<area shape="rect" coords="1373,88,1745,1003" href="EA974.htm" target="_self">
+<area shape="rect" coords="1124,88,1373,1003" href="EA973.htm" target="_self">
+<area shape="rect" coords="644,88,839,1003" href="EA972.htm" target="_self">
+<area shape="rect" coords="499,88,644,998" href="EA971.htm" target="_self">
+<area shape="rect" coords="20,20,1782,1040" href="EA969.htm" target="_self">
+</MAP>
+ </div>
+	<div class="ObjectTitle">Transmission of video frames older than 50ms shall be avoided : Activity diagram</div>
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">26.03.2025 07:55:07</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">06.06.2025 08:31:29</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><button onclick="switchProjectProperties()"><img src="../../../images/plus03.gif" align="absmiddle" id="proj" /></button>Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">rekas</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><button onclick="switchAdvancedProperties()"><img src="../../../images/plus03.gif" align="absmiddle" id="adv" /></button>Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{279D34F3-CE58-41b5-B65F-A9F32C906470}</td>
+		</tr>
+	</table>
+	
+</div>
+
+ </td>
+				</tr>
+			</tbody>
+		</table>
+		
+</div>
+</body>
+</html>
+

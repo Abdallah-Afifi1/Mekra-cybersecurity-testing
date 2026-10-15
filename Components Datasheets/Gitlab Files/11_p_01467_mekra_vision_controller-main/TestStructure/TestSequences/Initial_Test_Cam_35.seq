@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsequence>
+	<meta>
+		<title>Initial_test_29</title>
+		<description>&lt;description text&gt;</description>
+		<author>Stefan Reiner</author>
+		<date>2026-03-05T08:58:20</date>
+		<version />
+		<last_revision />
+	</meta>
+	<singletests>
+		<singletest source="MVC-12345-B-Sample_functional_B.py" />
+	</singletests>
+</testsequence>
