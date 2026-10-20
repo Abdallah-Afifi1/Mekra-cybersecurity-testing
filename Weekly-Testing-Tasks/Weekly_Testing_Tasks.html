@@ -13,6 +13,7 @@
   --ok:#2C7A4B; --ok-soft:#DFF1E6; --prog:#2A55BE; --prog-soft:#E2E9F8;
   --todo:#55606F; --todo-soft:#E6EAF0; --bad:#B23A30; --bad-soft:#F7E0DD; --warn:#9A6300; --warn-soft:#F8EBD0;
   --not:#B23A30; --not-soft:#F7E0DD;
+  --epic:#6B3FB8; --epic-soft:#EEE7FA; --test:#0E7C7B; --test-soft:#DDF2F1; --req:#A0520C; --req-soft:#F9E9DA;
   --shadow:0 10px 30px rgba(20,30,50,.14), 0 2px 6px rgba(20,30,50,.08);
   --f-head:"IBM Plex Sans Condensed","Arial Narrow",Arial,sans-serif;
   --f-body:"IBM Plex Sans",-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
@@ -26,6 +27,7 @@
   --ok:#70C393; --ok-soft:#173022; --prog:#86A6F0; --prog-soft:#1E2A45;
   --todo:#A7B0BD; --todo-soft:#242B36; --bad:#EE8B80; --bad-soft:#3A1D1A; --warn:#E2B350; --warn-soft:#33270F;
   --not:#EE8B80; --not-soft:#3A1D1A;
+  --epic:#B99AF0; --epic-soft:#2B2140; --test:#5FC8C6; --test-soft:#13302F; --req:#E9A764; --req-soft:#36230F;
   --shadow:0 10px 30px rgba(0,0,0,.5), 0 2px 6px rgba(0,0,0,.4);
   color-scheme:dark;
 }}
@@ -36,6 +38,7 @@
   --ok:#70C393; --ok-soft:#173022; --prog:#86A6F0; --prog-soft:#1E2A45;
   --todo:#A7B0BD; --todo-soft:#242B36; --bad:#EE8B80; --bad-soft:#3A1D1A; --warn:#E2B350; --warn-soft:#33270F;
   --not:#EE8B80; --not-soft:#3A1D1A;
+  --epic:#B99AF0; --epic-soft:#2B2140; --test:#5FC8C6; --test-soft:#13302F; --req:#E9A764; --req-soft:#36230F;
   --shadow:0 10px 30px rgba(0,0,0,.5), 0 2px 6px rgba(0,0,0,.4);
   color-scheme:dark;
 }
@@ -90,6 +93,38 @@ h1{font-family:var(--f-head);font-weight:600;font-size:28px;line-height:1.1;marg
 .tchip{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:999px;background:var(--sunk);padding:2px 4px 2px 3px;font-size:12px}
 .tchip button{border:0;background:transparent;color:var(--muted);padding:0 5px;font-size:14px;line-height:1}
 .tchip button:hover{color:var(--bad)}
+
+/* control bar, sections, type badges */
+.ctrlbar{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:10px 14px}
+.ctrl{display:flex;align-items:center;gap:8px;min-width:0}
+.ctrl label{font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.ctrl select{border:1px solid var(--line-strong);border-radius:var(--r);background:var(--surface);padding:5px 8px;font-weight:600;max-width:60vw}
+.cwpick{display:flex;align-items:center;gap:6px}
+.cwpick .cw{font-family:var(--f-head);font-weight:600;font-size:22px;line-height:1;min-width:58px;text-align:center}
+.cwpick .cwdates{font-family:var(--f-mono);font-size:12px;color:var(--muted)}
+.ctrlbar .exports{margin-left:auto}
+.sec{display:flex;flex-direction:column;gap:10px}
+.sechead{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px}
+.sechead h2{font-family:var(--f-head);font-weight:600;font-size:22px;margin:0;line-height:1.15}
+.sechead .sub{font-size:13px;color:var(--muted)}
+.tbadge{display:inline-block;border-radius:3px;padding:1px 5px;font-family:var(--f-body);font-size:10.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;margin-right:6px;vertical-align:1px;white-space:nowrap}
+.t-bug{background:var(--bad-soft);color:var(--bad)}
+.t-task{background:var(--prog-soft);color:var(--prog)}
+.t-story{background:var(--ok-soft);color:var(--ok)}
+.t-epic{background:var(--epic-soft);color:var(--epic)}
+.t-test{background:var(--test-soft);color:var(--test)}
+.t-req{background:var(--req-soft);color:var(--req)}
+.t-sub,.t-other{background:var(--todo-soft);color:var(--todo)}
+table.feat{min-width:760px}
+table.feat td.fname{min-width:280px;max-width:420px}
+table.feat td.fname .k{font-family:var(--f-mono);font-size:12.5px;color:var(--accent);text-decoration:none}
+table.feat td.fname a.k:hover{text-decoration:underline}
+table.feat td.fname .pill{margin-top:4px}
+table.feat th.wk{min-width:260px}
+table.feat th.wk.cur{color:var(--fg)}
+table.feat td.old{color:var(--muted);white-space:pre-wrap;font-size:13px}
+.vaccard{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:12px 16px;display:flex;flex-direction:column;gap:8px}
+.vaccard h3{font-family:var(--f-head);font-size:16px;font-weight:600;margin:0}
 
 /* week card and vacations */
 .weekcard{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);display:grid;grid-template-columns:minmax(210px,auto) minmax(0,1fr)}
@@ -240,8 +275,7 @@ tr.grp .gmini span{font-size:11px;border-radius:999px;padding:0 7px;font-weight:
 .drop div{background:var(--surface);border:2px dashed var(--accent);border-radius:10px;padding:28px 36px;font-family:var(--f-head);font-size:20px;font-weight:600;color:var(--accent)}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 @media (max-width:720px){
-  .weekcard{grid-template-columns:1fr}
-  .weeknav{border-right:0;border-bottom:1px solid var(--line)}
+  .ctrlbar .exports{margin-left:0}
 }
 @media (max-width:640px){
   h1{font-size:23px}
@@ -303,18 +337,33 @@ tr.grp .gmini span{font-size:11px;border-radius:999px;padding:0 7px;font-weight:
     <span class="hint" id="storageHint"></span>
   </section>
 
-  <section class="weekcard" aria-label="Calendar week">
-    <div class="weeknav">
-      <span class="cw" id="cwLabel">CW</span>
-      <span class="cwdates" id="cwDates"></span>
-      <div class="row">
-        <button class="btn small" type="button" id="wkPrev" aria-label="Previous week">◀ Prev</button>
-        <button class="btn small" type="button" id="wkNow">This week</button>
-        <button class="btn small" type="button" id="wkNext" aria-label="Next week">Next ▶</button>
+  <div class="ctrlbar" aria-label="Release and week">
+    <div class="ctrl"><label for="relSel">Release</label><select id="relSel"></select></div>
+    <div class="ctrl"><label>Week</label>
+      <div class="cwpick">
+        <button class="btn small" type="button" id="wkPrev" aria-label="Previous week">◀</button>
+        <span class="cw" id="cwLabel">CW</span>
+        <button class="btn small" type="button" id="wkNext" aria-label="Next week">▶</button>
+        <span class="cwdates" id="cwDates"></span>
+        <button class="btn small ghost" type="button" id="wkNow">This week</button>
       </div>
     </div>
-    <div class="vac">
-      <h2>Vacations &amp; Training</h2>
+    <span class="exports">
+      <button class="btn" type="button" id="btnCopy">Copy for Confluence</button>
+      <button class="btn" type="button" id="btnWord">Word</button>
+      <button class="btn" type="button" id="btnHtml">HTML</button>
+    </span>
+  </div>
+
+  <section class="sec" aria-labelledby="featTitle">
+    <div class="sechead"><h2 id="featTitle">Release</h2><span class="sub" id="featSub"></span></div>
+    <div class="tablewrap"><table class="feat" id="featTbl"><thead id="featHead"></thead><tbody id="featBody"></tbody></table><div class="empty" id="featEmpty" hidden></div></div>
+  </section>
+
+  <section class="sec" aria-labelledby="cwTitle">
+    <div class="sechead"><h2 id="cwTitle">CW</h2><span class="sub" id="cwSub"></span></div>
+    <div class="vaccard">
+      <h3>Vacations &amp; Training</h3>
       <ul class="vaclist" id="vacList"></ul>
       <div class="vacform" id="vacForm">
         <input class="inp" id="vacName" list="peopleList" placeholder="Name, for example Raj" aria-label="Name">
@@ -323,6 +372,7 @@ tr.grp .gmini span{font-size:11px;border-radius:999px;padding:0 7px;font-weight:
         <button class="btn small primary" type="button" id="vacAdd">Add</button>
       </div>
     </div>
+    <div class="sechead" style="margin-top:6px"><h2 style="font-size:17px">Team tasks</h2><span class="sub">Every item of the release that is not an epic</span></div>
   </section>
 
   <section class="filters" aria-label="Filters">
@@ -346,12 +396,7 @@ tr.grp .gmini span{font-size:11px;border-radius:999px;padding:0 7px;font-weight:
     <label for="groupBy">Group by</label>
     <select id="groupBy"></select>
     <span class="sortinfo" id="sortInfo"></span>
-    <span class="exports">
-      <button class="btn" type="button" id="btnCopy">Copy for Confluence</button>
-      <button class="btn" type="button" id="btnWord">Word</button>
-      <button class="btn" type="button" id="btnHtml">HTML</button>
-      <button class="btn" type="button" id="btnJql" aria-expanded="false">Show JQL</button>
-    </span>
+    <button class="btn" type="button" id="btnJql" aria-expanded="false">Show JQL</button>
   </div>
 
   <section class="jql" id="jqlBox" hidden>
@@ -384,9 +429,9 @@ const WD=['Monday','Tuesday','Wednesday','Thursday','Friday'];
 /* ---------- state ---------- */
 const S={items:[],fields:[],meta:{},canon:{},source:null,example:false,
   filters:[],q:'',sort:[{id:'status',dir:1},{id:'due',dir:1}],group:'none',
-  me:'',base:'',team:[],notes:{},week:null,weekDoc:{comments:{},vacations:[]},prevWeekDoc:{comments:{}},
+  me:'',base:'',team:[],notes:{},week:null,release:'',weekCache:{},
   recent:LS.get('wtt.recent',[]),saved:LS.get('wtt.saved',[]),showJql:false,canWrite:true,mode:'local',
-  exNotes:{},exWeek:{comments:{},vacations:[]}};
+  exNotes:{},exWeeks:{}};
 let fid=1;
 
 /* ---------- dates and weeks ---------- */
@@ -476,7 +521,14 @@ function vals(it,h){const v=it[h];return Array.isArray(v)?v:(v?[v]:[]);}
 function get(it,c){const h=S.canon[c];if(!h)return'';const v=it[h];return Array.isArray(v)?v.join(', '):(v||'');}
 function keyOf(it){return get(it,'key');}
 function notesNow(){return S.example?S.exNotes:S.notes;}
-function weekNow(){return S.example?S.exWeek:S.weekDoc;}
+function emptyWeek(){return{comments:{},vacations:[],features:{}};}
+function weekDocFor(id){const C=S.example?S.exWeeks:S.weekCache;return C[id]||(C[id]=emptyWeek());}
+function weekNow(){return weekDocFor(weekId(S.week));}
+function typeOf(it){return get(it,'type');}
+function typeCat(t){t=(t||'').toLowerCase();if(/bug|defect/.test(t))return'bug';if(/epic|feature/.test(t))return'epic';if(/test/.test(t))return'test';if(/requirement|^req/.test(t))return'req';if(/sub-?task/.test(t))return'sub';if(/story/.test(t))return'story';if(/task/.test(t))return'task';return'other';}
+function isEpic(it){return typeCat(typeOf(it))==='epic';}
+function inRelease(it){return!S.release||(S.release==='__none__'?!vals(it,S.canon.release||'').length:vals(it,S.canon.release||'').includes(S.release));}
+function releases(){const s=new Set();if(S.canon.release)for(const it of S.items)for(const v of vals(it,S.canon.release))s.add(v);return[...s].sort((a,b)=>b.localeCompare(a,undefined,{numeric:true}));}
 function applyNotes(){const N=notesNow();for(const it of S.items){const n=N[keyOf(it)]||{};it[START]=n.start||'';it[DUE]=n.due||'';it.__date[START]=parseDate(n.start);it.__date[DUE]=parseDate(n.due);}}
 function commentOf(it){const c=(weekNow().comments||{})[keyOf(it)];return typeof c==='string'?c:'';}
 function dateOf(it,c){const h=S.canon[c];return h?it.__date[h]||null:null;}
@@ -495,22 +547,24 @@ function queue(path,fn){B.pending++;refreshSave();const prev=B.queues.get(path)|
   B.queues.set(path,p);return p;}
 function debounce(key,ms,fn){clearTimeout(B.timers.get(key));B.timers.set(key,setTimeout(()=>{B.timers.delete(key);fn();},ms));}
 function safeId(k){return String(k).replace(/[^A-Za-z0-9_\-.~:@+]/g,'_');}
-function writeWeek(patch){const path='weeks/'+weekId(S.week);
-  return queue(path,async()=>{const ref=B.db.doc(path);const s=await ref.get();if(s.exists)await ref.update(patch);else await ref.set(Object.assign({comments:{},vacations:[]},patch));});}
+function writeWeek(patch,id){const path='weeks/'+id;
+  return queue(path,async()=>{const ref=B.db.doc(path);const s=await ref.get();if(s.exists)await ref.update(patch);else await ref.set(Object.assign(emptyWeek(),patch));});}
+function saveWeekText(kind,key,text){const id=weekId(S.week);const W=weekDocFor(id);W[kind]=Object.assign({},W[kind],{[key]:text});if(S.example)return;
+  if(S.mode==='db'){const tk=kind+':'+id+':'+key;if(!B.timers.has(tk)){B.pending++;refreshSave();}debounce(tk,700,()=>{B.pending--;writeWeek({[kind]:{[key]:(weekDocFor(id)[kind]||{})[key]||''}},id);});}
+  else{LS.set('wtt.week.'+id,W);refreshSave();}}
 const store={
   saveNote(key,patch){if(S.example){S.exNotes[key]=Object.assign({},S.exNotes[key],patch);return;}
     S.notes[key]=Object.assign({},S.notes[key],patch,{key});
     if(S.mode==='db'){const body=Object.assign({},S.notes[key]);queue('notes/'+key,()=>B.db.doc('notes/'+safeId(key)).set(body));}
     else{LS.set('wtt.notes',S.notes);refreshSave();}},
-  saveComment(key,text){const W=weekNow();W.comments=Object.assign({},W.comments,{[key]:text});if(S.example)return;
-    if(S.mode==='db'){if(!B.timers.has('c:'+key)){B.pending++;refreshSave();}debounce('c:'+key,700,()=>{B.pending--;writeWeek({comments:{[key]:(S.weekDoc.comments||{})[key]||''}});});}
-    else{LS.set('wtt.week.'+weekId(S.week),S.weekDoc);refreshSave();}},
-  saveVacations(list){const W=weekNow();W.vacations=list;if(S.example)return;
-    if(S.mode==='db')writeWeek({vacations:list});else{LS.set('wtt.week.'+weekId(S.week),S.weekDoc);refreshSave();}},
+  saveComment(key,text){saveWeekText('comments',key,text);},
+  saveFeature(key,text){saveWeekText('features',key,text);},
+  saveVacations(list){const id=weekId(S.week);const W=weekDocFor(id);W.vacations=list;if(S.example)return;
+    if(S.mode==='db')writeWeek({vacations:list},id);else{LS.set('wtt.week.'+id,W);refreshSave();}},
   saveTeam(names){S.team=names;if(S.mode==='db')queue('config/team',()=>B.db.doc('config/team').set({names}));else{LS.set('wtt.team',names);refreshSave();}},
   saveBase(base){S.base=base;if(S.mode==='db'){debounce('base',800,()=>queue('config/settings',()=>B.db.doc('config/settings').set({base:S.base})));}else LS.set('wtt.base',base);},
-  saveView(){const v={filters:S.filters,q:S.q,sort:S.sort,group:S.group,me:S.me};LS.set('wtt.view',v);
-    if(S.mode==='db'&&B.uid){debounce('view',1200,()=>{const body=JSON.parse(JSON.stringify({filters:S.filters,q:S.q,sort:S.sort,group:S.group,me:S.me}));queue('view',()=>B.db.doc('data/users/'+B.uid+'/view').set(body));});}},
+  saveView(){const v={filters:S.filters,q:S.q,sort:S.sort,group:S.group,me:S.me,release:S.release};LS.set('wtt.view',v);
+    if(S.mode==='db'&&B.uid){debounce('view',1200,()=>{const body=JSON.parse(JSON.stringify({filters:S.filters,q:S.q,sort:S.sort,group:S.group,me:S.me,release:S.release}));queue('view',()=>B.db.doc('data/users/'+B.uid+'/view').set(body));});}},
   async saveDataset(text,source){
     if(S.mode!=='db'){const ok=LS.set('wtt.data',{text,source});if(!ok)throw new Error('the file is too large to keep in this browser; import it again next time');return;}
     const ver=Date.now().toString(36);const size=60000;const n=Math.ceil(text.length/size);
@@ -526,10 +580,10 @@ const store={
   async removeDataset(){if(S.mode==='db'){const cur=await B.db.doc('dataset/current').get();await B.db.doc('dataset/current').delete();if(cur.exists){const o=cur.data();for(let i=0;i<(o.chunks||0);i++)B.db.doc('chunks/'+o.ver+'_'+i).delete().catch(()=>{});}}LS.del('wtt.data');}
 };
 
+function loadLocalWeeks(){for(let i=0;i<=8;i++){const id=weekId(addDays(S.week,-7*i));const w=LS.get('wtt.week.'+id,null);S.weekCache[id]=Object.assign(emptyWeek(),w||{});}}
 function loadLocal(){
   S.team=LS.get('wtt.team',[]);S.base=LS.get('wtt.base','')||(LS.get('wtt.settings',{}).base||'');
-  S.notes=LS.get('wtt.notes',{});S.weekDoc=LS.get('wtt.week.'+weekId(S.week),{comments:{},vacations:[]});
-  S.prevWeekDoc=LS.get('wtt.week.'+weekId(addDays(S.week,-7)),{comments:{}});
+  S.notes=LS.get('wtt.notes',{});loadLocalWeeks();
   const v=LS.get('wtt.view',null);if(v)applyViewObj(v,true);else S.me=(LS.get('wtt.settings',{}).me)||'';}
 
 async function connect(){
@@ -555,12 +609,12 @@ async function connect(){
 function subscribeWeek(){
   if(S.mode!=='db')return;if(B.weekUnsub)B.weekUnsub();
   const id=weekId(S.week);
-  B.weekUnsub=B.db.doc('weeks/'+id).onSnapshot(s=>{if(weekId(S.week)!==id)return;const d=s.exists?s.data():{};
-    const mine=S.weekDoc.comments||{};const incoming=Object.assign({},d.comments||{});
-    for(const k of Object.keys(mine))if(B.timers.has('c:'+k))incoming[k]=mine[k];
-    S.weekDoc={comments:incoming,vacations:Array.isArray(d.vacations)?d.vacations.slice():[]};renderWeek();render();},()=>{});
-  B.db.doc('weeks/'+weekId(addDays(S.week,-7))).get().then(s=>{S.prevWeekDoc=s.exists?s.data():{comments:{}};render();},()=>{});}
-
+  B.weekUnsub=B.db.doc('weeks/'+id).onSnapshot(s=>{const d=s.exists?s.data():{};const cur=weekDocFor(id);
+    const merged={vacations:Array.isArray(d.vacations)?d.vacations.slice():[]};
+    for(const kind of['comments','features']){const inc=Object.assign({},d[kind]||{});const mine=cur[kind]||{};for(const k of Object.keys(mine))if(B.timers.has(kind+':'+id+':'+k))inc[k]=mine[k];merged[kind]=inc;}
+    S.weekCache[id]=merged;if(weekId(S.week)===id){renderWeek();renderFeatures();render();}},()=>{});
+  for(let i=1;i<=8;i++){const pid=weekId(addDays(S.week,-7*i));if(B.loaded&&B.loaded.has(pid))continue;(B.loaded||(B.loaded=new Set())).add(pid);
+    B.db.doc('weeks/'+pid).get().then(s=>{if(s.exists)S.weekCache[pid]=Object.assign(emptyWeek(),s.data());renderFeatures();render();},()=>{B.loaded.delete(pid);});}}
 /* ---------- load data ---------- */
 function loadText(text,source,quiet,persist){
   const data=buildData(parseCSV(text));
@@ -568,7 +622,7 @@ function loadText(text,source,quiet,persist){
   applyNotes();renderAll();
   if(persist){store.saveDataset(text,source).then(()=>{if(!quiet)showMsg(`Loaded ${S.items.length} items from ${source.name}.`,true);},e=>showMsg('Loaded the items here, but could not save them: '+((e&&e.message)||'error')+'.'));}
   else if(!quiet)showMsg(`Loaded ${S.items.length} items from ${source.name}.`,true);}
-function showExample(){S.exNotes=exampleNotes();S.exWeek=weekId(S.week)===weekId(new Date())?exampleWeek():{comments:{},vacations:[]};loadText(exampleCSV(),{kind:'example',name:'example data'},true,false);}
+function showExample(){S.exNotes=exampleNotes();S.exWeeks=exampleWeeks();loadText(exampleCSV(),{kind:'example',name:'example data'},true,false);}
 function importText(text,source){if(!S.canWrite){showMsg('You have view access only, so you cannot replace the items.');return;}
   try{loadText(text,source,false,true);}catch(e){showMsg('Could not read '+source.name+': '+e.message);}}
 function showMsg(t,ok){const m=$('#msg');if(!t){m.hidden=true;return;}m.textContent=t;m.className='msg'+(ok?' ok':'');m.hidden=false;clearTimeout(showMsg.t);if(ok)showMsg.t=setTimeout(()=>{m.hidden=true;},7000);}
@@ -583,12 +637,12 @@ function exampleCSV(){
    ['DEMO-102','Validate OEM dashboard','Task','Done','Medium','Ravi Kumar',-1,'Release 0.9','','Sprint 43','hmi',''],
    ['DEMO-103','Verify fix: comfort state is always default','Bug','Failed','High','Omar Haddad',0,'Release 0.9','','Sprint 43','regression',''],
    ['DEMO-104','Secure boot: OTP root key read-back','Task','To Do','High','Abdallah Afifi',-2,'Release 0.9','','Sprint 43','cybersecurity',''],
-   ['DEMO-105','SOW1-SOW2 authentication: I2C capture on bench','Task','In Progress','High','Abdallah Afifi',0,'Release 0.9','','Sprint 43','cybersecurity','bench'],
+   ['DEMO-105','SOW1-SOW2 authentication: I2C capture on bench','Test','In Progress','High','Abdallah Afifi',0,'Release 0.9','','Sprint 43','cybersecurity','bench'],
    ['DEMO-106','Prediction smoothing: design test cases','Story','In Review','Medium','Lena Berger',-1,'Release 1.0','','Sprint 42','',''],
    ['DEMO-107','HPC optimisation: vehicle profile with profiling tool','Task','Blocked','Medium','Tim Schulz',-3,'Release 1.0','','Sprint 43','waiting-tool',''],
    ['DEMO-108','Climate chamber: camera image freeze','Bug','In Progress','High','Sara Nabil',-1,'Release 0.9','','Sprint 43','climate',''],
    ['DEMO-109','Fleet management: agree validation scope','Task','To Do','Low','',-6,'Release 1.0','','','',''],
-   ['DEMO-110','AI eco mode: review requirements','Task','To Do','Medium','Lena Berger',-4,'Release 1.0','','Sprint 44','',''],
+   ['DEMO-110','AI eco mode: torque limit in eco mode','Requirement','To Do','Medium','Lena Berger',-4,'Release 1.0','','Sprint 44','',''],
    ['DEMO-111','HMI app: move related tickets to the new epic','Task','Done','Low','Tim Schulz',-2,'Release 0.9','','Sprint 42','',''],
    ['DEMO-112','Regression run on build 0.9.3','Task','In Progress','High','Omar Haddad',0,'Release 0.9','Release 0.9.1','Sprint 43','regression',''],
    ['DEMO-113','CAN timeout handling: re-test after fix','Bug','To Do','High','Sara Nabil',-3,'Release 0.9','','Sprint 43','regression',''],
@@ -596,7 +650,14 @@ function exampleCSV(){
    ['DEMO-115','Test report for last week','Task','Done','Low','Ravi Kumar',-6,'Release 0.9','','Sprint 42','report',''],
    ['DEMO-116','Trailer camera: frame tag check on HIL','Task','In Progress','Medium','Abdallah Afifi',-1,'Release 1.0','','Sprint 43','cybersecurity','hil'],
    ['DEMO-117','Power cycle stress test, 500 cycles','Task','Failed','Medium','Tim Schulz',0,'Release 0.9','','Sprint 43','stress',''],
-   ['DEMO-118','Update bench wiring for the second camera','Task','To Do','Low','Lena Berger',-5,'Release 1.0','','Sprint 44','bench','']];
+   ['DEMO-118','Update bench wiring for the second camera','Task','To Do','Low','Lena Berger',-5,'Release 1.0','','Sprint 44','bench',''],
+   ['DEMO-201','AI ECO Mode v1','Epic','In Progress','High','',-2,'Release 1.0','','','',''],
+   ['DEMO-202','Fleet Management','Epic','In Progress','Medium','',-6,'Release 1.0','','','',''],
+   ['DEMO-203','Prediction Smoothing','Epic','In Progress','Medium','',-1,'Release 1.0','','','',''],
+   ['DEMO-204','HPC system optimization, POC Phase 2','Epic','In Progress','Medium','',-3,'Release 1.0','','','',''],
+   ['DEMO-205','Secure communication SOW1-SOW2','Epic','In Progress','High','',0,'Release 0.9','','','',''],
+   ['DEMO-206','OEM Dashboard v1','Epic','Done','Medium','',-1,'Release 0.9','','','',''],
+   ['DEMO-207','Climate chamber issues and bugs','Epic','In Progress','High','',-1,'Release 0.9','','','','']];
   const q=v=>/[",\n]/.test(v)?'"'+v.replace(/"/g,'""')+'"':v;
   const head=['Issue key','Summary','Issue Type','Status','Priority','Assignee','Created','Updated','Fix versions','Fix versions','Sprint','Labels','Labels'];
   const lines=[head.join(',')];
@@ -604,7 +665,13 @@ function exampleCSV(){
   return lines.join('\n');}
 function exampleNotes(){const m=monday(new Date());const d=n=>iso(addDays(m,n));
   return{'DEMO-101':{start:d(0),due:d(0)},'DEMO-102':{start:d(0),due:d(0)},'DEMO-103':{start:d(0),due:d(0)},'DEMO-104':{start:d(1),due:d(3)},'DEMO-105':{start:d(-1),due:d(2)},'DEMO-106':{start:d(-7),due:d(-1)},'DEMO-107':{start:d(-3),due:d(4)},'DEMO-108':{start:d(-2),due:d(4)},'DEMO-112':{start:d(0),due:d(1)},'DEMO-113':{start:d(-3),due:d(-2)},'DEMO-116':{start:d(0),due:d(6)},'DEMO-117':{start:d(0),due:d(0)}};}
-function exampleWeek(){return{comments:{'DEMO-101':'TC_2297_03 failed. Reason still open.','DEMO-103':'Please verify the branch named in the ticket and add the build number.','DEMO-107':'Waiting for the profiling tool to be shared with the test team.'},vacations:[{id:'v1',name:'Ravi',days:[1],note:'Public holiday'},{id:'v2',name:'Sara',days:[3],note:''},{id:'v3',name:'Tim',days:[4],note:'Training'}]};}
+function exampleWeeks(){const now=weekId(new Date()),prev=weekId(addDays(new Date(),-7)),prev2=weekId(addDays(new Date(),-14));const W={};
+  W[now]={comments:{'DEMO-101':'TC_2297_03 failed. Reason still open.','DEMO-103':'Please verify the branch named in the ticket and add the build number.','DEMO-107':'Waiting for the profiling tool to be shared with the test team.'},
+    vacations:[{id:'v1',name:'Ravi',days:[1],note:'Public holiday'},{id:'v2',name:'Sara',days:[3],note:''},{id:'v3',name:'Tim',days:[4],note:'Training'}],
+    features:{'DEMO-201':'Pending on requirements','DEMO-202':'No clear scope to be validated','DEMO-203':'Test cases designed, implementation started','DEMO-204':'Current validation scope: vehicle profile with the profiling tool. Pending on sharing the tool with the testing team','DEMO-205':'Authentication and frame tag checks running on the bench','DEMO-207':'Waiting for answers about the camera and cloud issue'}};
+  W[prev]={comments:{},vacations:[],features:{'DEMO-201':'Pending on requirements','DEMO-202':'Scope meeting planned','DEMO-203':'Test case design ongoing','DEMO-205':'Bench set-up with the real camera','DEMO-206':'All test cases passed','DEMO-207':'Public holidays at the supplier, waiting for answers'}};
+  W[prev2]={comments:{},vacations:[],features:{'DEMO-203':'Waiting for the feature spec','DEMO-206':'Regression run started'}};
+  return W;}
 
 /* ---------- filters ---------- */
 function fieldLabel(h){return S.meta[h]?labelOf(h):h.replace(/^custom field \((.*)\)$/i,'$1');}
@@ -625,7 +692,7 @@ function inPreset(p,d,it){const t0=startOfDay(new Date());
   if(p==='overdue')return d<t0&&it.__cat!=='ok';
   const off=p==='lastweek'?-7:p==='nextweek'?7:0;const s=addDays(S.week,off),e=addDays(s,7);return d>=s&&d<e;}
 function filtered(except){const q=S.q.trim().toLowerCase();
-  return S.items.filter(it=>S.filters.every(f=>f===except||matchFilter(it,f))&&(!q||(keyOf(it)+' '+get(it,'summary')+' '+commentOf(it)).toLowerCase().includes(q)));}
+  return S.items.filter(it=>!isEpic(it)&&inRelease(it)&&S.filters.every(f=>f===except||matchFilter(it,f))&&(!q||(keyOf(it)+' '+get(it,'summary')+' '+commentOf(it)).toLowerCase().includes(q)));}
 function addFilter(f){f.id=fid++;S.filters.push(f);touchRecent(f.field);changed();return f;}
 function removeFilter(id){S.filters=S.filters.filter(f=>f.id!==id);closePops();changed();}
 function touchRecent(h){if(!h)return;S.recent=[h,...S.recent.filter(x=>x!==h)].slice(0,8);LS.set('wtt.recent',S.recent);}
@@ -729,7 +796,7 @@ function toggleQuick(h,v){if(!h)return;let f=S.filters.find(x=>x.field===h&&x.op
   if(!f.values.length)S.filters=S.filters.filter(x=>x!==f);changed();}
 
 /* ---------- sorting and grouping ---------- */
-const COLS=[{id:'key',label:'Key'},{id:'summary',label:'Task'},{id:'status',label:'Status'},{id:'assignee',label:'Assignee'},{id:'release',label:'Release'},{id:'start',label:'Start date',man:true},{id:'due',label:'Due date',man:true},{id:'comment',label:'Comment',man:true},{id:'updated',label:'Updated'}];
+const COLS=[{id:'key',label:'Type and key'},{id:'summary',label:'Task'},{id:'status',label:'Status'},{id:'assignee',label:'Assignee'},{id:'release',label:'Release'},{id:'start',label:'Start date',man:true},{id:'due',label:'Due date',man:true},{id:'comment',label:'Comment',man:true},{id:'updated',label:'Updated'}];
 function visibleCols(){return COLS.filter(c=>c.id==='comment'||S.canon[c.id]);}
 function keyNum(k){const m=String(k).match(/^(.*?)(\d+)$/);return m?[m[1],+m[2]]:[k,0];}
 function cmpBy(id){
@@ -748,9 +815,10 @@ const GROUPS=[['none','Nothing'],['assignee','Assignee'],['status','Status'],['r
 
 /* ---------- render ---------- */
 function changed(){store.saveView();render();}
-function renderAll(){renderSource();renderGroupSelect();renderTeam();renderWeek();render();}
+function renderAll(){renderSource();renderRelease();renderGroupSelect();renderTeam();renderWeek();renderFeatures();render();}
 function renderSource(){const s=S.source||{};
-  $('#sourceInfo').replaceChildren(S.example?el('span',{},'Showing ',el('strong',{text:'example data'})):el('span',{},el('strong',{text:s.name||'Imported items'}),' · imported '+(s.at?relDate(new Date(s.at)):'')),' · '+S.items.length+' items');
+  $('#sourceInfo').title='The Jira export the items come from. Import a new export to refresh them.';
+  $('#sourceInfo').replaceChildren(S.example?el('span',{},'Jira data: ',el('strong',{text:'example only'})):el('span',{},'Jira data: ',el('strong',{text:s.name||'imported file'}),', imported '+(s.at?relDate(new Date(s.at)):'')),', '+S.items.length+' items');
   $('#exampleBanner').hidden=!S.example;
   $('#btnForget').disabled=S.example||!S.canWrite;
   refreshSave();}
@@ -763,13 +831,34 @@ function vacText(v){const d=(v.days||[]).slice().sort((a,b)=>a-b);let when='';
   if(d.length===5)when='whole week';else if(d.length>2&&d[d.length-1]-d[0]===d.length-1)when=WD[d[0]]+' to '+WD[d[d.length-1]];else when=d.map(i=>WD[i]).join(', ');
   const inner=[when,v.note].filter(Boolean).join(' - ');return v.name+(inner?' ('+inner+')':'');}
 let vacDays=[];
+function relName(){return S.release==='__none__'?'No release':S.release||'All releases';}
+function renderRelease(){const sel=$('#relSel');const rs=releases();if(S.release&&S.release!=='__none__'&&!rs.includes(S.release))S.release='';
+  sel.replaceChildren(el('option',{value:''},'All releases'),...rs.map(r=>el('option',{value:r},r)),el('option',{value:'__none__'},'No release'));sel.value=S.release;}
 function renderWeek(){
-  $('#cwLabel').textContent=cwLabel(S.week);
-  $('#cwDates').textContent=fmtDay.format(S.week)+' to '+fmtDayY.format(addDays(S.week,6))+(weekId(S.week)===weekId(new Date())?' · this week':'');
+  const cw=cwLabel(S.week);const range=fmtDay.format(S.week)+' to '+fmtDayY.format(addDays(S.week,6));const now=weekId(S.week)===weekId(new Date());
+  $('#cwLabel').textContent=cw;$('#cwDates').textContent=range+(now?' · this week':'');
+  $('#cwTitle').textContent=cw;$('#cwSub').textContent=range;
   const list=(weekNow().vacations||[]);
   $('#vacList').replaceChildren(...(list.length?list.map(v=>el('li',{},vacText(v),S.canWrite?el('button',{type:'button',class:'x','aria-label':'Remove '+v.name,onclick:()=>{store.saveVacations(list.filter(x=>x!==v));renderWeek();}},'×'):null)):[el('li',{class:'hint none',text:'Nobody is away this week yet.'})]));
   $('#vacDays').replaceChildren(...['Mon','Tue','Wed','Thu','Fri'].map((t,i)=>el('button',{type:'button','aria-pressed':String(vacDays.includes(i)),title:WD[i],onclick:()=>{vacDays=vacDays.includes(i)?vacDays.filter(x=>x!==i):[...vacDays,i];renderWeek();}},t)));
   $('#vacForm').hidden=!S.canWrite;}
+function featureRows(){return S.items.filter(it=>isEpic(it)&&inRelease(it)).sort((a,b)=>{const x=keyNum(keyOf(a)),y=keyNum(keyOf(b));return x[0].localeCompare(y[0])||x[1]-y[1];});}
+function featureWeeks(rows){const ids=[weekId(S.week)];for(let i=1;i<=8&&ids.length<5;i++){const id=weekId(addDays(S.week,-7*i));const F=weekDocFor(id).features||{};if(rows.some(it=>(F[keyOf(it)]||'').trim()))ids.push(id);}return ids;}
+function wkLabel(id){return'W'+id.split('-W')[1].replace(/^0/,'');}
+function renderFeatures(){
+  const act=document.activeElement;const keep=act&&act.dataset&&act.dataset.k&&act.dataset.f==='feat'?{k:act.dataset.k,s:act.selectionStart,e:act.selectionEnd}:null;
+  $('#featTitle').textContent=relName();
+  const rows=featureRows();const weeks=featureWeeks(rows);
+  $('#featSub').textContent=rows.length?rows.length+' feature'+(rows.length>1?'s':'')+' (epics). Type this week\'s testing status; older weeks stay as they were.':'';
+  $('#featEmpty').hidden=rows.length>0;$('#featTbl').hidden=!rows.length;
+  $('#featEmpty').textContent=S.items.length?'No epic in '+relName()+'. Include the epics in your Jira export (for example issuetype = Epic) to fill this table.':'Import a Jira export to see the features.';
+  $('#featHead').replaceChildren(el('tr',{},el('th',{scope:'col'},el('button',{type:'button',tabindex:'-1'},'Feature')),weeks.map((id,i)=>el('th',{scope:'col',class:'wk'+(i?'':' cur')},el('button',{type:'button',tabindex:'-1'},wkLabel(id)+' Testing Status',i?null:el('span',{class:'man',text:'this CW'}))))));
+  $('#featBody').replaceChildren(...rows.map(it=>{const k=keyOf(it);const u=jiraUrl(k);
+    return el('tr',{},el('td',{class:'fname'},typeBadge(typeOf(it)),u?el('a',{class:'k',href:u,target:'_blank',rel:'noopener'},k):el('span',{class:'k',text:k}),': '+get(it,'summary'),el('div',{},get(it,'status')?el('span',{class:'pill cat-'+it.__cat,text:get(it,'status')}):null)),
+      weeks.map((id,i)=>{const t=((weekDocFor(id).features)||{})[k]||'';
+        if(i===0&&S.canWrite){const prev=weeks[1]?((weekDocFor(weeks[1]).features||{})[k]||''):'';return el('td',{class:'edit'},el('textarea',{rows:'1',value:t,'data-k':k,'data-f':'feat','aria-label':'Testing status of '+k+' in '+wkLabel(id),placeholder:prev?'Last: '+prev:'Testing status this week',oninput:e=>store.saveFeature(k,e.target.value)}));}
+        return el('td',{class:i===0?'edit':'old'},i===0?el('span',{class:'ro',text:t}):t);}));}));
+  if(keep){const t=document.querySelector(`[data-k="${CSS.escape(keep.k)}"][data-f="feat"]`);if(t){t.focus();try{t.setSelectionRange(keep.s,keep.e);}catch(e){}}}}
 
 function render(){
   const act=document.activeElement;const keep=act&&act.dataset&&act.dataset.k?{k:act.dataset.k,f:act.dataset.f,s:act.selectionStart,e:act.selectionEnd}:null;
@@ -780,7 +869,8 @@ function render(){
       el('button',{type:'button',class:'chip-x','aria-label':'Remove filter '+fieldLabel(f.field),onclick:()=>removeFilter(f.id)},'×'));}));
   renderSaved();
   const list=sorted(filtered());
-  $('#count').replaceChildren(String(list.length),el('small',{text:` of ${S.items.length} items`}));
+  const scope=S.items.filter(it=>!isEpic(it)&&inRelease(it)).length;
+  $('#count').replaceChildren(String(list.length),el('small',{text:` of ${scope} tasks`+(S.release?' in '+relName():'')}));
   const sf=S.filters.find(x=>x.field===S.canon.status&&x.op==='is'&&x.mode==='values');
   const sc=new Map();for(const it of list){const s=get(it,'status')||'(no status)';sc.set(s,(sc.get(s)||0)+1);}
   $('#statusPills').replaceChildren(...[...sc].sort((a,b)=>CAT_ORDER[statusCat(a[0])]-CAT_ORDER[statusCat(b[0])]||b[1]-a[1]).map(([s,n])=>el('button',{type:'button',class:'spill cat-'+statusCat(s)+(sf&&sf.values.includes(s)?' on':''),title:'Filter on status '+s,onclick:()=>toggleQuick(S.canon.status,s)},s,el('span',{class:'n',text:String(n)}))));
@@ -808,19 +898,20 @@ function render(){
   if(keep){const t=document.querySelector(`[data-k="${CSS.escape(keep.k)}"][data-f="${keep.f}"]`);if(t){t.focus();try{if(keep.s!=null&&t.type!=='date')t.setSelectionRange(keep.s,keep.e);}catch(e){}}}}
 function catName(c){return{bad:'Failed or blocked',prog:'In progress',todo:'To do',other:'Other',ok:'Done',none:'No status'}[c];}
 function initials(n){if(!n||n==='__empty__')return'–';const p=n.includes(',')?n.split(',').map(s=>s.trim()).reverse():n.split(/\s+/);return((p[0]||'')[0]||'').toUpperCase()+((p[p.length-1]||'')[0]||'').toUpperCase();}
+function typeBadge(t){return t?el('span',{class:'tbadge t-'+typeCat(t),text:t}):null;}
 function jiraUrl(k){const base=(S.base||'').trim().replace(/\/+$/,'');return base&&/^https?:\/\//i.test(base)?base+'/browse/'+encodeURIComponent(k):'';}
 function row(it,cols){
   const t=startOfDay(new Date());const k=keyOf(it);
   return el('tr',{},cols.map(c=>{
-    if(c.id==='key'){const u=jiraUrl(k);return el('td',{class:'key'},u?el('a',{href:u,target:'_blank',rel:'noopener'},k):k);}
-    if(c.id==='summary')return el('td',{class:'sum'},get(it,'summary'),S.canon.type?el('span',{class:'type',text:get(it,'type')}):null);
+    if(c.id==='key'){const u=jiraUrl(k);return el('td',{class:'key'},typeBadge(typeOf(it)),u?el('a',{href:u,target:'_blank',rel:'noopener'},k):k);}
+    if(c.id==='summary')return el('td',{class:'sum'},get(it,'summary'));
     if(c.id==='status'){const s=get(it,'status');return el('td',{},s?el('span',{class:'pill cat-'+it.__cat,text:s}):'');}
     if(c.id==='assignee'){const a=get(it,'assignee');return el('td',{},a?el('span',{class:'who'},el('span',{class:'av','aria-hidden':'true',text:initials(a)}),a):el('span',{class:'unassigned',text:'Unassigned'}));}
     if(c.id==='release'||c.id==='sprint')return el('td',{},vals(it,S.canon[c.id]).map(v=>el('span',{class:'tag',text:v})));
     if(c.id==='start'||c.id==='due'){const v=it[c.id==='start'?START:DUE]||'';const d=dateOf(it,c.id);const late=c.id==='due'&&d&&d<t&&it.__cat!=='ok';
       if(!S.canWrite)return el('td',{class:'date'+(late?' late':'')},fmtDate(d));
       return el('td',{class:'edit'},el('input',{type:'date',value:v,class:late?'late':'','data-k':k,'data-f':c.id,'aria-label':c.label+' for '+k,title:late?'Overdue':'',onchange:e=>{store.saveNote(k,{[c.id]:e.target.value});applyNotes();render();}}));}
-    if(c.id==='comment'){const v=commentOf(it);const prev=(S.example?'':((S.prevWeekDoc&&S.prevWeekDoc.comments)||{})[k])||'';
+    if(c.id==='comment'){const v=commentOf(it);const prev=((weekDocFor(weekId(addDays(S.week,-7))).comments)||{})[k]||'';
       if(!S.canWrite)return el('td',{class:'edit'},el('span',{class:'ro',text:v}));
       return el('td',{class:'edit'},el('textarea',{rows:'1',value:v,'data-k':k,'data-f':'comment','aria-label':'Comment for '+k+' in '+cwLabel(S.week),placeholder:prev?'Last week: '+prev:'Add a comment',oninput:e=>store.saveComment(k,e.target.value)}));}
     const d=dateOf(it,c.id);return el('td',{class:'date'},c.id==='updated'?relDate(d):fmtDate(d));}));}
@@ -830,13 +921,13 @@ function renderSaved(){const box=$('#saved');
   const chips=S.saved.map((v,i)=>el('span',{class:'saved-chip'},el('button',{type:'button',title:'Apply this view',onclick:()=>applyView(v)},v.name),el('button',{type:'button',class:'x','aria-label':'Delete view '+v.name,onclick:()=>{S.saved.splice(i,1);LS.set('wtt.saved',S.saved);renderSaved();}},'×')));
   const form=el('span',{class:'saveform',hidden:true});
   const inp=el('input',{type:'text',placeholder:'Name, for example Release 0.9 team','aria-label':'View name',maxlength:'60'});
-  const doSave=()=>{const n=inp.value.trim();if(!n){inp.focus();return;}S.saved=[...S.saved.filter(v=>v.name!==n),{name:n,filters:JSON.parse(JSON.stringify(S.filters)),q:S.q,sort:S.sort,group:S.group}];LS.set('wtt.saved',S.saved);renderSaved();showMsg('Saved view "'+n+'".',true);};
+  const doSave=()=>{const n=inp.value.trim();if(!n){inp.focus();return;}S.saved=[...S.saved.filter(v=>v.name!==n),{name:n,filters:JSON.parse(JSON.stringify(S.filters)),q:S.q,sort:S.sort,group:S.group,release:S.release}];LS.set('wtt.saved',S.saved);renderSaved();showMsg('Saved view "'+n+'".',true);};
   inp.addEventListener('keydown',e=>{if(e.key==='Enter')doSave();if(e.key==='Escape')renderSaved();});
   form.append(inp,el('button',{type:'button',class:'btn small primary',onclick:doSave},'Save'),el('button',{type:'button',class:'btn small ghost',onclick:renderSaved},'Cancel'));
   const open=el('button',{type:'button',class:'btn small',onclick:()=>{open.hidden=true;form.hidden=false;inp.focus();}},'Save current view');
   box.replaceChildren(el('span',{class:'muted',text:'Saved views:'}),...(chips.length?chips:[el('span',{class:'hint',text:'none yet'})]),open,form);}
-function applyViewObj(v,quiet){S.filters=JSON.parse(JSON.stringify(v.filters||[])).map(f=>Object.assign(f,{id:fid++}));S.q=v.q||'';if(v.sort&&v.sort.length)S.sort=v.sort;S.group=v.group||'none';if(typeof v.me==='string')S.me=v.me;if(!quiet){renderGroupSelect();render();}}
-function applyView(v){applyViewObj(Object.assign({},v,{me:S.me}),true);renderGroupSelect();closePops();changed();}
+function applyViewObj(v,quiet){S.filters=JSON.parse(JSON.stringify(v.filters||[])).map(f=>Object.assign(f,{id:fid++}));S.q=v.q||'';if(typeof v.release==='string')S.release=v.release;if(v.sort&&v.sort.length)S.sort=v.sort;S.group=v.group||'none';if(typeof v.me==='string')S.me=v.me;if(!quiet){renderRelease();renderGroupSelect();renderFeatures();render();}}
+function applyView(v){applyViewObj(Object.assign({},v,{me:S.me}),true);renderRelease();renderGroupSelect();renderFeatures();closePops();changed();}
 
 /* ---------- JQL ---------- */
 const JQL_FIELD={assignee:'assignee',status:'status',release:'fixVersion',sprint:'sprint',type:'issuetype',priority:'priority',labels:'labels',components:'component',reporter:'reporter',created:'created',updated:'updated',jdue:'due',resolved:'resolved'};
@@ -852,7 +943,7 @@ function jqlFor(f){if(S.meta[f.field]&&S.meta[f.field].virtual)return null;const
     if(f.op==='not'){const p=[];if(list.length)p.push(`${fld} not in (${list.join(', ')})`);if(hasEmpty)p.push(`${fld} is not EMPTY`);let s=p.join(' AND ');if(list.length&&!hasEmpty)s=`(${s} OR ${fld} is EMPTY)`;return s;}
     const p=[];if(list.length)p.push(`${fld} in (${list.join(', ')})`);if(hasEmpty)p.push(`${fld} is EMPTY`);return p.length>1?'('+p.join(' OR ')+')':p[0];}
   return f.op==='not'?`NOT (${c})`:c;}
-function buildJql(){const parts=S.filters.map(jqlFor).filter(Boolean);if(S.q.trim())parts.push('summary ~ '+qv(S.q.trim()));
+function buildJql(){const parts=S.filters.map(jqlFor).filter(Boolean);if(S.release)parts.unshift(S.release==='__none__'?'fixVersion is EMPTY':'fixVersion = '+qv(S.release));if(S.q.trim())parts.push('summary ~ '+qv(S.q.trim()));
   const order={key:'key',summary:'summary',status:'status',assignee:'assignee',release:'fixVersion',updated:'updated'};
   const ob=S.sort.filter(s=>S.canon[s.id]&&order[s.id]).map(s=>order[s.id]+(s.dir>0?' ASC':' DESC'));
   const skipped=S.filters.some(f=>S.meta[f.field]&&S.meta[f.field].virtual)?'\n-- The filters on the manual start and due dates exist only on this page and are left out.':'';
@@ -860,22 +951,30 @@ function buildJql(){const parts=S.filters.map(jqlFor).filter(Boolean);if(S.q.tri
 
 /* ---------- exports: Confluence, Word, HTML ---------- */
 function exportModel(){const list=sorted(filtered());
-  const rows=list.map(it=>{const k=keyOf(it);return{key:k,url:jiraUrl(k),summary:get(it,'summary'),status:get(it,'status'),cat:it.__cat,assignee:get(it,'assignee')||'Unassigned',start:dateOf(it,'start'),due:dateOf(it,'due'),comment:commentOf(it)};});
-  return{cw:cwLabel(S.week),dates:fmtDay.format(S.week)+' to '+fmtDayY.format(addDays(S.week,6)),vac:(weekNow().vacations||[]).map(vacText),filter:filterText(),rows};}
+  const rows=list.map(it=>{const k=keyOf(it);return{key:k,url:jiraUrl(k),type:typeOf(it),tcat:typeCat(typeOf(it)),summary:get(it,'summary'),status:get(it,'status'),cat:it.__cat,assignee:get(it,'assignee')||'Unassigned',start:dateOf(it,'start'),due:dateOf(it,'due'),comment:commentOf(it)};});
+  const fr=featureRows();const weeks=featureWeeks(fr);
+  const features=fr.map(it=>{const k=keyOf(it);return{key:k,url:jiraUrl(k),type:typeOf(it),tcat:'epic',summary:get(it,'summary'),status:get(it,'status'),cat:it.__cat,weeks:weeks.map(id=>((weekDocFor(id).features)||{})[k]||'')};});
+  return{release:relName(),cw:cwLabel(S.week),dates:fmtDay.format(S.week)+' to '+fmtDayY.format(addDays(S.week,6)),vac:(weekNow().vacations||[]).map(vacText),filter:filterText(),rows,features,weekHeads:weeks.map(id=>wkLabel(id)+' Testing Status')};}
+const TYPE_HEX={bug:['#F7E0DD','#B23A30'],task:['#E2E9F8','#2A55BE'],story:['#DFF1E6','#2C7A4B'],epic:['#EEE7FA','#6B3FB8'],test:['#DDF2F1','#0E7C7B'],req:['#F9E9DA','#A0520C'],sub:['#E6EAF0','#55606F'],other:['#E6EAF0','#55606F']};
 const esc=s=>String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 const fx=d=>d?fmtExport.format(d):'';
 const STATUS_HEX={ok:['#DFF1E6','#2C7A4B'],prog:['#E2E9F8','#2A55BE'],bad:['#F7E0DD','#B23A30'],todo:['#E6EAF0','#55606F'],other:['#E6EAF0','#55606F'],none:['#E6EAF0','#55606F']};
 function exportHtmlFragment(m){
   const th='style="border:1px solid #C1C7D0;background:#F4F5F7;padding:6px 8px;text-align:left"';const td='style="border:1px solid #C1C7D0;padding:6px 8px;vertical-align:top"';
-  const task=r=>(r.url?`<a href="${esc(r.url)}">${esc(r.key)}</a>`:esc(r.key))+': '+esc(r.summary);
-  const st=r=>{const c=STATUS_HEX[r.cat]||STATUS_HEX.none;return`<span style="background:${c[0]};color:${c[1]};font-weight:bold;padding:1px 6px;border-radius:3px;text-transform:uppercase;font-size:12px">${esc(r.status)}</span>`;};
-  return`<h2>${esc(m.cw)}</h2>`+
+  const badge=r=>{if(!r.type)return'';const c=TYPE_HEX[r.tcat]||TYPE_HEX.other;return`<span style="background:${c[0]};color:${c[1]};font-weight:bold;font-size:11px;padding:1px 5px;border-radius:3px;text-transform:uppercase">${esc(r.type)}</span> `;};
+  const st=r=>{if(!r.status)return'';const c=STATUS_HEX[r.cat]||STATUS_HEX.none;return`<span style="background:${c[0]};color:${c[1]};font-weight:bold;padding:1px 6px;border-radius:3px;text-transform:uppercase;font-size:12px">${esc(r.status)}</span>`;};
+  const task=r=>badge(r)+(r.url?`<a href="${esc(r.url)}">${esc(r.key)}</a>`:esc(r.key))+': '+esc(r.summary);
+  const nl=t=>esc(t).replace(/\n/g,'<br>');
+  const feat=m.features.length?`<table style="border-collapse:collapse;width:100%"><thead><tr><th ${th}>Feature</th>${m.weekHeads.map(h=>`<th ${th}>${esc(h)}</th>`).join('')}</tr></thead><tbody>`+
+    m.features.map(f=>`<tr><td ${td}>${task(f)}<br>${st(f)}</td>${f.weeks.map(w=>`<td ${td}>${nl(w)}</td>`).join('')}</tr>`).join('')+`</tbody></table>`:'';
+  return`<h1>${esc(m.release)}</h1>`+feat+
+    `<h2>${esc(m.cw)}</h2>`+
     `<h3>Vacations &amp; Training</h3>`+(m.vac.length?`<ul>${m.vac.map(v=>`<li>${esc(v)}</li>`).join('')}</ul>`:'<p>Nobody is away this week.</p>')+
     `<table style="border-collapse:collapse;width:100%"><thead><tr><th ${th}>Task Name</th><th ${th}>Status</th><th ${th}>Assignee</th><th ${th}>Start Date</th><th ${th}>Due Date</th><th ${th}>Comment</th></tr></thead><tbody>`+
-    m.rows.map(r=>`<tr><td ${td}>${task(r)}</td><td ${td}>${st(r)}</td><td ${td}>${esc(r.assignee)}</td><td ${td}>${esc(fx(r.start))}</td><td ${td}>${esc(fx(r.due))}</td><td ${td}>${esc(r.comment).replace(/\n/g,'<br>')}</td></tr>`).join('')+
+    m.rows.map(r=>`<tr><td ${td}>${task(r)}</td><td ${td}>${st(r)}</td><td ${td}>${esc(r.assignee)}</td><td ${td}>${esc(fx(r.start))}</td><td ${td}>${esc(fx(r.due))}</td><td ${td}>${nl(r.comment)}</td></tr>`).join('')+
     `</tbody></table>`+(m.filter?`<p style="color:#6B778C;font-size:12px">Filter: ${esc(m.filter)}</p>`:'');}
-function exportPlain(m){return[m.cw,'','Vacations & Training',...(m.vac.length?m.vac.map(v=>'- '+v):['Nobody is away this week.']),'',['Task Name','Status','Assignee','Start Date','Due Date','Comment'].join('\t'),...m.rows.map(r=>[r.key+': '+r.summary,r.status,r.assignee,fx(r.start),fx(r.due),r.comment.replace(/\s+/g,' ')].join('\t'))].join('\n');}
-function exportHtmlDoc(m){return`<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Weekly Testing Tasks ${esc(m.cw)}</title><style>body{font-family:Arial,sans-serif;font-size:14px;color:#172B4D;margin:24px}h1{font-size:22px;margin:0 0 4px}a{color:#0052CC}</style></head><body><h1>Weekly Testing Tasks</h1><p style="color:#6B778C">${esc(m.cw)} · ${esc(m.dates)}</p>${exportHtmlFragment(m)}</body></html>`;}
+function exportPlain(m){return[m.release,'',['Feature',...m.weekHeads].join('\t'),...m.features.map(f=>[f.key+': '+f.summary+' ('+f.status+')',...f.weeks.map(w=>w.replace(/\s+/g,' '))].join('\t')),'',m.cw,'','Vacations & Training',...(m.vac.length?m.vac.map(v=>'- '+v):['Nobody is away this week.']),'',['Task Name','Status','Assignee','Start Date','Due Date','Comment'].join('\t'),...m.rows.map(r=>[(r.type?'['+r.type+'] ':'')+r.key+': '+r.summary,r.status,r.assignee,fx(r.start),fx(r.due),r.comment.replace(/\s+/g,' ')].join('\t'))].join('\n');}
+function exportHtmlDoc(m){return`<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Weekly Testing Tasks ${esc(m.cw)}</title><style>body{font-family:Arial,sans-serif;font-size:14px;color:#172B4D;margin:24px}h1{font-size:24px;margin:0 0 10px}h2{font-size:20px;margin:22px 0 6px}a{color:#0052CC}</style></head><body><p style="color:#6B778C;margin:0 0 6px">Weekly Testing Tasks · ${esc(m.cw)} · ${esc(m.dates)}</p>${exportHtmlFragment(m)}</body></html>`;}
 
 /* minimal .docx writer (zip with stored entries, no compression) */
 const CRC=(()=>{const t=new Uint32Array(256);for(let n=0;n<256;n++){let c=n;for(let k=0;k<8;k++)c=c&1?0xEDB88320^(c>>>1):c>>>1;t[n]=c>>>0;}return t;})();
@@ -899,11 +998,16 @@ function makeDocx(m){
   const cell=(inner,w,fill)=>`<w:tc><w:tcPr><w:tcW w:w="${w}" w:type="dxa"/>${fill?`<w:shd w:val="clear" w:color="auto" w:fill="${fill}"/>`:''}</w:tcPr>${p(inner,{after:0})}</w:tc>`;
   const border='<w:tblBorders>'+['top','left','bottom','right','insideH','insideV'].map(s=>`<w:${s} w:val="single" w:sz="4" w:space="0" w:color="C1C7D0"/>`).join('')+'</w:tblBorders>';
   const SC={ok:'2C7A4B',prog:'2A55BE',bad:'B23A30',todo:'55606F',other:'55606F',none:'55606F'};
+  const TC={bug:'B23A30',task:'2A55BE',story:'2C7A4B',epic:'6B3FB8',test:'0E7C7B',req:'A0520C',sub:'55606F',other:'55606F'};
+  const tname=r=>(r.type?run(r.type.toUpperCase()+'  ',{b:true,color:TC[r.tcat]||'55606F',sz:15}):'')+(r.url?link(r.key,r.url):run(r.key,{b:true}))+run(': '+r.summary);
+  const tblPr=(w)=>`<w:tblPr><w:tblW w:w="${w.reduce((a,b)=>a+b,0)}" w:type="dxa"/>${border}<w:tblCellMar><w:top w:w="60" w:type="dxa"/><w:left w:w="100" w:type="dxa"/><w:bottom w:w="60" w:type="dxa"/><w:right w:w="100" w:type="dxa"/></w:tblCellMar></w:tblPr><w:tblGrid>${w.map(x=>`<w:gridCol w:w="${x}"/>`).join('')}</w:tblGrid>`;
+  const nW=m.weekHeads.length;const FW=[4800,...Array(nW).fill(Math.floor(10000/Math.max(1,nW)))];
+  const ftbl=m.features.length?`<w:tbl>${tblPr(FW)}<w:tr><w:trPr><w:tblHeader/></w:trPr>${['Feature',...m.weekHeads].map((h,i)=>cell(run(h,{b:true,color:'FFFFFF'}),FW[i],'1F3864')).join('')}</w:tr>`+m.features.map(f=>`<w:tr>${cell(tname(f)+(f.status?'<w:r><w:br/></w:r>'+run(f.status,{b:true,caps:true,sz:15,color:SC[f.cat]||'55606F'}):''),FW[0])}${f.weeks.map((w,i)=>cell(run(w),FW[i+1])).join('')}</w:tr>`).join('')+`</w:tbl>`:'';
   const tbl=`<w:tbl><w:tblPr><w:tblW w:w="${W.reduce((a,b)=>a+b,0)}" w:type="dxa"/>${border}<w:tblCellMar><w:top w:w="60" w:type="dxa"/><w:left w:w="100" w:type="dxa"/><w:bottom w:w="60" w:type="dxa"/><w:right w:w="100" w:type="dxa"/></w:tblCellMar></w:tblPr><w:tblGrid>${W.map(w=>`<w:gridCol w:w="${w}"/>`).join('')}</w:tblGrid>`+
     `<w:tr><w:trPr><w:tblHeader/></w:trPr>${head.map((h,i)=>cell(run(h,{b:true,color:'FFFFFF'}),W[i],'1F3864')).join('')}</w:tr>`+
-    m.rows.map(r=>`<w:tr>${cell((r.url?link(r.key,r.url):run(r.key,{b:true}))+run(': '+r.summary),W[0])}${cell(run(r.status,{b:true,color:SC[r.cat]||'55606F',caps:true,sz:17}),W[1])}${cell(run(r.assignee),W[2])}${cell(run(fx(r.start)),W[3])}${cell(run(fx(r.due)),W[4])}${cell(run(r.comment),W[5])}</w:tr>`).join('')+`</w:tbl>`;
-  const body=p(run('Weekly Testing Tasks',{b:true,sz:36,color:'1F3864'}),{after:40})+p(run(m.cw+' · '+m.dates,{color:'6B778C'}),{after:200})+
-    p(run(m.cw,{b:true,sz:30}),{after:80})+p(run('Vacations & Training',{b:true,sz:24}),{after:60})+
+    m.rows.map(r=>`<w:tr>${cell(tname(r),W[0])}${cell(run(r.status,{b:true,color:SC[r.cat]||'55606F',caps:true,sz:17}),W[1])}${cell(run(r.assignee),W[2])}${cell(run(fx(r.start)),W[3])}${cell(run(fx(r.due)),W[4])}${cell(run(r.comment),W[5])}</w:tr>`).join('')+`</w:tbl>`;
+  const body=p(run('Weekly Testing Tasks · '+m.cw+' · '+m.dates,{color:'6B778C'}),{after:60})+p(run(m.release,{b:true,sz:36,color:'1F3864'}),{after:120})+ftbl+
+    p(run(m.cw,{b:true,sz:30}),{before:240,after:80})+p(run('Vacations & Training',{b:true,sz:24}),{after:60})+
     (m.vac.length?m.vac.map(v=>p(run('•  '+v),{ind:true,after:20})).join(''):p(run('Nobody is away this week.')))+p('',{after:120})+tbl+
     (m.filter?p(run('Filter: '+m.filter,{color:'6B778C',sz:16}),{before:120}):'');
   const doc=`<?xml version="1.0" encoding="UTF-8" standalone="yes"?><w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"><w:body>${body}<w:sectPr><w:pgSz w:w="16838" w:h="11906" w:orient="landscape"/><w:pgMar w:top="900" w:right="900" w:bottom="900" w:left="900" w:header="400" w:footer="400" w:gutter="0"/></w:sectPr></w:body></w:document>`;
@@ -941,8 +1045,8 @@ $('#btnForget').addEventListener('click',async e=>{if(!forgetArmed){forgetArmed=
 $('#btnUseLocal').addEventListener('click',()=>{const d=LS.get('wtt.data',null);if(d&&d.text)importText(d.text,Object.assign({},d.source,{kind:'file',at:Date.now()}));});
 
 /* ---------- week and vacations ---------- */
-function setWeek(d){S.week=monday(d);if(S.mode==='db'){S.weekDoc={comments:{},vacations:[]};subscribeWeek();}else{S.weekDoc=LS.get('wtt.week.'+weekId(S.week),{comments:{},vacations:[]});S.prevWeekDoc=LS.get('wtt.week.'+weekId(addDays(S.week,-7)),{comments:{}});}
-  if(S.example)S.exWeek=weekId(S.week)===weekId(new Date())?exampleWeek():{comments:{},vacations:[]};renderWeek();render();}
+function setWeek(d){S.week=monday(d);if(S.mode==='db')subscribeWeek();else loadLocalWeeks();renderWeek();renderFeatures();render();}
+$('#relSel').addEventListener('change',e=>{S.release=e.target.value;store.saveView();renderFeatures();render();});
 $('#wkPrev').addEventListener('click',()=>setWeek(addDays(S.week,-7)));
 $('#wkNext').addEventListener('click',()=>setWeek(addDays(S.week,7)));
 $('#wkNow').addEventListener('click',()=>setWeek(new Date()));
@@ -978,7 +1082,7 @@ window.addEventListener('resize',()=>closePops());
 S.week=monday(new Date());
 loadLocal();
 showExample();
-if(!LS.get('wtt.view',null)&&S.canon.release){S.filters=[{id:fid++,field:S.canon.release,op:'is',mode:'values',values:['Release 0.9']}];S.group='assignee';renderGroupSelect();render();}
+if(!LS.get('wtt.view',null)){S.release='Release 0.9';S.group='assignee';renderRelease();renderGroupSelect();renderFeatures();render();}
 connect();
 })();
 </script>
